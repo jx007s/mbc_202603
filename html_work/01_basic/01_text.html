@@ -3,7 +3,10 @@
         <title>텍스트입니다</title>
     </head>
     <body>
-        <!-- heading 글자크기 및 강제개행 -->
+        <!-- heading 글자크기 및 강제개행 
+        <h1>  : 엘리먼트 노드
+        heading 1입니다 : 텍스트노드
+        -->
         <h1>heading 1입니다</h1>
         <h2>heading 2입니다</h2>
         <h3>heading 3입니다</h3>
@@ -24,15 +27,92 @@
             엄마상어 뚜루루뚜루 어여쁜 뚜루루뚜루 바닷속 뚜루루뚜루 엄마상어<br>
             아빠상어 뚜루루뚜루 힘이센 뚜루루뚜루 바닷속 뚜루루뚜루 아빠상어
         </p>
+        
+        <hr/>
+        <hr color="red"/> <!-- 속성 : 엘리먼트 노드 가 지니고 있는 성질
+                                 color="red"  색상속성을  red 로 지정-->
+<!--
+
+크기 단위
+
+bit                                                             byte
+                                        BCD         ASCII       EBCDIC
+1       2   3       4           5       6           7           8
+2       4   8       16          32      64          128         256
+------------------------------------------------------------------
+                    0~9(10)             0~9(10)     +특수기호   +양(0)/음(1)
+0(off)  00   000    0000  0             a~z(26)
+1(on)   01   001    0001  1             A~Z(26)
+        10   010    0010  2                 62
+        11   011    0011  3
+             100    0100  4
+             101    0101  5
+             110    0110  6
+             111    0111  7
+                    1000  8
+                    1001  9
+                    1010
+                    1011
+                    1100
+                    1101
+                    1110
+                    1111
+
+
+
+        10진수    16진수
+00000    0        0
+00001    1        1
+00010    2        2
+00011    3        3
+00100    4        4
+00101    5        5
+00110    6        6
+00111    7        7
+01000    8        8
+01001    9        9
+01010    10       A
+01011    11       B
+01100    12       C
+01101    13       D
+01110    14       E
+01111    15       F
+10000    16      10        
+-->
+
+        <hr color="#ff0000" size="5px" width="600px"/><!-- #ff0000 : red  여러 속성 지정가능-->
+        <hr  size="20px" align="left" width="600px" noshade/>
         <!--  
         기호        기호설명        예약문자
+        -------------------------------------
         &           엠퍼샌드        &amp;
         <           보다작은        &lt;
         >           보다큰          &gt;
         공백        공백            &nbsp;
-        Ⓒ          저작권          &copy
+        Ⓒ          저작권          &copy;
         
         -->
+        <p>
+        &lt;p&gt; : p태그 문단 표현<br/>
+         아기상어 뚜루루뚜루&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;귀여운 뚜루루뚜루 바닷속 뚜루루뚜루 아기상어&copy;<br/>
+        </p>
+        <span style="background: #ff0000;">빨강</span>
+        <span style="background: #ffaa00;">주황</span>
+        <span style="background: #ffff00;">노랑</span>
+        <span style="background: #00ff00;">초록</span>
+        <span style="background: #0000ff;">파랑</span>
+        <span style="background: #5555aa;">남색</span>
+        <span style="background: #ff00ff;">보라</span>
+        <hr/>
 
+        여기는 <font color="#ff0000">부산 </font>서면입니다<br/>
+        여기는 <font color="#ff0000" size="7">부산 </font>서면입니다<br/>
+        피카츄
+        <b>피카츄</b>
+        <i>피카츄</i>
+        <u>피카츄</u>
+        <s>피카츄</s>
+        <sub>피카츄</sub>
+        <sup>피카츄</sup>
     </body>
 </html>
