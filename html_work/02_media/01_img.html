@@ -5,6 +5,7 @@
     <body>
         <h1>01_img</h1>
         <!--
+        
         상대주소 : 현재 파일의 위치를 기준으로 참조하는 파일(이미지)의 위치 지정
 
         src="QEED4101.JPG"  :: 같은 폴더내의 파일
@@ -13,10 +14,44 @@
         ../../      ::> 2단계 부모
 
         ./          ::> 현재폴더
+        src="QEED4101.JPG"    :: 같은 폴더내의 파일
+        src="./QEED4101.JPG"  :: 같은 폴더내의 파일
         -->
-        <img src="../fff/NBDW3702.JPG" height="100px" alt="">
+        <img src="../fff/NBDW3702.JPG" height="100px" alt="설명1">
         <img src="QEED4101.JPG" height="100px" alt="">
-        <img src="../../QKAL1555.JPG" height="100px" alt="">
+        <img src="../../QKAL1555.JPG" height="100px" alt="설명2">
         <img src="./RREK2193.JPG" height="100px" alt="">
+
+        <!-- 절대주소 -->
+        <img src="D:/public/mbc/2026_03/public/html_work/fff/PHIS3580.JPG" height="100px" alt="">
+
+        <!-- 주소가 맞지 않는 이미지 불가-->
+        <img src="../fff/qwer.JPG" height="100px" width="200px" alt="설명3">
+        <hr/>
+        <img src="QEED4101.JPG" height="100px" alt="">
+        <img src="QEED4101.JPG" width="100px" alt="">
+        <img src="QEED4101.JPG" height="100px" width="100px" alt="">
+
+        <hr/>
+
+        <img src="QEED4101.JPG" height="100px" alt="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit reprehenderit, ut esse eligendi veritatis ab quidem, provident sed perspiciatis iste quae nam voluptatem tempora quisquam vero, aliquam illum asperiores!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit reprehenderit, ut esse eligendi veritatis ab quidem, provident sed perspiciatis iste quae nam voluptatem tempora quisquam vero, aliquam illum asperiores!
+
+        <hr/>
+        <!-- align : 글자와의 배치 left, right -->
+        <img src="QEED4101.JPG" height="100px" alt="" align="left">
+        <img src="../fff/NBDW3702.JPG" height="100px" alt="" align="right">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit reprehenderit, ut esse eligendi veritatis ab quidem, provident sed perspiciatis iste quae nam voluptatem tempora quisquam vero, aliquam illum asperiores!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit reprehenderit, ut esse eligendi veritatis ab quidem, provident sed perspiciatis iste quae nam voluptatem tempora quisquam vero, aliquam illum asperiores!
+
+        <hr/>
+
+        <!-- hspace, vspace  : 이미지 여백 -->
+        <img src="QEED4101.JPG" height="100px" alt="" align="left" hspace="30px">
+        <img src="../fff/NBDW3702.JPG" height="100px" alt="" align="right"
+        vspace="30px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit reprehenderit, ut esse eligendi veritatis ab quidem, provident sed perspiciatis iste quae nam voluptatem tempora quisquam vero, aliquam illum asperiores!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo velit reprehenderit, ut esse eligendi veritatis ab quidem, provident sed perspiciatis iste quae nam voluptatem tempora quisquam vero, aliquam illum asperiores!
     </body>
 </html>
