@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_table</title>
+</head>
+<body>
+    <h1>03_table</h1>
+    <table border="" bgcolor="#0ff">아기상어
+        <tr>엄마상어
+            <td width="100px">1_1</td>
+            <td>1_2</td>
+            <td>
+                <img src="../fff/NBDW3702.JPG" width="50px" alt="">
+            </td>
+        </tr>
+        <!--  
+        같은 속성이 중첩될 경우
+        1. scope 의 우선순위를 따름 (작은 영역이 우선순위가 높다)
+            td > tr > table
+        2. 같은 scope에서 속성이 같을 경우 비교가 가능한 값이면 큰값을 기준으로 한다.
+        -->
+        <tr bgcolor="#ff0">
+            <td  width="50px">2_1</td>
+            <td bgcolor="#0f0">2_2</td>
+            <td>2_3</td>
+        </tr>
+        <tr>
+            <!-- 
+            rowspan : 행늘이기
+            colspan : 칸늘이기 -->
+            <td width="200px" rowspan="2">3_1</td>
+            
+            <td colspan="2">3_2</td>
+            <!-- <td>3_3</td> -->
+        </tr>
+        <!-- <td>아빠상어</td>  
+        구조는 
+        table(표) > tr(행)  > td(칸)  을 준수해야 한다
+        
+        -->
+        <tr>
+            <td>4_2</td>
+            <td>4_3</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <table border="" width="100%">
+                    <tr>
+                        <td>새로운칸1</td>
+                        <td>새로운칸2</td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
