@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_box</title>
+    <style>
+        *{ /* 모든 선택자 */
+            color:#f00;
+            padding:0px;
+            margin: 0px;
+        }
+        html{
+            background-color: #ffc;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        .aa{
+            padding : 20px;  /* 내부 여백 : 배경색이 적용*/
+            background-color: #0f0;
+        }
+
+        .bb{
+                    /* 상하  좌우 */
+            padding : 10px 40px;  
+            background-color: #0ff;
+        }
+
+        .cc{
+                    /* 상  우    하   좌 */
+            padding : 10px 40px 0px 30px;  
+            background-color: #0ff;
+        }
+
+        .dd{
+            margin : 20px;  /* 외부 여백 : 배경색이 적용*/
+            background-color: #0f0;
+        }
+
+        .ee{
+                    /* 상하  좌우 */
+            margin : 10px 40px;  
+            background-color: #0ff;
+        }
+
+        .ff{
+                    /* 상  우    하   좌 */
+            margin : 10px 40px 0px 30px;  
+            background-color: #0ff;
+        }
+        #big{
+            width: 328px;
+            height: 656px;
+            background-color: #fa0;
+        }
+        .small{
+            float: left;   /* div 가 아래배치하지 않고 왼쪽에 배치*/
+            /*float: right;    div 가 아래배치하지 않고 오른쪽에 배치*/
+            width: 120px;
+            height: 120px;
+            margin : 10px; 
+            padding : 10px;
+            background-color: #fcf; 
+            border: 2px solid #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>02_box</h1>
+    <div class="aa">box1</div>
+    <div class="bb">box2</div>
+    <div class="cc">box3</div>
+    <div class="dd">box4</div>
+    <div class="ee">box5</div>
+    <div class="ff">box6</div>
+    <div class="aa dd">box7</div>
+    <hr/>
+    <div id="big">
+        <div class="small">1</div>
+        <div class="small">2</div>
+        <div class="small">3</div>
+        <div class="small">4</div>
+        <div class="small">5</div>
+        <div class="small">6</div>
+        <div class="small">7</div>
+        <div class="small">8</div>
+    </div>
+</body>
+</html>
