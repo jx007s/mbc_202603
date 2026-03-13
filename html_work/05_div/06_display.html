@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div, span, img{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 3px solid #f00;
+        }
+
+        .nn{
+            display: none;  /* 보이지 않음 , 위치 크기가 없음*/
+        }
+        .bb{
+            display: block; /* 크기 설정가능,  행 전체 사용 */
+        }
+        .ii{
+            display: inline;/* 크기 조정불가, 다른 요소와 같은 행사용 */
+                            /* 이미지인 경우 크기조정가능 -> inline-block와 같음*/
+        }
+        .ib{
+            display: inline-block;/* 크기 설정가능, 다른 요소와 같은 행사용 */
+        }
+    </style>
+</head>
+<body>
+    <h1>06_display</h1>
+    <h2>div</h2>
+    <div>div1</div><!-- div 기본값 : block-->
+    <div class="nn">div2</div>
+    <div class="bb">div3</div>
+    <div class="ii">div4</div>
+    <div class="ib">div5</div>
+
+    <h2>span</h2>
+    <span>span1</span><!-- span 기본값 : inline-->
+    <span class="nn">span2</span>
+    <span class="bb">span3</span>
+    <span class="ii">span4</span>
+    <span class="ib">span5</span>
+
+    <h2>img</h2>
+    <img src="../fff/AKYO5468.JPG">
+    <img src="../fff/CDCL8013.JPG" class="nn">
+    <img src="../fff/CXHA8530.JPG" class="bb">
+    <img src="../fff/CZRF0751.JPG" class="ii"><!--  inline 이어도 크기설정됨-->
+
+    <img src="../fff/MYMW7924.JPG" class="ib">
+
+</body>
+</html>

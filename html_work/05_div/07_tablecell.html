@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_tablecell</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .tt1{
+            display: table;
+            width: 400px;
+            height: 100px;
+            background-color: #ff0;
+            margin: 30px;
+        }
+
+        .tt2{
+            display: table;
+            height: 100px;
+            background-color: #0f0;
+            margin: 30px;
+        }
+        .cc1{
+            display: table-cell;
+            border: 1px solid #ccc;
+            margin: 20px; /* table-cell; 일때 의미 없음*/
+            /*
+            자식의 width 설정시
+            부모의 width를 자식의 갯수로 나누어 배분
+
+            부모와 자식의 width 없을경우 자식의 width 설정 불가
+            */
+        }
+
+        .cc2{
+            display: table-cell;
+            border: 1px solid #ccc;
+            width: 200px;  
+            /* 부모 width 있을 경우 : 자식이 width 없을때와 동일 
+                부모 width 없을 경우 : 자식이 width로 설정(부모의 부모 절대크기가 자식*n 의 크기보다 작을 경우 부모의 부모 크기로 배분하여 설정)
+
+            */
+        }
+    </style>
+</head>
+<body>
+    <h1>07_tablecell</h1>
+    <h2>tt1-cc1</h2><!-- 부모 width 고정 : 자식 width 없음-->
+    <div class="tt1">
+        <div class="cc1"></div>
+        <div class="cc1"></div>
+        <div class="cc1"></div>
+        <div class="cc1"></div>
+    </div>
+    <h2>tt1-cc2</h2><!-- 부모 width 고정 : 자식 width 고정-->
+    <div class="tt1">
+        <div class="cc2"></div>
+        <div class="cc2"></div>
+        <div class="cc2"></div>
+        <div class="cc2"></div>
+    </div>
+    <h2>tt2-cc1</h2><!-- 부모 width 없음 : 자식 width 없음-->
+    <div class="tt2">
+        <div class="cc1"></div>
+        <div class="cc1"></div>
+        <div class="cc1"></div>
+        <div class="cc1"></div>
+    </div>
+    <h2>tt2-cc2</h2><!-- 부모 width 없음 : 자식 width 고정-->
+    <div class="tt2">
+        <div class="cc2"></div>
+        <div class="cc2"></div>
+        <div class="cc2"></div>
+        <div class="cc2"></div>
+    </div>
+</body>
+</html>
