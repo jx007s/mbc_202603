@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_overflow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 5px solid #f00;
+            margin: 20px;
+        }
+        .aaa{
+            width: 300px;
+            height: 150px;
+        }
+        /*
+        overflow : 스타일객체 안의 요소가 스타일객체보다 큰 경우 
+            hidden : 내부객체를 스타일객체 만큼만 보이고 나머지 숨기기
+            scroll : 스크롤바 보이기(내부요소크기와 상관없음)
+            visible : 항상보이기(기본값)
+            auto : 내부객체가 큰 방향만 스크롤바 생성
+        */
+        .b1{
+            overflow: hidden;
+        }
+        .b2{
+            overflow: scroll;
+        }
+        .b3{
+            overflow: visible;
+        }
+        .b4{
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>04_overflow</h1>
+    <div class="box">
+        <img class="aaa" src="../fff/NBDW3702.JPG" alt="">
+    </div>
+    <h3>hidden</h3>
+    <div class="box b1">
+        <img class="aaa" src="../fff/NBDW3702.JPG" alt="">
+    </div>
+    <h3>scroll</h3>
+    <div class="box b2">
+        <img class="aaa" src="../fff/NBDW3702.JPG" alt="">
+    </div>
+    <h3>visible</h3>
+    <div class="box b3">
+        <img class="aaa" src="../fff/NBDW3702.JPG" alt="">
+    </div>
+    <h3>auto</h3>
+    <div class="box b4">
+        <img class="aaa" src="../fff/NBDW3702.JPG" alt="">
+    </div>
+</body>
+</html>
