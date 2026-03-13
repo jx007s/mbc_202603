@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_video</title>
+</head>
+<body>
+    <h1>06_video</h1>
+    <!-- 
+    muted : 무음
+    autoplay : 자동재생
+    loop : 무한반복
+    controls : 제어패널보이게
+    -->
+    <video src="../fff/SampleVideo_1280x720_1mb.mp4" muted autoplay loop controls></video>
+
+    <!-- source 가 여러개인 경우 
+        순서대로 재생가능한 source 인지 확인하고 1개만 재생
+        (source 가 재생 불가일 경우 다음 source로 재생)
+    -->
+    <video  loop controls>
+        <source src="../fff/sonsfewfwefew.mp4" /><!-- 주소가 맞지 않아 재생불가-->
+        <source src="../fff/tgd_1.mp4" />
+        <source src="../fff/tgd_2.mp4" />
+    </video>
+</body>
+</html>
