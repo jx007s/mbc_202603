@@ -14,19 +14,183 @@
             background-color: #ff0;
             width: 200px;
             height: 200px;
+            display: grid;
         }
         .box{
             background-color: #0ff;
             border: 1px solid #888;
+            /*   grid 사용시 셀로 사용되는 box의 크기는 지정하지 않는다
             width: 50px;
-            height: 50px;
+            height: 50px; 
+            */
         }
+        .c_r_px{  /*  3 x 3 */
+            grid-template-columns:  20px 30px 50px;
+            grid-template-rows:     20px 50px 30px;
+            /*
+                  20    30      50
+            20  20*20  30*20  50*20
+            50  20*50  30*50  50*50
+            30  20*30  30*30  50*30
+            
+            */
+        }
+
+        .c_r_fr{  /*  3 x 3 */
+            /*fr(fraction) : 부모를 전체갯수로 나누어서 배분처리 
+            1+2+1 : 4
+            200 / 4 : 50 = 1fr 
+
+            */
+            grid-template-columns:  1fr 2fr 1fr;  
+            grid-template-rows:     20px 50px 30px;
+            /*
+                1fr       2fr  1fr
+            20  50*20  100*20  50*20
+            50  50*50  100*50  50*50
+            30  50*30  100*30  50*30
+            
+            */
+        }
+        .not_fix{ /*갯수가 맞지 않을 경우 - 행을 생성하여 맞춤
+                    4 * 2
+            */
+            grid-template-columns:  1fr 2fr 1fr 1fr;  
+            grid-template-rows:     20px 50px ; 
+
+        }
+
+        .rp{ /*반복
+            */
+            grid-template-columns:  repeat(4, 2fr);  
+
+        }
+
+        .gap{ /*gap : cell 사이의 간격(상하, 좌우 가 같다)
+            */
+            grid-template-columns:  repeat(3, 1fr);  
+            gap:20px;
+
+        }
+
+        .c_r_gap{ /*gap : cell 사이의 간격을 다르게
+            */
+            grid-template-columns:  repeat(3, 1fr);  
+            row-gap:30px;
+            column-gap: 10px;
+
+        }
+
+        .gap_two{ /*gap : cell 사이의 간격을 다르게
+            */
+            grid-template-columns:  repeat(3, 1fr);  
+            gap:30px 10px;
+
+        }
+
+
+        .sp{ 
+            grid-template-columns:  repeat(3, 1fr);  
+        }
+      
     </style>
 </head>
 <body>
     <h1>11_grid</h1>
-    <h2></h2>
-    <div class="big">
+    <h2>c_r_px</h2>
+    <div class="big c_r_px">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>c_r_fr</h2>
+    <div class="big c_r_fr">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>not_fix</h2>
+    <div class="big not_fix">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>rp</h2>
+    <div class="big rp">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>gap</h2>
+    <div class="big gap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>c_r_gap</h2>
+    <div class="big c_r_gap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>gap_two</h2>
+    <div class="big gap_two">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+
+    <h2>start~end</h2>
+    <div class="big sp">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
