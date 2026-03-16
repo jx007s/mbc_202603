@@ -92,6 +92,113 @@
         .sp{ 
             grid-template-columns:  repeat(3, 1fr);  
         }
+        .bbb1{
+            /*  column 2 ~ 4(4-1) 칸*/
+            grid-column-start: 2;  
+            grid-column-end: 4;  /* 이전까지 영역 (4-1)*/
+
+            /*  row 1 ~ 3(3-1) 칸*/
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        .bbb2{
+            /*  column 2 ~ 4(4-1) 칸*/
+            grid-column: 2 / 4;  /* 이전까지 영역 (4-1)*/
+
+            /*  row 1 ~ 3(3-1) 칸*/
+            grid-row: 1 / 3;
+        }
+
+
+        .area1{   /* 문자열로 각 위치의 이름을 지정한다.*/
+            grid-template-areas: 
+            "aa bb cc"
+            "dd ee ff"
+            "gg hh ii"
+            ;
+        }
+
+        .a1{
+            grid-area: ee;
+        }
+        .a2{
+            grid-area: aa;
+        }
+        .a3{
+            grid-area: ii;
+        }
+
+        .area2{   /* 문자열로 각 위치의 이름을 지정한다.
+            . 또는 none : 빈칸
+            */
+            grid-template-areas: 
+            "aa header header"
+            "dd   ee   ff"
+            /* "dd   ee   dd"  동일한 이름이 붙어있지 않으면 에러발생*/
+            ".    .     ."
+            "none gg gg"
+            ;
+        }
+        .e1{
+            grid-area: gg;
+        }
+        .e2{
+            grid-area: header;
+        }
+        .e3{
+            grid-area: dd;
+        }
+        .e4{
+            grid-area: ee;
+        }
+        .e5{
+            grid-area: ff;
+        }
+        .e6{
+            grid-area: aa;
+        }
+
+        .a_center{
+            grid-template-columns:  repeat(3, 1fr); 
+            align-items: center;
+        }
+
+        .a_end{
+            grid-template-columns:  repeat(3, 1fr); 
+            align-items: end;
+        }
+
+        .a_start{
+            grid-template-columns:  repeat(3, 1fr); 
+            align-items: start;
+        }
+
+
+        .j_start{
+            grid-template-columns:  repeat(3, 1fr); 
+            justify-items: start;
+        }
+
+        .j_center{
+            grid-template-columns:  repeat(3, 1fr); 
+            justify-items: center;
+        }
+
+        .j_end{
+            grid-template-columns:  repeat(3, 1fr); 
+            justify-items: end;
+        }
+
+        .a_content{
+            grid-template-columns:  repeat(3, 1fr); 
+            align-content: space-between;
+        }
+
+        .j_content{
+            grid-template-columns:  repeat(3, 30px); 
+            justify-content: space-between;
+        }
       
     </style>
 </head>
@@ -191,6 +298,139 @@
 
     <h2>start~end</h2>
     <div class="big sp">
+        <div class="box">1</div>
+        <div class="box bbb1">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+
+    <h2>2/4, 1/3</h2>
+    <div class="big sp">
+        <div class="box">1</div>
+        <div class="box bbb2">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+
+
+    <h2>area1</h2>
+    <div class="big area1">
+        <div class="box a1">1</div>
+        <div class="box a2">2</div>
+        <div class="box a3">3</div>
+    </div>
+
+    <h2>area2</h2>
+    <div class="big area2">
+        <div class="box e1">1</div>
+        <div class="box e2">2</div>
+        <div class="box e3">3</div>
+        <div class="box e4">4</div>
+        <div class="box e5">5</div>
+        <div class="box e6">6</div>
+    </div>
+
+
+    <h2>align_center</h2>
+    <div class="big a_center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>align_start</h2>
+    <div class="big a_start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+
+    <h2>align_end</h2>
+    <div class="big a_end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>justify_start</h2>
+    <div class="big j_start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>justify_center</h2>
+    <div class="big j_center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>justify_end</h2>
+    <div class="big j_end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    <h2>align_content</h2>
+    <div class="big a_content">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+
+    
+    <h2>justify_content</h2>
+    <div class="big j_content">
         <div class="box">1</div>
         <div class="box">2</div>
         <div class="box">3</div>
