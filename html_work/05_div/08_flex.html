@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .big{
+            width: 600px;
+            height: 300px;
+            background-color: #ff0;
+            margin: 20px;
+            display: flex;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: #f0f;
+            border: 1px solid #888;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .row{  /*기본값*/
+            flex-direction: row;
+        }
+        .item-center{
+            align-items: center;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        .item-justify-center{
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row-r{
+            flex-direction: row-reverse;
+        }
+
+        .between{
+            justify-content: space-between;
+        }
+
+        .around{
+            justify-content: space-around;
+        }
+
+        .evenly{
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <h1>08_flex</h1>
+    <h2>기본</h2>
+    <div class="big">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>column</h2>
+    <div class="big column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>row-기본값</h2>
+    <div class="big row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>item-center</h2>
+    <div class="big item-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>justify-center</h2>
+    <div class="big justify-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>item-justify-center</h2>
+    <div class="big item-justify-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>row-r</h2>
+    <div class="big row-r">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>between</h2>
+    <div class="big between">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>around</h2>
+    <div class="big around">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
+    <h2>evenly</h2>
+    <div class="big evenly">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+</body>
+</html>

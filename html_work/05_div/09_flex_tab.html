@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_flex_tab</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 800px;
+            height: 500px;
+        }
+        .header{
+            width: 800px;
+            height: 50px;
+        }
+        .logo{
+            background-color: #fa0;
+            width: 100px;
+            height: 50px;
+            margin-left: 100px;
+            float: left;
+
+        }
+        .nav{
+            /* background-color: #f0f; */
+            width: 500px;
+            height: 50px;
+            margin: 0px 50px;
+            float: left;
+            display: flex;
+            justify-content: space-between;
+        }
+        .menu{
+            display: block;
+            width: 70px;
+            height: 48px;
+            /* background-color: #ff0; */
+            text-decoration: none;
+            color: #f00;
+            text-align: center;
+            line-height: 48px;
+            border: 1px solid #ccc;
+        }
+        .section ,img{
+            width: 800px;
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+    <h1>09_flex_tab</h1>
+    <div class="wrapper">
+        <div class="header">
+            <div class="logo">LOGO</div>
+            <div class="nav">
+                <a href="#" class="menu">메뉴1</a>
+                <a href="#" class="menu">메뉴2</a>
+                <a href="#" class="menu">메뉴3</a>
+                <a href="#" class="menu">메뉴4</a>
+                <a href="#" class="menu">메뉴5</a>
+            </div>
+
+        </div>
+        <div class="section">
+            <img src="../fff/AKYO5468.JPG" alt="">
+        </div>
+    </div>
+</body>
+</html>
