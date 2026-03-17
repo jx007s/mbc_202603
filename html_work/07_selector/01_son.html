@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_son</title>
+    <style>
+
+        /* 후손 선택자 */
+        .box h3{
+            color: #f00;
+        }
+
+        /* 자식(자손) 선택자 */
+        .box > h2{
+            color: #00f;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>01_son</h1>
+    <h2>h2 입니다</h2>
+    <h3>h3 입니다</h3>
+    <hr>
+    <div class="box">
+        box 입니다 1
+        <h2>box > h2 입니다 2</h2>
+        <h3>box > h3 입니다 3</h3>
+        <div>
+            box > div 입니다 4
+            <h2>box > div > h2 입니다 5</h2>
+            <h3>box > div > h3 입니다 6</h3>
+        </div>
+    </div>
+
+
+    <div class="box">
+        box 입니다 7
+        <span>
+            box > span 입니다 8
+            <h2>box > span  > h2 입니다 9</h2>
+            <h3>box > span  > h3 입니다 10</h3>
+            <div>
+                box > span  > div 입니다 11
+                <h2>box > span  > div > h2 입니다 12</h2>
+                <h3>box > span  > div > h3 입니다 13</h3>
+            </div>
+        </span>
+    </div>
+</body>
+</html>
