@@ -18,10 +18,11 @@
             width: 100px;
             height: 100px;
             border: 1px solid #ccc;
-            margin: 20px;
+            margin: 30px;
             float: left;
         }
         .grd1{
+            /* 그라데이션 */
             background: linear-gradient(
                 to right, 
                 #ff0000 0%,
@@ -42,9 +43,94 @@
         }
 
         .sh1{
+            /* 그림자 */
             background-color: #ff0;
             box-shadow:20px 5px 5px #333;
                 /*     왼쪽  위  퍼짐   색  */
+        }
+
+        .sh2{
+            background-color: #ff0;
+            box-shadow:-5px -5px 5px #00f;
+                /*     왼쪽  위  퍼짐   색  */
+        }
+        .sh3{
+            background-color: #ff0;
+            box-shadow:20px 0px 0px #f00;
+            box-shadow:0px 20px 0px #0f0;
+                /*     2개를 넣기 위해서는 box-shadow 1개에 넣어야 한다 */
+        }
+
+        .sh4{
+            background-color: #ff0;
+            box-shadow:20px 0px 0px #f00,
+                        0px 20px 0px #0f0,
+                        -20px 0px 0px #00f,
+                        0px -20px 0px #f0f;
+                /*     2개를 넣기 위해서는 box-shadow 1개에 넣어야 한다 */
+        }
+
+        .sh5{
+            background-color: #ff0;
+            box-shadow:
+            
+                        
+            20px 0px 0px #f00,
+                        0px 20px 0px #0f0,
+                        -20px 0px 0px #00f,
+                        0px -20px 0px #f0f,
+                        
+                        20px 20px 0px #fa0,
+                        -20px 20px 0px #0ff,
+                        -20px -20px 0px #383,
+                        20px -20px 0px #338;
+                /*     2개를 넣기 위해서는 box-shadow 1개에 넣어야 한다 */
+        }
+
+        .ii1{
+            background-color: #ff0;
+            box-shadow:inset 5px 5px 5px #333;
+                /*  안쪽그림자   왼쪽  위  퍼짐   색  */
+        }
+
+        .ii2{
+            background-color: #ff0;
+            box-shadow:
+            inset 5px 0px 0px #f00,
+            inset 0px 5px 0px #0f0,
+            inset -5px 0px 0px #00f,
+            inset 5px -5px 0px #f0f
+            ;
+                /*  안쪽그림자   왼쪽  위  퍼짐   색  */
+        }
+
+         .ii3{
+           
+            background-color: #33f;
+            border-radius: 50px;
+            box-shadow:
+            inset 5px 5px 10px #fff,
+            inset -5px -5px 10px #338,
+            5px 5px 10px #000;
+                /*  안쪽그림자   왼쪽  위  퍼짐   색  */
+        }
+
+        .ss1{
+            box-sizing: content-box;
+            background-color: #ff0;
+            border: 10px solid #f00;
+            padding:10px;
+        }
+
+        .ss2{
+            box-sizing: border-box;         
+            /*  border-box : border, padding 을 객체 안에 배치  - 공간차지 하지 않는다
+                content-box border, padding 을 객체 밖에 배치  - 공간차지 한다(기본값)
+            */
+
+            background-color: #ff0;
+            border: 10px solid #f00;
+            padding:10px;
         }
     </style>
 </head>
@@ -64,6 +150,21 @@
         <div class="box sh2">그림자2</div>
         <div class="box sh3">그림자3</div>
         <div class="box sh4">그림자4</div>
+        <div class="box sh5">그림자5</div>
+    </div>
+
+    <h2>inset</h2>
+    <div class="wrapper">
+        <div class="box ii1">inset1</div>
+        <div class="box ii2">inset2</div>
+        <div class="box ii3">inset3</div>    
+    </div>
+
+    <h2>box-sizing</h2>
+    <div class="wrapper">
+        <div class="box ss1">사이징1</div>
+        <div class="box ss2">사이징2</div>
+        <div class="box ss3">사이징3</div>    
     </div>
 </body>
 </html>
