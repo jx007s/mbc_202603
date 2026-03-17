@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_circleBtn</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 500px;
+            height: 450px;
+            background-color: #222;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+        }
+        .article{
+            width: 250px;
+            padding-top: 50px;
+            opacity: 0.5;       /* 투명도 : 0 (투명) < x < 1(불투명)  */
+            /* background-color: #ff0; */
+            height: 100px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+
+        .section{
+            width: 360px;
+            height: 100px;
+            margin: 0 auto;
+            font-size: 24px;
+        }
+        .btns{
+            display: flex;
+            justify-content: space-evenly;
+            width: 250px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .btn{
+            box-sizing: border-box;
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            border: 2px solid #fff;
+            font-size: 16px;
+            line-height: 80px;
+            float: left;
+        }
+        .ll{
+            background-color: #fff;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <h1>03_circleBtn</h1>
+    <div class="wrapper">
+        <div class="article">
+            to enter this site, you need to be of legal drinking age in your country.
+        </div>
+        <div class="section">
+            ARE YOU OF LEGAL PURCHASE AGE FOR ALCOHOL?
+        </div>
+        <div class="btns">
+            <div class="btn ll">YES</div>
+            <div class="btn">NO</div>
+        </div>
+    </div>
+</body>
+</html>
