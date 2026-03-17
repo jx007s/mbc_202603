@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_effect</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 1000px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            float: left;
+        }
+        .grd1{
+            background: linear-gradient(
+                to right, 
+                #ff0000 0%,
+                #ffa73d 16%,
+                #f9fc3c 32%,
+                #57ff3d 44%,
+                #0011ff 62%,
+                #381e7f 78%,
+                #f605ff 100%);
+        }
+
+        .grd2{
+            background: radial-gradient(ellipse at center, rgba(255,0,0,1) 0%,rgba(255,167,61,1) 16%,rgba(252,210,61,0) 24%,rgba(249,252,60,0) 32%,rgba(195,253,60,0) 36%,rgba(141,254,61,1) 40%,rgba(87,255,61,1) 44%,rgba(19,70,212,1) 58%,rgba(0,17,255,0.85) 62%,rgba(56,30,127,0.23) 78%,rgba(108,23,162,0) 84%,rgba(246,5,255,1) 100%);
+        }
+
+        .grd3{
+            background: radial-gradient(ellipse at center, rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%);
+        }
+
+        .sh1{
+            background-color: #ff0;
+            box-shadow:20px 5px 5px #333;
+                /*     왼쪽  위  퍼짐   색  */
+        }
+    </style>
+</head>
+<body>
+    <h1>02_effect</h1>
+    <h2>grdient</h2>
+    <div class="wrapper">
+        <div class="box grd1">grd1</div>
+        <div class="box grd2">grd2</div>
+        <div class="box grd3">grd3</div>
+        <div class="box grd4">grd4</div>
+    </div>
+
+    <h2>shadow</h2>
+    <div class="wrapper">
+        <div class="box sh1">그림자1</div>
+        <div class="box sh2">그림자2</div>
+        <div class="box sh3">그림자3</div>
+        <div class="box sh4">그림자4</div>
+    </div>
+</body>
+</html>
