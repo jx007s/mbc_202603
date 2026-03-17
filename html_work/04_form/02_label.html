@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_label</title>
+    <style>
+        *{
+            /* margin: 0;
+            padding: 0; */
+        }
+        fieldset{
+            width: 400px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        legend{
+            background-color: #ffa;
+            width: 100px;
+            height: 30px;
+        }
+        label{
+            background-color: #0ff;
+        }
+        #nn{
+            background-color: #faf;
+            width: 150px;
+            height: 24px;
+            border: 1px solid #ccc;
+        }
+        input[type=radio]{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>02_label</h1>
+    <form action="">
+        <fieldset><!-- 테두리가 있는 DIV-->
+            <legend>아이디</legend><!-- DIV-->
+            <input type="text" name="pid">
+        </fieldset>
+        <fieldset>
+            <label>이름</label>
+            <input type="text" name="pname">
+        </fieldset>
+        <fieldset>
+            <!-- label 클릭시 label 하위 input 으로 커서 이동 -->
+            <label>암호 <input type="text" name="pw"> </label>
+            
+        </fieldset>
+        <fieldset>
+            <label for="nn">별명</label>
+            <!-- label 클릭시 for 에 지정한 id 요소로 커서 이동 -->
+            <input type="text" id="nn" name="nick">
+        </fieldset>
+
+        <fieldset>
+            <!-- label 클릭시 for 지정시에는 하위 input 으로 커서 이동안함 
+                for 로 지정한 id로만 이동함
+            -->
+            <label for="ad">기본주소<input type="text" name="addr1"></label>
+        </fieldset>
+
+        <fieldset>
+            <label><input type="radio" name="gender" value="m">남</label>
+            <label><input type="radio" name="gender" value="f">여</label>
+            <label><input type="radio" name="gender" value="it">it인</label>
+        </fieldset>
+    </form>
+</body>
+</html>
