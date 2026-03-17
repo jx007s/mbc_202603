@@ -25,7 +25,6 @@
             text-align: center;
         }
         .section{
-            background-color: #ff0;
             width: 300px;
             height: 300px;
             display: grid;
@@ -35,6 +34,22 @@
         .box{
             padding: 10px;
             border: 1px solid #ccc;
+            text-align: right;
+            /* color: #0f0; */
+        }
+        .t_sun{
+            background-color: #f00;
+            color: #FFF;
+        }
+        .t_sat{
+            background-color: #00f;
+            color: #FFF;
+        }
+        .title{
+            text-align: center;
+        }
+        .now{
+            background-color: #ff0;
         }
     </style>
 </head>
@@ -47,14 +62,21 @@
 
         <h1>2026년 4월</h1>
         <div class="section">
-            <div class="box" bgcolor="#f00" style="color: #fff;">일</div>
-            <div class="box">월</div>
-            <div class="box">화</div>
-            <div class="box">수</div>
-            <div class="box">목</div>
-            <div class="box">금</div>
-            <div class="box" bgcolor="#00f" style="color: #fff;">토</div>
-        
+            <div class="box t_sun title">일</div>
+            <div class="box title">월</div>
+            <div class="box title">화</div>
+            <div class="box title">수</div>
+            <div class="box title">목</div>
+            <div class="box title">금</div>
+            <div class="box title t_sat" >토</div>
+        <!--1. style 태그에서 선택자를 이용한 디자인 적용과 요소태그에서 style 지정시 
+                요소 태그의 style 지정이 우선순위가 높다
+            2. class 로 style 지정시 같은 속성으로 다른 값이 지정된 경우 나중 지정한 클래스의 속성이 
+                우선순위가 높다
+
+                class="box title t_sat" 
+                t_sat > title > box
+        -->
             <div class="box" style="color: #f00;"></div>
             <div class="box"></div>
             <div class="box"></div>
@@ -66,7 +88,7 @@
             <div class="box" style="color: #f00;">5</div>
             <div class="box">6</div>
             <div class="box">7</div>
-            <div class="box" bgcolor="#ff0">8</div>
+            <div class="box now">8</div>
             <div class="box">9</div>
             <div class="box">10</div>
             <div class="box" style="color: #00f;">11</div>
