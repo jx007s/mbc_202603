@@ -24,18 +24,91 @@
         h1{
             text-align: center;
         }
-        .section{
+        .wrapper > div{
             width: 300px;
             height: 300px;
             display: grid;
             grid-template-columns: repeat(7,1fr);
             gap: 3px;
         }
-        .box{
+        .wrapper > div > div{
             padding: 10px;
             border: 1px solid #ccc;
             text-align: right;
             /* color: #0f0; */
+        }
+
+        .wrapper > div > div{
+            background-color: #f00;
+            color: #fff;
+        }
+        .wrapper > div > div~div{
+            background-color: #fff;
+            color: #000;
+        }
+        .wrapper > div > div+div+div+div+div+div+div{
+            background-color: #00f;
+            color: #fff;
+        }
+        .wrapper > div >  div+div+div+div+div+div+div~div{
+            background-color: #fff;
+            color: #000;
+        }
+        /*2*/
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #00f;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #f00;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div~div{
+            
+            color: #000;
+        }
+
+
+        /*3*/
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #00f;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #f00;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div~div{
+            
+            color: #000;
+        }
+
+        /*4*/
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #00f;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #f00;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div~div{
+            
+            color: #000;
+        }
+
+        /*5*/
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #00f;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div{
+            
+            color: #f00;
+        }
+        .wrapper > div > div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div+div~div{
+            
+            color: #000;
         }
         
     </style>
