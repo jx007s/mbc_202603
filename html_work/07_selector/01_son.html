@@ -15,6 +15,51 @@
         .box > h2{
             color: #00f;
         }
+
+        .box span h3{
+            background-color: #ff0;
+        }
+
+        .box > span > h2{
+            background-color: #f0f;
+        }
+
+        
+        /* 자식 , 후손 선택자는 우선순위가 없으며 나중 설정한 스타일로 지정된다. */
+        .box > div > h3{
+            text-decoration: line-through;
+        }
+
+        .box div h3{
+            text-decoration: overline;
+        }
+
+        .box  div  h2{
+            border: 3px solid #0ff;
+        }
+
+        #dd22{
+            border: 3px solid #f00;
+        }
+
+        .hh22{
+            border: 3px solid #f0f;
+        }
+
+        h2{
+            border: 3px solid #00f;
+        }
+
+        
+        
+
+        /*
+        선택자 우선순위
+        id > 자식/후손 > 클래스 > 태그
+        
+        */
+
+        
         
     </style>
 </head>
@@ -25,11 +70,11 @@
     <hr>
     <div class="box">
         box 입니다 1
-        <h2>box > h2 입니다 2</h2>
+        <h2 class="hh22">box > h2 입니다 2</h2>
         <h3>box > h3 입니다 3</h3>
         <div>
             box > div 입니다 4
-            <h2>box > div > h2 입니다 5</h2>
+            <h2 class="hh22" id="dd22">box > div > h2 입니다 5</h2>
             <h3>box > div > h3 입니다 6</h3>
         </div>
     </div>
@@ -43,7 +88,7 @@
             <h3>box > span  > h3 입니다 10</h3>
             <div>
                 box > span  > div 입니다 11
-                <h2>box > span  > div > h2 입니다 12</h2>
+                <h2 class="hh22">box > span  > div > h2 입니다 12</h2>
                 <h3>box > span  > div > h3 입니다 13</h3>
             </div>
         </span>
