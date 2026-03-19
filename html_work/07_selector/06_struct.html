@@ -20,6 +20,26 @@
         td:last-of-type{
             font-style: italic;
         }
+
+        tr:nth-child(3){
+            height: 80px;
+        }
+
+        td:nth-of-type(3){
+            width: 200px;
+        }
+
+        tr:nth-child(2n){
+            background-color: #ff0;
+        }
+
+        td:nth-of-type(2n+1){
+            color: #f00;
+        }
+
+        tr:nth-child(5) > td:nth-child(6){
+            background-color: #0f0;
+        }
     </style>
 </head>
 <body>
@@ -96,5 +116,51 @@
             <td>7_8</td>
         </tr>
     </table>
+
+    <h2>child vs of_type</h2>
+    <style>
+        .wrapper{
+            width: 200px;
+            display: inline-block;
+            border: 1px solid #000;
+        }
+        .wrapper > span{
+            display: block;
+        }
+
+        .wrapper > div:nth-child(3){  /*요소 종류 상관없이 3번째 --> 이후 종류가 div 인 요소 적용*/
+            background-color: #ff0;
+        }
+
+        .wrapper > div:nth-of-type(3){ /* 요소 종류만 순서로 적용*/
+            color: #f00;
+        }
+
+    </style>
+
+    <div class="wrapper">
+        <div>div 1</div>
+        <span>span</span>
+        <div>div 2</div>
+        <div>div 3</div>
+        <div>div 4</div>
+    </div>
+
+    <div class="wrapper">
+        <div>div 1</div>
+        <div>div 2</div>
+        <span>span</span>
+        <div>div 3</div>
+        <div>div 4</div>
+    </div>
+
+    <div class="wrapper">
+        <div>div 1</div>
+        <div>div 2</div>
+        <div>div 3</div>
+        <span>span</span>
+        <div>div 4</div>
+    </div>
+
 </body>
 </html>
