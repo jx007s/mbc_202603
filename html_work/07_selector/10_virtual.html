@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_virtual</title>
+    <style>
+        .box{
+            width: 50px;
+            height: 100px;
+            border: 1px solid #ccc;
+        }
+        .bbb::before{/* html 에 가상으로 추가 - bbb 앞에 위치
+                        
+                        <div class="box bbb">
+                            ::before --> 추가되는 위치
+                            "비비비"
+                        </div>       
+            */
+            content: "비포입니다"; /* 추가되는 내용*/
+            width: 100px;
+            height: 20px;
+            background-color: #ff0;
+            display: block;
+        }
+
+        .ccc:hover::before{/* html 에 가상으로 추가 - ccc 앞에 위치*/
+            content: "hover 비포입니다"; /* 추가되는 내용*/
+            width: 100px;
+            height: 20px;
+            background-color: #f00;
+            display: block;
+        }
+
+        .aaa::after{/* html 에 가상으로 추가 - aaa 뒤에 위치 */
+            content: "애프터입니다"; /* 추가되는 내용*/
+            width: 100px;
+            height: 20px;
+            background-color: #f0f;
+            display: block;
+        }
+        ul{
+            margin-left: 100px;
+        }
+        li::marker{
+            content: "🚒🧨😒🚑😍❤️😂😊";
+        }
+
+        .ddd{
+            width: 100px;
+            height: 200px;
+            background-color: #0ff;
+            counter-reset: qwer 5; /* qwer 변수명 
+                                        5  초기값
+                                    */
+        }
+        .ddd>p::before{
+            counter-increment: qwer 10; /* 10 증가량*/
+            content: counter(qwer) "번 ";
+        }
+
+        .eee>p::before{ /*attr : 태그 속성 을 가져온다 */
+            content: attr(asdf) " 수상자 ";
+        }
+
+    </style>
+</head>
+<body>
+    <h1>10_virtual</h1>
+    <div class="box aaa">aaa</div>
+    <div class="box bbb">비비비</div>
+    <div class="box ccc">ccc</div>
+
+    <ul>
+        <li>피카츄</li>
+        <li>라이츄</li>
+        <li>파이리</li>
+        <li>꼬부기</li>
+    </ul>
+
+    <div class="ddd">
+        <p>문단이지</p>
+        <p>문단이지</p>
+        <p>문단이지</p>
+        <p>문단이지</p>
+        <p>문단이지</p>
+    </div>
+
+    <div class="eee">
+        <p asdf="금메달"> 김연아</p>
+        <p asdf="은메달"> 박세리</p>
+        <p asdf="동메달"> 차범근</p>
+        
+    </div>
+</body>
+</html>

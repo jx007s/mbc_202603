@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_text</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #080;
+        }
+        a:visited{  /* 방문한 곳*/
+            color: #fa0;
+        }
+        a:hover{    
+            color: #f0f;
+        }
+        div{
+            margin: 20px;
+        }
+        div:nth-of-type(2)::first-line{/* 첫번째 줄*/
+            color: #f00;
+        }
+        div:nth-of-type(3)::first-letter{/* 첫번째 글자*/
+            color: #f00;
+            font-size: 30px;
+        }
+        div:nth-of-type(odd){/* 홀수 */
+            background-color: #ff0;
+        }
+        div:nth-of-type(even){/* 짝수 */
+            background-color: #faf;
+        }
+        div:not(.asdf){/* not 제외  :  클래스 asdf 제외 */
+            border: 4px solid #333;
+        }
+
+        div::selection{ /* 블럭으로 선택시 */
+            background-color: #0f0;
+            color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <h1>11_text</h1>
+    <div>
+        <a href="">link1</a>
+        <a href="https://www.naver.com">link2</a>
+        <a href="https://www.google.com">link3</a>
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita illum voluptates aliquam molestias quod laboriosam asperiores eligendi. Distinctio harum impedit fugiat facere nihil suscipit nesciunt minima ut illum nulla?
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita illum voluptates aliquam molestias quod laboriosam asperiores eligendi. Distinctio harum impedit fugiat facere nihil suscipit nesciunt minima ut illum nulla?
+    </div>
+    <div class="asdf">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita illum voluptates aliquam molestias quod laboriosam asperiores eligendi. Distinctio harum impedit fugiat facere nihil suscipit nesciunt minima ut illum nulla?
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita illum voluptates aliquam molestias quod laboriosam asperiores eligendi. Distinctio harum impedit fugiat facere nihil suscipit nesciunt minima ut illum nulla?
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita illum voluptates aliquam molestias quod laboriosam asperiores eligendi. Distinctio harum impedit fugiat facere nihil suscipit nesciunt minima ut illum nulla?
+    </div>
+
+</body>
+</html>
