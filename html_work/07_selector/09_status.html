@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_status</title>
+    <style>
+        .wrapper{
+            width: 800px;
+            height: 400px;
+        }
+        .wrapper > div{
+            width: 50px;
+            height: 50px;
+            transition-duration: 0.5s; /* 변화 지연시간 , s(초)*/
+        }
+        .wrapper > div:hover{  /* 마우스 올렸을때*/
+            width: 500px;
+        }
+        .wrapper > div:nth-child(1){ background-color: #f00; }
+        .wrapper > div:nth-child(2){ background-color: #fa0; }
+        .wrapper > div:nth-child(3){ background-color: #ff0; }
+        .wrapper > div:nth-child(4){ background-color: #0f0; }
+        .wrapper > div:nth-child(5){ background-color: #00f; }
+        .wrapper > div:nth-child(6){ background-color: #309; }
+        .wrapper > div:nth-child(7){ background-color: #f0f; }
+    </style>
+</head>
+<body>
+    <h1>09_status</h1>
+
+    <div class="wrapper">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <style>
+        fieldset{
+            width: 600px;
+            height: 50px;
+            margin: 5px;
+        }
+        input:focus{    /* 커서가 들어왔을 때*/
+            background-color: #ff0;
+        }
+        input:read-only{    
+            background-color: #f0f;
+        }
+        input:disabled{    
+            color: #0f0;
+        }
+        input:hover{
+            background-color: #00f;
+        }
+        input:checked{
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+
+
+
+    <form action="">
+        <fieldset>
+            <label>번호<input type="hidden" name="pno" value="23"></label>
+        </fieldset>
+        <fieldset>
+            <label>아이디<input type="text" name="pid" placeholder="아이디를 입력하세요"></label>
+        </fieldset>
+        <fieldset>
+            <!--
+                            보임    변경    커서    data전송
+                readonly    O       X       O       O
+                disabled    O       X       X       X
+            type="hidden"   X       X       X       O
+            -->
+            <label>이름<input type="text" name="pname" value="정우성" readonly></label>
+        </fieldset>
+        <fieldset>
+            <label>별명<input type="text" name="nick" value="잘생김" disabled></label>
+        </fieldset>
+        <fieldset>
+            취미
+            <label><input type="checkbox" value="running" name="hobby">러닝</label>
+            <label><input type="checkbox" value="music" name="hobby">노래</label>
+            <label><input type="checkbox" value="movie" name="hobby">영상</label>
+        </fieldset>
+        <fieldset>
+            <label><input type="text"></label>
+        </fieldset>
+        <fieldset>
+            <label><input type="text"></label>
+        </fieldset>
+        <fieldset>
+            <label><input type="text"></label>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="가입">
+        </fieldset>
+
+
+    </form>
+</body>
+</html>
