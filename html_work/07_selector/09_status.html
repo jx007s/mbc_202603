@@ -61,6 +61,48 @@
             height: 50px;
         }
 
+       
+
+        input[name="gen"]~img, label[for="em3chk"] > img{
+            width: 30px;
+        }
+        input[name="gen"]~img[src="../fff/on.png"]{/* 1. 체크이미지 처음에는 보이지 않게*/
+            display: none;
+        }
+
+        input[name="gen"]:checked~img[src="../fff/on.png"]{/*2. 라디오 체크시 체크이미지 보이게*/
+            display: inline-block;
+        }
+
+        input[name="gen"]:checked~img[src="../fff/off.png"]{/*3. 라디오 체크시 빈 체크이미지 보이지 않게*/
+            display: none;
+        }
+
+        input[name="gen"]{ /* 4. 체크 기능 확인 후 라디오버튼 보이지 않게*/
+            display: none;
+        }
+
+        /* em3chk  */
+
+        #em3chk~label>img[src="../fff/on.png"],
+        #em3chk~input[name="email3"]
+        {/* 1. 체크이미지 처음에는 보이지 않게*/
+            display: none;
+        }
+
+        #em3chk:checked~label>img[src="../fff/on.png"],
+        #em3chk:checked~input[name="email3"]{/*2. 라디오 체크시 체크이미지 보이게*/
+            display: inline-block;
+        }
+
+        #em3chk:checked~label>img[src="../fff/off.png"],
+        #em3chk:checked~select[name="email2"]{/*3. 라디오 체크시 빈 체크이미지 보이지 않게*/
+            display: none;
+        }
+
+        #em3chk{ /* 4. 체크 기능 확인 후 라디오버튼 보이지 않게*/
+            display: none;
+        }
     </style>
 
 
@@ -85,20 +127,45 @@
             <label>별명<input type="text" name="nick" value="잘생김" disabled></label>
         </fieldset>
         <fieldset>
-            취미
+            <legend>취미</legend>
             <label><input type="checkbox" value="running" name="hobby">러닝</label>
             <label><input type="checkbox" value="music" name="hobby">노래</label>
             <label><input type="checkbox" value="movie" name="hobby">영상</label>
         </fieldset>
         <fieldset>
-            <label><input type="text"></label>
+            <legend>성별</legend>
+            <label>
+                <input type="radio" name="gen" value="m">
+                <img src="../fff/off.png" alt="">
+                <img src="../fff/on.png" alt="">
+                남성
+            </label>
+            <label>
+                <input type="radio" name="gen" value="f">
+                <img src="../fff/off.png" alt="">
+                <img src="../fff/on.png" alt="">
+                여성
+            </label>
         </fieldset>
-        <fieldset>
-            <label><input type="text"></label>
+        <fieldset>  
+            <legend>이메일</legend>
+            <input type="text" name="email1">@
+            <input type="checkbox" id="em3chk">
+
+            <select name="email2" >
+                <option value="naver.com">네이버</option>
+                <option value="google.com">구글</option>
+                <option value="daum.net">다음</option>
+            </select>
+            <input type="text" name="email3">
+            <label for="em3chk">
+                <img src="../fff/off.png" alt="">
+                <img src="../fff/on.png" alt="">
+                직접입력
+            </label>
+            
         </fieldset>
-        <fieldset>
-            <label><input type="text"></label>
-        </fieldset>
+        
         <fieldset>
             <input type="submit" value="가입">
         </fieldset>
