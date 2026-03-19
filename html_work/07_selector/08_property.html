@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_property</title>
+    <style>
+        div{
+            width: 300px;
+            height: 40px;
+            margin: 10px;
+            border: 1px solid #ccc;
+        }
+
+        /*
+        선택자[속성명='값']  속성선택자 : 속성이 값인 선택자 태그
+        */
+        div[qwer-data='abc']{  /* 정확하게 일치 */
+            color: #f00;
+        }
+        div[qwer-data~='abc']{  /* 단어형태 abc, 띄어쓰기로 구분
+                                        abc, abc qwe , zxcv abc tyui
+                                */
+            font-weight: bolder;
+        }
+        div[qwer-data|='abc']{  /* 단어형태 abc, -로 구분
+                                        abc, abc-qwe
+                                */
+            font-style: italic;
+        }
+        div[qwer-data^='abc']{  /*abc로 시작
+                abc, abc qwe, abc-qwe, abcgvereverwfgerg
+                                */
+            text-align: center;
+        }
+        div[qwer-data$='abc']{  /*abc로 끝
+                            abc, dcsxvbrabc
+                                */
+            text-decoration: underline;
+        }
+        div[qwer-data*='abc']{  /*abc포함
+                            abc,abc qwe, abc-qwe,zxcv abc tyui,zxcv-abc-tyui,abcgvereverwfgerg, dcsxvbrabc, dcsdsabcewcewfc
+                                */
+            background-color: #ff0;
+        }
+        .aaa{
+            background-color: #f0f;
+        }
+        .bbb{
+            font-size: 30px;
+        }
+        .ccc{
+            text-align: right;
+        }
+
+        div[class="aaa bbb"]{ /* "aaa bbb" 일치 */
+            color: #0f0;
+        }
+
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>08_property</h1>
+    <div qwer-data="abc">abc 이지롱</div>
+    <div qwer-data="eee">eee 이지롱</div>
+    <div qwer-data="abc qwe">abc qwe 이지롱</div>
+    <div qwer-data="abc-qwe">abc-qwe 이지롱</div>
+    <div qwer-data="zxcv abc tyui">zxcv abc tyui 이지롱</div>
+    <div qwer-data="zxcv-abc-tyui">zxcv-abc-tyui 이지롱</div>
+    <div qwer-data="abcgvereverwfgerg">abcgvereverwfgerg 이지롱</div>
+    <div qwer-data="dcsxvbrabc">dcsxvbrabc 이지롱</div>
+    <div qwer-data="dcsdsabcewcewfc">dcsdsabcewcewfc 이지롱</div>
+
+    <div class="aaa bbb">aaa bbb</div>
+    <div class="aaa ccc">aaa ccc</div>
+
+<!--
+        JPG, jpeg : 테두리색 빨강
+        bmp, gif : 테두리색 파랑
+        png : 테두리색 녹색
+-->
+    <img src="../fff/CZRF0751.JPG" alt="">
+    <img src="../fff/CZRF0751.bmp" alt="">
+    <img src="../fff/CZRF0751.gif" alt="">
+    <img src="../fff/CZRF0751.png" alt="">
+    <img src="../fff/CZRF0751.jpeg" alt="">
+
+</body>
+</html>
