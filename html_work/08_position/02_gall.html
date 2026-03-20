@@ -15,12 +15,21 @@
             background-color: #ff0;
             position: relative;
             margin: 0 auto; /* auto : absolute 불가*/
+            overflow: hidden;
         }
         .big{
-            width: 600px;
+            width: 3000px;
             height: 400px;
             background-color: #0f0;
             position: relative;
+            left:0px;
+            transition-duration: 0.5s;
+        }
+        .big > img{
+            width: 600px;
+            height: 400px;
+            display: block;
+            float: left;
         }
         .btns{
             width: 400px;
@@ -32,7 +41,8 @@
             display: flex;
             justify-content: space-around;
         }
-        .btns > div{
+        .btns > label{
+            display: block;
             width: 50px;
             height: 100px;
             line-height: 50px;
@@ -40,19 +50,40 @@
             text-align: center;
         }
 
+        input{
+            display: none;
+        }
+
+        input[id="im1"]:checked~.big{left: -0px; }
+        input[id="im2"]:checked~.big{left: -600px; }
+        input[id="im3"]:checked~.big{left: -1200px; }
+        input[id="im4"]:checked~.big{left: -1800px; }
+        input[id="im5"]:checked~.big{left: -2400px; }
+
 
     </style>
 </head>
 <body>
     <h1>02_gall</h1>
     <div class="wrapper">
-        <div class="big"></div>
+        <input type="radio" id="im1" name="im">
+        <input type="radio" id="im2" name="im">
+        <input type="radio" id="im3" name="im">
+        <input type="radio" id="im4" name="im">
+        <input type="radio" id="im5" name="im">
+        <div class="big">
+            <img src="../fff/CDCL8013.JPG" alt="">
+            <img src="../fff/MYMW7924.JPG" alt="">
+            <img src="../fff/NBDW3702.JPG" alt="">
+            <img src="../fff/AKYO5468.JPG" alt="">
+            <img src="../fff/PHIS3580.JPG" alt="">
+        </div>
         <div class="btns">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
+            <label for="im1">1</label>
+            <label for="im2">2</label>
+            <label for="im3">3</label>
+            <label for="im4">4</label>
+            <label for="im5">5</label>
         </div>
     </div>
 </body>
