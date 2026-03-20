@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_gall</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 600px;
+            height: 500px;
+            background-color: #ff0;
+            position: relative;
+            margin: 0 auto; /* auto : absolute 불가*/
+        }
+        .big{
+            width: 600px;
+            height: 400px;
+            background-color: #0f0;
+            position: relative;
+        }
+        .btns{
+            width: 400px;
+            height: 100px;
+            background-color: rgba(0,0,255,0.3);
+            position: absolute;
+            bottom: 50px;
+            left:100px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .btns > div{
+            width: 50px;
+            height: 100px;
+            line-height: 50px;
+            background-color: #fa0;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>02_gall</h1>
+    <div class="wrapper">
+        <div class="big"></div>
+        <div class="btns">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+</body>
+</html>
