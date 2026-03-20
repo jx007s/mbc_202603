@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_sra</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 800px;
+            height: 300px;
+            background:url('../fff/CDCL8013.JPG');
+            margin: 20px;
+        }
+        .wrapper > div{
+            width: 100px;
+            height: 50px;
+            border: 1px solid #000;
+            background-color: rgba(255,255,0,0.5);
+                                    /*R   G  B  alpha
+                                    R,G,B : 0~255
+                                    alpha(투명도) : 0~1
+                                    */
+        }
+
+        .st > div{
+            position: static;  /* 좌표이동 불가 (기본값)*/
+        }
+        .rr > div{
+            position: relative;/* 현재 위치를 기반으로 상대좌표 이동
+                                    static 형태로 기본위치가 지정된 후 좌표이동
+            */
+        }
+        .aa{
+            position: relative;
+        }
+        .aa > div{
+            position: absolute;/* 부모를 기반으로 절대좌표 이동
+                                    부모가 static인 경우 
+                                    상위 객체가 static 이 아닌 것을 찾아 기준으로 함 --> 아무것도 없으면 body 기준
+
+            */
+        }
+
+        .wrapper > div:nth-of-type(1){
+            top: 40px;
+            left: 200px;
+        }
+        .wrapper > div:nth-of-type(2){
+            /*
+            relative : 1번째 다음 위치를 기준으로 좌표이동
+            absolute : 부모 기준위치에서 좌표이동
+            */
+
+            top: 40px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>01_sra</h1>
+    <h2>static</h2>
+    <div class="wrapper st">
+        <div>static 1</div>
+        <div>static 2</div>
+        <div>static 3</div>
+        <div>static 4</div>
+    </div>
+    <h2>relative</h2>
+    <div class="wrapper rr">
+        <div>relative 1</div>
+        <div>relative 2</div>
+        <div>relative 3</div>
+        <div>relative 4</div>
+    </div>
+    <h2>absolute</h2>
+    <div class="wrapper aa">
+        <div>absolute 1</div>
+        <div>absolute 2</div>
+        <div>absolute 3</div>
+        <div>absolute 4</div>
+    </div>
+</body>
+</html>
