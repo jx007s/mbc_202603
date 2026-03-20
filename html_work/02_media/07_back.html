@@ -112,6 +112,94 @@
             background-position: center 20px;  /*가로 위px 기준 - 방향과 px 혼용가능*/
         }
 
+
+        .nnn{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            overflow: auto;
+        }
+
+        .ooo{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            overflow: auto;
+            background-attachment: scroll;
+            /*
+            background-attachment 스크롤시 배경이미지 영향
+
+                                    전체스크롤      내부요소스크롤
+                scroll(기본값)       O :내부와 같이      X      
+
+                fixed               X :화면고정         X
+
+                local               O                  O : 요소내부스크롤시 배경도 움직임
+            
+            
+            */
+        }
+
+        .ppp{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-color: #ff0;
+            overflow: auto;
+            background-attachment: fixed;
+        }
+
+        .qqq{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            overflow: auto;
+            background-attachment: local;
+        }
+
+        .btn{
+            width: 200px;
+            height: 100px;
+            border-radius: 50px;
+            overflow: hidden;
+            border: 5px solid #f00;
+            float: left;
+        }
+
+        .btn > img{
+            width: 300px;
+            display: block;
+            margin-left: -30px;
+            margin-top: -40px;
+            filter: blur(5px) hue-rotate(90deg);
+            /* filter: blur(5px)  brightness(50%);  다중 적용 가능*/
+            /*
+            이미지 보정 filter
+            % : 100% or 0~1
+            deg(각도) : 0~360deg
+            blur(px):흐리게, brightness(%):밝기, contrast(%):대비, grayscale(%):회색조, sepia(%):갈색, hue-rotate(deg): 색상회전(색상값의 offset), invert(%) : 반전,
+            opacity(0~1):투명도, saturate(%) : 채도, 
+            drop-shadow() : 그림자 효과 ==>  drop-shadow(5px 5px 10px #f00)
+            */
+
+        }
+        .bk{
+            background: url("../fff/MYMW7924.JPG");
+            background-size: 300px;
+            background-position: -30px -40px;
+            filter: blur(5px);
+        }
+
+        .bkimg{
+            width: 200px;
+            height: 100px;
+            background: url("../fff/MYMW7924.JPG");
+            background-size: 300px;
+            background-position: -30px -40px;
+            filter: blur(5px);
+        }
     </style>
 </head>
 <body>
@@ -139,5 +227,43 @@
     <div class="box lll"></div>
     <div class="box mmm"></div>
     
+    <h3>attachment</h3>
+    <div class="box nnn">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+    </div>
+
+    <div class="box ooo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+    </div>
+
+    <div class="box ppp">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+    </div>
+
+    <div class="box qqq">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, voluptatum vel nostrum pariatur dolore officiis recusandae mollitia officia earum quo tenetur, deleniti ipsa magnam quibusdam nulla cupiditate nihil fuga? Nemo?
+    </div>
+
+    <h3>버튼</h3>
+    <div class="btn">
+        <img src="../fff/MYMW7924.JPG" alt="">
+        글자를 넣어요<!--글자가 영역안에 없어서 안보임 position 설정 필요-->
+    </div>
+
+    <!--글자가 보이지만 blur 처리하여 명확히 안보임 테두리도 blur -->
+    <div class="btn bk">글자를 넣어요</div>
+
+    <div class="btn">
+        <!--글자가 보이지만 blur 처리하여 명확히 안보임 테두리는 blur 안함-->
+        <div class="bkimg">글자를 넣어요</div>
+    </div>
 </body>
 </html>
