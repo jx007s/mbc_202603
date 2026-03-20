@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_zindex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper{
+            width: 200px;
+            height: 200px;
+            /* background-color: #ff0; */
+            border: 1px solid #000;
+            position: relative;
+            float: left;
+            margin: 30px;
+        }
+
+        .wrapper > div{
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            position: absolute;
+        }
+        .wrapper > div:nth-of-type(1){
+            background-color: #faa;
+            left: 30px;
+            top: 30px;
+        }
+        .wrapper > div:nth-of-type(2){
+            background-color: #0f0;
+            left: 45px;
+            top: 45px;
+        }
+        .wrapper > div:nth-of-type(3){
+            background-color: #f0f;
+            left: 20px;
+            top: 60px;
+        }
+
+        .one{
+            z-index: 1; /* 기본값 : 0*/
+        }
+        .b1{
+            z-index: -1; /* 기본값 : 0*/
+        }
+
+        .wrapper:nth-of-type(2){
+            z-index: 1;
+        }
+
+        .nn{
+            background-color: #ff0;
+            left: 290px;
+            top: 50px;
+        }
+
+        .hh{
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <h1>03_zindex</h1>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div><!-- 뒤에 생성된 객체가 위에 배치 -->
+    </div>
+
+    <div class="wrapper">
+        <div>1</div>
+        <div class="one">2</div>
+        <div class="b1">3</div>
+        <div class="nn">4</div>
+    </div>
+
+    <div class="wrapper">
+        <div>1</div>
+        <div class="hh">2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

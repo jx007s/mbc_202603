@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_fixed</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper:nth-of-type(1){
+            top:0px;
+            position: relative;
+        }
+        .wrapper:nth-of-type(2){
+            top:3000px;
+            position: absolute;
+        }
+        .wrapper:nth-of-type(3){
+            position: static;
+        }
+        .menu{
+            width: 500px;
+            height: 50px;
+            background-color: rgba(200, 0, 200, 0.3);
+            box-shadow: 5px 5px 5px #000;
+            position: fixed; /* 화면 기준 배치*/
+            right: 20px;
+            top: 50px;
+        }
+
+        .st{
+            width: 500px;
+            height: 50px;
+            background-color: rgba(200, 255, 0, 0.7);
+            box-shadow: 5px 5px 5px #000;
+            position: sticky; /* 자신의 위치에서 좌표값에 위치하면 
+                                 화면 기준으로 고정된다 */
+            left: 20px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>04_fixed</h1>
+    <div class="wrapper">
+        <img src="../fff/CDCL8013.JPG" alt="">
+    </div>
+    <div class="st">난 자석이야</div>
+    <div class="wrapper">
+        <img src="../fff/CXHA8530.JPG" alt="">
+    </div>
+    <div class="wrapper">
+        <img src="../fff/MYMW7924.JPG" alt="">
+    </div>
+
+    <div class="menu">난메뉴야</div>
+</body>
+</html>
