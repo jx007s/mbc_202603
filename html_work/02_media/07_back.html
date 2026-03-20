@@ -17,6 +17,12 @@
             height: 200px;
             background-color: #ff0;
             margin: 10px;
+            float: left;
+        }
+        h3{
+            clear: both;  /* float 무력화 
+                        left, right, both(left+right)
+            */
         }
         .box > img{
             display: block;
@@ -30,7 +36,80 @@
         }
         .ddd{
             background: url('../fff/CDCL8013.JPG');
-            background-size: 40%;
+            background-size: 100%; /*크기 조정 : 100% - 부모 width 기준 100%
+                                        - 이미지 종횡비 유지
+                                */
+        }
+
+        .eee{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 150px; /* 너비 px - 이미지 종횡비 유지 */
+        }
+
+        .fff{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px 150px; /* 너비, 높이 */
+        }
+
+        .ggg{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;  /* 반복
+                        repeat(기본값), no-repeat, repeat-x, repeat-y
+            */
+            background-color: #ff0;
+        }
+
+        .hhh{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: repeat-x;
+            background-color: #ff0;
+        }
+        .iii{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: repeat-y;
+            background-color: #ff0;
+        }
+
+        .jjj{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            background-position: 30px 0px;  /*왼쪽 위*/
+        }
+
+        .kkk{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            background-position: bottom; /*아래 (가로는 center가 기본값)*/
+        }
+        
+        .lll{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            background-position: right center ; /*  가로 세로
+                가로 : left center right
+                
+                세로 :  top 
+                        center 
+                        bottom
+                
+            */
+        }
+
+        .mmm{
+            background: url('../fff/CDCL8013.JPG');
+            background-size: 100px; 
+            background-repeat: no-repeat;
+            background-color: #ff0;
+            background-position: center 20px;  /*가로 위px 기준 - 방향과 px 혼용가능*/
         }
 
     </style>
@@ -43,7 +122,22 @@
     </div>
     <div class="box bbb"></div>
     <div class="box ccc"></div>
+
+    <h3>크기</h3>
     <div class="box ddd"></div>
+    <div class="box eee"></div>
+    <div class="box fff"></div>
+
+    <h3>반복</h3>
+    <div class="box ggg"></div>
+    <div class="box hhh"></div>
+    <div class="box iii"></div>
+
+    <h3>위치</h3>
+    <div class="box jjj"></div>
+    <div class="box kkk"></div>
+    <div class="box lll"></div>
+    <div class="box mmm"></div>
     
 </body>
 </html>
