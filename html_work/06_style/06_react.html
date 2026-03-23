@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_react</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /*  나머지
+        body{
+            background-color: #ff0;
+        }
+        */
+
+        /* width >= 1200  데스크탑 */
+        @media screen and (min-width:1200px) {
+            body{
+                background-color: #f0f;
+            }
+
+            .rr{
+                width: 1200px; /* 8열 보임*/
+            }
+        }
+
+        /* 1200 >=width >= 540 태블릿 */
+        @media screen   and (max-width:1200px) 
+                        and (min-width:540px) {
+            body{
+                background-color: #0f0;
+            }
+            .rr{
+                width: 560px; /* 4열 보임*/
+            }
+        }
+
+         /*  540 >= width   모바일 */
+        @media screen and (max-width:540px) {
+            body{
+                background-color: #ff0;
+            }
+
+            .rr{
+                width: 280px; /* 2열 보임*/
+            }
+        }
+        .big > div{
+            width: 100px;
+            height: 100px;
+            background-color: #0ff;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            float: left;
+            margin: 20px;
+        }
+        h2{
+            clear: both;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>06_react</h1>
+    <h2>반응형 안함</h2>
+    <div class="big">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <h2>반응형 설정</h2>
+    <div class="big rr">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>
