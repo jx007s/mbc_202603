@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_sementic</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        wrapper{
+            width: 800px;
+            height: 1000px;
+            background-color: #ff0;
+            display: block;
+        }
+        header, nav, aside, section, main, figure, footer,address{
+            border: 1px solid #000;
+            margin: 20px;
+            padding: 20px;
+        }
+        aside{
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        main{
+            width: 400px;
+            height: 400px;
+            float: right;
+        }
+        footer{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>08_sementic</h1>
+    <wrapper>
+        <header>헤더입니다
+            <nav>내비게이션입니다.</nav>
+        </header>
+        <aside>측면입니다</aside>
+        <main>
+            메인입니다.
+            <article>글글글글 입니다</article>
+            <section>
+                섹션입니다.
+                <figure>
+                    <img src="../fff/AKYO5468.JPG" width="200px" alt="">
+                    <figcaption>그림설명이지롱</figcaption>
+                </figure>
+            </section>
+        </main>
+        <footer>
+            푸터입니다
+            <address>주소입니다</address>
+        </footer>
+    </wrapper>
+
+</body>
+</html>
