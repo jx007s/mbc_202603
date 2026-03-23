@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_font</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dokdo&family=Dongle&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 16px; /* 지정하지 않을 경우 기본값 : 16px */
+        }
+        .wrapper{
+            font-size: 24px;
+        }
+        p{
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            
+        }
+        p:nth-of-type(1){
+            font-family: "Dongle", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 24px; /* 크기를 지정하지 않으면 16px 이 기본값*/
+        }
+
+        p:nth-of-type(2){
+            font-size: 16px; /* 크기를 지정하지 않으면 16px 이 기본값*/
+        }
+
+        p:nth-of-type(3){
+            font-family: "Dokdo", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 24px;
+        }
+
+        p:nth-of-type(4){
+            font-family: "Iosevka Charon Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2rem; 
+            /* 1rem = html 에서 지정한 font-size 
+                기본값인 경우
+                html font-size : 16px  = 1rem
+            */
+        }
+
+        p:nth-of-type(5){
+            font-family: "Iosevka Charon Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 32px;
+        }
+
+        p:nth-of-type(6){
+            font-family: "Iosevka Charon Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 2em;
+
+            /* 1em = 부모객체 에서 지정한 font-size 
+                기본값인 경우
+                .wrapper font-size : 16px  = 1em
+            */
+        }
+
+
+        .box{
+            background-color: #ff0;
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+        .aaa{
+
+            width: 100%;
+            height: 100%;
+        }
+
+        .bbb{
+
+            width: 100vw; 
+            height: 100vh;
+
+            /* 
+                % : 부모의 크기대비
+                viewport 의 폭 100 % : 100vw
+                viewport 의 높이 100 % : 100vh
+            
+            */
+        }
+
+        .big{
+            width: 800px;
+            height: 400px;
+            background-color: #fa0;
+        }
+        
+        .ccc{
+            width: 50%;
+            height: 50%;
+        }
+
+        .ddd{
+            width: 50vw;
+            height: 50vh;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>04_font</h1>
+    <div class="wrapper">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            아기상어 뚜루루 뚜루루
+            日月火水木金土
+            1234567890
+            !@#$%^&*()
+            😊❤️🚑✨🚒🧨
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            아기상어 뚜루루 뚜루루
+            日月火水木金土
+            1234567890
+            !@#$%^&*()
+            😊❤️🚑✨🚒🧨
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            아기상어 뚜루루 뚜루루
+            日月火水木金土
+            1234567890
+            !@#$%^&*()
+            😊❤️🚑✨🚒🧨
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            아기상어 뚜루루 뚜루루
+            日月火水木金土
+            1234567890
+            !@#$%^&*()
+            😊❤️🚑✨🚒🧨
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            아기상어 뚜루루 뚜루루
+            日月火水木金土
+            1234567890
+            !@#$%^&*()
+            😊❤️🚑✨🚒🧨
+        </p>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            아기상어 뚜루루 뚜루루
+            日月火水木金土
+            1234567890
+            !@#$%^&*()
+            😊❤️🚑✨🚒🧨
+        </p>
+    </div>
+
+    <div class="box aaa">box1</div>
+    <div class="box bbb">box2</div>
+    <div class="big">
+        <div class="box ccc">box3</div>
+        <div class="box ddd">box4</div>
+    </div>
+
+</body>
+</html>
