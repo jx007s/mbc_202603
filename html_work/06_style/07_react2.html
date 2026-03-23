@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_react2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 600px;
+            height: 1000px;
+            background-color: #7cf;
+            margin: 0 auto;
+        }
+        .wrapper>div:nth-of-type(1){
+            position: relative;
+            top:20px;
+            width: 500px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: #00f;
+            color: #fff;
+        }
+
+        .wrapper>div:nth-of-type(2){
+            position: relative;
+            top:20px;
+            width: 500px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: #000;
+            color: #fff;
+        }
+
+         .wrapper>div:nth-of-type(3){
+            position: relative;
+            top:20px;
+            width: 500px;
+            height: 600px;
+            margin: 20px auto;
+            border:3px solid #fff;
+            padding:5px;
+            box-sizing: border-box;
+        }
+
+        .wrapper>div:nth-of-type(3) > div{
+            width: 100%;
+            height: 260px;
+            background-color: #ef5;
+            margin: 5px auto;
+            float: left;
+        }
+
+        .wrapper>div:nth-of-type(3) > div:last-of-type{
+            background-color: #afa;
+            
+        }
+
+        @media screen and (min-width:1000px){
+            .wrapper{
+                width: 1000px;
+                height: 700px;
+            }
+
+            .wrapper> div:nth-of-type(1){
+                margin: 20px 30px;
+            }
+            .wrapper> div:nth-of-type(2){
+                margin: 20px 30px;
+                width: 940px;
+            }
+            .wrapper> div:nth-of-type(3){
+                margin: 20px 30px;
+                width: 940px;
+                height: 300px;
+            }
+
+            .wrapper>div:nth-of-type(3) > div{
+                width: 48%;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>07_react2</h1>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>
+            <div>contents1</div>
+            <div>contents2</div>
+        </div>
+
+    </div>
+</body>
+</html>
