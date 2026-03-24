@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>03_var</h1>
+    <script>
+        //5 + 3 = x
+        x = 5 + 3
+        // x : 변수
+        // 5, 3 : 상수
+        //  + , = : 연산자
+        console.log("x : ", x)  // x 호출
+
+        var b  //  변수 선언 : var 변수명
+                // b 는 새로운 변수야
+        console.log(b)  //undefined :  초기값이 정의되지 않음
+
+        // console.log(c) 선언하지 않은 변수 호출 불가
+        // 호출 : 변수에 저장되어 있는 값을 복사하여 가지고 와서 사용
+
+        b = 20 // 변수 대입 : 대입연산자를 사용하여 우항의 값을 좌항 변수에 저장
+        console.log("b : ", b)
+
+        b = 30  //대입시 변수 기존의 값은 사라진다
+        b = 40
+        b = 50
+        console.log("b : ", b)  //호출시 호출 바로전 대입된 값이 호출
+
+        var d = 60  // 선언과 동시에 대입
+                    // 변수 선언 및 초기화 (맨 처음 대입하기)
+        console.log("d : ", d)
+
+        var e = 100, f = '아기상어', g = 123.456    //다중선언 가능
+
+        console.log("e : ", e)
+        console.log("f : ", f)
+        console.log("g : ", g)
+
+        var h = i = j = 200 // 권장하지 않음
+
+        console.log("h : ", h)
+        console.log("i : ", i)
+        console.log("j : ", j)
+
+        
+        var k = m, m = 300
+        //  k = m (?)  , 아직 l이 선언되지 않음
+        //  m = 300
+
+        console.log("k : ", k) // k :  undefined
+        console.log("m : ", m)
+
+
+        // 변수명 규칙
+        //  var var = 8     예약어 불가
+        //  var 87abc = 9   숫자로 시작불가
+        var abc87 = 10
+        console.log("abc87 : ", abc87)
+        //var + = 11        특수기호 불가  , 예외 _  $
+        var _ = 12
+        console.log("_ : ", _)
+        var $ = 13
+        console.log("$ : ", $)
+        //  var t u = 14    공백 불가
+        var abcd = 15   // 대소문자 구분
+        var aBcd = 16
+        console.log(abcd, aBcd)
+        var 국어 = 88       // 한글가능
+        console.log("국어 : ", 국어)
+
+        var aa = 19, bb = 15, cc = 10
+        var dd = aa * bb / 2 + cc
+        console.log(dd)
+
+        // 변수명은 유의미하게 정의한다
+
+        var studentnumber = 17
+        console.log(studentnumber)
+
+        var studnum = 23  // 자음 혹은 앞의 글자로 줄여서 사용
+        console.log(studnum)
+
+        var studNum = 35        //카멜표기법 - 2단어를 결합할경우 뒤의 단어 시작 글자를 대문자로 표기
+                                    // java, c, python, ....
+        console.log(studNum)
+
+        var stud_num = 42       // 스네이크표기법 - 단어연결 _ 로 표기
+                                // 대소문자 구분이 가지 않는 언어에서 사용 : HTML, DB...
+        console.log(stud_num)
+
+        const vv = 1234     // 상수 선언 : 선언과 동시에 초기화 해야함
+        console.log("vv : ", vv)
+
+        //vv = 5678     대입시 에러발생
+
+        //const yy
+
+        // 변수 : 소문자로 시작, 상수 : 모두 대문자로 작성 하는 것이 관례 임
+    </script>
+</body>
+</html>
