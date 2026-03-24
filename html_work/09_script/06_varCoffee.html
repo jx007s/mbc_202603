@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_varCoffee</title>
+    <script>
+        //커피이름, 커피가격, 수량, 금액
+        var cfName = "아메리카노";
+        var price = 2000;
+        var cnt = 3;
+        var money = price * cnt;
+
+        console.log(cfName, price, cnt, money)
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        wrapper{
+            width: 400px;
+            height: 440px;
+            display: block;
+            
+            margin: 0 auto;
+        }
+        header{
+            width: 80%;
+            padding: 20px;
+            height: 4rem;
+            line-height: 4rem;
+            font-size: 2rem;
+            margin: 20px;
+            border: 2px solid #ccc;
+        }
+        li{
+            list-style: none;
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        li>div{
+            width: 40%;
+            padding: 10px;
+            height: 2rem;
+            line-height: 2rem;
+            font-size: 1.5rem;
+            margin: 10px;
+            border: 2px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>06_varCoffee</h1>
+    <wrapper>
+        <header>영수증</header>
+        <main>
+            <ul>
+                <li><div>커피이름</div>
+                    <div><script>document.write(cfName)</script></div>
+                </li>
+            </ul>
+            <ul>
+                <li><div>커피가격</div>
+                    <div><script>document.write(price)</script></div>
+                </li>
+            </ul>
+            <ul>
+                <li><div>수량</div>
+                    <div><script>document.write(cnt)</script></div>
+                </li>
+            </ul>
+            <ul>
+                <li><div>금액</div>
+                    <div><script>document.write(money)</script></div>
+                </li>
+            </ul>
+        </main>
+
+    </wrapper>
+
+
+</body>
+</html>
