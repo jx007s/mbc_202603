@@ -1,0 +1,17 @@
+.section{
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 3px;
+}
+.box{
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: right;
+    /* color: #0f0; */
+}
+
+.now{
+    background-color: #ff0;
+}

@@ -1,0 +1,5 @@
+header, nav, aside, section, main, figure, footer,address{
+    border: 3px dashed #f00;
+    margin: 20px;
+    padding: 20px;
+}

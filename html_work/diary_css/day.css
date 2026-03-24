@@ -1,0 +1,11 @@
+.t_sun{
+    background-color: #f00;
+    color: #FFF;
+}
+.t_sat{
+    background-color: #00f;
+    color: #FFF;
+}
+.title{
+    text-align: center;
+}
