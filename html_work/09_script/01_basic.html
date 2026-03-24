@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_basic</title>
+</head>
+<body>
+    <h1>01_basic</h1>
+    document.write("나는무너") 
+    <!-- script 태그 안에서 작성해야 한다. -->
+
+    <script>    //script 구간 시작
+                // 한줄 주석
+                /*
+                    주석 구간
+                
+                */
+        document.write("나는고래")   // html 문서에 문자형태로 작성
+        // 태그나 스타일 등 유의미한 내용도 코드에 반영
+
+        document.write("<h2>나는상어</h2>")
+        /* 나는거북 직접 출력 불가 */
+            //script 구간 끝
+    </script>
+    <div>일반 div</div>
+
+    <script language="javascript">// script 구간분리 가능
+
+        document.write("나폴레옹은 '어? 이산이 아닌데?'라고 생각했다")
+        document.write("<br/>")
+        //document.write("나폴레옹은 "불이야!" 라고 외쳤다")
+        document.write('나폴레옹은 "불이야!" 라고 외쳤다')
+        document.write("<br/>")
+        document.write('나폴레옹은 \"예전 행군할때 \'어? 이산이 아닌데?\' 생각했었어!\" 라고 말했다')
+        //   특수기호 사용시 문자열로 처리할 경우 \ 를 앞에 기재
+        /*
+        
+        \"      "
+        \'      '
+        \t      TAB
+        \n      줄바꿈
+        \0      null
+
+        */
+        document.write("<br/>")
+
+        //console 에 출력
+        console.log("나는삼치") // 출력마다 줄바꿈
+        console.log(1+2+3+4)    //연산가능
+        document.write(5+6+7+8)
+        console.log("<br/>")
+        console.log("최강전사\t미니특공대\n평화를위해\t싸우는\n용감한 전사")
+    </script>
+</body>
+</html>
