@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_if</title>
+</head>
+<body>
+    <h1>01_if</h1>
+    <script>
+        /*
+
+        if(조건){
+            // 조건이 true 일때 실행
+        }
+
+        */
+        if(false){
+            document.write("if 참이지롱 1 <br/>")
+            document.write("if 참이지롱 1 <br/>")
+            document.write("if 참이지롱 1 <br/>")
+            document.write("if 참이지롱 1 <br/>")
+        }
+
+        document.write("if 종료 ---- 1 <br/>")
+
+        if(false) // {} 가 없을 경우 if 바로 다음 명령문 1개만 종속
+                    //  실행 명령문이 없으면 에러발생
+            document.write("if 참이지롱 2 <br/>")
+
+        document.write("if 참이지롱 2 <br/>")
+        document.write("if 참이지롱 2 <br/>")
+        document.write("if 참이지롱 2 <br/>")
+        
+
+        document.write("if 종료 ---- 2 <br/>")
+        if(false){
+            
+        }
+
+        document.write("if 종료 ---- 3 <br/>")
+
+        //if(false)   실행구문이 없으면 에러발생
+
+
+        if(true){
+            var aa = 10 
+            let dd = 1000   //내부변수 - 선언된 구간에서만 사용가능
+            document.write(`if 참이지롱 4 ${aa} ${dd}<br/>`)
+        }
+        //document.write(`if 종료 ---- 4  ${aa} ${dd}<br/>`) 
+        // 선언된 구간을 벗어나 dd 소멸
+        document.write(`if 종료 ---- 4  ${aa}<br/>`)
+
+        var x = false
+        if(x){
+            var bb = 20
+            document.write(`if 참이지롱 5 ${bb}<br/>`)
+        }
+        document.write(`if 종료 ---- 5  ${bb}<br/>`)
+
+
+        if(false){  //머리
+            document.write("if ~ else 참이지롱 1 <br/>")
+        }else{      //꼬리
+            document.write("if ~ else 거짓부렁 1 <br/>")
+        }
+
+        document.write("if ~ else 종료 ---- 1 <br/>")
+        /*
+        else : if 문에 종속이며 순서는 마지막임
+        else{
+            document.write("if ~ else 거짓부렁 2 <br/>")
+        }if(false){
+            document.write("if ~ else 참이지롱 2 <br/>")
+        }*/
+
+        var jum = 88
+        if(jum >= 80){
+            document.write("우수 <br/>")
+        }
+
+
+
+        if(jum >= 60){
+            document.write("양호 <br/>")
+        
+        }else{      
+            document.write("미달 <br/>")
+        }
+
+        document.write("if ~ else 종료 ---- 2 <br/>")
+
+        // else if : if 종속 필수 - if ~else if ~else 순서 변경 불가
+        jum = 37
+        if(jum >= 80){                  //머리
+            document.write("우수2 <br/>")
+        }else if(jum >= 60){            //몸통
+            document.write("양호2 <br/>")
+
+            if(jum % 2 == 0){               //중첩 if문 - 제어문 안에 제어문 가능
+                document.write("짝수 <br/>")
+            }else{
+                document.write("홀수 <br/>")
+            }
+            
+        }else if(jum >= 40){            //몸통
+            document.write("정상2 <br/>")
+        }else{                          //꼬리
+            document.write("미달2 <br/>")
+        }
+        document.write("if ~else if ~ else 종료 ---- 1 <br/>")
+        // 좁은 영역에서부터 차례대로 분기 해야 한다.
+
+        if(jum >= 80){
+            document.write("우수3 <br/>")
+        }else if(jum >= 40){
+            document.write("정상3 <br/>")
+        }else if(jum >= 60){
+            document.write("양호3 <br/>")
+        }else{      
+            document.write("미달3 <br/>")
+        }
+
+        document.write("if ~else if ~ else 종료 ---- 2 <br/>")
+
+        /*
+        if(jum >= 80){
+            document.write("우수3 <br/>")
+        }else{      
+            document.write("미달3 <br/>")
+        }else if(jum >= 40){
+            document.write("정상3 <br/>")
+        }*/
+
+
+    // if 문을 이용하여 등급2를 수우미양가 로 출력하세요
+    //// 단 등급2가 '우' 일 경우 모든 과목 점수가 80 이상이라면 '균등'을 추가로 출력해 주세요
+    
+    //ex) 국어-89, 영어-88, 수학 -87 : 우(균등)
+    //ex) 국어-89, 영어-98, 수학 -72 : 우
+    </script>
+</body>
+</html>

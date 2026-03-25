@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_exam</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 80vw;
+            height: 400px;
+            background-color: #ffa;
+            margin: 0 auto;
+        }
+        li{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            margin: 5px;
+        }
+        li > div{
+            width: 30%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+
+    <script>
+        /*
+08_exam.html
+이름 , 국어, 영어, 수학, 총점, 평균, 등급 을 출력하세요
+국어, 영어, 수학 점수를 가지고
+총점, 평균을 계산하세요
+평균의 점수를 이용하여 등급을 출력하세요
+90 점이상 : 수
+80 점이상 : 우
+70 점이상 : 미
+60 점이상 : 양
+나머지 : 가
+        
+        */
+        const pname = "정우성"
+        const kor = 87, eng = 78, mat = 91
+        var tot = kor + eng + mat
+        var avg = tot / 3
+        var grade = avg >= 90? "수":
+                    avg >= 80? "우":
+                    avg >= 70? "미":
+                    avg >= 60? "양":
+                                "가"
+    </script>
+</head>
+<body>
+    <h1>08_exam</h1>
+
+        <ul>
+            <li>
+                <div>이름</div><div><script>document.write(pname)</script></div>
+            </li>
+            <li>
+                <div>국어</div><div><script>document.write(kor)</script></div>
+            </li>
+            <li>
+                <div>영어</div><div><script>document.write(eng)</script></div>
+            </li>
+            <li>
+                <div>수학</div><div><script>document.write(mat)</script></div>
+            </li>
+            <li>
+                <div>총점</div><div><script>document.write(tot)</script></div>
+            </li>
+            <li>
+                <div>평균</div><div><script>document.write(avg)</script></div>
+            </li>
+            <li>
+                <div>등급</div><div><script>document.write(grade)</script></div>
+            </li>
+        </ul>
+
+
+</body>
+</html>
