@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_calc</title>
+</head>
+<body>
+    <h1>07_calc</h1>
+    <script>
+        document.write("<h2>1 1항 연산자</h2>")
+        
+        var x = true
+        document.write(`!${x} : ${false == !x} <br/>`)
+        x = 123
+        document.write(`-${x} : ${100 + -x } <br/>`)
+        x = x + 1
+        document.write(`${ x } <br/>`)
+        x++     // 증감연산자 ++,--
+        document.write(`${ x } <br/>`)
+        x--
+        document.write(`${ x } <br/>`)
+        //x**
+        //x//
+        //x%%
+        document.write(`${ x } <br/>`)
+        document.write(`x++ ${ x++ } <br/>`)        //후치연산
+        document.write(`x ${ x } <br/>`)
+        document.write(`++x ${ ++x } <br/>`)        //전치연산
+        document.write(`x ${ x } <br/>`)
+
+        var aa=5, bb = 6, cc = 10
+        var dd = aa++ + ++cc - bb-- * --aa + aa++
+        /*
+                    5 +   11 -  6   *   5  +  5
+
+            aa :  6                     5     6
+            cc :          11
+            bb :                5
+        
+        */
+        document.write(`${aa  } ,${bb  } ,${ cc } ,${ dd }  <br/>`)
+
+        x = 10
+        document.write(`${x  }  <br/>`)
+        var y = x++
+        document.write(`${x  }, ${y  }  <br/>`)
+
+
+        document.write("<h2>2.1 산술 연산자</h2>")
+        /*
+        항 :    숫자,boolean       문자(+만 가능)
+        결과 :  숫자                문자
+        */
+
+        var a = 15, b = 7; // 변수 다중 선언 - 1 명령문으로 2개의 변수 선언
+        document.write(a+b)
+        document.write("<br/>")
+        document.write(a-b)
+        document.write("<br/>")
+        document.write(a*b)
+        document.write("<br/>")
+        document.write(a/b)
+        document.write("<br/>")
+        document.write(a%b)
+        document.write("<br/>")
+        document.write(2**4)
+        document.write("<br/>")
+
+        a = 100; b = "장동건";  // 변수 대입 명령문 2개 :: >   ; 으로 명령 종결
+        document.write(a+b)     // 문자열결합
+        document.write("<br/>")
+        document.write(a-b)         // NaN : Not A Number 
+                                    // - 숫자가 아니어서 연산불가
+        document.write("<br/>")
+        document.write(a*b)         // NaN 
+        document.write("<br/>")
+        document.write(a/b)         // NaN 
+        document.write("<br/>")
+        document.write(a%b)         // NaN 
+        document.write("<br/>")
+
+
+        a = "장북건"; b = "장동건"; 
+        document.write(a+b)     // 문자열결합
+        document.write("<br/>")
+        document.write(a-b)         // NaN : Not A Number 
+                                    // - 숫자가 아니어서 연산불가
+        document.write("<br/>")
+        document.write(a*b)         // NaN 
+        document.write("<br/>")
+        document.write(a/b)         // NaN 
+        document.write("<br/>")
+        document.write(a%b)         // NaN 
+        document.write("<br/>")
+
+        a = false; b = true;
+        /*                      숫자로 변환시
+            true : 참       ->  1
+            false : 거짓    ->  0
+        */
+        document.write(a+b)
+        document.write("<br/>")
+        document.write(a-b)
+        document.write("<br/>")
+        document.write(a*b)
+        document.write("<br/>")
+        document.write(a/b)
+        document.write("<br/>")
+        document.write(b/a)     //  1/0     Infinity
+        document.write("<br/>")
+        document.write(a%b)
+        document.write("<br/>")
+
+        document.write(2 + 3 * 4)
+        document.write("<br/>")
+        document.write((2 + 3) * 4)
+        document.write("<br/>")
+
+        a = 15 ; b = 7;
+        document.write(a+" + "+b+" = "+ (a+b) +"<br/>")
+
+        document.write(`${a} + ${b} = ${a+b} <br/>`) //   `  백틱  :  문자열 안에 변수 입력 가능
+                                                    //   ` 블라블라 ${변수명} `
+
+
+        document.write("<h2>2.2 비교 연산자</h2>")
+        /*
+        항 :    숫자,boolean,문자
+        결과 :  boolean
+
+        실제   java      의미
+        >       >       초과
+        ≧      >=      이상        부등호와 등호 결합시 부등호가 먼저
+        ≦      <=      이하
+        <       <       미만
+        =       ==      같다
+        ≠       !=      다르다
+
+        */
+
+        a = 30; b = 20;
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        // document.write(`${a} => ${b} = ${a=>b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = true; b = false;        // 1 , 0
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        // '0' < '9' < A < Z < a < z < ㄱ < ㅎ < ㅏ < ㅣ < 가 < 힣
+        // 첫글자부터 순서로 비교
+        a = "장동건"; b = "장서건";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "가"; b = "z";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "가"; b = "ㄱ";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "z"; b = "ㄱ";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "ㅏ"; b = "ㄱ";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "z"; b = "ㅏ";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "a"; b = "100";
+        document.write(`${a} > ${b} = ${a>b} <br/>`)
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)
+        document.write(`${a} < ${b} = ${a<b} <br/>`)
+        document.write(`${a} == ${b} = ${a==b} <br/>`)
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)
+
+        a = "a"; b = 100;           // a : NaN 으로 변환하여 비교  - 숫자와 문자열 직접비교불가
+        document.write(`${a} > ${b} = ${a>b} <br/>`)    // false
+        document.write(`${a} >= ${b} = ${a>=b} <br/>`)    // false
+        document.write(`${a} <= ${b} = ${a<=b} <br/>`)    // false
+        document.write(`${a} < ${b} = ${a<b} <br/>`)    // false
+        document.write(`${a} == ${b} = ${a==b} <br/>`)    // true
+        document.write(`${a} != ${b} = ${a!=b} <br/>`)    // false
+
+        document.write(20 < 10+15)      // 연산자를 혼합하여 사용 가능
+        document.write("<br/>")
+
+
+        document.write("<h2>2.3 논리 연산자</h2>")
+        /*
+        항 :    boolean
+        결과 :  boolean
+
+                    숫자        문자열
+        true        0 제외      "" 제외 => " ", "내용내용"
+        false       0           "", ''
+
+        !   not - 1항 연산  : true -> false, false -> true
+        &&  and - 2항이 모두 true 일때 : true
+        ||  or  - 2항 중 1개라도 true 일때 : true
+
+        */
+
+        a = true; b = true;
+        document.write(`!${a} = ${!a} <br/>`)
+        document.write(`${a} && ${b} =  ${a  && b} <br/>`)
+        document.write(`${a} || ${b} =  ${a  || b} <br/>`)
+
+        a = 123; b = 0;
+        document.write(`!${a} = ${!a} <br/>`)
+        document.write(`${a} && ${b} =  ${a  && b} <br/>`)
+        document.write(`${a} || ${b} =  ${a  || b} <br/>`)
+
+        a = "아기상어"; b = "";
+        document.write(`!${a} = ${!a} <br/>`)
+        document.write(`${a} && ${b} =  ${a  && b} <br/>`)
+        document.write(`${a} || ${b} =  ${a  || b} <br/>`)
+
+        a = "아기상어"; b = 123;
+        document.write(`${a} && ${b} =  ${a  && b} <br/>`)
+        document.write(`${a} || ${b} =  ${a  || b} <br/>`)
+
+        var age = 53, color = "자주"
+
+        //var ageChk = age <= 26
+        //var colorChk = color == "파랑"
+        //document.write(`and : ${ageChk && colorChk} <br/>`)
+        //document.write(`or : ${ageChk || colorChk} <br/>`)
+        
+        document.write(`and : ${age <= 26 && color == "파랑"} <br/>`)
+        document.write(`or : ${age <= 26 || color == "파랑"} <br/>`)
+
+
+
+        document.write("<h2>2.4 복합 대입 연산자</h2>")
+        /*
+            기존 연산을 누적처리
+        */
+
+        a = 5;
+        document.write(`a : ${a} <br/>`)
+        a = a+3
+        document.write(`a=a+3 : ${a} <br/>`)
+        a+=3
+        document.write(`a+=3 : ${a} <br/>`)
+        a-=2
+        document.write(`a-=2 : ${a} <br/>`)
+        a*=4
+        document.write(`a*=4 : ${a} <br/>`)
+        a/=2
+        document.write(`a/=2 : ${a} <br/>`)
+        a%=4
+        document.write(`a%=4 : ${a} <br/>`)
+        a**=3
+        document.write(`a**=3 : ${a} <br/>`)
+
+
+        
+        
+        document.write("<h2>2.5 비트 연산자</h2>")
+        /*
+            항 :    숫자
+            결과 :  숫자
+
+            5 : 0101(2)
+
+                10 -> 2
+                5
+                2  --- 1
+                1  --- 0
+
+                2 -> 10
+                0    1   0   1
+                2^3 2^2 2^1 2^0
+                0  +  4 +  0 + 1
+
+            0 : false, 1 : true    
+            5 : 0101(2)
+            6 : 0110(2)
+        -----------------
+        &(and)  0100    -- 4
+        |(or)   0111    -- 7
+        ^(Xor)  0011    -- 3
+        Xor : 두항이 다르면 true
+
+        */
+
+        a = 5;  b = 6;
+        document.write(`a & b : ${a & b} <br/>`)
+        document.write(`a | b : ${a | b} <br/>`)
+        document.write(`a ^ b : ${a ^ b} <br/>`)
+
+
+        document.write("<h2>2.6 시프트 연산자</h2>")
+        /*
+            항 :    숫자
+            결과 :  숫자
+
+            6 : 0110
+
+            6 >> 2
+    2개추가  00 0110
+    2개삭제  00 01 10
+                  -- 삭제
+            0001  : 1
+
+            6 << 2
+    2개추가  0110 00 : 24
+
+
+
+            0000 0000   0       0   0000 0000 0000 0000
+            0000 0001   1       1   0000 0000 0000 0001
+            0000 0010   2       2   0000 0000 0000 0010
+            0000 0011   3       3   0000 0000 0000 0011
+                        ......
+            0111 1110   126     126 0000 0000 0111 1110   
+            0111 1111   127     127 0000 0000 0111 1111
+            1000 0000   -128    128 0000 0000 1000 0000
+            1000 0001   -127    129 0000 0000 1000 0001
+            1111 1101   -3      253 0000 0000 1111 1101
+            1111 1110   -2      254 0000 0000 1111 1110
+            1111 1111   -1      255 0000 0000 1111 1111
+          1 0000 0000   0       256 0000 0001 0000 0000
+            
+
+            -6
+                1111 1010
+            -6 >> 2  (자리수에 맞추어 추가 : 양수 0, 음수 1)
+    2개추가   11 1111 1010
+    2개제거   11 1111 10  10
+             1111 1110 
+
+
+            
+    
+        */
+
+        document.write(`6 >> 2 : ${6 >> 2} <br/>`)
+        document.write(`6 << 2 : ${6 << 2} <br/>`)
+        document.write(`-6 >> 2 : ${-6 >> 2} <br/>`)
+
+        /*
+        연산자 우선순위
+        ()
+        - !
+        * / % **
+        + - 
+        <  <=  >=  >  ==  !=
+        &&  ||
+        = += -= *= /= %= **=
+        */
+    </script>
+</body>
+</html>
