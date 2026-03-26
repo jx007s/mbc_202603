@@ -47,7 +47,7 @@
         
         */
         const pname = "정우성"
-        const kor = 87, eng = 78, mat = 91
+        const kor = 87, eng = 78, mat = 81
         var tot = kor + eng + mat
         var avg = tot / 3
         var grade = avg >= 90? "수":
@@ -55,6 +55,22 @@
                     avg >= 70? "미":
                     avg >= 60? "양":
                                 "가"
+
+        var grade2
+        if(avg >=90){
+            grade2 = "수"
+        }else if(avg >=80){
+            grade2 = "우"
+            if(kor>=80 && eng>=80 && mat>=80){
+                grade2 += "(등급)"
+            }
+        }else if(avg >=70){
+            grade2 = "미"
+        }else if(avg >=60){
+            grade2 = "양"
+        }else{
+            grade2 = "가"
+        }
     </script>
 </head>
 <body>
@@ -81,6 +97,9 @@
             </li>
             <li>
                 <div>등급</div><div><script>document.write(grade)</script></div>
+            </li>
+            <li>
+                <div>등급2</div><div><script>document.write(grade2)</script></div>
             </li>
         </ul>
 

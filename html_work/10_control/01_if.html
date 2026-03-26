@@ -112,15 +112,17 @@
         document.write("if ~else if ~ else 종료 ---- 1 <br/>")
         // 좁은 영역에서부터 차례대로 분기 해야 한다.
 
+        var res2 
         if(jum >= 80){
-            document.write("우수3 <br/>")
+            res2 = "우수3"
         }else if(jum >= 40){
-            document.write("정상3 <br/>")
+            res2 = "정상3"
         }else if(jum >= 60){
-            document.write("양호3 <br/>")
+            res2 = "양호3"
         }else{      
-            document.write("미달3 <br/>")
+            res2 = "미달3"
         }
+        document.write(`${res2} <br/>`)
 
         document.write("if ~else if ~ else 종료 ---- 2 <br/>")
 
