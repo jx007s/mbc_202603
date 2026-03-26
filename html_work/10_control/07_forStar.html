@@ -8,13 +8,70 @@
 <body>
     <h1>07_forStar</h1>
     <script>
-        for(let line = 0 ; line < 5 ; line++){
+        let cnt = 5
+        document.write(`<h3>1번</h3>`)
+        for(let line = 0 ; line < cnt ; line++){
             for (let star = 0; star <= line; star++) {
                                 //star <= line : 반복횟수 동적처리
                 
                 document.write(`*`)    
             }
-            document.write(`${line}<br/>`)
+            document.write(`<br/>`)
+        }
+
+        document.write(`<h3>2번</h3>`)
+        for(let line = 0 ; line < cnt ; line++){
+            for (let star = line; star < cnt; star++) {
+                document.write(`*`)    
+            }
+            document.write(`<br/>`)
+        }
+
+        document.write(`<h3>3번</h3>`)
+        for(let line = 0 ; line < cnt ; line++){
+            for (let star = line; star < cnt-1; star++) {
+                document.write(`&nbsp;&nbsp;`)    
+            }
+            for (let star = 0; star <= line; star++) {
+                document.write(`*`)    
+            }
+            document.write(`<br/>`)
+        }
+
+        document.write(`<h3>4번</h3>`)
+        for(let line = 0 ; line < cnt ; line++){
+            
+            for (let star = 0; star < line; star++) {
+                document.write(`&nbsp;&nbsp;`)    
+            }
+            for (let star = line; star < cnt; star++) {
+                document.write(`*`)    
+            }
+            document.write(`<br/>`)
+        }
+
+
+        document.write(`<h3>5번</h3>`)
+        for(let line = 0 ; line < cnt ; line++){
+            for (let star = line; star < cnt-1; star++) {
+                document.write(`&nbsp;&nbsp;`)    
+            }
+            for (let star = 0; star <= line*2; star++) {
+                document.write(`*`)    
+            }
+            document.write(`<br/>`)
+        }
+
+        document.write(`<h3>6번</h3>`)
+        for(let line = 0 ; line < cnt ; line++){
+            
+            for (let star = 0; star < line; star++) {
+                document.write(`&nbsp;&nbsp;`)    
+            }
+            for (let star = cnt*2; star >line*2+1; star--) {
+                document.write(`*`)    
+            }
+            document.write(`<br/>`)
         }
 /*
 1번
@@ -36,10 +93,10 @@
 
 3번
 
-    *
-   **
-  ***
- ****
+&&&&*
+&&&**
+&&***
+&****
 *****
 
 4번
@@ -51,7 +108,7 @@
      *
 
 
-5번
+cnt번
 
       *
      ***
