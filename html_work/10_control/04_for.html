@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_for</title>
+</head>
+<body>
+    <h1>04_for</h1>
+    <script>
+        // 1 -> 5 합
+        var tot = 0
+        //tot += 1 + 2+ 3 + 4 + 5
+        tot += 1
+        tot += 2
+        tot += 3
+        tot += 4
+        tot += 5
+        document.write(tot)
+
+        document.write("<hr/>")
+        var tot2 = 0
+        for (let i = 1; i <= 5; i++) {
+            //  초기값 ; 조건   ; 증감
+            tot2 += i
+            document.write(`${i} , ${tot2}<br/>`)
+        }
+        document.write("<hr/>")
+        document.write(tot2)
+        document.write("<hr/>")
+
+        for (let i = 20; i <= 40; i+=3) {
+            
+            document.write(`${i} <br/>`)
+        }
+        document.write("<hr/>")
+        // 1->100 짝수들의 합
+
+        tot = 0
+        for(let i = 1 ; i<=100; i++){
+            if(!(i%2)){
+                tot += i
+                document.write(`${i} : ${tot}<br/>`)    
+            }  
+        }
+        document.write(`결과 1 : ${tot}<br/>`)
+
+        tot = 0
+        for(let i = 0 ; i<=100; i+=2){
+            tot += i
+            document.write(`${i} : ${tot}<br/>`)    
+        }
+        document.write(`결과 2 : ${tot}<br/>`)
+
+        tot = 0
+        for(let i = 1 ; i<=100; i+=2){
+            i += i % 2
+            tot += i
+            document.write(`${i} : ${tot}<br/>`)    
+        }
+        document.write(`결과 3 : ${tot}<br/>`)
+
+
+    </script>
+</body>
+</html>

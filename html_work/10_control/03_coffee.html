@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_coffee</title>
+</head>
+<body>
+    <h1>03_coffee</h1>
+    <script>
+    /*
+        03_coffee.html
+        커피를 주문받아 처리하세요
+        메뉴, 가격, 수량
+        아메리카노 : 2000
+        아시아노   : 3000
+        아프리카노 : 4000
+    */
+        const menu = "아프리카노"
+        const cnt = 3
+        let price
+
+        switch(menu){
+            case "아메리카노":
+                price = 2000
+                break
+            case "아시아노":
+                price = 3000
+                break
+            case "아프리카노":
+                price = 4000
+                break
+        }
+    </script>
+    <style>
+        section{
+            width: 600px;
+            height: 500px;
+            background-color: #ffa;
+        }
+        section > div{
+            width: 80%;
+            height: 40px;
+            padding: 5px;
+            /* border: 1px solid #ccc; */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            margin: 0 auto;
+        }
+        section > div > div{
+            border: 2px solid #888;
+        }
+    </style>
+
+    <section>
+        <div>
+            <div>메뉴</div><div><script>document.write(menu)</script></div>
+        </div>
+        <div>
+            <div>가격</div><div><script>document.write(price)</script></div>
+        </div>
+        <div>
+            <div>수량</div><div><script>document.write(cnt)</script></div>
+        </div>
+        <div>
+            <div>금액</div><div><script>document.write(price*cnt)</script></div>
+        </div>
+    </section>
+</body>
+</html>
