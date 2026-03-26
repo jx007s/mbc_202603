@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>06_forfor</title>
+    <style>
+        wrapper{
+            display: block;
+        }
+        main{
+            width: 1200px;
+            clear: both;
+        }
+        section{
+            background-color: #ffa;
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #888;
+            float: left;
+        }
+    </style>
 </head>
 <body>
     <h1>06_forfor</h1>
@@ -17,6 +33,26 @@
 
             //document.write(`<h3>${h} : ${m}</h3>`)
         }
+
+        document.write(`<wrapper>`)
+        for (let big = 1; big < 10; big+=3) {
+            //document.write(`big - ${big} <br/>`)
+            document.write(`<main>`)
+            for (let dan = big; dan < big+3; dan++) { 
+                //document.write(`dan - ${dan} , `)   
+                document.write(`<section><h3>${dan}단</h3>`)
+
+                for (let gob = 1; gob < 10; gob++) {
+                     document.write(`<div>${dan} x ${gob} = ${dan * gob}</div>`)   
+                }
+
+                document.write(`</section>`)
+            }
+            //document.write(`<br/>`)
+            document.write(`</main>`)
+        }
+        document.write(`</wrapper>`)
+        
     </script>
 </body>
 </html>
