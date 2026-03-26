@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_forStar</title>
+</head>
+<body>
+    <h1>07_forStar</h1>
+    <script>
+        for(let line = 0 ; line < 5 ; line++){
+            for (let star = 0; star <= line; star++) {
+                                //star <= line : 반복횟수 동적처리
+                
+                document.write(`*`)    
+            }
+            document.write(`${line}<br/>`)
+        }
+/*
+1번
+
+*
+**
+***
+****
+*****
+
+
+2번
+
+  *****
+  ****
+  ***
+  **
+  *
+
+3번
+
+    *
+   **
+  ***
+ ****
+*****
+
+4번
+
+ *****
+  ****
+   ***
+    **
+     *
+
+
+5번
+
+      *
+     ***
+    *****
+   *******
+  *********
+
+6번
+
+  *********
+   *******
+    *****
+     ***
+      *
+
+*/
+
+
+    </script>
+</body>
+</html>
