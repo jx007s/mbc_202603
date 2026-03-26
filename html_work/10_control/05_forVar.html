@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_forVar</title>
+</head>
+<body>
+    <h1>05_forVar</h1>
+    <script>
+        /*
+        for(;;){
+            document.write('무한반복이여')
+        }
+        
+        for(let i = 0; i<5;){
+            document.write('무한반복이여')
+        }
+
+        for(let i = 0; ; i++){
+            document.write('무한반복이여')
+        }*/
+
+        let b = 20
+        //let b = 30    let 중첩선언 불가
+
+        const c = 40
+        //const c = 50 const 중첩선언 불가
+
+        var d = 60
+        var d = 70     //중첩선언 가능
+
+        for(let i = 10; i <=30; i+=10){
+            let a = 100      // 반복문 내 지역변수 - 1회 반복마다 소멸 및 선언
+            a+=2
+            var e = 1000    // 반복마다 선언됨
+            e+=2            // 누적증가하지 않음
+            document.write(`${i} , ${a}, ${e}<br/>`)
+        }
+        
+        //document.write(`${a}<br/>`)   내부 지역변수 호출 불가
+        //document.write(`${i}<br/>`)   반복 변수 호출 불가
+        document.write(`반복문 종료 1 : ${e}<br/>`)   // var 가 전역이므로 호출 가능
+        document.write(`<hr/>`)
+
+
+        // 반복변수를 var(전역) 으로 선언
+        for(var j = 10; j <=30; j+=10){
+            
+            document.write(`${j} <br/>`)
+        }
+        
+        document.write(`반복문 종료 2 : ${j}<br/>`) // var 호출 가능  
+        document.write(`<hr/>`)
+
+        let k = 10
+        let m = 100
+        for(; k <=30; k+=10){ // 외부에서 선언된 지역변수 k 반복변수로 사용
+            
+            m += 1          //외부 변수 증가
+            document.write(`${k}, ${m} <br/>`)
+        }
+        
+        document.write(`반복문 종료 3 : ${k}, ${m}<br/>`) // var 호출 가능  
+        document.write(`<hr/>`)
+
+    </script>
+</body>
+</html>
