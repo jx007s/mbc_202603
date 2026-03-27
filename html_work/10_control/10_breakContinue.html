@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_breakContinue</title>
+</head>
+<body>
+    <h1>10_breakContinue</h1>
+    <script>
+        for (let i = 0; i < 10; i++) {
+            document.write(`for 시작 ${i} <br/>`)
+            if(i==4){
+                break       // 제어문 탈출 -- 구간 중간에 탈출 가능
+            }
+            document.write(`for 끝 ${i} <br/>`)
+        }
+
+        document.write(`break 종료 ------------ <br/>`)
+
+        for (let i = 0; i < 10; i++) {
+            document.write(`for 시작 ${i} <br/>`)
+            if(i==4){
+                continue       // 이하 구문을 실행하지 않고 반복문 상위로 이동
+            }
+            document.write(`for 끝 ${i} <br/>`)
+        }
+
+        document.write(`continue 종료 ------------ <br/>`)
+
+        for (let i = 0; i < 10; i++) {
+            document.write(`for 시작 ${i} <br/>`)
+            if(i!=4){
+                document.write(`for 끝 ${i} <br/>`)
+            }    
+        }
+
+        document.write(`if 종료 ------------ <br/>`)
+    </script>
+</body>
+</html>

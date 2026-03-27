@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_while</title>
+</head>
+<body>
+    <h1>08_while</h1>
+    <script>
+        // 초기값과 증감을 개발자가 임의로 처리해야 함
+
+
+        let i = 0           // 초기값
+        while(i < 10){      //조건
+            document.write(`while 이지롱 ${i}<br/>`)
+            i++             //증감
+        }
+        document.write(`while 종료 ------ 1 <br/>`)
+
+        //alert("난 경고창이야")
+
+        //let aa = confirm("때릴꼬야?") // 확인,취소 창
+                        // 리턴 : 확인 - true/ 취소 - false
+        //document.write(`aa : ${aa}`)
+
+        //let bb = prompt("라면먹고갈래?")    // 입력된 문자열을 리턴
+       // document.write(`bb : ${bb} <br/>`)
+
+        let ttt = ""
+        while(ttt!="x"){      // 불규칙한 반복형태
+            ttt = prompt("글자입력")    // x 입력시 종료
+            document.write(`ttt : ${ttt} <br/>`)
+        }
+        document.write(`while 종료 ------ 2 <br/>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_whileSum</title>
+</head>
+<body>
+    <h1>09_whileSum</h1>
+
+    <script>
+        //let aa = "1234"
+
+        // 문자열 결합
+        //document.write(`${aa+100} <br/>`)
+
+        // eval(문자열) : 문자열 -> 수식
+        // let bb = eval(aa)
+        // document.write(`${bb+100} <br/>`)
+
+        // let ttt = "0"
+        // let tot = 0
+
+        /*
+        while(ttt!="x"){
+            let cc = eval(ttt)
+            tot += cc
+            ttt = prompt("숫자입력(x 입력시 종료)")
+            document.write(`${ttt} <br/>`)    
+        }
+        document.write(`tot : ${tot} <br/>`)
+        */
+
+
+        let ttt
+        let tot = 0
+
+        while(true){
+            ttt = prompt("숫자입력(x 입력시 종료)")
+            document.write(`${ttt} <br/>`) 
+            if(ttt=="x"){
+                break
+            }
+            tot += eval(ttt)
+        }
+        document.write(`tot : ${tot} <br/>`)
+    </script>
+</body>
+</html>
+
+<!--
+11_multiple.html
+
+////// 숫자들을 입력받아 결과를 출력하세요
+
+2의 배수 : 합
+3의 배수 : 곱
+나머지 수는 연산 안함
+
+x 입력시 종료 및 결과 출력
+
+4
+9
+6
+7
+5
+15
+8
+2
+
+2의 배수: 20
+3의 배수:810
+
+-->
