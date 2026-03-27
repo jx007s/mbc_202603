@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_sort2</title>
+</head>
+<body>
+    <h1>05_sort2</h1>
+    <script>
+        const data = [78,91,46,83,50,23,53,67,88,52,72,92,44]
+        let arr = new Array()
+        let now = 0
+        for (const dd of data) {
+            if(dd >= 70){
+                arr[now++] = dd  
+            }
+        }
+        
+
+        for (const me in arr) {
+            for (let you = eval(me)+1; you < arr.length; you++) {
+                
+                if(arr[me] > arr[you]){
+                    buf = arr[me]
+                    arr[me] = arr[you]
+                    arr[you] = buf
+                }
+            }
+            
+        }
+        document.write(`arr : ${arr} <br/>`)
+    </script>
+</body>
+</html>
