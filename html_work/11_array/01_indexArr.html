@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_indexArr</title>
+</head>
+<body>
+    <h1>01_indexArr</h1>
+    <script>
+        let aa = 10 // 변수 선언
+        // 배열 변수 선언 및 생성
+        // 배열명 = [원소0, 원소1, 원소2,...]
+        let arr1 = [44,33,66,22,11,44,99,33,44,77]
+        // 인덱스    0   1  2  3  4  5  6  7  8  9
+
+        document.write(`aa : ${aa} <br/>`)
+        document.write(`arr1 : ${arr1} <br/>`)
+
+        document.write(`arr1[0] : ${arr1[0]} <br/>`) //배열 원소 호출
+            // 배열명[인덱스]
+
+        document.write(`arr1[10] : ${arr1[10]} <br/>`) // 존재하지 않는 원소 호출 :  undefined
+
+        arr1[0] = 4567      //원소 대입
+        document.write(`arr1 : ${arr1} <br/>`)
+        
+        arr1[12] = 876      // 존재하지 않는 원소번호 : 추가 (추가되는 번호까지 비어있는 원소(undefined)로 처리)
+        document.write(`arr1 : ${arr1} <br/>`)
+
+        delete arr1[2]  //삭제
+        document.write(`arr1 : ${arr1} <br/>`)
+        document.write(`arr1[2] : ${arr1[2]} <br/>`) //undefined
+
+        let arr2 = ["현빈","원빈","투빈","김우빈","강다빈"]
+        document.write(`arr2 : ${arr2} <br/>`)
+        document.write(`arr2[0] : ${arr2[0]} <br/>`)
+        document.write(`arr2[1] : ${arr2[1]} <br/>`)
+        document.write(`arr2[2] : ${arr2[2]} <br/>`)
+        document.write(`arr2[3] : ${arr2[3]} <br/>`)
+        document.write(`arr2[4] : ${arr2[4]} <br/>`)
+        document.write(`arr2.length : ${arr2.length} <br/>`) //원소갯수
+        for (let i = 0; i < arr2.length; i++) {
+            document.write(`arr2[${i}] : ${arr2[i]} <br/>`)
+        }
+        document.write(`<hr/>`)
+        for (let i in arr2) {  // 개선된 for문   for(인덱스번호 in 배열명){}
+            document.write(`arr2[${i}] : ${arr2[i]} <br/>`)
+        }
+
+        document.write(`<hr/>`)
+        for (let e of arr2) {  // 개선된 for문   for(원소 of 배열명){}
+                                // 인덱스번호를 알수 없음
+            document.write(`${e} <br/>`)
+        }
+
+    </script>
+</body>
+</html>
