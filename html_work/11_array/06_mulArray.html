@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06_mulArray</title>
+    
+</head>
+<body>
+    <h1>06_mulArray</h1>
+    <script>
+        let arr = [                                  //1차원
+            ["0_0",     "0_1",  "0_2",      "0_3"],  //arr[0]
+            ["1_0",     "1_1",  "1_2",      "1_3"],  //arr[1]
+            ["2_0",     "2_1",  "2_2",      "2_3"]   //arr[2]
+//2차원     arr[?][0],arr[?][1],arr[?][2],arr[?][3]
+        ]
+
+        document.write(`arr : ${arr} => ${arr.length}<br/>`)
+        document.write(`1차원 <br/>`)
+        document.write(`arr[0] : ${arr[0]} =>  ${arr[0].length}<br/>`)
+        document.write(`arr[1] : ${arr[1]} =>  ${arr[1].length} <br/>`)
+        document.write(`arr[2] : ${arr[2]} =>  ${arr[2].length} <br/>`)
+
+        document.write(`2차원 <br/>`)
+        document.write(`arr[0][0] : ${arr[0][0]} <br/>`)
+        document.write(`arr[1][2] : ${arr[1][2]} <br/>`)
+
+        let studs = [
+            ["한가인",72,77,78],
+            ["두가인",52,57,58],
+            ["세가인",92,97,98],
+            ["네가인",62,67,68],
+            ["오가인",82,87,88]
+        ]
+
+
+
+
+
+    </script>
+
+    <table border="">
+        <tr>
+            <td>이름</td>
+            <td>국어</td>
+            <td>영어</td>
+            <td>수학</td>
+            <td>총점</td>
+            <td>평균</td>
+        </tr>
+        <script>
+            for (const st of studs) {// st : 각 학생 정보
+                let ttt = `<tr>`
+                    for (const e of st) {   // e : 한 학생의 각 정보
+                        ttt += `<td>${e}</td>`
+                    }
+                    
+                    ttt += `</tr>`
+
+                document.write(ttt)
+            }
+
+        </script>
+
+    </table>
+</body>
+</html>
