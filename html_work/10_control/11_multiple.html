@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_multiple</title>
+</head>
+<body>
+    <h1>11_multiple</h1>
+    <script>
+        let ttt
+        let two = 0, three = 1
+
+        while(true){
+            ttt = prompt("숫자입력(x 입력시 종료)")
+            document.write(`${ttt} <br/>`) 
+            if(ttt=="x"){
+                break
+            }
+            const num = eval(ttt)
+            if(num%2==0){
+                two += num
+            }
+
+            if(num%3==0){
+                three *= num
+            }
+            
+        }
+        document.write(`2의 배수 : ${two} <br/>`)
+        document.write(`3의 배수 : ${three} <br/>`)
+    </script>
+</body>
+</html>
