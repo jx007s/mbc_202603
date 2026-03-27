@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_singleExam</title>
+</head>
+<body>
+    <h1>03_singleExam</h1>
+    <script>
+        /*
+        현빈            78
+        원빈            68
+        젤리빈          58
+        미스터빈        48
+        장희빈          88
+        텅빈            38
+        레오나르도다빈    98
+        커피빈           87
+    
+        합계    ?
+        평균    ?
+        */
+
+        // 1. 입력부
+        const pname = [
+            "현빈",
+            "원빈",
+            "젤리빈",
+            "미스터빈",
+            "장희빈",
+            "텅빈",
+            "레오나르도다빈",
+            "커피빈"
+        ]
+        const jum = [ 78, 68, 58, 48, 88, 38,98,87]
+
+        //2. 연산부
+        let tot = 0
+        for (const j of jum) {
+            tot += j
+        }
+        let avg = tot/jum.length
+    </script>
+
+    <table border="">
+        <script>
+            //3. 출력부
+            for (const i in pname) {
+                let ttt = `<tr><td>${pname[i]}</td><td>${jum[i]}</td></tr>`
+
+                document.write(ttt)
+            }
+            document.write(`<tr><td>합계</td><td>${tot}</td></tr>`)
+            document.write(`<tr><td>평균</td><td>${avg}</td></tr>`)
+        </script>
+        
+    </table>
+
+
+</body>
+</html>
