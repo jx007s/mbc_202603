@@ -30,12 +30,26 @@
             document.write(`${me} : ${arr[me]} <br/>`)
 
             for (let you = eval(me)+1; you < arr.length; you++) {
-                document.write(`${arr[you]} , `)    
+                //document.write(`${arr[you]} , `)    
+                if(arr[me] < arr[you]){
+                    buf = arr[me]
+                    arr[me] = arr[you]
+                    arr[you] = buf
+                }
             }
             document.write(`<br/>`)
         }
 
         document.write(`정렬후 : ${arr} <br/>`)
+
+        /*
+        78,91,46,83,50,23,53,67,88,52,72,92,44
+
+        05_sort2.html
+        // 70점 이상 합격한 점수들을 오름차순으로 정렬하여 출력하세요
+        
+        */
+
     </script>
 </body>
 </html>
