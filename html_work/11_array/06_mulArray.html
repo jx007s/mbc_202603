@@ -26,6 +26,7 @@
         document.write(`arr[0][0] : ${arr[0][0]} <br/>`)
         document.write(`arr[1][2] : ${arr[1][2]} <br/>`)
 
+        //1. 입력부
         let studs = [
             ["한가인",72,77,78],
             ["두가인",52,57,58],
@@ -34,9 +35,35 @@
             ["오가인",82,87,88]
         ]
 
+        let res = [
+        //     [0,0],   연산부에서 각 학생의 점수계산 하여 입력하므로 초기화 필요없음
+        //     [150, 50],
+        //     [270, 90],
+        //     [180, 60],
+        //     [240, 80]
+        ]
 
 
 
+        // 2. 연산부 - 합계, 평균
+        //      res[?][0], res[?][1]
+        
+
+        // studs[0][0] : 이름 - 과목점수 합계 연산에서 제외해야 함
+        //   i = 1 부터 시작
+        //let p = 1
+        // p : 학생번호
+        for (let p = 0; p < studs.length; p++) {
+            let tot = 0 //각 학생마다 총점을 초기화
+            for (let i = 1; i < studs[p].length; i++) {
+                tot += studs[p][i]
+                //  studs[0][1]+studs[0][2]+studs[0][3]
+            }
+            let avg = tot/(studs[p].length-1) 
+            // (studs[0].length-1) 배열 갯수에서 이름 제외 
+            
+            res[p] = [tot, avg] //각 학생점수계산배열에 대입
+        }
 
     </script>
 
@@ -48,15 +75,35 @@
             <td>수학</td>
             <td>총점</td>
             <td>평균</td>
+            <td>등급</td>
         </tr>
         <script>
-            for (const st of studs) {// st : 각 학생 정보
+
+            // 3. 출력부
+            for (let i = 0; i<studs.length; i++) {
+                // i : 각 학생의 번호 : 0,1,2,3,4
+                const st = studs[i]   // st : 각 학생 정보
+                // i : 0 , studs[i] : ["한가인",72,77,78]
+                // st  :  ["한가인",72,77,78]
                 let ttt = `<tr>`
-                    for (const e of st) {   // e : 한 학생의 각 정보
-                        ttt += `<td>${e}</td>`
-                    }
+                for (const e of st) {   // e : 한 학생의 각 정보
+                            // st :  ["한가인",72,77,78]
+                //   e : "한가인"            
+                //   e: 72
+                //   e: 77
+                //   e: 78
+                    ttt += `<td>${e}</td>`
+                }
+                const rr = res[i]       //각 학생의 계산 정보
+                //    rr = res[i]:[210, 70]
+                for (const r of rr) {   // e : 한 학생의 각 계산 정보
+                    //          rr:[210, 70]
+                    // r : 210
+                    // r : 70
+                    ttt += `<td>${r}</td>`
+                }
                     
-                    ttt += `</tr>`
+                ttt += `</tr>`
 
                 document.write(ttt)
             }
