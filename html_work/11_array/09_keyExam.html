@@ -38,6 +38,97 @@
         }
 
         console.log(st)
+
+        //1. 입력부
+        let studs = [
+            {name:"한가인",jum:[72,77,78]},
+            {name:"두가인",jum:[52,57,58]},
+            {name:"세가인",jum:[92,97,98]},
+            {name:"네가인",jum:[62,67,68]},
+            {name:"오가인",jum:[82,87,88]}
+        ]
+
+        //2. 연산부
+        for (let mem of studs) {
+            mem.tot = 0
+            for(const j of mem.jum){
+                mem.tot += j
+            }
+            mem.avg = mem.tot / mem.jum.length
+
+            if(mem.avg >= 90){
+                mem.grade = "수"
+            }else if(mem.avg >= 80){
+                mem.grade = "우"
+            }else if(mem.avg >= 70){
+                mem.grade = "미"
+            }else if(mem.avg >= 60){
+                mem.grade = "양"
+            }else{
+                mem.grade = "가"
+            }
+        }
+
+        //3. 출력부
     </script>
+
+        <table border="">
+            <tr>
+                <script>
+                    for (const ee of ["이름","국어","영어","수학","총점","평균","등급"]) {
+                        document.write(`<td>${ee}</td>`)
+                    }
+
+                    for (const st of studs) {
+                        let ttt = "<tr>"
+                        ttt+= `<td>${st.name}</td>`
+
+                        for (const j of st.jum) {
+                            ttt += `<td>${j}</td>`
+                        }
+                        for (const ee of ["tot","avg","grade"]) {
+                            ttt+= `<td>${st[ee]}</td>`
+                        }
+                        /*
+                        for (const k in st) {
+                            //console.log(k, st[k])
+                            if(k!="jum"){ //점수가 아닐때
+                                ttt += `<td>${st[k]}</td>`
+                            }else{//점수일때
+                                for (const j of st[k]) {
+                                    ttt += `<td>${j}</td>`
+                                }
+                            }    
+                        }*/
+                        ttt += "</tr>"
+                        document.write(ttt)
+                    }
+                </script>
+                
+            </tr>
+        </table>
 </body>
 </html>
+
+<!--
+10_keyPlayer.html
+선수들의 최고 기록을 키배열로 저장하세요
+player = [
+            {'name':'정우성','jum':67},
+            {'name':'김태희','jum':76},
+            {'name':'손지창','jum':91},
+            {'name':'김무경','jum':65},
+            {'name':'김성욱','jum':91},
+            {'name':'정우성','jum':87},
+            {'name':'김태희','jum':86},
+            {'name':'손지창','jum':71},
+            {'name':'김무경','jum':85},
+            {'name':'김성욱','jum':71},
+            {'name':'정우성','jum':77},
+            {'name':'김태희','jum':96},
+            {'name':'손지창','jum':61},
+            {'name':'김무경','jum':95},
+            {'name':'김성욱','jum':81}
+        ]
+
+-->
