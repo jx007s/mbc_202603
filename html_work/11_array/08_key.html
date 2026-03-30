@@ -8,7 +8,26 @@
 <body>
     <h1>08_key</h1>
     <script>
+        let arr1 = [11,22,33,44]
+        //let arr2 = {11,22,33,44}  인덱스배열이 아님
+
+        let arr3 = {
+            "사자":"포유류", "사자":"포유류",
+            곰:"포유류" , 독수리:"조류", 악어:"파충류",
+            오타니:"이도류", 사자:"팔자"
+        }
         
+        //키배열 생성
+        //{key1:value1, key2:value2, key3:value3, ... }
+        // 키 : "" 하지 않아도 가능
+        // 키는 중복 되지 않음
+        // 키를 중복하여 원소 입력시 마지막 값으로 대입 --> 사자:"팔자"
+
+        document.write(`arr1 : ${arr1} <br/>`)
+        document.write(`arr3 : ${arr3} <br/>`) // [object Object] 로 출력
+
+        console.log(arr1)
+        console.log(arr3)
     </script>
 </body>
 </html>

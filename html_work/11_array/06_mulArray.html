@@ -54,15 +54,35 @@
         //let p = 1
         // p : 학생번호
         for (let p = 0; p < studs.length; p++) {
-            let tot = 0 //각 학생마다 총점을 초기화
+            //let tot = 0 //각 학생마다 총점을 초기화
+            res[p] = []
+            res[p][0] = 0
             for (let i = 1; i < studs[p].length; i++) {
-                tot += studs[p][i]
+                //tot += studs[p][i]
+                res[p][0] += studs[p][i]
                 //  studs[0][1]+studs[0][2]+studs[0][3]
             }
-            let avg = tot/(studs[p].length-1) 
+            //let avg = tot/(studs[p].length-1) 
+            res[p][1] = res[p][0] /(studs[p].length-1) 
             // (studs[0].length-1) 배열 갯수에서 이름 제외 
             
-            res[p] = [tot, avg] //각 학생점수계산배열에 대입
+            //let grade = "수"
+            // res[p][2] = "수"
+            // //res[p] = [tot, avg, grade] //각 학생점수계산배열에 대입
+
+            // if(res[p][1] >= 90){
+            //     res[p][2] = "수"
+            // }else if(res[p][1] >= 80){
+            //     res[p][2] = "우"
+            // }else if(res[p][1] >= 70){
+            //     res[p][2] = "미"
+            // }else if(res[p][1] >= 60){
+            //     res[p][2] = "양"
+            // }else{
+            //     res[p][2] = "가"
+            // }
+            const gTitle = ["가","가","가","가","가","가","양","미","우","수","수"]
+            res[p][2] = gTitle[(res[p][0]-res[p][0]%30)/30]
         }
 
     </script>
