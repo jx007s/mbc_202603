@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_keyPlayer</title>
+</head>
+<body>
+    <h1>10_keyPlayer</h1>
+    <script>
+        const player = [
+            {'name':'정우성','jum':67},
+            {'name':'김태희','jum':76},
+            {'name':'정우성','jum':87},
+            {'name':'김태희','jum':86},
+            {'name':'손지창','jum':91},
+            {'name':'손지창','jum':71},
+            {'name':'김무경','jum':85},
+            {'name':'김성욱','jum':71},
+            {'name':'정우성','jum':77},
+            {'name':'김태희','jum':96},
+            {'name':'김무경','jum':65},
+            {'name':'김성욱','jum':91},
+            {'name':'손지창','jum':61},
+            {'name':'김무경','jum':95},
+            {'name':'김성욱','jum':81}
+        ]
+        /*
+       // console.log(player)
+        let best1 = []
+
+        let cnt = 0
+        for (const pp of player) {
+            //console.log(pp)
+
+            let me = false
+            // 같은 이름이 있는지 검사
+            for (const bb of best1) {
+                if(pp.name==bb.name){  // 같은 이름이 있다면
+                    me = true         // 같은 이름이 있음을 확인
+
+                    if(bb.jum < pp.jum){  //저장된 점수보다 현재 점수가 높다면 
+
+                        bb.jum = pp.jum     //저장된 점수를 변경
+                    }
+                    //console.log(bb)
+                    break   //같은 이름을 찾았으므로 더이상 진행할 필요없음
+                }
+            }
+
+            if(!me){ //같은 이름이 존재하지 않는다
+                best1[cnt] = pp
+                cnt++
+            }   
+        }
+        console.log(best1) */
+
+        
+        let best2 = {}
+        for (const pp of player) {
+
+            
+            console.log(pp.name, best2[pp.name])
+            // best2[pp.name]  없으면 undefined 
+            //undefined == false
+            //best2[pp.name] = pp.jum
+            if(best2[pp.name]){  // 이름의 key 가 있으면
+                // 점수비교
+                if(best2[pp.name] < pp.jum){  //저장된 점수보다 현재 점수가 높다면 
+                    best2[pp.name] = pp.jum     //저장된 점수를 변경
+                }
+            }else{      //없으면
+                best2[pp.name] = pp.jum
+            }
+        }
+        console.log(best2)
+    </script>
+</body>
+</html>

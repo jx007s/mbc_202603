@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_func</title>
+</head>
+<body>
+    <h1>01_func</h1>
+    <script>
+
+        /*
+        함수 정의
+        함수명 : fn_1
+        매개변수 : aa,bb
+        리턴값 : 1234
+        */
+        function fn_1(aa,bb){
+            document.write(`fn_1() 시작 --------<br/>`)
+            document.write(`aa ${aa}, bb ${bb}<br/>`)
+            document.write(`fn_1() 끝 --------<br/>`)
+            return 1234
+        }
+
+        /*
+        함수호출
+        aa = "아기상어", bb = 100
+        1. 매개변수를 대입받아 함수에 진입
+        2. 함수 호출 후 리턴값이 함수 위치에 반환
+        3. 변수 rr 에 대입
+        rr = 1234
+        */
+        let rr = fn_1("아기상어", 100)
+        document.write(`rr ${rr}<br/>`)
+
+        rr = fn_1("엄마상어", 200)
+        document.write(`rr ${rr}<br/>`)
+    </script>
+</body>
+</html>
