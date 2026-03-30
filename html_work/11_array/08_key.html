@@ -8,15 +8,23 @@
 <body>
     <h1>08_key</h1>
     <script>
+        // 인덱스배열 생성
         let arr1 = [11,22,33,44]
         //let arr2 = {11,22,33,44}  인덱스배열이 아님
 
+        // 키배열 생성
         let arr3 = {
             "사자":"포유류", "사자":"포유류",
             곰:"포유류" , 독수리:"조류", 악어:"파충류",
             오타니:"이도류", 사자:"팔자"
         }
-        
+/*
+        let arr4 = [
+            "사자":"포유류", "사자":"포유류",
+            곰:"포유류" , 독수리:"조류", 악어:"파충류",
+            오타니:"이도류", 사자:"팔자"
+        ]
+ */       
         //키배열 생성
         //{key1:value1, key2:value2, key3:value3, ... }
         // 키 : "" 하지 않아도 가능
@@ -28,6 +36,42 @@
 
         console.log(arr1)
         console.log(arr3)
+
+        //  배열명[키] : 호출
+        document.write(`arr3["사자"] : ${arr3["사자"]} <br/>`) 
+        arr3["사자"] = "오자"   //대입 ==> 배열명[키] = 값
+        console.log(arr3)
+        document.write(`arr3[0] : ${arr3[0]} <br/>`) // 키 가 아닌 인덱스 접근 불가
+        arr3[0] = "영이지롱" //key가 0  : 추가 - 기존 key가 있으면 대입, 없으면 추가
+        console.log(arr3)
+
+        arr3["상어"] = "어류"
+        console.log(arr3)
+
+        document.write(`arr3.사자 : ${arr3.사자} <br/>`) 
+        
+        document.write(`arr3[0] : ${arr3[0]} <br/>`) 
+        // 배열명[k] : k ==> 상수 혹은 값 ==> 문자열 "" 필수, 숫자 입력 가능
+        // 문자열 "" 없이 입력시 변수로 오판 ==> 에러발생
+        //document.write(`arr3[사자] : ${arr3[사자]} <br/>`)
+        // 배열명.k : k ==> 속성으로 인지 : 문자열"", 숫자 입력불가
+        //document.write(`arr3."사자" : ${arr3."사자"} <br/>`) 
+         //document.write(`arr3.0 : ${arr3.0} <br/>`)
+
+        document.write(`arr3.length : ${arr3.length} <br/>`) // length 없음
+        delete arr3["곰"]
+        console.log(arr3)
+
+        document.write(`<hr/>`)
+        for (const key in arr3) {
+            document.write(`${key} arr3[${key}] : ${arr3[key]} <br/>`) 
+        }
+
+        document.write(`<hr/>`)
+        /* 불가
+        for (const vv of arr3) {
+            document.write(`${vv} <br/>`) 
+        }*/
     </script>
 </body>
 </html>

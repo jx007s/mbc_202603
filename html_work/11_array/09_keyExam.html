@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_keyExam</title>
+</head>
+<body>
+    <h1>09_keyExam</h1>
+    <script>
+        let st = {
+            name:"한가인", 
+            jum:[72,77,78],
+            // tot:0,
+            // avg:0,
+            // grade:"미"
+        }
+
+        console.log(st)
+
+        st.tot = 0
+        for (const j of st.jum) {
+            console.log(j)
+            st.tot += j
+        }
+        st.avg = st.tot/st.jum.length
+
+        if(st.avg >= 90){
+            st.grade = "수"
+        }else if(st.avg >= 80){
+            st.grade = "우"
+        }else if(st.avg >= 70){
+            st.grade = "미"
+        }else if(st.avg >= 60){
+            st.grade = "양"
+        }else{
+            st.grade = "가"
+        }
+
+        console.log(st)
+    </script>
+</body>
+</html>
