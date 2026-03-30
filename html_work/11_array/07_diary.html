@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_diary</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        section{
+            width: 320px;
+            height: 600px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            background-color: #ffa;
+            
+        }
+        section> div{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        section img{
+            width: 320px;
+        }
+
+        section> h1{
+            
+            text-align: center;
+        }
+        section > div{
+            text-align: right;
+        }
+        section > div:first-of-type{
+            text-align: center;
+        }
+        section > div > div{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #ccc;
+            margin: 1px;
+            padding: 6px;
+
+            float: left;
+        }
+
+        section > div:first-of-type > div:first-of-type{
+            background-color: #f00; 
+            color: #fff;
+        }
+        section > div:first-of-type > div:last-of-type{
+            background-color: #00f; 
+            color: #fff;
+        }
+
+        section > div > div:nth-of-type(7n+1){
+            
+            color: #f00; 
+        }
+        section > div > div:nth-of-type(7n){
+            
+            color: #00f;
+        }
+
+        .now{
+            background-color: #ff0; 
+            color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <h1>07_diary</h1>
+    <section>
+        
+        <img src="../fff/NBDW3702.JPG">
+        <h1>2026년 4월</h1>
+        
+        <div>
+            <script>
+                const title = ['일','월','화','수','목','금','토']
+                for (const tt of title) {
+                    document.write(`<div>${tt}</div>`)
+                }
+            </script>
+        </div>
+        <div>
+
+            <script>
+                for (let i = 0; i<3 ; i++) {
+                    document.write(`<div></div>`)
+                }
+                for (let i = 1; i<=30 ; i++) {
+                    let cc = ''
+                    if(i==8){
+                        cc = 'class="now"'
+                    }
+                    document.write(`<div ${cc} >${i}</div>`)
+                }
+            </script>
+        </div>
+    </section>
+</body>
+</html>
