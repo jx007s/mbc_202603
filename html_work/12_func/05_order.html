@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_order</title>
+</head>
+<body>
+    <h1>05_order</h1>
+    <script>
+        /*
+        아메리카노  2000
+        아프리카노  2100
+        아시아노    2300
+        */
+
+        let price = {
+            아메리카노:  2000,
+            아프리카노:  2100,
+            아시아노 :   2300
+        }
+
+        function order(menu, cnt){
+            
+            let rr = calc(menu, cnt)
+            if(rr){
+                goHtml(rr)    
+            }else{
+                document.write(`<div> ${menu} 없는메뉴입니다</div>`)
+            }
+            
+        }
+
+        function calc(menu, cnt){
+
+            if(!price[menu]){
+                return false
+            }
+
+            return {
+                menu : menu,
+                price : price[menu],
+                cnt,   // cnt : cnt
+                total : price[menu] * cnt
+            }
+        }
+        function goHtml(data){
+            let ttt = `<ul>`
+
+            for (const k in data) {
+                ttt += `<li>${k} : ${data[k]}</li>`
+            }
+            ttt += `</ul>`
+
+            document.write(ttt)
+        }
+
+        order("아메리카노", 5)
+        order("와그라노", 3)
+        order("아프리카노", 1)
+        order("아시아노", 2)
+        order("아메리카노", 4)
+    </script>
+</body>
+</html>
