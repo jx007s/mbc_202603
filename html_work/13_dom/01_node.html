@@ -10,6 +10,15 @@
             padding: 10px;
             margin: 10px;
         }
+        .qaz{
+            background-color: #ff0;
+        }
+        .wsx{
+            color: #f00;
+        }
+        .edc{
+            text-decoration: underline;
+        }
     </style>
     <script>
         function conMsg(msg){
@@ -36,8 +45,42 @@
             spans[0].innerHTML = "스팬0이지롱"
 
             let bbbs = document.getElementsByClassName("bbb")
+            //스타일변경
             bbbs[1].style.border = "3px solid #f00"
+            //속성변경
             bbbs[2].setAttribute("id","b2")
+            conMsg(spans[0].getAttribute("zz-data"))
+
+            let b2 = document.getElementById("b2")
+            conMsg(b2.innerHTML)
+
+            spans[0].className="qaz"  //클래스적용
+            spans[0].className="wsx"  //클래스변경 - 기존의 클래스는 삭제
+            spans[0].setAttribute("class","edc")//클래스변경 - 기존의 클래스는 삭제
+            spans[0].removeAttribute("class")//속성 삭제
+            spans[0].removeAttribute("zz-data")
+            spans[0].classList.add("qaz")   //클래스 추가
+            spans[0].classList.add("wsx")
+            spans[0].classList.add("edc")
+            spans[0].classList.toggle("qaz") // 있으면 삭제, 없으면 추가
+            conMsg(spans[0].classList.contains("qaz"))
+            spans[0].classList.toggle("qaz") // 있으면 삭제, 없으면 추가
+            conMsg(spans[0].classList.contains("qaz"))
+
+            //  css 선택자 사용 
+            let q11 = document.querySelector("#q1")
+            conMsg(q11.innerHTML)
+
+            // 여러개인 경우 처음 1개만 리턴
+            let bbb = document.querySelector(".bbb")
+            conMsg(bbb.innerHTML)
+
+            // 배열로 리턴 - 1개도 배열
+            let bbbArr = document.querySelectorAll(".bbb")
+            console.log(bbbArr)
+            conMsg(bbbArr[0].innerHTML)
+            conMsg(bbbArr[1].innerHTML)
+            conMsg(bbbArr[2].innerHTML)
         }
     </script>
 </head>
