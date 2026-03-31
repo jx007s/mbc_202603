@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_funcScope</title>
+</head>
+<body>
+    <h1>02_funcScope</h1>
+    <script>
+        function fn_1(aa,bb){
+            
+                                //  선언위치에 따른 소멸
+            //aa,bb           매개변수 - 함수
+            let cc = 300    //지역변수 - 함수, 제어문
+            var dd = 400    //지역변수 - 함수
+            ee = 500        //전역변수 - 모든 영역에서 사용
+            document.write(`fn_1() 시작 --------<br/>`)
+            document.write(`aa : ${aa} , bb : ${bb} , cc : ${cc} , dd : ${dd} , ee : ${ee}<br/>`)
+            document.write(`fn_1() 끝 --------<br/>`)
+        }
+
+        function fn_2(){
+            document.write(`fn_2() 시작 --------<br/>`)
+            // document.write(`aa : ${aa} , bb : ${bb} , cc : ${cc} , dd : ${dd} , ee : ${ee}<br/>`)
+            // 다른 함수의 지역, 매개변수 모두 접근 불가
+            // 전역변수는 선언 순서에 따라 접근 가능
+            document.write(`ee : ${ee}<br/>`)
+            document.write(`fn_2() 끝 --------<br/>`)
+        }
+
+        fn_1(10,20)
+        
+        //document.write(`메인 aa : ${aa} , bb : ${bb} , cc : ${cc}<br/>`)
+        // 함수내부의 매개변수, 지역변수(let, var) 접근 불가
+        // 단 선언 위치에 따라 전역변수로 사용가능 : let, var
+        //document.write(`메인 dd : ${dd}<br/>`)
+        document.write(`메인 ee : ${ee}<br/>`)
+
+        fn_2()
+    </script>
+</body>
+</html>

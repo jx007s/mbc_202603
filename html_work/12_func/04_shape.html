@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_shape</title>
+    <style>
+        section{
+            width: 200px;
+            height: 100px;
+        }
+
+        section > div{
+            width: 200px;
+            height: 30px;
+            clear: both;
+        }
+        section > div > div{
+            width: 80px;
+            height: 30px;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>04_shape</h1>
+    <script>
+        //전체
+        function shape(lines){
+            //1. 입력부
+            let ret
+
+            //2. 연산부
+            // 1개 - 원
+            if(lines.length==1){
+                ret = circle(lines[0])
+            }
+            // 2개 - 직사각형
+            else if(lines.length==2){
+                ret = rectangle(lines[0], lines[1])
+            }
+
+            //console.log(ret)
+            //3. 출력부
+            shapeDiv(ret)
+        }
+
+        function circle(r){
+            //document.write(`원 계산 ${r} <br/>`)
+            const PI = 3.141592
+            return {
+                pname :"원",
+                area : r**2 * PI ,
+                border : r* 2 * PI 
+            }
+        }
+        function rectangle(w,h){
+            //document.write(`직사각형 계산 ${w}, ${h} <br/>`)
+            return {
+                pname :"직사각형",
+                area : w *h ,
+                border : (w + h) * 2
+            }
+        }
+
+        function shapeDiv(data){
+            let ttt = `<section>`
+                for (const k in data) {
+                    ttt += `<div><div>${k}</div>`
+                    ttt += `<div>${data[k]}</div></div>`
+                }
+                ttt += `</section>`
+
+            document.write(ttt)
+        }
+
+
+        shape([5])      //원
+        shape([5,6])    //직사각형
+        shape([7])      //원
+        shape([10,20])    //직사각형
+        /*
+        05_order.html
+
+        아메리카노  2000
+        아프리카노  2100
+        아시아노    2300
+        
+        메뉴, 수량 - 주문 구현하세요
+
+        연산부, 출력부 함수로 구분하여 처리하세요
+        */
+    </script>
+</body>
+</html>

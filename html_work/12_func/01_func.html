@@ -22,6 +22,20 @@
             return 1234
         }
 
+        function fn_2(aa,bb){  
+            document.write(`fn_2()  aa :${aa}, bb: ${bb}, ret : X <br/>`) 
+            return
+        }
+        function fn_3(){
+            document.write(`fn_3()  param : X, ret : X <br/>`) 
+            //return 이 없는 경우 생략 가능
+        }
+        function fn_4(aa,bb){
+            document.write(`fn_4() param : X <br/>`) 
+            return {pname:"정우성", age:56, marriage:false}
+        }
+
+
         /*
         함수호출
         aa = "아기상어", bb = 100
@@ -35,6 +49,22 @@
 
         rr = fn_1("엄마상어", 200)
         document.write(`rr ${rr}<br/>`)
+
+        rr = fn_1() // 인수를 입력하지 않은 경우 undefined
+        document.write(`rr ${rr}<br/>`)
+
+        rr = fn_1("아빠상어","할머니상어","할아버지상어") // 순서에 맞게 인수 대입
+                                    // 여분의 인수는 사용안함 : "할아버지상어"
+        document.write(`rr ${rr}<br/>`)
+
+        rr = fn_2("나는무너", 123)
+        document.write(`rr ${rr}<br/>`) // return 이 없으므로  undefined
+
+        rr = fn_3("나는고래", 456)
+        document.write(`rr ${rr}<br/>`)
+
+        rr = fn_4("나는물개", 789)
+        document.write(`rr : ${rr.pname}, ${rr.age}, ${rr.marriage}<br/>`)
     </script>
 </body>
 </html>

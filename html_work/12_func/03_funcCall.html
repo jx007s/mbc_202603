@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_funcCall</title>
+</head>
+<body>
+    <h1>03_funcCall</h1>
+    <script>
+        var a = 10000
+        function fn_1(p1){
+            var b = 1000
+            document.write(`fn_1() 시작 a:${a}, b:${b}, p1:${p1} --------<br/>`)
+            let r1 = fn_2(p1)  // 함수내부에서 함수호출
+            a++
+            b++
+            document.write(`fn_1() 끝  a:${a}, b:${b}, p1:${p1} , r1 : ${r1}--------<br/>`)
+            return r1*2
+        }
+        function fn_2(p2){
+            var c = 2000
+            const pre = '&nbsp;&nbsp;&nbsp;'
+            //document.write(`${pre}fn_2() 시작 a:${a}, b:${b} --------<br/>`)
+            // 함수호출한 함수의 지역변수 접근 불가
+            document.write(`${pre}fn_2() 시작 a:${a}, c:${c}, p2:${p2}  --------<br/>`)
+            //let rr = fn_3(9)
+            let rr = fn_3(p2)
+            a++
+            c++
+            document.write(`${pre}fn_2() 끝  a:${a}, c:${c}, p2:${p2}, rr:${rr}--------<br/>`)
+            return rr * 2
+        }
+        function fn_3(p3){
+            var d = 3000
+            const pre = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+            document.write(`${pre}fn_3() 시작 a:${a}, d:${d}, p3:${p3} --------<br/>`)
+            a++
+            d++
+            document.write(`${pre}fn_3() 끝  a:${a}, d:${d}, p3:${p3}--------<br/>`)
+            return p3+10
+        }
+
+        let r0 = fn_1(6)
+        document.write(`main a:${a}, r0:${r0} <br/>`)
+    </script>
+
+</body>
+</html>
