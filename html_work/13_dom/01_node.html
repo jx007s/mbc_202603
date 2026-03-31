@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_node</title>
+    <style>
+        #cons{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        function conMsg(msg){
+            let cons = document.getElementById("cons")
+            //console.log(cons)
+            cons.innerHTML += `${msg}<br/>`
+        }
+        window.onload = function(){ // html 로드 후에 실행하는 이벤트함수
+            //alert("로드 후 실행")
+
+            
+            //conMsg("나는문어")
+            //conMsg("나는상어")
+            //전체 
+            let rrtt = document.documentElement
+            //console.log(rrtt)
+
+            // 기본태그배열
+            let spans = document.getElementsByTagName("span")
+            console.log(spans)
+            console.log(spans[1])
+            conMsg(spans[1].innerHTML) 
+            // innerHTML : <span>span1</span>  text노드 : span1
+            spans[0].innerHTML = "스팬0이지롱"
+
+            let bbbs = document.getElementsByClassName("bbb")
+            bbbs[1].style.border = "3px solid #f00"
+            bbbs[2].setAttribute("id","b2")
+        }
+    </script>
+</head>
+<body>
+    <h1>01_node</h1>
+    <div class="aaa">
+        aaa0
+        <div class="bbb" id="b0">bbb0</div>
+        <div qwer="11" id="q1">qwer11</div>
+        <div qwer="11" id="q1" class="bbb">qwer11 bbb1</div>
+        <span zz-data="1234">span0</span>
+        <span>span1</span>
+        <div class="bbb">bbb2</div>
+    </div>
+
+    <div id="cons"></div>
+
+    <script>
+        // let cons = document.getElementById("cons")
+        // console.log(cons)
+        // cons.innerHTML = "메세지를 넣어주세요"
+    </script>
+</body>
+</html>

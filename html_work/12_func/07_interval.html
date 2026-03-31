@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_interval</title>
+</head>
+<body>
+    <h1>07_interval</h1>
+    <script>
+        var cnt = 0
+        function gogo(){
+            cnt++
+            document.write(`gogo : ${cnt} <br/>`)
+        }
+        //1초마다 gogo() 실행
+        let tt = setInterval(gogo,1000)
+
+        function ttStop(){
+            clearInterval(tt)  //tt interval 해제
+        }
+
+        setTimeout(ttStop, 5000)  // 5초 뒤에 ttStop() 실행
+    </script>
+    내용내용
+</body>
+</html>
