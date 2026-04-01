@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_event</title>
+    <style>
+        section{
+            width: 800px;
+            height: 400px;
+            background-color: #ffa;
+        }
+
+        section > div{
+            width: 100px;
+            height: 70px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            float: left;
+        }
+        section > div > img{
+            width: 100px;
+            height: 70px;
+        }
+
+        hr{
+            clear: both;
+        }
+        footer{
+            width: 200px;
+            height: 150px;
+            
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            //2. 이벤트리스너방식 (java GUI 처리와 같음)
+            let dd2 = document.querySelector("section > div:nth-of-type(2)")
+
+            dd2.addEventListener('click',function(){
+                console.log(`dd2 눌렀나?`)
+            })
+
+            //3. dom 이벤트 핸들러 방식(가장 많이 사용)
+            let dd3 = document.querySelector("section > div:nth-of-type(3)")
+            dd3.onclick= function(){
+                console.log(`dd3 눌렀나?`)
+            }
+
+
+            document.querySelector("section > div:nth-of-type(4)")
+            .onmouseover= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                console.log(`onmouseover 이지롱 ${e.clientX}, ${e.clientY}`)
+            }
+
+            document.querySelector("section > div:nth-of-type(5)")
+            .onmouseout= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                console.log(`onmouseout 이지롱 ${e.clientX}, ${e.clientY}`)
+            }
+
+            document.querySelector("section > div:nth-of-type(6)")
+            .onmousemove= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                console.log(`onmousemove 이지롱 ${e.clientX}, ${e.clientY}`)
+            }
+
+            document.querySelector("section > div:nth-of-type(7)")
+            .onmouseup= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                console.log(`onmouseup 이지롱 ${e.clientX}, ${e.clientY}`)
+            }
+
+            document.querySelector("section > div:nth-of-type(8)")
+            .onmousedown= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                console.log(`onmousedown 이지롱 ${e.clientX}, ${e.clientY}`)
+            }
+
+            document.querySelector("section > div:nth-of-type(9)")
+            .ondblclick= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                console.log(`ondblclick 이지롱 ${e.clientX}, ${e.clientY}`)
+            }
+
+            document.querySelector("section > div:nth-of-type(10)")
+            .onwheel= function(e){
+                //e.clientX, e.clientY 들어올때 마우스 위치
+                //console.log(`onwheel 이지롱 ${e.clientX}, ${e.clientY}`)
+                console.log(`onwheel 이지롱 ${e.deltaY}`)  // 휠방향만 + , -
+            }
+
+
+            document.querySelector("input:nth-of-type(1)")
+            .onfocus= function(){
+                console.log(`focus 이지롱`)  
+            }
+
+            document.querySelector("input:nth-of-type(2)")
+            .onblur= function(){
+                console.log(`blur 이지롱`)  
+            }
+
+            document.querySelector("input:nth-of-type(3)")
+            .onblur= function(){
+                console.log(`blur 이지롱`)  
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>03_event</h1>
+    <section>
+        <div>
+            <!--1. 태그에 직접입력 : 태그 속성에 onclick="alert('눌렀냐?')" -->
+            <img src="../fff/CDCL8013.JPG" alt="" onclick="alert('눌렀냐?')">
+        </div><div>
+            <img src="../fff/CXHA8530.JPG" alt="">
+        </div><div>
+            <img src="../fff/CZRF0751.JPG" alt="">
+        </div><div>
+            <img src="../fff/MYMW7924.JPG" alt="">
+        </div><div>
+            <img src="../fff/NBDW3702.JPG" alt="">
+        </div><div>
+            <img src="../fff/AKYO5468.JPG" alt="">
+        </div><div>
+            <img src="../fff/back.png" alt="">
+        </div><div>
+            <img src="../fff/PHIS3580.JPG" alt="">
+        </div><div>
+            <img src="../fff/star1.png" alt="">
+        </div><div>
+            <img src="../fff/star2.png" alt="">
+        </div>
+
+        <hr/>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <hr/>
+        <select name="" id="">
+            <option >하니</option>
+            <option >홍두깨</option>
+            <option >나애리</option>
+            <option >너애리</option>
+            <option >그애리</option>
+            <option >저애리</option>
+        </select>
+    </section>
+    <footer>
+        <img src="../fff/CDCL8013.JPG" alt="">
+    </footer>
+</body>
+</html>
