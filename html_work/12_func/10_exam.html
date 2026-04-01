@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_exam</title>
+</head>
+<body>
+    <h1>10_exam</h1>
+    <script>
+        let avgCalc = {
+            일반 :(tot,arr)=> tot/arr.length ,
+            예체능:(tot,arr)=>{
+                let ret = 0 //평점
+                    //점수비중 국   영   수   예체능
+                const rate = [0.05,0.1,0.15,0.7]
+                for (const i in rate) { // i : 0,1,2,3
+                    ret += rate[i] * arr[i]
+                    //평점 +=  rate[0] * arr[0]   : 0.05 * 국어점수
+                    //평점 +=  rate[1] * arr[1]   : 0. 1 * 영어점수
+                    //평점 +=  rate[2] * arr[2]   : 0.15 * 수학점수
+                    //평점 +=  rate[3] * arr[3]   : 0.7  * 예체능점수
+                }
+                return ret
+            }
+        }
+        
+        function stOne(pname,...jum){
+            let totCalc = ()=>{
+                let rr = 0
+                for(j of jum) rr += j
+                return rr
+            }
+            let kind = ["일반","예체능"][jum.length-3]
+            let tot = totCalc()
+            return {
+                pname,
+                kind,
+                tot,
+                avg: avgCalc[kind](tot,jum)
+            }
+        }
+
+        let st = stOne("정우성",37,68,92)
+        console.log(st)
+        console.log(stOne("정남성",97,68,32))
+        st = stOne("정좌성",37,58,72,96)
+        console.log(st)
+        console.log(stOne("정북성",97,78,52,36))
+        
+    </script>
+</body>
+</html>

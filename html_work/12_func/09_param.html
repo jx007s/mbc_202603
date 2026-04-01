@@ -82,6 +82,23 @@
         //fn_e("나는무너",10,20,30,40)  10 만 bb 로 인식
         fn_f("나는징어",[10,20,30,40])  // bb : [ [10,20,30,40] ]
         fn_f("나는징어",10,20,30,40)  // bb : [ ]
+
+        function fn_h(aa,bb=999,...cc){
+            document.write(`fn_h 시작 -----${aa} , ${bb}<br/>`)
+            for (const c of cc) {
+                document.write(`${c}<br/>`)
+            }
+            document.write(`fn_h 끝 -----<br/>`)
+        }
+
+        /*
+        function fn_i(aa,...cc,bb=999){
+        }*/
+
+        fn_h(11,22,33,44,55)     //aa:11,bb:22, cc:[33,44,55]
+        fn_h(11,22,33)           //aa:11,bb:22, cc:[33]
+        fn_h(11,22)              //aa:11,bb:22, cc:[]
+        fn_h(11)                 //aa:11,bb:999, cc:[]
     </script>
 </body>
 </html>
