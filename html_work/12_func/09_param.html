@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_param</title>
+</head>
+<body>
+    <h1>09_param</h1>
+
+    <h2>고차함수</h2>
+    <script>
+        let fn_a = (aa,bb,cc)=> {
+            document.write("fn_a 시작-------<br/>")
+            document.write(`aa : ${aa}<br/>`)
+            document.write(`bb : ${bb}<br/>`)
+            document.write(`cc : ${cc}<br/>`)
+            document.write("fn_a 끝-------<br/>")
+        }
+
+        let fn_b = (aa,bb,cc)=> { //cc : 고차함수 - 함수를 매개변수로 전달받거나 반환하는 함수
+            document.write("fn_b 시작-------<br/>")
+            cc(aa,bb)  //매개변수로 받은 함수를 호출
+            document.write("fn_b 끝-------<br/>")
+        }
+
+        fn_a(10,{pname:"정우성",age:53},[11,22,33,44])
+
+        fn_a(10,{pname:"정우성",age:53},
+            (x,y)=>{document.write(`매개변수가 함수 ${x}, ${y}<br/>`)})
+        fn_b(10,{pname:"정우성",age:53},
+            (x,y)=>{document.write(`매개변수가 함수 ${x}, ${y}<br/>`)})
+    </script>
+
+    <h2>초기값</h2>
+    <script>
+        function fn_c(aa,bb = 1357){  //bb = 1357 : 매개변수 초기값 - 매개변수 지정이 되지 않은 경우 대입
+            document.write(`fn_c ${aa} , ${bb}<br/>`)
+        }
+
+        // 매개변수 초기값은 뒤에서 부터 설정해야 의미있음
+        function fn_d(aa=2468,bb){  //aa=2468 bb의 값을 인지 하지 못함
+
+            document.write(`fn_d ${aa} , ${bb}<br/>`)
+        }
+
+        fn_c(100,200) // 100,200
+        fn_c(100)     // 100,1357
+        fn_c()        // undefined , 1357
+
+        fn_d(100,200) // 100,200
+        fn_d(100)     // 100,undefined - bb = 100 로 처리하지 않음
+        fn_d()        // 2468,undefined
+    </script>
+
+    <h2>스프레드연산자</h2>
+    <script>
+        function fn_e(aa,bb){   // bb : 배열
+            document.write(`fn_e 시작 -----${aa}<br/>`)
+            for (const b of bb) {
+                document.write(`${b}<br/>`)
+            }
+            document.write(`fn_e 끝 -----<br/>`)
+        }
+
+        function fn_f(aa,...bb){   // 스프레드연산자 ...   bb : 배열
+                        // aa 다음의 모든 매개변수를 묶어서  배열 bb로 생성
+            document.write(`fn_f 시작 -----${aa}<br/>`)
+            for (const b of bb) {
+                document.write(`${b}<br/>`)
+            }
+            document.write(`fn_f 끝 -----<br/>`)
+        }
+
+        /*
+        function fn_g(aa,...bb, cc){ 
+                        // aa 다음의 모든 매개변수를 묶어서  배열 bb로 생성
+                        // bb뒤에 매개변수가 올 수 없다 
+        }*/
+
+        fn_e("나는무너",[10,20,30,40])
+        //fn_e("나는무너",10,20,30,40)  10 만 bb 로 인식
+        fn_f("나는징어",[10,20,30,40])  // bb : [ [10,20,30,40] ]
+        fn_f("나는징어",10,20,30,40)  // bb : [ ]
+    </script>
+</body>
+</html>

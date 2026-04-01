@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_lambda</title>
+</head>
+<body>
+    <h1>08_lambda</h1>
+    <script>
+
+        //선언적 함수 정의
+        function fn_a(aa,bb){
+            document.write(`fn_a : ${aa}, ${bb} <br/>`)
+            return "아기상어"
+        }
+
+        //익명함수 정의
+        let vv_b = function (aa,bb){
+            document.write(`익명함수b : ${aa}, ${bb} <br/>`)
+            return "엄마상어"
+        }
+
+        // 선언적 함수로 사용불가
+        // 익명 함수로 정의 됨
+        let vv_c = function fn_c(aa,bb){
+            document.write(`익명함수c : ${aa}, ${bb} <br/>`)
+            return "아빠상어"
+        }
+
+        let rr = fn_a(11,22)
+        console.log(`rr : ${rr}`)
+        rr = vv_b(11,22)
+        console.log(`rr : ${rr}`)
+        //rr = fn_c(11,22)  호출 불가
+        rr = vv_c(11,22)
+        console.log(`rr : ${rr}`)
+
+        // 람다함수(화살표 함수) 정의
+        let vv_d = (aa,bb) => {
+            document.write(`람다함수 d : ${aa}, ${bb} <br/>`)
+            return "할머니상어"
+        }
+        rr = vv_d(11,22)
+        console.log(`rr : ${rr}`)
+
+        //현재는 리턴이 없음 : undefined
+        let vv_e = (aa,bb) => 
+            document.write(`실행코드1줄 중괄호생략 가능 : ${aa}, ${bb} <br/>`)
+            
+        rr = vv_e(11,22)
+        console.log(`rr : ${rr}`)//undefined
+
+        // 1줄이면서 리턴값인 경우 {} 생략 가능
+        let vv_f = (aa,bb) => "할아버지상어"
+            
+        rr = vv_f(11,22)
+        console.log(`rr : ${rr}`)
+
+        let vv_g = () => "할머니상어"
+            
+        rr = vv_g()
+        console.log(`rr : ${rr}`)
+
+        // 매개변수가 1개인 경우 () 생략 가능
+        let vv_h = aa => `삼촌상어 ${aa}`
+            
+        rr = vv_h(11)
+        console.log(`rr : ${rr}`)
+    </script>
+</body>
+</html>
