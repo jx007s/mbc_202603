@@ -41,13 +41,94 @@
             }
         }
 
+        /*
         let st = stOne("정우성",37,68,92)
         console.log(st)
         console.log(stOne("정남성",97,68,32))
         st = stOne("정좌성",37,58,72,96)
         console.log(st)
         console.log(stOne("정북성",97,78,52,36))
+        */
+        function view(vvFn,...studs){
+                // vvFn :출력하는 방식 함수
+                // studs : 학생들
+                vvFn(studs)
+
+        }
+        //table
+        function tableGo(arr){
+            let section = document.querySelector("section")
+            //console.log(arr)
+            let ttt = `<table border="">`
+                for(const st of arr){
+                    ttt +="<tr>"
+                    for (const k in st) {
+                        ttt+=`<td>${st[k]}</td>`
+                    }
+                    ttt +="</tr>"
+                }
+                ttt += `</table>`
+            section.innerHTML = ttt
+        }
+        // div
+        function divGo(arr){
+            let section = document.querySelector("section")
+            //console.log(arr)
+            let ttt = `<ul>`
+                for(const st of arr){
+                    ttt +="<li>"
+                    for (const k in st) {
+                        ttt+=`<div>${st[k]}</div>`
+                    }
+                    ttt +="</li>"
+                }
+                ttt += `</ul>`
+            section.innerHTML = ttt
+        }
+        
+        
+        window.onload=function(){
+            let dGo = document.querySelector("#dGo")
+            let tGo = document.querySelector("#tGo")
+
+            dGo.onclick=()=>{
+                view(
+                    divGo,
+                    //tableGo,
+                    stOne("정우성",37,68,92),
+                    stOne("정남성",97,68,32),
+                    stOne("정좌성",37,58,72,96),
+                    stOne("정북성",97,78,52,36)
+                )
+            }
+            
+            tGo.onclick=()=>{
+                view(
+                    //divGo,
+                    tableGo,
+                    stOne("정우성",37,68,92),
+                    stOne("정남성",97,68,32),
+                    stOne("정좌성",37,58,72,96),
+                    stOne("정북성",97,78,52,36)
+                )
+            }            
+        }
+
+        /*
+        직사각형 5개를 table , div  선택하여 화면에 출력하세요
+
+        직사각형 정보 : 가로,세로, 넓이, 둘레길이
+        
+        이벤트, DOM, 고차함수
+        
+        */
         
     </script>
+
+    <h2>학생정보 출력자리</h2>
+    <input type="button" id="dGo" value="div">
+    <input type="button" id="tGo" value="table">
+    <section></section>
+
 </body>
 </html>
