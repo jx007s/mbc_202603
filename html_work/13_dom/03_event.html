@@ -106,8 +106,46 @@
             }
 
             document.querySelector("input:nth-of-type(3)")
-            .onblur= function(){
-                console.log(`blur 이지롱`)  
+            .onkeydown= function(e){
+                console.log(`keydown 이지롱 ${e.keyCode}`)  
+            }
+            document.querySelector("input:nth-of-type(4)")
+            .onkeyup= function(e){
+                console.log(`keyup 이지롱 ${e.keyCode}`)  
+            }
+            document.querySelector("input:nth-of-type(5)")
+            .onkeypress= function(e){
+                console.log(`keypress 이지롱 ${e.keyCode}`)   //한글작동 안함 
+            }
+
+
+            document.querySelector("select")
+            .onchange= function(){  // this : 객체 자신
+                console.log(`select-change 이지롱 ${this.value}`)
+            }
+
+            //배열이어서 직접 이벤트 불가
+            /*
+            document.querySelectorAll("input[type=radio]")
+            .onchange= function(){  // this : 객체 자신
+                console.log(`radio-change 이지롱 ${this.value}`)
+            }
+            */
+
+            // 배열의 각 원소에 이벤트 설정
+            for (const rr of document.querySelectorAll("input[type=radio]")) {
+                rr.onchange= function(){  // this : 객체 자신
+                    console.log(`radio-change 이지롱 ${this.value}`)
+                }
+            }
+
+            document.querySelector("footer")
+            .onscroll= function(){  // this : 객체 자신
+                console.log(`scroll 이지롱 ${this.scrollTop}, ${this.scrollHeight},  ${this.scrollLeft}, ${this.scrollWidth}`)
+            }
+
+            window.onresize= function(){  // this : 객체 자신
+                console.log(`resize 이지롱 ${this.innerWidth}, ${this.innerHeight}`)
             }
         }
     </script>
@@ -153,6 +191,10 @@
             <option >그애리</option>
             <option >저애리</option>
         </select>
+
+        <input type="radio" name="gender" value="m">남자
+        <input type="radio" name="gender" value="f">여자
+        <input type="radio" name="gender" value="it">it인
     </section>
     <footer>
         <img src="../fff/CDCL8013.JPG" alt="">
