@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_shape</title>
+    <script>
+        /*
+        직사각형 5개를 table , div  선택하여 화면에 출력하세요
+        직사각형 정보 : 가로,세로, 넓이, 둘레길이
+        이벤트, DOM, 고차함수
+        
+        */
+        function recOne(w, h){
+            
+            return {
+                w, 
+                h,
+                area: w*h,
+                border:(w+h)*2
+            }
+        }
+
+        //console.log(recOne(5,6))
+
+        function view(vvFn,recs){
+                // vvFn :출력하는 방식 고차함수
+                vvFn(recs)
+        }
+
+        const title = {
+            w:"가로",
+            h:"세로",
+            area:"넓이",
+            border:"둘레"
+        }
+
+        //section에 div 로 구성하는 함수 -DOM 활용
+        const divGo = (arr)=>{
+            let ttt = `<ul>`
+                for(const st of arr){
+                    ttt +="<li>"
+                    for (const k in st) {
+                        ttt+=`<div>${title[k]} : ${st[k]}</div>`
+                    }
+                    ttt +="</li>"
+                }
+                ttt += `</ul>`
+
+
+            document.querySelector("section")
+            .innerHTML = ttt
+        }
+
+        function tableGo(arr){
+            let section = document.querySelector("section")
+            
+            let ttt = `<table border=""><tr>`
+                for (const k in title) {
+                    ttt +=`<td>${title[k]}</td>`
+                }
+                ttt +="</tr>"
+                for(const st of arr){
+                    ttt +="<tr>"
+                    for (const k in st) {
+                        ttt+=`<td>${st[k]}</td>`
+                    }
+                    ttt +="</tr>"
+                }
+                ttt += `</table>`
+            section.innerHTML = ttt
+        }
+
+        let recArr = [
+            recOne(5,6),
+            recOne(10,10),
+            recOne(17,5),
+            recOne(20,10),
+            recOne(8,9)
+        ]
+
+        //이벤트
+        window.onload=()=>{
+            //view(divGo,recArr)
+            //view(tableGo,recArr)
+
+            document.querySelector("#dGo").onclick=()=>view(divGo,recArr)
+            document.querySelector("#tGo").onclick=()=>view(tableGo,recArr)
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>11_shape</h1>
+    <input type="button" id="dGo" value="div">
+    <input type="button" id="tGo" value="table">
+    <section></section>
+</body>
+</html>
