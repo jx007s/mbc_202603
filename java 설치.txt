@@ -1,0 +1,92 @@
+1. java 설치
+
+https://www.oracle.com/kr/java/technologies/downloads/
+
+jdk21 window x64 Compressed Archive 다운로드
+
+다운로드 위치 : c:\이름폴더    ==> c:\asdf\jdk-21_windows-x64_bin.zip
+
+압축해제 : 여기에 압축풀기  c:\asdf\jdk-21.0.10
+
+
+2. 환경변수 등록
+내컴퓨터 > 마우스 오른쪽 > 속성
+고급시스템설정> 환경변수
+시스템변수 
+  새로만들기 :
+       변수이름 : JAVA_HOME
+     변수값 : c:\asdf\jdk-21.0.10
+   path 편집
+        새로만들기  : %JAVA_HOME%\bin
+
+  모든창 닫기
+
+3. java 실행
+cmd 실행
+java -version 
+c:\asdf\java_work> java -version
+java version "21.0.10" 2026-01-20 LTS
+Java(TM) SE Runtime Environment (build 21.0.10+8-LTS-217)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.10+8-LTS-217, mixed mode, sharing)
+
+
+4. java 파일 실행
+1) 메모장으로 파일생성
+c:\asdf\java_work\Test.java
+public class Test {
+
+  public static void main(String[] args){
+  
+  System.out.println("hello world");
+  }
+}
+
+2) class 생성
+탐색기에서 shfit + 마우스 오른쪽  : 터미널 열기
+javac Test.java
+Test.class 생성
+
+3) 실행
+java Test
+hello world
+
+                   컴파일                                                         실행
+                   javac                                     java
+
+Test.java -----------------> Test.class --------------------------> 실행
+
+
+5. 이클립스 설치
+1) 다운로드
+https://www.eclipse.org/downloads/packages 사이트
+
+Eclipse IDE for Enterprise Java and Web Developers
+573 MB 다운로드
+
+다운로드 위치 : c:\asdf
+
+2) 압축해제
+여기에 압축해제 : c:\asdf\eclipse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+패키지 : basic_p
+클래스명 : First
