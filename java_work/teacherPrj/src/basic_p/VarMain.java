@@ -93,6 +93,16 @@ public class VarMain {
 		// String : 문자열클래스 , 기본자료형이 아님 - "" 안에 0~무한대 글자표현
 		String str = "아기상어";
 		System.out.println("str : "+str);
+		
+		// var 변수선언 - 초기값 필수 , 초기값의 자료형이 변수 자료형
+		//var aaa; 에러
+		var bbb = 10;	// int bbb = 10;
+		System.out.println(bbb);
+		//bbb = "아기상어";
+		var ccc = true ;  //boolean ccc = true;
+		System.out.println(ccc);
+		//ccc = 123;
+
 	}
 
 }
