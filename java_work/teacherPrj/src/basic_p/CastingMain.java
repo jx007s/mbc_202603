@@ -74,6 +74,11 @@ public class CastingMain {
 		ch = (char)bb;
 		System.out.println(bb+","+ch);
 		
+		// 클래스 이름 Exam
+		 //번호, 성명, 국어, 영어, 수학, 총점, 평균을 선언하고 출력하세요
+		// 평균을 소숫점 2자리로 표현해 주세요
+		//76.33333333  -> 76.33
+		
 	}
 
 }
