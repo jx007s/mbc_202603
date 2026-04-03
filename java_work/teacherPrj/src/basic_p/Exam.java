@@ -7,6 +7,9 @@ public class Exam {
 		final int kor = 87, eng = 78, mat = 82;
         int tot = kor + eng + mat;
         double avg = (double)tot / 3;
+        
+        double pos = 100;
+        double avg2 = (double)(int)(avg*pos)/pos;
         // tot : 247   , (double)tot : 247.0
         /*
 
@@ -28,6 +31,7 @@ public class Exam {
          System.out.println("수학 : "+mat);
          System.out.println("총점 : "+tot);
          System.out.println("평균 : "+avg);
+         System.out.println("평균2 : "+avg2);
          System.out.println(247);
          System.out.println((double)247);
 
