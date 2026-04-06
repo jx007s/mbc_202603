@@ -53,7 +53,16 @@ public class ModifyMain {
 		System.out.println("arr1 : "+arr1+","+Arrays.toString(arr1));
 		
 		// 중간삭제 - 1번째  [100, 888, 300, 400]
-		
+		pos = 1;
+		delArr = new int[arr1.length-1];
+		for (int i = 0; i < pos; i++) {
+			delArr[i] = arr1[i];
+		}
+		for (int i = pos+1; i <arr1.length; i++) {
+			delArr[i-1] = arr1[i];
+		}
+		System.out.println("arr1 : "+arr1+","+Arrays.toString(arr1));
+		System.out.println("delArr : "+delArr+","+Arrays.toString(delArr));
 	}
 
 }
