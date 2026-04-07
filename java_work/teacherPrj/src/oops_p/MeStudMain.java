@@ -2,6 +2,16 @@ package oops_p;
 
 import java.util.Arrays;
 
+class MeClaStudProvider{
+	
+	MeClaStud studMake(String name, int kor, int eng, int mat) {
+		
+		MeClaStud st = new MeClaStud();
+		st.input(name, kor, eng, mat);
+		return st;
+	}
+}
+
 class MeClaStud{
 	String name;
 	int [] jum;
@@ -9,10 +19,11 @@ class MeClaStud{
 	double avg;
 	
 	// 1. 입력부
-	void input(String name, int kor, int eng, int mat) {
+	void input(String name, int ...jum) {
 		// 멤버변수 = 매개변수
 		this.name = name;
-		jum = new int[] {kor, eng, mat};
+		//jum = new int[] {kor, eng, mat};
+		this.jum = jum;
 		//메소드 내 메소드 호출
 		calc();
 		//ppp();
@@ -57,7 +68,7 @@ public class MeStudMain {
 			new MeClaStud(),
 			new MeClaStud()
 		};
-		*/
+		
 		
 		MeClaStud [] studs = new MeClaStud[3];
 		for (int i = 0; i < studs.length; i++) {
@@ -67,6 +78,16 @@ public class MeStudMain {
 		studs[0].input("현빈", 78, 73, 79);
 		studs[1].input("원빈", 88, 83, 89);
 		studs[2].input("투빈", 68, 63, 69);
+		*/
+		
+		MeClaStudProvider provider = new MeClaStudProvider();
+		MeClaStud [] studs = {
+			provider.studMake("현빈", 78, 73, 79),
+			provider.studMake("원빈", 88, 83, 89),
+			provider.studMake("투빈", 68, 63, 69),
+			provider.studMake("김우빈", 55, 57, 52),
+			provider.studMake("젤리빈", 92, 93, 91)
+		};
 		
 		for (MeClaStud st : studs) {
 			st.ppp();

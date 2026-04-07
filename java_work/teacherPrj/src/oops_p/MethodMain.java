@@ -1,5 +1,7 @@
 package oops_p;
 
+import java.util.Arrays;
+
 class ClaMeth{
 	
 	void meth_1() {
@@ -46,6 +48,20 @@ class ClaMeth{
 		System.out.println("meth_5 끝 ----- ");
 		return "m5리턴값이지롱"; 
 	}
+	
+	
+	void  meth_6(String aa, int [] arr) {
+		System.out.println("meth_6 : "+aa+","+Arrays.toString(arr));
+		 
+	}
+	
+	void  meth_7(String aa, int ... arr) {
+		System.out.println("meth_7 : "+aa+","+Arrays.toString(arr));
+	}
+	/*
+	void  meth_8(String aa, int bb = 100) {
+		System.out.println("meth_8 : 매개변수 초기값 불가");	 
+	}*/
 }
 
 public class MethodMain {
@@ -67,6 +83,14 @@ public class MethodMain {
 		//System.out.println("main :"+cm1.a+ " , "+cm1.aa+ " , "+cm1.aaa);
 		System.out.println("main :"+cm1.a);
 		//System.out.println("cm1.this : "+cm1.this); this - 클래스 정의부에서만 사용
+		
+		int [] qqq = {111,222,333,444};
+		cm1.meth_6("아빠상어", qqq);
+		cm1.meth_7("할머니상어", qqq);
+		//cm1.meth_6("할아버지상어", 999,888,777);  배열매개변수에 직접 입력불가
+		cm1.meth_7("삼촌상어", 999,888,777);  // arr = new int[]{999,888,777}
+				// 가변매개변수(스프레드연산자) : 매개변수 이후의 값을 모두 배열원소로 처리
+		
 	}
 
 }
