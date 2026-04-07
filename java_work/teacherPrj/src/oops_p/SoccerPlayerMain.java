@@ -6,15 +6,15 @@ class SoccerPlayer{
 	int no;
 	
 	void attack() {
-		System.out.println("공격해요");
+		System.out.println(pos+name+no+"공격해요");
 	}
 	
 	void pass() {
-		System.out.println("패쓰해요");
+		System.out.println(pos+name+no+"패쓰해요");
 	}
 	
 	void defense() {
-		System.out.println("수비해요");
+		System.out.println(pos+name+no+"수비해요");
 	}
 }
 
