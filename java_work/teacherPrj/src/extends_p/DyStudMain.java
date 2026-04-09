@@ -11,6 +11,22 @@ class DyStud{
 	DyStud(String kind, String name) {
 		this.kind = kind;
 		this.name = name;
+		
+	}
+	void calc() {
+		totCalc();
+		avgCalc();
+		ppp();
+	}
+	
+	void totCalc() {
+		tot = 0;
+		for (int i : jum) {
+			tot += i;
+		}
+	}
+	void avgCalc() {
+		avg = tot/jum.length;
 	}
 	void ppp() {
 		System.out.println(kind+"\t"+name+"\t"+
@@ -27,6 +43,11 @@ class DyGen extends DyStud{
 		
 		jum = new int[] {kor, eng, mat};
 	}
+	
+	void ppp() {
+		System.out.println(kind+"\t"+name+"\t"+
+				Arrays.toString(jum)+"\t\t"+tot+"\t"+avg);
+	}
 }
 
 class DyArt extends DyStud{
@@ -34,6 +55,14 @@ class DyArt extends DyStud{
 	public DyArt(String name, int kor, int eng, int mat, int art) {
 		super("예체능",name);
 		jum = new int[] {kor, eng, mat, art};
+	}
+	
+	void avgCalc() {
+		double [] rate = {0.05, 0.1, 0.15, 0.7};
+		avg = 0;
+		for (int i = 0; i < rate.length; i++) {
+			avg += rate[i]*jum[i];
+		}
 	}
 }
 
@@ -51,9 +80,26 @@ public class DyStudMain {
 		};
 		
 		for (DyStud st : studs) {
-			st.ppp();
+			st.calc();
 		}
 
 	}
 
 }
+
+
+/*
+DyShapeMain를 구현하세요
+부모 : 도형
+종류, 넓이, 둘레
+
+자식
+   종류        넓이                      둘레
+ 직사각형      가로 * 세로                (가로 + 세로) * 2
+ 직각삼각형     가로 * 세로 /2             가로 + 세로 + 빗변
+ 원          반지름*반지름*PI				반지름*2*PI
+
+
+
+* */
+
