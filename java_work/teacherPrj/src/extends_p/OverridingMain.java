@@ -1,9 +1,16 @@
 package extends_p;
-
-class OvPar{
+class OvGrand{
+	String g = "할아버지";
+	void meth_g() {
+		System.out.println("할아버지meth_g()");
+	}
+}
+class OvPar extends OvGrand{
 	String a = "부모a";
 	String b = "부모b";  //자식과 중첩되어 hiding - 소멸되지 않음
 	final String c = "final부모c"; // final 멤버변수 hiding 가능
+	int g = 1234;	//할아버지 hiding
+	
 	void meth_1() {
 		System.out.println("부모meth_1() : "+a+","+b+","+c);
 		// b : 부모b
@@ -13,6 +20,9 @@ class OvPar{
 	}
 	final void meth_3() { //final 메소드 overriding 불가
 		System.out.println("final부모meth_3()");
+	}
+	void meth_g() {	//할아버지 overriding --> 자식클래스에게 할아버지 메소드를 넘기지 않겠다
+		System.out.println("부모재정의meth_g()");
 	}
 }
 class OvChild extends OvPar{
@@ -39,6 +49,11 @@ class OvChild extends OvPar{
 	void meth_3() {
 		System.out.println("자식meth_3()");
 	}*/
+	void meth_goGrand() {
+		System.out.println("자식goGrand() : ");
+		//System.out.println("자식goGrand() : "+super.super.g);
+		//super.super.meth_g();
+	}
 }
 public class OverridingMain {
 
@@ -53,6 +68,9 @@ public class OverridingMain {
 		cc.meth_4();
 		//cc.super.meth_2();
 		//cc.super.b = "아기상어";
+		System.out.println("cc : "+cc.g);
+		cc.meth_g();
+		cc.meth_goGrand();
 
 	}
 
