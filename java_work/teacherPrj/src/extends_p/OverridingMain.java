@@ -18,7 +18,7 @@ class OvPar extends OvGrand{
 	void meth_2() {
 		System.out.println("부모meth_2()");
 	}
-	final void meth_3() { //final 메소드 overriding 불가
+	final void meth_3() { // final 메소드 overriding 불가
 		System.out.println("final부모meth_3()");
 	}
 	void meth_g() {	//할아버지 overriding --> 자식클래스에게 할아버지 메소드를 넘기지 않겠다
