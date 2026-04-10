@@ -66,3 +66,14 @@ class CCC {
 	}
 }
 
+/* 
+protected class
+private class 불가
+protected class DDD {
+
+}
+
+private class EEE {
+
+}*/
+
