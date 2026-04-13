@@ -102,6 +102,21 @@ public class Uncle50Main {
 		System.out.println("qq : "+qq);
 		hh = uu2;
 		uu2.work();
+		
+		uu1.data.ppp();
+		uu2.data.ppp();
 	}
 
 }
+
+/*
+AlbaMain
+식당을 구현해주세요
+카운터 - 계산(몇번테이블에 얼마를), 인사
+홀 - 음식나르기(몇번테이블에 뭐를), 인사
+주방 - 설겆이(그릇몇개를)
+-> 구현객체 : 알바생
+ * */
+
+
+
