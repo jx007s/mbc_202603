@@ -108,6 +108,7 @@ public class InterfaceMain {
 		//btot.meth_3();
 		btot.meth_4();
 		
+		// 클래스로 인스턴스 생성
 		InImp iip = new InImp();
 		//System.out.println("iip : "+iip.A+","+iip.B+","+iip.C);
 		System.out.println("iip : "+iip.A+","+iip.C);
