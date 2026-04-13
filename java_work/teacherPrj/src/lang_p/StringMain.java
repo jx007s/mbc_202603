@@ -122,6 +122,38 @@ public class StringMain {
 		
 		//"aBcd Efg HIJk lMn opQR" -> Abcd Efg Hijk Lmn Opqr  로 변경해 주세요
 		//"lMn aBcd HIJk opQR  Efg" -> GFe rqPO Kjih DCbA NmL  로 변경해 주세요
+		
+		c = "aBcd Efg HIJk lMn opQR";
+		arr2 = c.toLowerCase().split(" ");
+		for (int i =0; i<arr2.length;i++) {
+			String tt = arr2[i];
+			System.out.println(tt);
+			arr2[i] = tt.substring(0,1).toUpperCase()+tt.substring(1);
+		}
+		d = String.join(" " ,arr2);
+		System.out.println(d);
+		System.out.println("----------------------------");
+		c = "lMn aBcd HIJk opQR  Efg";
+		arr4 = c.toCharArray();
+		System.out.println(c);
+		System.out.println(Arrays.toString(arr4));
+		int gap ='a'-'A';
+		String res = "";
+		for (int i = arr4.length-1; i >=0; i--) {
+			char hh = arr4[i];
+			char nhh = hh;
+			if(hh>='A') {
+				
+				if(hh>='a') {
+					nhh -= gap;
+				}else {
+					nhh += gap;
+				}
+				
+			}
+			res += nhh;
+		}
+		System.out.println(res);
 	}
 
 }
