@@ -16,7 +16,7 @@ public class TryCatchMain {
 			System.out.println("b : "+b); // 실행하지 않음 -- 2-2
 			
 			int [] arr = {11,22,33,44};
-			System.out.println("arr : "+arr[5]);
+			System.out.println("arr : "+arr[2]);
 			
 		}
 		/* catch의 예외처리 클래스가 여러개일때
@@ -30,14 +30,20 @@ public class TryCatchMain {
 		catch(Exception e) {
 			System.out.println("Exception 발생 : "+e.getMessage());
 			//e.printStackTrace();
+			return;
 		}
 		/*catch(ArrayIndexOutOfBoundsException e) {
 			System.out.println("ArrayIndexOutOfBoundsException 발생");
 		}*/
+		finally {
+			// 항상 실행
+			System.out.println("try~catch 종료 ");  // 3
+		}
 		
-		
-		System.out.println("try~catch 종료 ");  // 3
-		
+		//TSNMain 
+		/// 3,6, 9 
+		/// 1-> 20  
+		/// if, switch, 3항연산자 사용불가 
 
 	}
 
