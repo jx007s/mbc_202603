@@ -74,6 +74,20 @@ public class EnumMain {
 		System.out.println(EAAA.bb.compareTo(EAAA.cc));  // -1 : bb가 cc 보다 앞에 bb < cc
 		System.out.println(EAAA.bb.compareTo(EAAA.dd));  // -2 : bb가 cc 보다 앞에 bb < dd
 
+		System.out.println("EBB--------------------");
+		System.out.println(EBB.OH); //toString() 호출
+		System.out.println(EBB.KKS);
+		System.out.println(EBB.KSM);
+		System.out.println(EBB.PJH);
+		System.out.println("--------------------");
+		EBB.OH.pname = "육수민";
+		//EBB.OH.gender = "IT";
+		System.out.println(EBB.OH); 
+		EBB.OH.meth();
+		System.out.println(EBB.OH.ordinal()); //열거원소의 순서
+		System.out.println(EBB.OH.name());
+		EBB b1 = EBB.valueOf("KKS"); //문자열로 열거원소 호출
+		System.out.println(b1);
 	}
 
 }
