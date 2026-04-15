@@ -1,5 +1,10 @@
 package oops_p;
 
+//익명 클래스로 처리하기 위한 인터페이스 정의
+interface AnInter{
+	void mmm();
+}
+
 class Outer1{
 	String aa = "외부aa",  bb = "외부bb";
 	
@@ -84,6 +89,13 @@ class Outer1{
 		
 		
 		System.out.println("외부big_4() 끝----------");
+	}
+	
+	
+	void big_5(AnInter ait) {//인터페이스가 매개변수
+		System.out.println("외부big_5() 시작----------");
+		ait.mmm();  // 익명클래스에서 정의된 메소드 호출
+		System.out.println("외부big_5() 끝----------");
 	}
 	
 	
@@ -188,6 +200,21 @@ public class InnerMain {
 		oo1.big_4();
 		
 		//Outer1.Inner3 oi3;
+		
+		oo1.big_5(
+			//4. 익명 내부 클래스 - 생성시 멤버요소 정의
+				// 인터페이스, 추상클래스를 매개변수로 처리하는 메소드 호출시 사용
+				// 재사용 금지
+				// 람다식에서 주로 사용
+			new AnInter() {
+			
+				@Override
+				public void mmm() {
+					System.out.println("익명내부클래스생성시정의.mmm() 실행");
+					
+				}
+			}
+		);
 
 	}
 
