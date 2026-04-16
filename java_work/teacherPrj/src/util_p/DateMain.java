@@ -54,6 +54,15 @@ public class DateMain {
 		 //today = new Date(0);
 		 today.setTime(0);
 		 System.out.println(today);
+		 
+		 Date now = new Date();
+		 // now 가 today 전인가?
+		 System.out.println(now.before(today));
+		// now 가 today 지났는가?
+		 System.out.println(now.after(today));
+		 
+		 
+		 
 	}
 
 }
