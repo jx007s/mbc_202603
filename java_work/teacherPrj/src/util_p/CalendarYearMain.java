@@ -44,9 +44,17 @@ public class CalendarYearMain {
 		System.out.println();
 
 	}
-	public static void main(String[] args) {
+	public static void main(String[] qazxsw) {
+		
+		if(qazxsw.length!=1) {
+			System.out.println("년도 입력 필수1234");
+			return;
+		}
+		
+		int year = Integer.parseInt(qazxsw[0]);
+		
 		for (int i = 1; i <=12; i++) {
-			monthGo(2026,i);
+			monthGo(year,i);
 		}
 		
 	}
