@@ -52,9 +52,38 @@ class MemberJoin{
 		this.pname = pname;
 	}
 
-	public void setZipcode(String zipcode) {
+	public void setZipcode(String zipcode) throws Exception{
 		
-		String [] dongs = {"강동동",
+		if(!Pattern.matches("[가-힣ㄱ-ㅎ0-9]{1,}", zipcode)) {
+			throw new Exception("zipcode 에러");
+		}
+		
+		String pp = ".*";
+		
+		String index = "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎㅃㅉㄸㄲㅆ";
+		String start = "가나다라마바사아자차카타파하빠짜따까싸";
+		String end   = "깋닣딯맇밓빟싷잏짛칳킿팋핗힣삫찧띻낗앃";
+		
+		for (String zz : zipcode.split("")) {
+			
+			if(Pattern.matches("[ㄱ-ㅎ]", zz)) {
+				
+				int pos = index.indexOf(zz);
+				pp+="[";
+				pp+=start.charAt(pos);
+				pp+="-";
+				pp+=end.charAt(pos);
+				pp+="]";
+			}else {
+				pp+=zz;
+			}
+			
+		}
+		pp += ".*";
+		System.out.println(pp);
+		
+		String [] dongs = {
+				"강동동",
 				"구랑동",
 				"녹산동",
 				"눌차동",
@@ -77,9 +106,7 @@ class MemberJoin{
 				"지사동",
 				"천성동",
 				"화전동",
-				
-				
-				
+
 				"구서동",
 				"금사동",
 				"금성동",
@@ -207,133 +234,78 @@ class MemberJoin{
 				"동삼동",
 				"봉래동1가",
 				"봉래동2가",
-				
 				"봉래동3가",
-				
 				"봉래동4가",
-				
 				"봉래동5가",
-				
 				"신선동1가",
-				
 				"신선동2가",
-				
 				"신선동3가",
-				
 				"영선동1가",
-				
 				"영선동2가",
-				
 				"영선동3가",
-				
 				"영선동4가",
-				
 				"청학동",
-				
 				"광복동1가",
-				
 				"광복동2가",
-				
 				"광복동3가",
-				
 				"남포동1가",
-				
 				"남포동2가",
-				
 				"남포동3가",
-				
 				"남포동4가",
-				
 				"남포동5가",
-				
 				"남포동6가",
-				
 				"대창동1가",
-				
 				"대창동2가",
-				
 				"대청동1가",
-				
 				"대청동2가",
-				
 				"대청동3가",
-				
 				"대청동4가",
-				
 				"동광동1가",
-				
 				"동광동2가",
-				
 				"동광동3가",
-				
 				"동광동4가",
-				
 				"동광동5가",
-				
 				"보수동1가",
-				
 				"보수동2가",
-				
 				"보수동3가",
-				
 				"부평동1가",
-				
 				"부평동2가",
-				
 				"부평동3가",
-				
 				"부평동4가",
-				
 				"신창동1가",
-				
 				"신창동2가",
-				
 				"신창동3가",
-				
 				"신창동4가",
-				
 				"영주동",
-				
 				"중앙동1가",
-				
 				"중앙동2가",
-				
 				"중앙동3가",
-				
 				"중앙동4가",
-				
 				"중앙동5가",
-				
 				"중앙동6가",
-				
 				"중앙동7가",
-				
 				"창선동1가",
-				
 				"창선동2가",
-				
-				
-				
 				"반송동",
-				
 				"반여동",
-				
 				"석대동",
-				
 				"송정동",
-				
 				"우동",
-				
 				"재송동",
-				
 				"좌동",
-				
 				"중동"};
 		
 		
-		System.out.println(Arrays.toString(dongs));
+		//System.out.println(Arrays.toString(dongs));
 		
-		this.zipcode = zipcode;
+		this.zipcode = "";
+		
+		for (String dd : dongs) {
+			if(Pattern.matches(pp, dd)) {
+				this.zipcode += dd+","; 
+			}
+		}
+		
 	}
 	
 	
