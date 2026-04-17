@@ -63,7 +63,8 @@ public class ArrayStudMain {
 			}else {
 				curr = team2;
 			}
-			curr.add(st);
+			ArrayList banList = (ArrayList)curr.get(st.ban-1);
+			banList.add(st);
 		}
 		
 		//System.out.println(team1);
@@ -82,10 +83,28 @@ public class ArrayStudMain {
 		listppp("team2", team2); 
 	}
 	static void listppp(String title, List list) {
+		
 		System.out.println(title+" >>>");
-		for (Object st : list) {
-			System.out.println(st);
+		
+		for (int i =0; i<list.size();i++) {
+			System.out.println(i+1+" 반 ");
+			//ArrayList stArr = (ArrayList)list.get(i);
+			//for (Object st : stArr) {
+			for (Object st : (ArrayList)list.get(i)) {
+				System.out.println(st);
+			}
 		}
 	}
 
 }
+
+/*
+ArrayJumMain
+56,78,92,45,78,25,77,94,77,56,83,85,56,45,72  --> 수우미양가 구간으로 나누어서 점수를 정렬하세요
+각 구간은 내림차순(높은 점수가 앞에 위치) 하세요 
+ * */
+
+
+
+
+
