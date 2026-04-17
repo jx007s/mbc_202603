@@ -186,6 +186,12 @@ public class ArrayListMain {
 		System.out.println("arr8:"+arr8);
 		System.out.println("arr9:"+arr9);
 		
+		System.out.println("isEmpty() : "+arr6.isEmpty());
+		arr6.clear();
+		System.out.println("clear() : "+arr6);
+		System.out.println("isEmpty() : "+arr6.isEmpty());
+		
+		
 	}
 	
 
