@@ -11,11 +11,11 @@ enum MapGrade{
 }
 class MapSawon{
 	String  name;
-	TreeGrade grade;
+	MapGrade grade;
 
 	MapSawon(String ttt) {
 		String [] arr = ttt.split("_");
-		this.grade = TreeGrade.valueOf(arr[0]);
+		this.grade = MapGrade.valueOf(arr[0]);
 		this.name = arr[1];
 	}
 
@@ -28,24 +28,22 @@ public class MapSawonMain {
 
 	public static void main(String[] args) {
 		
-		Map total = new TreeMap();
+		TreeMap<MapGrade, TreeSet<MapSawon>> total = new TreeMap();
 		
 		for (String str : "사원_정우성,과장_현빈,부장_원빈,과장_장동건,사원_장서건,대리_정남성,대리_정좌성,부장_이효리,사원_삼효리,과장_한가인,대리_두가인".split(",")) {
 			
 			
 			MapSawon sw = new MapSawon(str);
 			
-			TreeSet set;
+			TreeSet<MapSawon> set;
 			
 			if(total.containsKey(sw.grade)) {
-				set = (TreeSet)total.get(sw.grade);
+				set = total.get(sw.grade);
 			}else {
 				set = new TreeSet(
-						new Comparator() {
+						new Comparator<MapSawon>() {
 							@Override
-							public int compare(Object o1, Object o2) {
-								MapSawon me = (MapSawon)o1;
-								MapSawon you = (MapSawon)o2;
+							public int compare(MapSawon me, MapSawon you) {
 								
 								return me.name.compareTo(you.name);
 							}
@@ -56,10 +54,10 @@ public class MapSawonMain {
 		}
 
 		//System.out.println(total);
-		for (Object oo : total.entrySet()) {
-			Map.Entry grade = (Map.Entry)oo;
+		for (Map.Entry<MapGrade, TreeSet<MapSawon>> grade : total.entrySet()) {
+			//Map.Entry<MapGrade, TreeSet<MapSawon>> grade = (Map.Entry)oo;
 			System.out.println(grade.getKey()+" >>>");
-			for (Object sw : (TreeSet)grade.getValue()) {
+			for (MapSawon sw : grade.getValue()) {
 				System.out.println(sw);
 			}
 		}
