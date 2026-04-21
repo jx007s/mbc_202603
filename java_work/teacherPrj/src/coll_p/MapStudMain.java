@@ -86,8 +86,6 @@ public class MapStudMain {
 				   Key : value
 				   남 : 남자들(Set)
 				   여 : 여자들(Set)
-		 * */
-		Map total = new HashMap();
 		
 		Map ban1 = new HashMap();
 		TreeSet b1m = new TreeSet();
@@ -115,6 +113,34 @@ public class MapStudMain {
 		
 		ban2.put("남", b2m);
 		ban2.put("여", b2f);
+		*/
+		
+		
+		Map total = new HashMap();
+		
+		for (MapStud st : data) {
+			// 입력할 반
+			Map ban;
+			
+			if(total.containsKey(st.ban)) {//기존 반이 존재한다면
+				ban = (HashMap)total.get(st.ban);
+			}else { //반이 없다면 새로운 반 Map 생성
+				ban  = new HashMap();
+			}
+			total.put(st.ban, ban);
+			
+			TreeSet gender; 
+			
+			if(ban.containsKey(st.gender)) { //기존 성별이 존재한다면
+				gender = (TreeSet)ban.get(st.gender);
+			}else { // 반에 성별이 없다면 새로운 성별 TreeSet 생성
+				gender = new TreeSet(); 
+			}
+			
+			ban.put(st.gender, gender);
+			
+			gender.add(st);
+		}
 		
 		//전체 -> 반
 		for (Object obj1 : total.entrySet()) {
@@ -137,3 +163,10 @@ public class MapStudMain {
 	}
 
 }
+
+/*
+MapSawonMain 
+TreeSawonMain --> Map 구조로 변경해 주세요  
+
+ * */
+
