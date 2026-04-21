@@ -22,6 +22,15 @@ interface QQ5{
 	String zxcv();
 }
 
+class AAA{
+	void meth_1(int u, int r) {
+		System.out.println("AAA meth_1() : "+u+","+r);
+	}
+	static void meth_s1(int u, int r) {
+		System.out.println("AAA meth_s1() : "+u+","+r);
+	}
+}
+
 public class LambdaMain {
 	
 	void p2r0(QQ1 qq1) {
@@ -102,10 +111,27 @@ public class LambdaMain {
 		
 		// 다른 실행문없이 바로 리턴인 경우 {}  return  ; 모두 동시생략
 		p0rStr(() -> "엄마상어");
+		
+		// 메소드 참조 -- 인터페이스 구현과 상관없이 형태(리턴, 매개변수)만 맞으면 참조가능
+		//p2r0( AAA::meth_1);
+		p2r0( AAA::meth_s1);  	//스태틱 메소드 참조
+		AAA aa = new AAA();
+		p2r0( aa::meth_1);		//인스턴스 메소드 참조
 	}
 
 	public static void main(String[] args) {
 		new LambdaMain();
 	}
+	
+	/*
+Lambda3Main
+정수3개를 매개변수로 받고 정수1개를 리턴하는 람다식 가능한 인터페이스를 구현하세요
+
+계산식은 3개를 구현하세요
+
+1. 3개의 합 리턴
+2. 3개중 가장 큰수를 리턴
+3. 첫번째 두번째 매개변수를 곱하고 3번째 매개변수로 뺀 수 리턴
+	 * */
 
 }
