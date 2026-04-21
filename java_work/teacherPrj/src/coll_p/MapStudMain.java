@@ -3,6 +3,7 @@ package coll_p;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 class MapStud implements Comparable{
@@ -116,16 +117,16 @@ public class MapStudMain {
 		*/
 		
 		
-		Map total = new HashMap();
+		Map total = new TreeMap();
 		
 		for (MapStud st : data) {
 			// 입력할 반
 			Map ban;
 			
 			if(total.containsKey(st.ban)) {//기존 반이 존재한다면
-				ban = (HashMap)total.get(st.ban);
+				ban = (TreeMap)total.get(st.ban);
 			}else { //반이 없다면 새로운 반 Map 생성
-				ban  = new HashMap();
+				ban  = new TreeMap();
 			}
 			total.put(st.ban, ban);
 			
@@ -149,7 +150,7 @@ public class MapStudMain {
 			System.out.println("[[ "+banEnt.getKey()+" 반 ]]");
 			
 			// 반 -> 성별
-			for (Object obj2 : ((HashMap)banEnt.getValue()).entrySet()) {
+			for (Object obj2 : ((TreeMap)banEnt.getValue()).entrySet()) {
 				//System.out.println(obj2);
 				Map.Entry genEnt = (Map.Entry)obj2;
 				System.out.println(genEnt.getKey()+" >>>");
