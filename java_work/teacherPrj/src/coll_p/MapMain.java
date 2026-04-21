@@ -1,5 +1,6 @@
 package coll_p;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -86,6 +87,28 @@ public class MapMain {
 			//System.out.println(men);
 			System.out.println(men.getKey()+" : "+men.getValue());
 		}
+		
+		//key 만 set 으로 리턴
+		Set kk = mm1.keySet();
+		System.out.println("keySet() : "+kk);
+		
+		for (Object obj : kk) {
+			System.out.println(obj+":"+mm1.get(obj));
+		}
+		
+		//value 리턴
+		Collection vv = mm1.values();
+		System.out.println("values() : "+vv);
+		
+		for (Object obj : vv) {
+			System.out.println(obj);
+		}
+		
+		System.out.println(mm1.isEmpty());
+		mm1.clear();
+		System.out.println("mm1 : "+mm1);
+		System.out.println(mm1.isEmpty());
+		
 	}
 
 }
