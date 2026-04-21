@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-class MapStud implements Comparable{
+class MapStud implements Comparable<MapStud>{
 
 	int ban, tot ,avg;
 	String gender, name;
@@ -35,8 +35,8 @@ class MapStud implements Comparable{
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		MapStud you = (MapStud)o;
+	public int compareTo(MapStud you) {
+		
 		
 		//평균
 		int res = you.avg-avg;
@@ -117,23 +117,23 @@ public class MapStudMain {
 		*/
 		
 		
-		Map total = new TreeMap();
+		Map<Integer, TreeMap<String, TreeSet<MapStud>>> total = new TreeMap();
 		
 		for (MapStud st : data) {
 			// 입력할 반
-			Map ban;
+			TreeMap<String, TreeSet<MapStud>> ban;
 			
 			if(total.containsKey(st.ban)) {//기존 반이 존재한다면
-				ban = (TreeMap)total.get(st.ban);
+				ban = total.get(st.ban);
 			}else { //반이 없다면 새로운 반 Map 생성
 				ban  = new TreeMap();
 			}
 			total.put(st.ban, ban);
 			
-			TreeSet gender; 
+			TreeSet<MapStud> gender; 
 			
 			if(ban.containsKey(st.gender)) { //기존 성별이 존재한다면
-				gender = (TreeSet)ban.get(st.gender);
+				gender = ban.get(st.gender);
 			}else { // 반에 성별이 없다면 새로운 성별 TreeSet 생성
 				gender = new TreeSet(); 
 			}
@@ -143,20 +143,23 @@ public class MapStudMain {
 			gender.add(st);
 		}
 		
+		
+		
 		//전체 -> 반
-		for (Object obj1 : total.entrySet()) {
-			Map.Entry banEnt = (Map.Entry)obj1;
+		for (Map.Entry<Integer, TreeMap<String, TreeSet<MapStud>>>banEnt  : total.entrySet()) {
+			//Map.Entry banEnt = (Map.Entry)obj1;
 			//System.out.println(totEnt);
 			System.out.println("[[ "+banEnt.getKey()+" 반 ]]");
 			
 			// 반 -> 성별
-			for (Object obj2 : ((TreeMap)banEnt.getValue()).entrySet()) {
+			for(Map.Entry<String, TreeSet<MapStud>> genEnt : banEnt.getValue().entrySet()) {
+			//for (Object obj2 : ((TreeMap)banEnt.getValue()).entrySet()) {
 				//System.out.println(obj2);
-				Map.Entry genEnt = (Map.Entry)obj2;
+				//Map.Entry genEnt = (Map.Entry)obj2;
 				System.out.println(genEnt.getKey()+" >>>");
 				
 				// 성별 -> 학생
-				for (Object st : (TreeSet)genEnt.getValue()) {
+				for (MapStud st : genEnt.getValue()) {
 					System.out.println(st);
 				}
 			}

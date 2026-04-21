@@ -1,6 +1,7 @@
 package coll_p;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 class Product{}
 class Phone extends Product{}
@@ -69,6 +70,36 @@ public class GenericListMain {
 		//meth_5(arr2);
 		//meth_5(arr3);
 		meth_5(arr5);
+		
+		Iterator it1;
+		it1 = arr1.iterator();
+		it1 = arr2.iterator();
+		it1 = arr3.iterator();
+		it1 = arr5.iterator();
+		
+		Iterator<Phone> it2;
+		//it2 = arr1.iterator();
+		it2 = arr2.iterator();
+		//it2 = arr3.iterator();
+		//it2 = arr5.iterator();
+		
+		Iterator<? super Phone> it3;
+		//it3 = arr1.iterator();
+		it3 = arr2.iterator();
+		it3 = arr3.iterator();
+		//it3 = arr5.iterator();
+		
+		Iterator<? extends Phone> it4;
+		//it4 = arr1.iterator();
+		it4 = arr2.iterator();
+		//it4 = arr3.iterator();
+		it4 = arr5.iterator();
+		
+		Iterator<HandPhone> it5;
+		//it5 = arr1.iterator();
+		//it5 = arr2.iterator();
+		//it5 = arr3.iterator();
+		it5 = arr5.iterator();
 	}
 	
 	static void meth_1(ArrayList arr) {}
