@@ -1,5 +1,9 @@
 package lambda_p;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -98,6 +102,61 @@ public class FilterMain {
 		
 		
 		//exam.txt 에서 평균이 70점 인상인 정보를 출력하세요
+		
+		try {
+			System.out.println("Files.lines");
+			File ff = new File("fff/exam.txt");
+			Path path = ff.toPath();
+			Stream<String> stream3 = Files.lines(path);
+			
+//			Stream<Stud> stream4 = stream3.map(tt->new Stud(tt));
+//			//stream4.forEach(tt->System.out.println( tt));
+//			Stream<Stud> stream5 = stream4.filter(st->st.avg>=70);
+//			stream5.forEach(tt->System.out.println( tt));
+//			stream5.close();
+//			stream4.close();
+			
+			stream3
+				.map(tt->new Stud(tt))
+				.filter(st->st.avg>=70)
+				.forEach(tt->System.out.println( tt));
+			
+			stream3.close();
+			
+			//System.out.println(new Stud("장동건,78,79,72"));
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 	}
 
 }
+
+class Stud{
+	String ttt;
+	int tot, avg;
+	
+	Stud(String ttt) {
+
+		this.ttt = ttt;
+		List<String> data = Arrays.asList(ttt.split(",")) ;
+		tot = 0;
+		
+		IntStream istr = 
+				data.subList(1, data.size()).stream().mapToInt(tt->Integer.parseInt(tt));
+		istr.forEach(i->tot+=i);
+		istr.close();
+		avg=tot/(data.size()-1);
+		
+	}
+
+	@Override
+	public String toString() {
+		return ttt + "," + tot + "," + avg;
+	}
+}
+
+
+
+
+
