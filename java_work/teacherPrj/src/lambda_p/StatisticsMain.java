@@ -152,7 +152,39 @@ public class StatisticsMain {
 		
 		
 		/* 45,123,67,890,23,45,22,132,56,7,62 : 2의 배수들의 합계를 구하세요*/
+		int [] arr5 = {45,123,67,890,23,45,22,132,56,7,62};
+		System.out.println("2의 배수 : "+Arrays.stream(arr5).filter(a->a%2==0).sum());
 		
+		
+		System.out.println("reduce ------------");
+		int rr = Arrays.stream(arr1).sum();
+		System.out.println(rr);
+		
+		// reduce : 수식으로 누적처리
+		// 통계 수식보다 복잡한 경우 사용
+		// reduce( 수식 ) : OptionalInt 리턴
+		// (a, b)
+		// a : 누적되는 변수
+		// b : 각 원소
+		rr = Arrays.stream(arr1).reduce((a, b)->a+b).getAsInt();
+		System.out.println(rr);
+		
+		// reduce( 초기값, 수식 ) : int 리턴
+		// 수식전에 리턴할 변수에 3000 초기값으로 대입
+		rr = Arrays.stream(arr1).reduce(3000,(a, b)->a+b);
+		System.out.println(rr);
+		
+		rr = Arrays.stream(arr1).reduce(3000,(a, b)->{
+			int res = a+b;
+			System.out.println(a+","+b+","+res);
+			return res;
+		});
+		System.out.println(rr);
+		
+		/* 45,123,67,890,23,45,22,132,56,7,62 : 2의 배수들의 합계를 구하세요 
+		 filter 사용금지,  reduce 사용
+		*/
+		System.out.println("2의 배수 : "+Arrays.stream(arr5).reduce(0,(a, b)->b%2==0 ? a+b : a));
 	}
 
 }
