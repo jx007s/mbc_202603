@@ -1,5 +1,6 @@
 package io_p;
 
+import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Arrays;
@@ -27,34 +28,26 @@ class RWExam{
 public class RWExamMain {
 
 	public static void main(String[] args) throws Exception {
-		
-		
-		
+
 		FileReader fr = new FileReader("fff/exam.txt");
-		char [] buf = new char[20];
-		String data = "";
-		while(true) {
-			int len = fr.read(buf);
-			if(len<0) {
-				break;
-			}
-			//String str = new String(buf,0,len);
-			//System.out.println(len+":"+str);
-			data += new String(buf,0,len);
-		}
-		fr.close();
-		//System.out.println(data);
+		BufferedReader br = new BufferedReader(fr);//1행씩 가져오는 stream
+													// FileReader의 buffer
 		
+		FileWriter fw = new FileWriter("dst/examRes.txt"); 
 		
-		FileWriter fw = new FileWriter("dst/examRes.txt"); // 생략 , false : 덮어쓰기
-		//new FileWriter("dst/memberRes.txt", true); 				// true : 뒤에 이어쓰기
-		
-		for (String dd : data.split("\n")) {
-			//System.out.println(new RWMember(dd));
-			fw.write(new RWExam(dd).toString()+"\n");
+		String data;
+		int cnt = 0;
+		while((data=br.readLine())!=null) { // 더이상 가져오는 내용이 없으면 null
+			
+			System.out.println(++cnt+":"+data);
+			fw.write(new RWExam(data).toString()+"\n");
 		}
 		
 		fw.close();
+		
+		br.close();
+		fr.close();
+		
 
 	}
 
