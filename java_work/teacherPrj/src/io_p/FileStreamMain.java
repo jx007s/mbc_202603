@@ -11,8 +11,12 @@ public class FileStreamMain {
 		
 		String srcPath = "fff/exam.txt";
 		String dstPath = "dst/aaa.txt";
-		srcPath = "fff/back.png";
-		dstPath = "dst/bbb.png";
+		//상대주소
+		//srcPath = "fff/back.png";
+		//dstPath = "dst/bbb.png";
+		//절대주소
+		srcPath = "D:\\public\\mbc\\2026_03\\public\\QKAL1555.JPG";
+		dstPath = "D:\\public\\mbc\\2026_03\\public\\java_work\\teacherPrj\\dst\\ccc.jpg";
 									//파일경로
 									//상대주소, 절대주소
 									// 상대주소 : 프로젝트 위치를 기반으로 함
