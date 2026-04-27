@@ -9,7 +9,25 @@ import java.io.IOException;
 import java.util.Date;
 
 /**
- * Servlet implementation class Now3
+	[Servlet lifeCycle]
+ 
+ 	instance 생성 (생성자)		-- 1
+ 		최초 1회
+ 			|
+ 			V
+ 		  init()			-- 2
+ 		  최초 1회
+ 			|
+ 			V
+ 		doService()			-- 3
+ 		url로 서비스 호출시마다
+ 		   doGet()
+ 		   doPost()
+ 		    |
+ 			V
+ 		destroy()			-- 4
+ 		톰캣서버 종료시
+ 	
  */
 @WebServlet("/Now3")
 public class Now3 extends HttpServlet {
