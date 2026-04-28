@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 
 /**
@@ -52,8 +53,13 @@ public class Now3 extends HttpServlet {
 		int b = 0;
 		a++;
 		b++;
-		System.out.println("\t doGet 실행 : "+a+","+b);
-		response.getWriter().append("Served at: ").append(new Date()+"");
+		//System.out.println("\t doGet 실행 : "+a+","+b);
+		//response.getWriter().append("Served at: ").append(new Date()+"");
+		
+		// client 브라우져에 작성하는 Stream 가져오기
+		PrintWriter pw = response.getWriter();
+		pw.println("Hi Now3");
+		pw.close();
 		
 		/*
 		 testJspPrj > 
