@@ -15,5 +15,11 @@
 	<a href="basic/04_lifeCycle.jsp">04_lifeCycle</a>
 	<a href="basic/05_out.jsp">05_out</a>
 	<a href="basic/06_dirary.jsp">06_dirary</a>
+	<h2>request</h2>
+	<a href="request/01_info.jsp">01_info</a>
+	<a href="request/02_param.jsp">02_param1</a>
+	<a href="request/02_param.jsp?pid=aaa&age=34&marriage=true">02_param2</a>
+	<a href="request/03_joinForm.jsp">03_joinForm</a>
+	
 </body>
 </html>
