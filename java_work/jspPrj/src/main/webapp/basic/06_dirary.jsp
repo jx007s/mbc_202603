@@ -27,7 +27,6 @@ section > div{
 
 	width:40px;
 	height: 40px;
-	text-align: center;
 	float: left;
 	margin: 1px;
 	border:  1px solid #ccc;
@@ -36,6 +35,47 @@ section > div{
 }
 
 
+section > .title{
+
+	text-align: center;
+
+}
+
+section > .title:nth-of-type(1){
+
+	background-color: #f00;
+	color: #fff;
+
+}
+section > .title:nth-of-type(7){
+
+	background-color: #00f;
+	color: #fff;
+
+}
+
+section > .days:nth-of-type(7n+1){
+
+	color: #f00;
+
+}
+section > .days:nth-of-type(7n){
+
+	color: #00f;
+
+}
+
+section > .days{
+
+	text-align: right;
+
+}
+
+section > .today{
+
+	background-color: #ff0;
+
+}
 </style>
 </head>
 <body>
@@ -62,29 +102,22 @@ now.setDate(1);
 <%
 for(char ch : "일월화수목금토".toCharArray()){ %>
 
-<div><%=ch %></div>	
+<div class='title'><%=ch %></div>	
 <%}
 
 for (int i = 0; i < now.getDay(); i++) {
-	out.print("<div></div>");
+	out.print("<div class='days'></div>");
 }
 
 for (int i = 1; i <=last; i++) {
 	now.setDate(i);	//날짜 변경
 	//System.out.print(i+" "+now.getDay()+"\t");
-	String pre = "";
-	String sur = "";
-	if(i<10) {
-		pre = " ";
-	}
+	String today = "";
 	if(nn==i) {
-		pre+="[";
-		sur = "]";
-	}else {
-		pre+=" ";
+		today = "today";
 	}
 %>	
-	<div><%=pre+i+sur %></div>
+	<div class='days <%=today%>'><%=i %></div>
 <%}%>
 
 </section>
