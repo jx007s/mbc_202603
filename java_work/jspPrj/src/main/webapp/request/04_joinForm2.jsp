@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>04_joinForm2</title>
 </head>
 <body>
-	<h1>03_joinForm</h1>
-	<form action="joinReg.jsp" method="post">
+	<h1>04_joinForm2</h1>
+	<form action="joinReg2.jsp" method="post">
 		<table border="">
 			<tr>
 				<td>id</td>

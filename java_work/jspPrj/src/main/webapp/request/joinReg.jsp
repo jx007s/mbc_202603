@@ -39,6 +39,39 @@
 				<%=request.getParameter("email1") %>@<%=request.getParameter("email2") %>
 				</td>
 			</tr>
+			<tr>
+				<td>남기실말</td>
+				<%
+	String content = request.getParameter("content").replaceAll("\n", "<br/>");
+				
+				%>
+				<td><%-- <%=request.getParameter("content") %> --%>
+				<%=content %></td>
+			</tr>
+			<tr>
+				<td>파일</td>
+				<td>
+				<!-- 파일객체가 아닌 파일이름만 업로드됨 -->
+				<%=request.getParameter("upfile") %></td>
+			</tr>
+			<tr>
+				<td>생일</td>
+				<td><%=request.getParameter("birth") %></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><%=request.getParameter("pname") %></td>
+			</tr>
 		</table>
 </body>
 </html>
+
+<!-- examForm.jsp -> examReg.jsp
+
+학생 1명의 
+
+이름, 국어, 영어, 수학 점수를 입력받아
+
+이름, 국어, 영어, 수학 , 총점, 평균 을 출력하세요 -->
+
+
