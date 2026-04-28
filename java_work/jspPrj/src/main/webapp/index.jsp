@@ -14,5 +14,6 @@
 	<a href="Now3">Now3</a>
 	<a href="basic/04_lifeCycle.jsp">04_lifeCycle</a>
 	<a href="basic/05_out.jsp">05_out</a>
+	<a href="basic/06_dirary.jsp">06_dirary</a>
 </body>
 </html>
