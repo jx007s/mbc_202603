@@ -7,10 +7,18 @@
 <!--  
 http://download.emmet.io/eclipse/updates/
  -->
-<title>05_request</title>
+<title>05_out</title>
+<style>
+	.box{
+		width: 50px;
+		height: 50px;
+		border : 1px solid #ccc;
+		background-color: #ff0;
+	}
+</style>
 </head>
 <body>
-<h1>05_request</h1>
+<h1>05_out</h1>
 <%
 /*
 
@@ -54,6 +62,42 @@ JSP 내장객체
 <%
 	jw1.println("아빠상어");
 	jw2.println("할머니상어");
+	
+	out.println("<div class='box'>box-1</div>");
+	
+	String bb = "box2";
+	out.println("<div class='box'>"+bb+"</div>");
 %>
+<%="<div class='box'>"+bb+"</div>" %>
+
+<script>
+	document.write("<div class='box'>"+"<%=bb%>"+"</div>")
+	bb3 = "box3"
+	document.write("<div class='box'>"+bb3+"</div>")
+</script>
+<%
+	// jsp --> html 문자열로 변환후 html 코드 작성
+	// javascript 나 html 요소를 JSP 코드에 사용 불가
+	//out.println("<div class='box'>"+<script>document.write(bb3)</script>+"</div>");
+%>
+<%-- <%="<div class='box'>"+<script>document.write(bb3)</script>+"</div>" %> --%>
+
+
+<%
+	for(int i = 10; i<50 ; i+=10){
+		out.println("<div class='box'>i = "+i+"</div>");
+	}
+%>
+
+<%	for(int i = 100; i<500 ; i+=100){ %>
+
+		<div class='box'>i = <%=i %></div>
+<% 	}
+
+// 06_dirary.jsp
+// Date , for 이용하여 달력 구현하세요
+// javascript 사용불가
+%>
+
 </body>
 </html>

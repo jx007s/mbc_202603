@@ -13,6 +13,6 @@
 	<a href="basic/02_now.jsp">02_now</a>
 	<a href="Now3">Now3</a>
 	<a href="basic/04_lifeCycle.jsp">04_lifeCycle</a>
-	<a href="basic/05_request.jsp">05_request</a>
+	<a href="basic/05_out.jsp">05_out</a>
 </body>
 </html>
