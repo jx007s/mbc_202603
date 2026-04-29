@@ -27,5 +27,12 @@
 	<a href="response/movieForm.html">movieForm</a>
 	<h2>application</h2>
 	<a href="application/info.jsp">info</a>
+	<a href="application/set1.jsp">set1</a>
+	<a href="application/view.jsp">view</a>
+	<a href="application/set2.jsp">set2</a>
+	<a href="application/remove.jsp">remove</a>
+	<a href="application/examForm.jsp">examForm</a>
+	<a href="application/examView.jsp">examView</a>
+	<a href="application/examDelete.jsp?no=0">examDelete</a>
 </body>
 </html>
