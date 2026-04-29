@@ -38,6 +38,10 @@
 				<td>평균</td>
 				<td><%=dto.getAvg()%></td>
 			</tr>
+			<tr>
+				<td>등급</td>
+				<td><%=dto.getGrade()%></td>
+			</tr>
 		</table>
 
 </body>
