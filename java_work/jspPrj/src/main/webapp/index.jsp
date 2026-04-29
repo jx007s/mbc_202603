@@ -21,6 +21,7 @@
 	<a href="request/02_param.jsp?pid=aaa&age=34&marriage=true">02_param2</a>
 	<a href="request/03_joinForm.jsp">03_joinForm</a>
 	<a href="request/04_joinForm2.jsp">04_joinForm2</a>
+	<a href="request/examForm.jsp">examForm</a>
 	
 </body>
 </html>
