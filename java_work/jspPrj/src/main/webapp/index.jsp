@@ -25,6 +25,7 @@
 	<h2>response</h2>
 	<a href="response/aaa.jsp">aaa</a>
 	<a href="response/movieForm.html">movieForm</a>
-	
+	<h2>application</h2>
+	<a href="application/info.jsp">info</a>
 </body>
 </html>
