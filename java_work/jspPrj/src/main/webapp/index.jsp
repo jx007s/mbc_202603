@@ -24,6 +24,7 @@
 	<a href="request/examForm.jsp">examForm</a>
 	<h2>response</h2>
 	<a href="response/aaa.jsp">aaa</a>
+	<a href="response/movieForm.html">movieForm</a>
 	
 </body>
 </html>
