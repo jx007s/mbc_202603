@@ -22,6 +22,8 @@
 	<a href="request/03_joinForm.jsp">03_joinForm</a>
 	<a href="request/04_joinForm2.jsp">04_joinForm2</a>
 	<a href="request/examForm.jsp">examForm</a>
+	<h2>response</h2>
+	<a href="response/aaa.jsp">aaa</a>
 	
 </body>
 </html>
