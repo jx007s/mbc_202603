@@ -34,5 +34,7 @@
 	<a href="application/examForm.jsp">examForm</a>
 	<a href="application/examView.jsp">examView</a>
 	<a href="application/examDelete.jsp?no=0">examDelete</a>
+	<h2>include</h2>
+	<a href="include/big.jsp">big</a>
 </body>
 </html>
