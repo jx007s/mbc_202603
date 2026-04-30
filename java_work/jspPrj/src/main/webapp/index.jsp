@@ -38,5 +38,8 @@
 	<a href="include/big.jsp?pid=abcd&age=34&job=의사">big</a>
 	<a href="include/zzz/bbb.jsp?pid=wsx&age=19&job=장의사">bbb</a>
 	<a href="include/bakery.jsp?cate=info&service=hello">빵집</a>
+	<h2>forward</h2>
+	<a href="forward/aaa.jsp?pid=abcd&age=34&job=의사">aaa</a>
+	<a href="forward/info/hello.jsp">빵집</a>
 </body>
 </html>
