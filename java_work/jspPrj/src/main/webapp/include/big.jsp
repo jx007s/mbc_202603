@@ -63,6 +63,15 @@ include			jsp 액션태그      페이지 내 페이지 삽입          	o
 	</jsp:include>
 <%-- 	<br/><%=zxc1 %>, <%=zxc2 %><br/> 다른파일의 변수 접근 불가   --%>
 	<h3>big ----------- 2</h3>
+	<p>
+		<%=request.getAttribute("pname") %>,
+		<%=Arrays.toString((int [])request.getAttribute("arr"))%>,
+		<%=request.getAttribute("marriage") %>,
+		<%=request.getAttribute("st1") %>,
+		<%=request.getAttribute("menu") %>
+	</p>
+	
+	
 	<jsp:include page="zzz/bbb.jsp"/>
 	<h3>big ----------- 3</h3>
 	<!-- parameter 를 추가하여 요청가능 -->

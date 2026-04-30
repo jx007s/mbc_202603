@@ -47,11 +47,19 @@ public class ExamDTO {
 		
 		
 	}*/
+	
+	
 
 	public String getPname() {
 		return pname;
 	}
 
+	public int[] getJum() {
+		return jum;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
 	public int getJum(int no) {
 		//System.out.println(Arrays.toString(jum));
 		return jum[no];
