@@ -1,3 +1,5 @@
+<%@page import="basic_p.MenuDTO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
@@ -12,6 +14,17 @@
 		service = request.getParameter("service");
 	}
 	String serviceUrl = "baService/"+cate+"/"+service+".jsp";
+	
+	request.setAttribute("cate", cate);
+	
+	List<MenuDTO> menuData = List.of(
+			new MenuDTO("hello","인사말"),
+			new MenuDTO("history","연혁"),
+			new MenuDTO("location","오시는길")
+			);
+	
+	request.setAttribute("menuData", menuData);
+	
 %>    
 <!DOCTYPE html>
 <html>
@@ -29,7 +42,8 @@
 	</tr>
 	<tr>
 		<td width="200px">
-		<jsp:include page="<%=cateUrl %>"/>
+		<%-- <jsp:include page="<%=cateUrl %>"/> --%>
+		<jsp:include page="baInc/menu.jsp"/>
 		</td>
 		<td width="700px">
 		<jsp:include page="<%=serviceUrl %>"/>
