@@ -8,6 +8,11 @@ nav{
 nav>a{
 	display:block;
 }
+
+aside > a{
+	display: block;
+}
+
 </style>    
 <header>   
 <h2>난헤더</h2>
