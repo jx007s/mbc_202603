@@ -68,5 +68,10 @@ public class ExamDTO {
 	public String getGrade() {
 		return "가가가가가가양미우수수".charAt(getAvg()/10)+"";
 	}
+	@Override
+	public String toString() {
+		return "ExamDTO [pname=" + pname + ", jum=" + Arrays.toString(jum) + "]";
+	}
+	
 	
 }
