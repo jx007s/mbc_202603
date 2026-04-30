@@ -8,7 +8,7 @@
 %>
 <aside>    
 <h3><%=cate %>메뉴</h3>
-<a href="?cate=<%=cate %>&service=hello">인사말</a>
-<a href="?cate=<%=cate %>&service=history">연혁</a>
-<a href="?cate=<%=cate %>&service=location">오시는길</a>
+<% for(MenuDTO dto : menuData){ %>
+<a href="?cate=<%=cate %>&service=<%=dto.getUrl() %>"><%=dto.getTitle() %></a>
+<%} %>
 </aside>
