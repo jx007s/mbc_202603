@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
+import bakery_p.MenuListService;
 import basic_p.MenuDTO;
 
 /**
@@ -30,15 +31,20 @@ public class Bagette extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
+		/*
 		List<MenuDTO> menuData = List.of(
 				new MenuDTO("/jspPrj/forward/basic/Bagette","바게뜨"),
 				new MenuDTO("/jspPrj/forward/basic/RedBean","앙꼬"),
 				new MenuDTO("/jspPrj/forward/basic/Soboro","소보로")
 				
 				);
-
-		request.setAttribute("cate","일반빵");
-		request.setAttribute("menuData",menuData);
+				
+				https://github.com/?locale=ko-kr
+				*/
+		String cate = "일반빵";
+		request.setAttribute("cate",cate);
+		request.setAttribute("menuData",new MenuListService().menuList(cate));
 		
 		request.setAttribute("mainUrl","basicView.jsp");
 		request.setAttribute("service","바게뜨이지롱");
