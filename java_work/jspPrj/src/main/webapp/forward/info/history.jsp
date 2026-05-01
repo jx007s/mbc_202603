@@ -11,7 +11,7 @@
 
 	request.setAttribute("cate","회사소개");
 	request.setAttribute("menuData",menuData);
-	request.setAttribute("mainUrl","info/hello.jsp");
-	request.setAttribute("mainData","데이터베이스에서 가져오는 멋진 인사말정보");
+	request.setAttribute("mainUrl","info/history.jsp");
+	request.setAttribute("mainData","회사연혁이지롱");
 %>    
 <jsp:forward page="../../forView/template2.jsp"/>
