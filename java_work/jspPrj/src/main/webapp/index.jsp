@@ -41,5 +41,11 @@
 	<h2>forward</h2>
 	<a href="forward/aaa.jsp?pid=abcd&age=34&job=의사">aaa</a>
 	<a href="Bakery">빵집</a>
+	<h2>cookie</h2>
+	<a href="cookie/make.jsp">make</a>
+	<a href="cookie/view.jsp">view</a>
+	<a href="cookie/modify.jsp">modify</a>
+	<a href="cookie/delete.jsp">delete</a>
+	<a href="cookie/logMain.jsp">logMain</a>
 </body>
 </html>
