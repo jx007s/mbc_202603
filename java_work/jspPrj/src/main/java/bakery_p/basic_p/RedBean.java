@@ -14,14 +14,14 @@ import basic_p.MenuDTO;
 /**
  * Servlet implementation class Bagette
  */
-@WebServlet("/forward/basic/Bagette")
-public class Bagette extends HttpServlet {
+@WebServlet("/forward/basic/RedBean")
+public class RedBean extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Bagette() {
+    public RedBean() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,16 +41,14 @@ public class Bagette extends HttpServlet {
 				);
 				
 				https://github.com/?locale=ko-kr
-				
-				https://git-scm.com/install/windows
 				*/
 		String cate = "일반빵";
 		request.setAttribute("cate",cate);
 		request.setAttribute("menuData",new MenuListService().menuList(cate));
 		
 		request.setAttribute("mainUrl","basicView.jsp");
-		request.setAttribute("service","바게뜨이지롱");
-		request.setAttribute("mainData","데이터베이스에서 가져오는 바게뜨 정보");
+		request.setAttribute("service","앙꼬이지롱");
+		request.setAttribute("mainData","데이터베이스에서 가져오는 앙꼬 정보");
 		
 		//forwarding
 		request.getRequestDispatcher("../../forView/template2.jsp").forward(request, response);
