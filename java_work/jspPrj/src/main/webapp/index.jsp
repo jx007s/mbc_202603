@@ -40,6 +40,6 @@
 	<a href="include/bakery.jsp?cate=info&service=hello">빵집</a>
 	<h2>forward</h2>
 	<a href="forward/aaa.jsp?pid=abcd&age=34&job=의사">aaa</a>
-	<a href="forward/info/hello.jsp">빵집</a>
+	<a href="Bakery">빵집</a>
 </body>
 </html>
