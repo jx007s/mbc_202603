@@ -15,6 +15,8 @@
 	<a href="basic/04_lifeCycle.jsp">04_lifeCycle</a>
 	<a href="basic/05_out.jsp">05_out</a>
 	<a href="basic/06_dirary.jsp">06_dirary</a>
+	<a href="basic/07_page.jsp">07_page</a>
+	<a href="basic/08_config.jsp">08_config</a>
 	<h2>request</h2>
 	<a href="request/01_info.jsp">01_info</a>
 	<a href="request/02_param.jsp">02_param1</a>
