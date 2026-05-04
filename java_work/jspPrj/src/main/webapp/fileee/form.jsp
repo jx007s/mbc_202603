@@ -8,7 +8,12 @@
 </head>
 <body>
 <h1>form</h1>
-<form action="/jspPrj/UploadReg" method="get" enctype="application/x-www-form-urlencoded">
+<!--  파일업로드시
+method="post"   :: URL기반으로 파일전송이 아닌  post 로 묶어서 전송 
+enctype="multipart/form-data"  //데이터가 multipart 형태
+필수
+ -->
+<form action="/jspPrj/UploadReg" method="post" enctype="multipart/form-data">
 	<table border="">
 		<tr>
 			<td>pid</td>
@@ -24,7 +29,7 @@
 		</tr>
 		<tr>
 			<td>파일2</td>
-			<td><input type="file" name="up2" /></td>
+			<td><input type="file" name="up2" multiple /></td>
 		</tr>
 		<tr>
 			<td colspan="2" align="center">
