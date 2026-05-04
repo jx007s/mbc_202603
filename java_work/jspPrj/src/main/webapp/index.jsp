@@ -47,5 +47,11 @@
 	<a href="cookie/modify.jsp">modify</a>
 	<a href="cookie/delete.jsp">delete</a>
 	<a href="cookie/logMain.jsp">logMain</a>
+	<h2>session</h2>
+	<a href="session/make.jsp">make</a>
+	<a href="session/view.jsp">view</a>
+	<a href="session/modify.jsp">modify</a>
+	<a href="session/delete.jsp">delete</a>
+	<a href="session/logMain.jsp">logMain</a>
 </body>
 </html>

@@ -6,10 +6,18 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public class JoinDTO {
 
-	String pid, pw, gender, email1, email2,content, upfile;
+	String pid, pw,pname, gender, email1, email2,content, upfile;
 	String [] hobby;
 	Date birth;
 	
+	
+	
+	public JoinDTO(String pid, String pw, String pname) {
+		this.pid = pid;
+		this.pw = pw;
+		this.pname = pname;
+	}
+
 	public void reqInit(HttpServletRequest request) {
 		this.pid = request.getParameter("pid");
 		this.pw = request.getParameter("pw");
@@ -22,6 +30,12 @@ public class JoinDTO {
 		
 		System.out.println(request.getParameter("birth"));
 		//birth = new Date(request.getParameter("birth"));
+	}
+	
+	
+
+	public String getPname() {
+		return pname;
 	}
 
 	public String getPid() {
