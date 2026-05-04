@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+<web-app id="WebApp_ID" version="2.4" 
+xmlns="http://java.sun.com/xml/ns/j2ee" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<!-- 에러코드 500 발생시  
+	클라이언트 전달 : /exceppp/ex500.jsp 로 forward
+	서버출력 : console 에서 에러메세지 출력
+	
+	
+	error-code
+	tomcat  컨테이너 에러처리
+	-->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/exceppp/ex500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/exceppp/ex404.jsp</location>
+	</error-page>
+
 	<display-name>jspPrj</display-name>
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

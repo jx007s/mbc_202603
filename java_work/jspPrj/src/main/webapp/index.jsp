@@ -55,5 +55,8 @@
 	<a href="session/modify.jsp">modify</a>
 	<a href="session/delete.jsp">delete</a>
 	<a href="session/logMain.jsp">logMain</a>
+	<h2>exception</h2>
+	<a href="error/err1.jsp">err1</a>
+	<a href="error/err2.jsp">err2</a>
 </body>
 </html>
