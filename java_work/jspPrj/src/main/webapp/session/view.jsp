@@ -20,5 +20,9 @@
 <%=request.getSession() %><br/>
 <%=pageContext.getSession() %><br/>
 <%=se %><br/>
+<%=session.getAttribute("pid") %><br/>
+<%=session.getAttribute("arr") %><br/>
+<%=session.getAttribute("dto") %><br/>
+<%=session.getAttribute("ss") %><br/>
 </body>
 </html>
