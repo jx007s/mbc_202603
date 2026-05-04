@@ -58,5 +58,9 @@
 	<h2>exception</h2>
 	<a href="error/err1.jsp">err1</a>
 	<a href="error/err2.jsp">err2</a>
+	<a href="error/err3.jsp">err3</a>
+	<a href="error/err4.jsp">err4</a>
+	<h2>file</h2>
+	<a href="fileee/form.jsp">form</a>
 </body>
 </html>

@@ -9,10 +9,13 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 	클라이언트 전달 : /exceppp/ex500.jsp 로 forward
 	서버출력 : console 에서 에러메세지 출력
 	
+	예외처리 우선순위
+	1. try~catch
+	2. errorPage 로 예외처리 지정
+	3. exception-type
+	4. error-code
+	5. tomcat  컨테이너 에러처리
 	
-	error-code
-	tomcat  컨테이너 에러처리
-	-->
 	<error-page>
 		<error-code>500</error-code>
 		<location>/exceppp/ex500.jsp</location>
@@ -21,6 +24,13 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 		<error-code>404</error-code>
 		<location>/exceppp/ex404.jsp</location>
 	</error-page>
+	
+	
+	<error-page>
+		<exception-type>java.lang.ArithmeticException</exception-type>
+		<location>/exceppp/exArith.jsp</location>
+	</error-page>
+	-->
 
 	<display-name>jspPrj</display-name>
 	<welcome-file-list>
