@@ -8,7 +8,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Collection;
 
 
@@ -58,11 +62,18 @@ public class UploadReg extends HttpServlet {
 		dstPath ="D:\\public\\mbc\\2026_03\\public\\java_work\\jspPrj\\src\\main\\webapp\\fff\\";
 		System.out.println(dstPath+up1.getSubmittedFileName());
 		
-		//파일쓰기
-		up1.write(dstPath+up1.getSubmittedFileName());
+		String savePath = dstPath+up1.getSubmittedFileName();
+		
+		//파일쓰기1 - 구식버전
+		//up1.write(savePath);
+			
+		//파일쓰기2 - 요즘버전
+		//Files.copy(up1.getInputStream(), Paths.get(savePath));
+		// StandardCopyOption.REPLACE_EXISTING 기존파일이 있을경우 에러발생하지 않고 덮어쓰기
+		Files.copy(up1.getInputStream(), Paths.get(savePath), StandardCopyOption.REPLACE_EXISTING);
 		
 		//임시폴더에 업로드된 파일 삭제
-		up1.delete();
+		//up1.delete();
 		
 		// multipart 처리
 		System.out.println("getParts----------");
@@ -89,3 +100,15 @@ public class UploadReg extends HttpServlet {
 	}
 
 }
+
+
+/*
+이력서 업로드를 구현하세요
+이름, 전화번호,생년월일, 주소, 사진, 포트폴리오
+사진 : 1장(필수) - 이미지(bmp,jpeg,jpg,gif,png) 만 업로드
+포트폴리오 : 다수 파일 업로드 가능(없어도 가능)
+
+"업로드 되었습니다." 경고창 출력 후
+확인 페이지에서 확인 
+이름, 전화번호,생년월일, 주소, 사진, 포트폴리오(파일명만 보이기) 
+ * */
