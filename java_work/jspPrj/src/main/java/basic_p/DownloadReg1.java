@@ -49,7 +49,7 @@ public class DownloadReg1 extends HttpServlet {
 		//3. 서버 파일 읽기 stream
 		//3.1 파일 경로 가져오기
 		//3.1.1 실제 서버에서의 파일위치
-		String path = request.getServletContext().getRealPath("fff/qqq.txt");
+		String path = getServletContext().getRealPath("fff/qqq.txt");
 		//3.1.2 가상 서버에서의 파일위치(배포시 주석처리 필수)
 		path = "D:\\public\\mbc\\2026_03\\public\\java_work\\jspPrj\\src\\main\\webapp\\fff\\qqq.txt";
 		FileInputStream fis = new FileInputStream(path);

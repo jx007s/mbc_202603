@@ -3,7 +3,9 @@ package basic_p;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
-
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
@@ -37,7 +39,7 @@ public class DownloadReg3 extends HttpServlet {
 		
 		//1.1 파일명 한글 encoding
 		
-		String fname = URLEncoder.encode("아기상어.txt", "utf-8");
+		String fname = URLEncoder.encode("엄마상어.txt", "utf-8");
 		System.out.println("fname:"+fname);
 		response.setHeader("Content-Disposition", "attachment;filename="+fname);
 		
@@ -46,32 +48,25 @@ public class DownloadReg3 extends HttpServlet {
 		//2. 클라이언트 파일쓰기 stream
 		ServletOutputStream sos = response.getOutputStream();
 		
-		//3. 서버 파일 읽기 stream
+		//3. 서버 파일 Path
 		//3.1 파일 경로 가져오기
 		//3.1.1 실제 서버에서의 파일위치
-		String path = request.getServletContext().getRealPath("fff/qqq.txt");
+		String path = getServletContext().getRealPath("fff/exam.txt");
 		//3.1.2 가상 서버에서의 파일위치(배포시 주석처리 필수)
-		path = "D:\\public\\mbc\\2026_03\\public\\java_work\\jspPrj\\src\\main\\webapp\\fff\\qqq.txt";
-		FileInputStream fis = new FileInputStream(path);
+		path = "D:\\public\\mbc\\2026_03\\public\\java_work\\jspPrj\\src\\main\\webapp\\fff\\exam.txt";
+		
+		//3.2 파일 경로로 Path 얻기
+		Path inFile = Paths.get(path);
 		
 		//4. 파일 내용 전송
-		//4.1 buffer 생성
-		byte [] buf = new byte[1024];
-		
-		//4.2 buf 이용해서 파일내용 보내기
-		while(fis.available()>0) {
-			int len = fis.read(buf);
-			sos.write(buf,0,len);
-			//System.out.println(Arrays.toString(buf));
-		}
+		Files.copy(inFile, sos);
 		
 		//5. stream 닫기
-		fis.close();
 		sos.close();
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 https://www.postgresql.org/
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
