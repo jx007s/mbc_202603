@@ -3,7 +3,7 @@ package basic_p;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URLEncoder;
-import java.util.Arrays;
+
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletOutputStream;
@@ -49,7 +49,7 @@ public class DownloadReg1 extends HttpServlet {
 		//3. 서버 파일 읽기 stream
 		//3.1 파일 경로 가져오기
 		//3.1.1 실제 서버에서의 파일위치
-		String path = request.getServletContext().getRealPath("fff/zaq.txt");
+		String path = request.getServletContext().getRealPath("fff/qqq.txt");
 		//3.1.2 가상 서버에서의 파일위치(배포시 주석처리 필수)
 		path = "D:\\public\\mbc\\2026_03\\public\\java_work\\jspPrj\\src\\main\\webapp\\fff\\qqq.txt";
 		FileInputStream fis = new FileInputStream(path);
@@ -79,3 +79,9 @@ public class DownloadReg1 extends HttpServlet {
 	}
 
 }
+/*
+ * fileee/ori.jsp 를 생성하고
+ *  ori 폴더의 파일들을 다운로드 구현하세요
+ * 
+ * 
+ * */
