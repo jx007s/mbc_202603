@@ -62,5 +62,6 @@
 	<a href="error/err4.jsp">err4</a>
 	<h2>file</h2>
 	<a href="fileee/form.jsp">form</a>
+	<a href="DownloadReg1">DownloadReg1</a>
 </body>
 </html>
