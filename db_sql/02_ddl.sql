@@ -49,5 +49,16 @@ drop table mem;
 */
 
 
+create table shirt(
+	pno int8,
+	title varchar(50),
+	price "numeric",
+	la_date date,
+	sa_date "timestamp",
+	size int8
+);
+
+
+
 
 
