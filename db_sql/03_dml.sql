@@ -21,11 +21,11 @@ insert into person (age, height,   pid,  reg_date)
 
 -- 다중 입력
 insert into person ( pid,  pame, age, height,  reg_date) values 
-('ccc','장서건',57 , 146.3 , CURRENT_TIMESTAMP),
-('ddd','장남건',17 , 178.3 , CURRENT_TIMESTAMP),
-('eee','장중건',37 , 164.3 , CURRENT_TIMESTAMP),
-('fff','북두신건',67 , 184.3 , CURRENT_TIMESTAMP),
-('ggg','이건',25 , 146.3 , CURRENT_TIMESTAMP);
+('kkk','장발장',57 , 146.3 , CURRENT_TIMESTAMP),
+('mmm','강서건',17 , 178.3 , CURRENT_TIMESTAMP),
+('nnn','장동준',37 , 164.3 , CURRENT_TIMESTAMP),
+('ooo','최장군',67 , 184.3 , CURRENT_TIMESTAMP),
+('ppp','장',25 , 146.3 , CURRENT_TIMESTAMP);
 
 
 /*
@@ -104,3 +104,30 @@ id, hakgi, name,  pid, reg_date, kor, eng, mat
 ...
 
 */
+
+
+create table exam(
+	id int8,  
+	hakgi  int8, 
+	name "text",  
+	pid "text", 
+	reg_date date, 
+	kor  int8, 
+	eng  int8, 
+	mat  int8
+);
+
+insert into exam (id, hakgi, name,  pid, reg_date, kor, eng, mat)
+values 
+(11,1 , 'semi', 'aaa',	'2019-5-4' ,77 ,78, 71),
+(12,1 , 'semi', 'bbb',	'2019-5-4' ,87 ,88, 81),
+(13,1 , 'final', 'ccc',	 '2019-7-4', 56 ,65 ,71),
+(14,1 , 'final', 'aaa',	 '2019-7-4', 76 ,65 ,41),
+(15,2 , 'semi', 'bbb',	'2019-10-4', 97 ,98 ,91),
+(16,2 , 'semi', 'aaa',	'2019-10-4', 67 ,68 ,61),
+(10,2 , 'final', 'bbb',	 '2019-12-4', 76, 85, 91),
+(9,	2 , 'final', 'ddd',	 '2019-12-4', 66, 85, 21);
+
+
+select * from exam;
+
