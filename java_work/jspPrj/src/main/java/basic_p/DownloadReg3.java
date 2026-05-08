@@ -1,6 +1,7 @@
 package basic_p;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.file.Files;
@@ -64,6 +65,8 @@ public class DownloadReg3 extends HttpServlet {
 		//5. stream 닫기
 		sos.close();
 	}
+	
+
 
 	/**
 	 https://www.postgresql.org/
