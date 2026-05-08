@@ -24,6 +24,24 @@ order by hakgi,name desc;
 --- 키가 150 이상인 사람들의 나이대별 인원수를 출력하세요
  -- 나이대별 10,20,30,40...
 
+ select age/10*10 as ten, count(*) from person
+ where height >= 150
+ group by ten
+ order by ten;
+
+
+ --- 중복제거 : DISTINCT
+ -- 컬럼 의 모든 내용이 중복된 것을 제거
+select pid from exam;
+
+select DISTINCT pid from exam;
+
+
+select DISTINCT hakgi, name from exam;
+
+-- 모든 컬럼 내용이 중복되는 것 제거
+select DISTINCT * from exam;
+
 
 
 
