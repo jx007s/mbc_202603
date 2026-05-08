@@ -116,4 +116,9 @@ select * , kor+eng+mat as tot, (kor+eng+mat)/3 as avg from exam
 where (kor+eng+mat)/3 >= 60
 order by hakgi desc, name , avg desc;
 
-
+-- 서브쿼리 활용
+select * from
+(select * , tot/3 as avg 
+from (select * , kor+eng+mat as tot  from exam))
+where avg >= 60
+order by hakgi desc, name , avg desc;
