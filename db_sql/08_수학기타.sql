@@ -181,6 +181,26 @@ pw    해시 암호화
 5명의 데이터를 입력하세요
 */
 
+create table member(
+pid text, 
+pname text, 
+pw text, 
+zipcode text, 
+addr1 text, 
+addr2 text, 
+email text, 
+tel text
+);
+
+insert into member (pid, pname,  email,pw)
+values
+('aaa','김광수',encode(encrypt('qaz@mbc.com','asdf'::bytea,'aes'),'base64'),digest('1111' ,'sha256')),
+('bbb','김케빈',encode(encrypt('xsw@mbc.com','asdf'::bytea,'aes'),'base64'),digest('2222' ,'sha256')),
+('ccc','배소영',encode(encrypt('cde@mbc.com','asdf'::bytea,'aes'),'base64'),digest('' ,'sha256')),
+('ddd','이석범',encode(encrypt('rfv@mbc.com','asdf'::bytea,'aes'),'base64'),digest('1111' ,'sha256')),
+('eed','이학섭',encode(encrypt('bgt@mbc.com','asdf'::bytea,'aes'),'base64'),digest('5555' ,'sha256'));
+
+select *,  convert_from(decrypt(decode( email, 'base64'), 'asdf'::bytea,'aes'),	'UTF8') AS email2 from member;
 
 
 
