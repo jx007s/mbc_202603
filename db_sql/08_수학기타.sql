@@ -152,8 +152,34 @@ select digest('1234qawer' ,'sha256');
 insert into person(pid, pame)
 values ('qqq', digest('1234qawer' ,'sha256'));
 
+
+/*
+-- 해시함수 암호화 방식
+md5(평서문)
+digest(평서문 ,'sha1')
+digest(평서문 ,'sha224')
+digest(평서문 ,'sha256')
+digest(평서문 ,'sha384')
+digest(평서문 ,'sha512')
+*/
+
+-- 일치
 select * from person
-where pid = 'qqq' and digest('1234qawer' ,'sha256') = pame;
+where pid = 'qqq' and digest('1234qawer' ,'sha256') = pame::bytea;
+
+-- 일치정보 없음
+select * from person
+where pid = 'qqq' and digest('5678qawer' ,'sha256') = pame::bytea;
+
+/*
+member 테이블
+pid, pname, pw, zipcode, addr1, addr2, email, tel
+
+email 양방향 암호화
+pw    해시 암호화
+
+5명의 데이터를 입력하세요
+*/
 
 
 
