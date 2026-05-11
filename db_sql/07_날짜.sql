@@ -118,5 +118,46 @@ EXTRACT(QUARTER from now())		--분기
 ;
 
 
+-- date_part : 날짜 --> 특정 필드값 숫자로 추출
+select 
+date_part('year', now()),		--년
+date_part('MONTH', now()),		--월
+date_part('DAY',now()),			--일
+date_part('HOUR', now()),		--시
+date_part('MINUTE', now()),		--분
+date_part('SECOND', now()),		--초
+date_part('DOW', now()),		--요일  일:0 - 토:6
+date_part('ISODOW',now()),		--요일(ISO)
+date_part('DOY', now()),		--1년중 날짜
+date_part('WEEK', now()),		--주차
+date_part('QUARTER', now())		--분기
+;
 
 
+-- 타임존
+select now();
+select 
+now() at time ZONE 'UTC',
+now() at time ZONE 'Asia/Seoul',
+now() at time ZONE 'Asia/Pyongyang',
+now() at time ZONE 'Asia/Shanghai',
+now() at time ZONE 'Asia/Tokyo',
+now() at time ZONE 'America/New_York',
+now() at time ZONE 'America/Los_Angeles',
+now() at time ZONE 'Europe/London',
+now() at time ZONE 'Europe/Paris',
+now() at time ZONE 'Africa/Cairo',
+now() at time ZONE 'Africa/Algiers',
+now() at time ZONE 'Australia/Sydney',
+now() at time ZONE 'Australia/Sydney',
+now() at time ZONE 'Australia/Brisbane';
+
+select 
+now() at time ZONE 'UTC',
+now() at time ZONE 'KST',
+now() at time ZONE 'PST',
+now() at time ZONE 'CET',
+now() at time ZONE 'CST';
+
+-- 주민번호를 이용하여 출생일의 요일을 구하세요
+select substring('일월화수목금토', extract(DOW from to_date(left('260511-1234567',6),'YYMMDD'))::int+1 ,1) ;
