@@ -65,3 +65,17 @@ select
 78 >= any(Array[65,52,61,72]),		-- 요소 중 1 조건에 맞는 요소가 1개라도 있을경우 true
 78 >= all(Array[65,52,61,73])		-- 모든 요소가 조건에 충족해야 true
 ;
+
+
+select mat from exam where pid = 'aaa';
+--  71 ,41 , 61
+
+select 
+65 >= any(select mat from exam where pid = 'aaa'),
+65 >= all(select mat from exam where pid = 'aaa'),
+30 >= any(select mat from exam where pid = 'aaa'),
+30 >= all(select mat from exam where pid = 'aaa'),
+80 >= any(select mat from exam where pid = 'aaa'),
+80 >= all(select mat from exam where pid = 'aaa');
+
+-- 나이가 40세 이하인 학생중 국어점수가 80점 이하인 학생의 수학점수를 3점 추가하세요
