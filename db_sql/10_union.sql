@@ -147,6 +147,50 @@ select title from menu_3);
 2. 룸이 1개만 존재 하는 방을 알려주세요
 */
 
+create table research(
+	room text
+);
+
+create table classroom(
+	room text
+);
+
+create table convergence(
+	room text
+);
+create table mainhall(
+	room text
+);
+
+insert into research values ('컴공'),('건축'),('디자인'),('국문');
+insert into classroom values ('컴공'),('디자인'),('음악'),('수학');
+insert into convergence values ('디자인'),('음악'),('건축'),('사학');
+insert into mainhall values ('컴공'),('건축'),('사학'),('물리');
+
+select * from research;
+select * from classroom;
+select * from convergence;
+select * from mainhall;
+
+(select * from research
+	union
+select * from classroom
+	union
+select * from convergence
+	union
+select * from mainhall)
+except 
+(
+	(select * from research intersect select * from classroom)
+	union
+	(select * from convergence intersect select * from classroom)
+	union
+	(select * from convergence intersect select * from mainhall)
+);
+
+
+
+
 
 
 
