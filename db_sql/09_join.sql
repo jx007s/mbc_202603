@@ -42,3 +42,36 @@ professor - "pid" "NAME", "TEL"
 2. 교수별 학생중 가장 높은 평균점수를  출력하세요 (group by)
 
 */
+
+
+create table professor(
+	"pid"  text,
+	"NAME" text, 
+	"TEL"  text
+);
+
+
+insert into professor("pid", "NAME", "TEL")
+values
+('pf1','김교수','1234'),
+('pf2','이교수','5678'),
+('pf3','박교수','9012'),
+('pf4','최교수','3456');
+
+
+-- 1번
+select person.*, professor."NAME" from person
+left join professor
+on pfid = professor.pid;
+
+
+-- 2번
+select  pf_name, max(avgg) from
+(select *, (kor+eng+mat)/3 as avgg from exam
+left join
+(select person.*, professor."NAME" as pf_name from person
+left join professor
+on pfid = professor.pid) ppf
+on exam.pid = ppf.pid)
+group by  pf_name;
+
