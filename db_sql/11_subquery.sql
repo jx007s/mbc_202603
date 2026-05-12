@@ -79,3 +79,14 @@ select
 80 >= all(select mat from exam where pid = 'aaa');
 
 -- 나이가 40세 이하인 학생중 국어점수가 80점 이하인 학생의 수학점수를 3점 추가하세요
+select pid from person where age <= 40;
+select * from exam where kor <= 80;
+
+select * from exam where
+pid in(select pid from person where age <= 40) and kor <= 80;
+
+update exam set mat = mat + 3 
+where pid in 
+(select pid from exam where
+pid in(select pid from person where age <= 40) and kor <= 80);
+
