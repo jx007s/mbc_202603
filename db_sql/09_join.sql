@@ -14,3 +14,31 @@ left join person
 on exam.pid = person.pid;
 
 
+select * from exam
+right join person
+on exam.pid = person.pid;
+
+select * from person
+where pid = friend;
+
+-- 테이블 이름을 새로 주어야 하는 경우 별칭 사용 me, fr
+-- 셀프조인
+select me.* , fr.pame as fr_name from person me, person fr
+where fr.pid = me.friend;
+
+
+select me.* , fr.pame as fr_name from person me
+left join person fr
+on fr.pid = me.friend;
+
+/*
+교수테이블을 생성하세요
+professor - "pid" "NAME", "TEL"
+
+학생테이블에 교수를 추가하시고 각 학생마다 교수를 지정하세요 (pid)
+
+1. 학생별 교수 이름을 출력하세요
+
+2. 교수별 학생중 가장 높은 평균점수를  출력하세요 (group by)
+
+*/
