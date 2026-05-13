@@ -38,3 +38,85 @@ to_char(now(), 'US');		--마이크로초:627182
 
 
 -- 2023-08-09 15:06:45를 2023년 8월 09일 (수) 15:06:45 PM 으로 출력하세요
+
+select now(), 
+to_char(now(), 'YYYY년 MM월 DD일 (') ||
+substring('일월화수목금토', to_char(now(), 'D')::int,1)  ||
+to_char(now(), ') HH24:MI:SS AM') ;
+
+
+select to_timestamp('2023-08-09 15:06:45','YYYY-MM-DD HH24:MI:SS'),
+to_char(to_date('2023-08-09 15:06:45','YYYY-MM-DD HH24:MI:SS'), 'YYYY년 MM월 DD일 (') ||
+substring('일월화수목금토', to_char(to_date('2023-08-09 15:06:45','YYYY-MM-DD HH24:MI:SS'), 'D')::int,1)  ||
+to_char(to_timestamp('2023-08-09 15:06:45','YYYY-MM-DD HH24:MI:SS'), ') HH24:MI:SS AM') ;
+
+
+-- 계산
+select 
+date '2025-05-08' + INTERVAL '7 century', 					-- 100년
+date '2025-05-08' + INTERVAL '7 decades', 					-- 10년
+date '2025-05-08' + INTERVAL '7 years',		 				-- 년
+date '2025-05-08' + INTERVAL '7 months',					-- 월
+date '2025-05-08' + INTERVAL '7 weeks',						-- 주
+date '2025-05-08' + INTERVAL '7 days',						-- 일
+timestamp '2025-05-08 14:12:35' + INTERVAL '7 hours',		-- 시간
+timestamp '2025-05-08 14:12:35' + INTERVAL '7 minutes',		-- 분
+timestamp '2025-05-08 14:12:35' + INTERVAL '7 seconds',		-- 초
+timestamp '2025-05-08 14:12:35' + INTERVAL '7 milliseconds',-- 1/1000초
+timestamp '2025-05-08 14:12:35' + INTERVAL '7 microseconds';-- 1/1000000초
+
+select 
+now() + INTERVAL '7 century', 					-- 100년
+now() + INTERVAL '7 decades', 					-- 10년
+now() + INTERVAL '7 years',		 				-- 년
+now() + INTERVAL '7 months',					-- 월
+now() + INTERVAL '7 weeks',						-- 주
+now() + INTERVAL '7 days',						-- 일
+now() + INTERVAL '7 hours',		-- 시간
+now() + INTERVAL '7 minutes',		-- 분
+now() + INTERVAL '7 seconds',		-- 초
+now() + INTERVAL '7 milliseconds',-- 1/1000초
+now() + INTERVAL '7 microseconds';-- 1/1000000초
+
+select 
+CURRENT_DATE + INTERVAL '7 century', 					-- 100년
+CURRENT_DATE + INTERVAL '7 decades', 					-- 10년
+CURRENT_DATE + INTERVAL '7 years',		 				-- 년
+CURRENT_DATE + INTERVAL '7 months',					-- 월
+CURRENT_DATE + INTERVAL '7 weeks',						-- 주
+CURRENT_DATE + INTERVAL '7 days',						-- 일
+CURRENT_TIMESTAMP + INTERVAL '7 hours',			-- 시간
+CURRENT_TIMESTAMP + INTERVAL '7 minutes',		-- 분
+CURRENT_TIMESTAMP + INTERVAL '7 seconds',		-- 초
+CURRENT_TIMESTAMP + INTERVAL '7 milliseconds',-- 1/1000초
+CURRENT_TIMESTAMP + INTERVAL '7 microseconds';-- 1/1000000초
+
+select now() - date '2026-05-07';	--6 days 22:11:22.243123
+select date '2026-05-24' - date '2026-05-07';	--17
+select age(now() , date '2026-05-07');	--6 days 22:11:22.243123
+select age(date '2026-05-24' , date '2026-05-07');	--17 days
+
+
+-- 날짜비교
+select date '2026-05-08' > date '2025-07-04';
+select date '2025-05-08' between date '2026-01-01' and date '2026-12-31';
+
+
+-- extract : 날짜 --> 특정 필드값 숫자로 추출
+select 
+EXTRACT(YEAR from now()),		--년
+EXTRACT(MONTH from now()),		--월
+EXTRACT(DAY from now()),		--일
+EXTRACT(HOUR from now()),		--시
+EXTRACT(MINUTE from now()),		--분
+EXTRACT(SECOND from now()),		--초
+EXTRACT(DOW from now()),		--요일
+EXTRACT(ISODOW from now()),		--요일(ISO)
+EXTRACT(DOY from now()),		--1년중 날짜
+EXTRACT(WEEK from now()),		--주차
+EXTRACT(QUARTER from now())		--분기
+;
+
+
+
+
