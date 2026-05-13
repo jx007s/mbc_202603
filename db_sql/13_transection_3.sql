@@ -25,4 +25,36 @@ insert into person (pid, pame) values ('u5','오타니');
 -- 1명 취소
 -- 저장
 
+begin;
+insert into professor (pid, "NAME", "TEL") values ('pf11','덤블도어','136');
+insert into professor (pid, "NAME", "TEL") values ('pf12','스네이프','258');
+SAVEPOINT s1;
+insert into professor (pid, "NAME", "TEL") values ('pf13','헤그리드','369');
+
+insert into exam (id, name, pid, kor, eng, mat) values (17,'semi','u1',68,67,69);
+SAVEPOINT s2;
+insert into exam (id, name, pid, kor, eng, mat) values (18,'semi','u2',98,97,99);
+
+rollback to SAVEPOINT s2;
+
+insert into person(pid, pame) values ('v1','김케빈');
+
+rollback to SAVEPOINT s1;
+
+insert into person(pid, pame) values ('v2','김라라');
+insert into person(pid, pame) values ('v3','김롤롤');
+SAVEPOINT s3;
+insert into person(pid, pame) values ('v4','기로로');
+
+rollback to SAVEPOINT s3;
+
+commit;
+
+select * from professor;
+select * from exam;
+select * from person;
+
+
+
+
 
