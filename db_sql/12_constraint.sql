@@ -183,6 +183,23 @@ pid : fk <--- person(pid)
 */
 
 
+alter table person alter column pame set not null;
+
+alter table professor add constraint professor_pkkk PRIMARY key(pid);
+
+alter table person add constraint person_pfid_fkkk
+FOREIGN key(pfid) REFERENCES professor(pid) ;
+
+
+alter table exam add constraint exam_fkkk
+FOREIGN key(pid) REFERENCES person(pid) ;
+
+update exam set pid = 'qqq'
+where pid in
+(select pid from exam
+EXCEPT
+select pid from person);
+
 
 
 
