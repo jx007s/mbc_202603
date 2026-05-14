@@ -35,19 +35,53 @@ public class ExamMain {
 			ResultSet rs = ptmt.executeQuery();
 			
 			//4. sql 실행 결과 처리
+			while(rs.next()) {  // rs.next() 가지고 올 객체(레코드) 유무
+				//rs.getXXX("컬럼명")  :: 컬럼 데이터 호출
+				String ttt = rs.getInt("id")+"\t";
+				ttt += rs.getInt("hakgi")+"\t";
+				ttt += rs.getString("name")+"\t";
+				ttt += rs.getString("pid")+"\t";
+				ttt += rs.getString("reg_date")+"\t";
+				ttt += rs.getInt("kor")+"\t";
+				ttt += rs.getInt("eng")+"\t";
+				ttt += rs.getInt("mat");
+				System.out.println(ttt);
+			}
+			/*
 			System.out.println(rs.next()); //가지고 올 객체(레코드) 유무
 			
 			//rs.getXXX("컬럼명")  :: 컬럼 데이터 호출
-			System.out.println(rs.getInt("id"));
+			String ttt = rs.getInt("id")+"\t";
+			 ttt += rs.getInt("hakgi")+"\t";
+			 ttt += rs.getString("name")+"\t";
+			 ttt += rs.getString("pid")+"\t";
+			 ttt += rs.getString("reg_date")+"\t";
+			 ttt += rs.getInt("kor")+"\t";
+			 ttt += rs.getInt("eng")+"\t";
+			 ttt += rs.getInt("mat");
+			 System.out.println(ttt);
+			 rs.next();
+			 ttt = rs.getInt("id")+"\t";
+			 ttt += rs.getInt("hakgi")+"\t";
+			 ttt += rs.getString("name")+"\t";
+			 ttt += rs.getString("pid")+"\t";
+			 ttt += rs.getString("reg_date")+"\t";
+			 ttt += rs.getInt("kor")+"\t";
+			 ttt += rs.getInt("eng")+"\t";
+			 ttt += rs.getInt("mat");
+			 System.out.println(ttt);
+			*/
 			
 			
-			// sql 실행결과 종료
+			
+			
+			//5. sql 실행결과 종료
 			rs.close();
 			
-			// sql 실행객체 종료
+			//6. sql 실행객체 종료
 			ptmt.close();
 			
-			// db 연결종료
+			//7. db 연결종료
 			conn.close();
 			
 		} catch (Exception e) {
@@ -60,3 +94,8 @@ public class ExamMain {
 	}
 
 }
+
+
+// personPrj 프로젝트를 생성하고 person 정보를 가져오세요
+
+
