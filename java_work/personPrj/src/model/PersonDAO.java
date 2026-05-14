@@ -146,21 +146,22 @@ public class PersonDAO {
 		int res = 0;
 		try {
 
-			String sql = "update person set pame = '두별이', height = 174.23, "
-					+ " friend='u3' , pfid = 'pf1' "
-					+ " where pid = 'aaa'";
+//			String sql = "update person set pame = '두별이', height = 174.23, "
+//					+ " friend='u3' , pfid = 'pf1' "
+//					+ " where pid = 'aaa'";
+			
+			String sql = "update person set pame = ?, height = ?, "
+					+ " friend= ? , pfid = ? "
+					+ " where pid = ?";
 
 			// 2. sql 실행 객체 생성
 			ptmt = conn.prepareStatement(sql);
 			
-//			ptmt.setString(1, dto.getPid());
-//			ptmt.setString(2, dto.getPame());
-//			ptmt.setInt(3, dto.getAge());
-//			ptmt.setDouble(4, dto.getHeight());
-//			// java.util.Date --> java.sql.Date -->  sql 구문
-//			ptmt.setDate(5, new java.sql.Date((dto.getBirth().getTime())));
-//			ptmt.setString(6, dto.getFriend());
-//			ptmt.setString(7, dto.getPfid());
+			ptmt.setString(5, dto.getPid());
+			ptmt.setString(1, dto.getPame());
+			ptmt.setDouble(2, dto.getHeight());
+			ptmt.setString(3, dto.getFriend());
+			ptmt.setString(4, dto.getPfid());
 						
 			//3. sql 실행 결과 
 			res = ptmt.executeUpdate();  // insert, update, delete ...  - 실행결과 : 적용된 갯수
@@ -173,6 +174,33 @@ public class PersonDAO {
 		
 		return res;
 	}
+	
+	
+	
+	
+	
+	public int delete(String pid){
+		int res = 0;
+		try {
+
+			String sql = "delete from person where pid = ?";
+
+			ptmt = conn.prepareStatement(sql);
+			
+			ptmt.setString(1, pid);
+						
+			res = ptmt.executeUpdate(); 
+			
+		} catch (Exception e) {
+			System.out.println("delete() 실패"+e.getMessage());
+		}finally {
+			close();
+		}
+		
+		return res;
+	}
+	
+	
 	
 	// 종료 메소드
 	void close() {

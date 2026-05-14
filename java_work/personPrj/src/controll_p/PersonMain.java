@@ -38,8 +38,9 @@ public class PersonMain {
 		System.out.println("4. modify: "+ modifyDTO);
 		System.out.println(new PersonDAO().modify(modifyDTO));
 		
-		
-		
+		pid = "u3";
+		System.out.println("4. delete: "+ pid);
+		System.out.println(new PersonDAO().delete(pid));
 		
 		System.out.println("1. list");
 		for (PersonDTO dto : new PersonDAO().list()) {
@@ -50,6 +51,6 @@ public class PersonMain {
 }
 
 
-// personPrj 프로젝트를 생성하고 person 정보를 가져오세요
+// examPrj 프로젝트를 생성하고 DAO, DTO 를 구성하여 CRUD 정보를 가져오세요
 
 
