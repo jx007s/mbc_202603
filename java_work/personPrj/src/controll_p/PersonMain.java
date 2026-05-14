@@ -9,10 +9,7 @@ public class PersonMain {
 
 	public static void main(String[] args) {
 
-		System.out.println("1. list");
-		for (PersonDTO dto : new PersonDAO().list()) {
-			System.out.println(dto);
-		}
+		
 
 		String pid = "nnn";
 		System.out.println("2. detail : "+pid);
@@ -25,13 +22,29 @@ public class PersonMain {
 		insertDTO.setAge(24);
 		insertDTO.setHeight(184.31);
 		insertDTO.setBirth(new Date(1997-1900,5-1,8));
-		insertDTO.setReg_date(new Date(2026-1900,8-1,12 ,17,23,45));
 		insertDTO.setFriend("rrr");
 		insertDTO.setPfid("pf1");
 		
 		System.out.println("3. insert: "+ insertDTO);
-		//System.out.println(new PersonDAO().detail(pid));
+		System.out.println(new PersonDAO().insert(insertDTO));
 		
+		
+		PersonDTO modifyDTO = new PersonDTO();
+		modifyDTO.setPid("qqq");
+		modifyDTO.setPame("한별이");
+		modifyDTO.setHeight(163.92);
+		modifyDTO.setFriend("u2");
+		modifyDTO.setPfid("pf4");
+		System.out.println("4. modify: "+ modifyDTO);
+		System.out.println(new PersonDAO().modify(modifyDTO));
+		
+		
+		
+		
+		System.out.println("1. list");
+		for (PersonDTO dto : new PersonDAO().list()) {
+			System.out.println(dto);
+		}
 	}
 
 }
