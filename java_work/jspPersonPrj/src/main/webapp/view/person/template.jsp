@@ -8,7 +8,7 @@
 <style>
 wrapper{
 	display: block;
-	width: 1000px;
+	width: 600px;
 	padding:10px;
 	border:1px solid #333;
 }
