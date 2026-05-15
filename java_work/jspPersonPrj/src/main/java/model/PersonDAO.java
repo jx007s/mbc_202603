@@ -21,8 +21,9 @@ public class PersonDAO {
 		String pw = "123456";
 		
 		try {
-			// 0. DB driver 로드
+			// 0. driver load
 			Class.forName("org.postgresql.Driver");
+			
 			//1. db 연결 객체 생성
 			conn = DriverManager.getConnection(url, user, pw);
 		} catch (Exception e) {

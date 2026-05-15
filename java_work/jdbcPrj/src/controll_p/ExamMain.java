@@ -8,14 +8,15 @@ import java.sql.ResultSet;
 public class ExamMain {
 
 	public static void main(String[] args) {
-		// 연결확인 되었으면 실행하지 않아도 됨
-		//Class.forName("org.postgresql.Driver");
+		
 		
 		String url = "jdbc:postgresql://localhost:5432/mbc_db";
 		String user = "mbc_user";
 		String pw = "123456";
 		
 		try {
+			// 0. DB driver 로드
+			Class.forName("org.postgresql.Driver");
 			//1. db 연결 객체 생성
 			Connection conn = DriverManager.getConnection(url, user, pw);
 			// DriverManager는 Class.forName("org.postgresql.Driver") 를 이용하여
