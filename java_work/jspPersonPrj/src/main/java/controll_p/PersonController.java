@@ -11,67 +11,37 @@ import java.io.IOException;
 
  View     ------      Controller  ---------------------------------------------- model
 
-
-
        url : http://localhost:8080:jspPersonProj/person/PList   1
-
                (... /PDetail?id=12  ... /PWriteForm   ... /PWriteReg 
-
                 ... /PModifyForm?id=12  ....... )
-
                              |
-
                              V
-
            server : http://localhost
-
                              |
-
                              V
-
            tomcat  : http://localhost:8080
-
                              |
-
                              V  
-
           project  : http://localhost:8080/jspPersonProj/프로젝트 로 진입해라!!!      2
-
                               |
-
                               V
-
-                          web.xml    3   (규칙 ::>  /person/???? 인 경우 PersonController로 진입)
-
+                               3   (규칙 ::>  /person/???? 인 경우 PersonController로 진입)
                           @WebServlet("/person/*")
-
                               |
-
                               V
 template 10 <------  PersonController  4, 9  (Servlet)
-
                               ↑              
-
    |                          |
-
    |                          |   
-
    |                          |               PersonService.execute()  추상메소드    5
-
    |                          |                (인터페이스) 
-
    V                          V
 
                             (Service)
-
-board_list.jsp 11        PList .execute()   (Interface 구현 클래스)  6, 8 <------------------>  db.java  (DAO) 7
-
+list.jsp 11              PList .execute()   (Interface 구현 클래스)  6, 8 <------------------>  db.java  (DAO) 7
 top.jsp                                                                                                (db에서 받아오는 클래스)
-
 menu.jsp                                                                                                   Object  write()
-
 bottom.jsp
-
                                (Service) PDetail, PWrite, PModify,PDelete.....
 
 
