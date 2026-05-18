@@ -182,7 +182,7 @@ public class PersonDAO {
 	
 	
 	
-	public int delete(String pid){
+	public int delete(PersonDTO dto){
 		int res = 0;
 		try {
 
@@ -190,7 +190,7 @@ public class PersonDAO {
 
 			ptmt = conn.prepareStatement(sql);
 			
-			ptmt.setString(1, pid);
+			ptmt.setString(1, dto.getPid());
 						
 			res = ptmt.executeUpdate(); 
 			

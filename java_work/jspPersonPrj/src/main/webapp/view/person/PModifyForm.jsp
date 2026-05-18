@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 <% PersonDTO dto =(PersonDTO)request.getAttribute("mainData"); %>
 <h2>회원수정입니다</h2>
-<form action="PModifyReg" method="get">
+<form action="PModifyReg" method="post">
 <table border="">
 	<tr>
 		<td>아이디</td><td><input type="text" name="pid" value="<%=dto.getPid() %>" readonly /></td>

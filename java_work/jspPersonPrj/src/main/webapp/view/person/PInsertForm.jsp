@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 
 <h2>회원가입입니다</h2>
-<form action="PInsertReg" method="get">
+<form action="PInsertReg" method="post">
 <table border="">
 	<tr>
 		<td>아이디</td><td><input type="text" name="pid" /></td>
