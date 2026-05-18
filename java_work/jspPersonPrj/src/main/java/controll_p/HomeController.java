@@ -49,15 +49,15 @@ bottom.jsp
 
 
  */
-@WebServlet("/person/*")  
+@WebServlet("/")  
 //    /person/ 으로 작성되는 url 요청은 현재 서블릿(controller)로 진입하라
-public class PersonController extends HttpServlet {
+public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PersonController() {
+    public HomeController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -68,28 +68,9 @@ public class PersonController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		System.out.println(request.getRequestURI());  // /jspPersonPrj/person/PList
 		
-		
-		// service 문자열로 가져오기
-		// /jspPersonPrj/person/PList ==> // /jspPersonPrj/person/  +   PList
-		//                                           21글자
-		String service = request.getRequestURI().substring(21);
-		System.out.println(service);
-		
-		try {
-			// service 에 해당하는 객체 생성 및 서비스인터페이스로 형변환(다형성)
-			PersonService pservice = (PersonService)Class.forName("person_p."+service).newInstance();
-			
-			// 연산 메소드 실행
-			pservice.execute(request, response);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		//view 진입
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/view/person/template.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/view/home.jsp");
 		dispatcher.forward(request, response);
 	}
 

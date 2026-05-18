@@ -1,4 +1,4 @@
-package service_p;
+package exam_p;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -6,7 +6,7 @@ import model.PersonDAO;
 import model.PersonDTO;
 
 
-public class PDelete implements PersonService{
+public class PDelete implements ExamService{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {

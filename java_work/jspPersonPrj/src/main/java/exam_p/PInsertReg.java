@@ -1,4 +1,4 @@
-package service_p;
+package exam_p;
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import model.PersonDTO;
 
 // PList 의 서비스 클래스
 // --> DB 에 가서 person 테이블 목록 가져오기
-public class PInsertReg implements PersonService{
+public class PInsertReg implements ExamService{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {

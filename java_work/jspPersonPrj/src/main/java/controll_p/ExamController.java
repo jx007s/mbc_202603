@@ -10,6 +10,8 @@ import person_p.PersonService;
 
 import java.io.IOException;
 
+import exam_p.ExamService;
+
 /**
 
  View     ------      Controller  ---------------------------------------------- model
@@ -49,15 +51,15 @@ bottom.jsp
 
 
  */
-@WebServlet("/person/*")  
+@WebServlet("/exam/*")  
 //    /person/ 으로 작성되는 url 요청은 현재 서블릿(controller)로 진입하라
-public class PersonController extends HttpServlet {
+public class ExamController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public PersonController() {
+    public ExamController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -72,14 +74,14 @@ public class PersonController extends HttpServlet {
 		
 		
 		// service 문자열로 가져오기
-		// /jspPersonPrj/person/PList ==> // /jspPersonPrj/person/  +   PList
-		//                                           21글자
-		String service = request.getRequestURI().substring(21);
+		// /jspPersonPrj/exam/PList ==> // /jspPersonPrj/exam/  +   PList
+		//                                           19글자
+		String service = request.getRequestURI().substring(19);
 		System.out.println(service);
 		
 		try {
 			// service 에 해당하는 객체 생성 및 서비스인터페이스로 형변환(다형성)
-			PersonService pservice = (PersonService)Class.forName("person_p."+service).newInstance();
+			ExamService pservice = (ExamService)Class.forName("exam_p."+service).newInstance();
 			
 			// 연산 메소드 실행
 			pservice.execute(request, response);
@@ -89,7 +91,7 @@ public class PersonController extends HttpServlet {
 			e.printStackTrace();
 		}
 		//view 진입
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/view/person/template.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/view/exam/template.jsp");
 		dispatcher.forward(request, response);
 	}
 
