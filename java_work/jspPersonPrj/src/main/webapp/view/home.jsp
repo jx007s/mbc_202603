@@ -26,4 +26,4 @@ wrapper{
 </html>
 
 
-https://www.jetbrains.com/ko-kr/idea/download/?section=windows#section=windows1
+https://www.jetbrains.com/ko-kr/idea/download/?section=windows#section=windows
