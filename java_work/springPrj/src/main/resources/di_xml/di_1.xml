@@ -4,4 +4,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!-- bean 등록
+    id : bean 등록 이름  , 이것으로 호출 한다
+    class : 생성할 인스턴스 의 원형 클래스 (패키지명을 모두 적어야 한다)
+    -->
+    <bean id="cam2" class="di_p.Camera">
+
+    </bean>
 </beans>
