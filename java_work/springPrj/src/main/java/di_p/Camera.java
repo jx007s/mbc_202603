@@ -2,6 +2,7 @@ package di_p;
 
 public class Camera {
     String name, kind;
+    public String size;
 
     public void setName(String name) {
         System.out.println("setName() : "+name);
@@ -18,6 +19,7 @@ public class Camera {
         return "Camera{" +
                 "name='" + name + '\'' +
                 ", kind='" + kind + '\'' +
+                ", size='" + size + '\'' +
                 '}';
     }
 
