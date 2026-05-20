@@ -1,16 +1,30 @@
 package anno_p;
 
-import di_p.Camera;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class HandPhone {
-    di_p.Camera fc, rc;
+    Camera fc, rc;
     String name;
     Mic mm;
-
-    public void setFc(di_p.Camera fc) {
+    Display dd;
+    Battery bat;
+/*
+1. @Qualifier("camera2")  //bean 이름 명시
+2. byName - 같은 Type Bean 이 다수일때 같은 이름적용
+3. byType - 같은 Type Bean 이 1개일때 가능
+            같은 Type Bean 이 다수일때 에러발생
+4. @Autowired(required=false)  // true 이면 필수 O , false이면 필수 X (생략시 true)
+                false - 같은 Type Bean 있으면 결합 없을때 에러 안남
+*/
+    @Autowired
+    public void setFc(Camera fc) {
         this.fc = fc;
     }
 
+    @Qualifier("cam3") // bean 이름 명시
+    @Autowired
     public void setRc(Camera rc) {
         this.rc = rc;
     }
@@ -19,8 +33,19 @@ public class HandPhone {
         this.name = name;
     }
 
+    @Autowired
     public void setMm(Mic mm) {
         this.mm = mm;
+    }
+
+    @Autowired(required = false) // 결합할 bean 이 있으면 결합, 없으면 결합없이 에러없음
+    public void setBat(Battery bat) {
+        this.bat = bat;
+    }
+
+    //@Autowired    (결합 할 bean 이 없을 경우 에러발생)
+    public void setDd(Display dd) {
+        this.dd = dd;
     }
 
     @Override
@@ -30,6 +55,8 @@ public class HandPhone {
                 ", fc=" + fc +
                 ", rc=" + rc +
                 ", mm=" + mm +
+                ", dd=" + dd +
+                ", bat=" + bat +
                 '}';
     }
 }
@@ -53,4 +80,35 @@ class Mic{
                 ", price=" + price +
                 '}';
     }
+}
+
+
+class Display{
+    String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Display{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+class Battery{
+    String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Battery{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
 }
