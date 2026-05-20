@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cam3" class="di_p.Camera" p:name="캐논" p:kind="DSLR" />
+    <bean id="cam4" class="di_p.Camera" p:name="샘송" p:kind="똑딱이" />
+    <bean id="fc" class="di_p.Camera" p:name="니콘" p:kind="미러리스" />
+
+    <bean id="mm1" class="di_p.Mic" p:name="노래방마이크" p:price="50" />
+
+    <!--autowire : bean 자동참조
+        byType :  property의 Type 에 대입가능한 Bean 자동참조 - 2개이상일 경우 에러발생
+                  property 명시적 참조가 우선순위가 높음 - 에러발생시 대응
+    -->
+    <bean id="hp1" class="di_p.HandPhone" p:name="은하수" autowire="byType"
+    p:fc-ref="fc" p:rc-ref="cam3"
+    />
+
+    <!--autowire : bean 자동참조
+        byName :  property의 이름이 일치하는 bean 자동참조
+    -->
+    <bean id="hp2" class="di_p.HandPhone" p:name="어른폰" autowire="byName"/>
+</beans>

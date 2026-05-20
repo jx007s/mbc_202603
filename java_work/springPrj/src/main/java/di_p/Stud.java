@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Stud {
+public class Stud implements  Comparable<Stud>{
     //이름, 국어, 영어, 수학 , 총점, 평균
     String name;
     int [] jum;
@@ -41,5 +41,14 @@ public class Stud {
                 Arrays.toString(jum) + '\t' +
                 getTot() + '\t' +
                 getAvg() + '\t' + rank;
+    }
+
+    @Override
+    public int compareTo(Stud o) {
+        int res = rank - o.rank;
+        if(res==0){
+            res = 1;
+        }
+        return res;
     }
 }

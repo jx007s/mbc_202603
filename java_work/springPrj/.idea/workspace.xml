@@ -4,26 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/di_p/ExamData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/di_p/ExamMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/di_p/Stud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_exam.xml" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/di_main/AutoWireMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_autowire.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/aaa/SpringPrjApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/di_main/CollMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/di_main/CollMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/di_p/CollData.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/di_p/CollData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/di_xml/di_Coll2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/di_xml/di_Coll2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CollMain.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/CollMain.class.uniqueId0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/di_main/CollMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_main/CollMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/CollData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_p/CollData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/di_xml/di_Coll2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_Coll2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/ExamData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_p/ExamData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/Stud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_p/Stud.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +80,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Git.Working.Tree.Tab.closed.by.user": "closed",
+    "Gradle.springPrj [:di_main.AutoWireMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.CollMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.DiMain.main()].executor": "Run",
     "Gradle.springPrj [:di_p.ExamMain.main()].executor": "Run",
@@ -116,8 +105,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\resources\di_xml" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="di_main" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.ExamMain">
+  <component name="RunManager">
     <configuration name="ExamMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="di_p.ExamMain" />
       <module name="springPrj.main" />
@@ -189,7 +181,7 @@
       <workItem from="1779168718607" duration="8533000" />
       <workItem from="1779236779221" duration="4472000" />
       <workItem from="1779243966586" duration="1262000" />
-      <workItem from="1779245441474" duration="2549000" />
+      <workItem from="1779245441474" duration="5571000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -223,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779243690378</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="5_20_2">
+      <option name="closed" value="true" />
+      <created>1779250916916</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779250916916</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,8 +244,8 @@
     <MESSAGE value="5_19_4" />
     <MESSAGE value="5_19_5" />
     <MESSAGE value="5_19_6" />
-    <MESSAGE value="5_20_2" />
     <MESSAGE value="5_20_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_20_1" />
+    <MESSAGE value="5_20_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_20_2" />
   </component>
 </project>
