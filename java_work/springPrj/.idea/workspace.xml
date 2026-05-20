@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_3">
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/HandPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/di_main/ComputerMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/di_p/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_autowire.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_Computer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/di_main/AutoWireMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_main/AutoWireMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/ExamMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_main/ExamMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/di_xml/di_autowire.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_autowire.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +84,7 @@
     "Git.Working.Tree.Tab.closed.by.user": "closed",
     "Gradle.springPrj [:di_main.AutoWireMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.CollMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_main.ComputerMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.DiMain.main()].executor": "Run",
     "Gradle.springPrj [:di_p.ExamMain.main()].executor": "Run",
     "Gradle.springPrj [clean].executor": "Run",
@@ -92,7 +96,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/public/mbc/2026_03/public/java_work/springPrj/src/main/resources/di_xml",
+    "last_opened_file_path": "D:/public/mbc/2026_03/public/java_work/springPrj/src/main/resources/anno_xml",
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -102,9 +106,12 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\resources\anno_xml" />
+      <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\java\anno_p" />
       <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\resources\di_xml" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="anno_p" />
       <recent name="di_main" />
     </key>
   </component>
@@ -180,7 +187,7 @@
       <workItem from="1779168718607" duration="8533000" />
       <workItem from="1779236779221" duration="4472000" />
       <workItem from="1779243966586" duration="1262000" />
-      <workItem from="1779245441474" duration="6256000" />
+      <workItem from="1779245441474" duration="9924000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -230,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779255785148</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="5_20_4">
+      <option name="closed" value="true" />
+      <created>1779256426817</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779256426817</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +269,7 @@
     <MESSAGE value="5_20_1" />
     <MESSAGE value="5_20_2" />
     <MESSAGE value="5_20_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_20_3" />
+    <MESSAGE value="5_20_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_20_4" />
   </component>
 </project>
