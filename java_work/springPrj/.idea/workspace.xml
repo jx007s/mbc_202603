@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/di_main/AutoWireMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_autowire.xml" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_3">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/ExamData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_p/ExamData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/Stud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_p/Stud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/di_main/AutoWireMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_main/AutoWireMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/di_p/ExamMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/di_main/ExamMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/di_xml/di_autowire.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/di_xml/di_autowire.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +110,11 @@
   </component>
   <component name="RunManager">
     <configuration name="ExamMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="di_p.ExamMain" />
+      <option name="MAIN_CLASS_NAME" value="di_main.ExamMain" />
       <module name="springPrj.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="di_p.*" />
+          <option name="PATTERN" value="di_main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,7 +180,7 @@
       <workItem from="1779168718607" duration="8533000" />
       <workItem from="1779236779221" duration="4472000" />
       <workItem from="1779243966586" duration="1262000" />
-      <workItem from="1779245441474" duration="5571000" />
+      <workItem from="1779245441474" duration="6256000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -223,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779250916916</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5_20_3">
+      <option name="closed" value="true" />
+      <created>1779255785148</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779255785148</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +253,7 @@
     <MESSAGE value="5_19_6" />
     <MESSAGE value="5_20_1" />
     <MESSAGE value="5_20_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_20_2" />
+    <MESSAGE value="5_20_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_20_3" />
   </component>
 </project>

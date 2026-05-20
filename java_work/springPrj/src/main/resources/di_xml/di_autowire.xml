@@ -9,7 +9,7 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="cam4" class="di_p.Camera" p:name="샘송" p:kind="똑딱이" />
     <bean id="fc" class="di_p.Camera" p:name="니콘" p:kind="미러리스" />
 
-    <bean id="mm1" class="di_p.Mic" p:name="노래방마이크" p:price="50" />
+    <bean class="di_p.Mic" p:name="노래방마이크" p:price="50" />
 
     <!--autowire : bean 자동참조
         byType :  property의 Type 에 대입가능한 Bean 자동참조 - 2개이상일 경우 에러발생
@@ -23,4 +23,15 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
         byName :  property의 이름이 일치하는 bean 자동참조
     -->
     <bean id="hp2" class="di_p.HandPhone" p:name="어른폰" autowire="byName"/>
+
+
+    <bean class="di_p.Stud" p:name="장동건" p:jum="76,78,72"/>
+    <bean class="di_p.Stud" p:name="장서건" p:jum="56,58,52"/>
+    <bean class="di_p.Stud" p:name="장남건" p:jum="96,98,92"/>
+    <bean class="di_p.Stud" p:name="장중건" p:jum="86,88,82"/>
+    <bean class="di_p.Stud" p:name="북두신건" p:jum="66,68,62"/>
+
+    <!-- property가 collection  인 경우
+         생성된 bean 중 같은 Type인 bean을 collection 화 하여 대입-->
+    <bean name="eData" class="di_p.ExamData" autowire="byType"/>
 </beans>

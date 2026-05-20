@@ -1,5 +1,6 @@
-package di_p;
+package di_main;
 
+import di_p.ExamData;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

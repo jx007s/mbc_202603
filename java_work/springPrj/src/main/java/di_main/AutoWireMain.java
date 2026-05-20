@@ -1,6 +1,7 @@
 package di_main;
 
 import di_p.Camera;
+import di_p.ExamData;
 import di_p.HandPhone;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -16,14 +17,18 @@ public class AutoWireMain {
         System.out.println("hp1:"+ph1);
 
         System.out.println("hp2:"+context.getBean("hp2"));
+
+        ExamData eData = context.getBean("eData", ExamData.class);
+        eData.ppp();
     }
 }
 
 /*
-project: hambugerPrj
-햄버거 셋트를 구현해 주세요
-햄버거세트 : 햄버거, 음료, 사이드, 이름, 가격
-햄버거 : 종류, 이름, 칼로리, 가격
-사이드 : 이름, 갯수, 칼로리, 가격
-음료 : 핫/아이스, 이름, 크기, 칼로리, 가격
+ComputerMain
+--  autowire 로 작업 요망
+
+서버  - 본체 1, 모니터 2, 키보드 1, 마우스 1
+데스크탑   - 본체 1, 모니터 1, 키보드 1, 마우스 1
+노트북    - 본체 1, 마우스 1
+테블릿   - 본체 1
 * */
