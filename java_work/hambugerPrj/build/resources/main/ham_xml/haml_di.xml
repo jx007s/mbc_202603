@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="model.Hambuger" id="h1"
+    p:name="빅맥" p:kind="비프" p:cal="2000" p:price="7800"   />
+
+    <bean class="model.Drink" id="d1"
+    p:name="아메리카노" p:hi="true" p:cal="300" p:price="1500"   />
+    <bean class="model.Side" id="s1"
+    p:name="감자튀김" p:cnt="3" p:cal="700" p:price="1800"   />
+    <bean class="model.HambugerSet" id="hs1"
+    p:name="빅맥셋트" p:drink-ref="d1" p:side-ref="s1" p:ham-ref="h1"  p:price="9700" />
+
+</beans>
