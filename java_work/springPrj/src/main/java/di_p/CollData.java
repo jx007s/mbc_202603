@@ -6,10 +6,18 @@ import java.util.HashSet;
 
 public class CollData {
 
-    int [] aa;
+    int [] aa,ee;
     ArrayList bb;
     HashSet cc;
     HashMap dd;
+
+    public void setEe(int[] ee) {
+        this.ee = ee;
+    }
+
+    public int[] getEe() {
+        return ee;
+    }
 
     public int[] getAa() {
         return aa;
@@ -30,6 +38,8 @@ public class CollData {
     public void setAa(int[] aa) {
         this.aa = aa;
     }
+
+
 
     public void setBb(ArrayList bb) {
         this.bb = bb;

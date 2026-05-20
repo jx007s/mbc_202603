@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="st1" class="di_p.Stud" p:name="장동건" p:jum="76,78,72"/>
+    <bean name="st2" class="di_p.Stud" p:name="장서건" p:jum="56,58,52"/>
+    <bean name="st3" class="di_p.Stud" p:name="장남건" p:jum="96,98,92"/>
+    <bean name="st4" class="di_p.Stud" p:name="장중건" p:jum="86,88,82"/>
+    <bean name="st5" class="di_p.Stud" p:name="북두신건" p:jum="66,68,62"/>
+
+    <bean name="eData" class="di_p.ExamData" >
+        <property name="data">
+            <list>
+                <ref bean="st1"/>
+                <ref bean="st2"/>
+                <ref bean="st3"/>
+                <ref bean="st4"/>
+                <ref bean="st5"/>
+            </list>
+        </property>
+    </bean>
+</beans>

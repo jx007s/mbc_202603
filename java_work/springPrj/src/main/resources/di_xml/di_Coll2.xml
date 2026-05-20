@@ -5,6 +5,16 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-
+    <bean name="cd" class="di_p.CollData" p:ee="123,456,789"
+    p:bb-ref="arr1" p:cc-ref="ss1" p:dd-ref="mm1">
+        <property name="aa">
+            <array>
+                <value>100</value>
+                <value>200</value>
+                <value>300</value>
+                <value>400</value>
+                <value>500</value>
+            </array>
+        </property>
+    </bean>
 </beans>
