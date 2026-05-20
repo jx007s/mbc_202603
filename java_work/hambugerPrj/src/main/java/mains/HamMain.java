@@ -9,6 +9,8 @@ public class HamMain {
                 new ClassPathXmlApplicationContext("ham_xml/haml_di.xml");
 
         System.out.println("햄버거 결합");
+        System.out.println(context.getBean("hs1"));
+
         context.close();
     }
 }
