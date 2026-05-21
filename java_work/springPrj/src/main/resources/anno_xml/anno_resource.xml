@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="cam3" class="anno_p.ReCamera" p:name="캐논"  />
+    <bean id="cam4" class="anno_p.ReCamera" p:name="샘송"  />
+    <bean id="fc" class="anno_p.ReCamera" p:name="니콘"  />
+
+    <bean class="anno_p.ReMic" p:name="노래방마이크"  />
+    <bean class="anno_p.ReBattery" p:name="배트맨배터리" />
+
+
+    <bean id="hp1" class="anno_p.ReHandPhone" p:name="은하수" />
+
+    <!--class 에서 @(annotation) 인식 및 적용-->
+    <context:annotation-config/>
+</beans>

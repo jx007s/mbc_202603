@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_main/AutoCoffeeMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/Coffee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/CoffeeParts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/Wondu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_coffee.xml" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/anno_main/ResourceMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/ReHandPhone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_resource.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anno_p/HandPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_p/HandPhone.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +87,7 @@
     &quot;Gradle.Build springPrj.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.springPrj [:anno_main.AutoCoffeeMain.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.springPrj [:anno_main.AutoWireMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [:anno_main.ResourceMain.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.springPrj [:di_main.AutoWireMain.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.springPrj [:di_main.CollMain.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.springPrj [:di_main.ComputerMain.main()].executor&quot;: &quot;Run&quot;,
@@ -236,7 +232,8 @@
       <workItem from="1779329545484" duration="839000" />
       <workItem from="1779330443150" duration="147000" />
       <workItem from="1779330596394" duration="258000" />
-      <workItem from="1779330883658" duration="489000" />
+      <workItem from="1779330883658" duration="1841000" />
+      <workItem from="1779332736799" duration="1476000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -318,7 +315,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779324632705</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="5_21_2">
+      <option name="closed" value="true" />
+      <created>1779331659132</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1779331659132</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +351,8 @@
     <MESSAGE value="5_20_5" />
     <MESSAGE value="5_20_6" />
     <MESSAGE value="5_21_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_21_1" />
+    <MESSAGE value="5_21_2" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_21_2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
