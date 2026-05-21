@@ -6,11 +6,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-public class ConfigMain {
+public class ConfigMain2 {
     public static void main(String[] args) {
 
         AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("anno_xml/anno_config.xml");
+                new ClassPathXmlApplicationContext("anno_xml/anno_config2.xml");
 
         // Bean 이름 배열
         String [] names = context.getBeanDefinitionNames();

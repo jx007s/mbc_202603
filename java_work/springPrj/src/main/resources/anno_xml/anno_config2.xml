@@ -8,13 +8,14 @@ http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean class="anno_p.AnnoConfig"  />
+
 
     <bean class="anno_p.SmartPhone" id="sp1" p:fc-ref="cam1" p:name="스폰1" />
 
     <!--class 에서 @(annotation) 인식 및 적용-->
     <context:annotation-config/>
 
-    <context:component-scan base-package="anno_p.comp_p.aaa"/>
+    <!-- 다수의 스캔패키지 등록 가능-->
+    <context:component-scan base-package="anno_p.config_p,anno_p.comp_p.aaa"/>
 
 </beans>

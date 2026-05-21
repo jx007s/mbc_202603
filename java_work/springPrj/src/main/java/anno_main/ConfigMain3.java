@@ -1,23 +1,26 @@
 package anno_main;
 
 
+import anno_p.AnnoConfig3;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-public class ConfigMain {
+public class ConfigMain3 {
     public static void main(String[] args) {
 
-        AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("anno_xml/anno_config.xml");
+        ApplicationContext context = new
+                AnnotationConfigApplicationContext(AnnoConfig3.class);
 
         // Bean 이름 배열
         String [] names = context.getBeanDefinitionNames();
         System.out.println("names:"+ Arrays.toString(names));
 
         System.out.println("cam1:"+context.getBean("cam1"));
-        System.out.println("sp1:"+context.getBean("sp1"));
+
         System.out.println("sp2:"+context.getBean("sp2"));
     }
 }

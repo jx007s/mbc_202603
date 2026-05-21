@@ -6,5 +6,5 @@ import org.springframework.stereotype.Component;
 @Component
 @Data
 public class Display {
-    String name;
+    String name="이름없는디스플레이";
 }

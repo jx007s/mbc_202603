@@ -2,8 +2,10 @@ package anno_p;
 
 import anno_p.comp_p.aaa.Display;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
-public class AnnoConfig {
+@ComponentScan(basePackages = "anno_p.comp_p.aaa")
+public class AnnoConfig3 {
 
     // 메소드를 실행하여 Bean 생성및 설정
     @Bean  // 컨테이너 실행시점에 Bean을 생성하기 위해 메소드 실행
@@ -30,4 +32,5 @@ public class AnnoConfig {
         res.dd = qwe;
         return res;
     }
+
 }

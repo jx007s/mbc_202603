@@ -1,5 +1,6 @@
 package anno_p;
 
+import anno_p.comp_p.aaa.Display;
 import lombok.Data;
 
 @Data
