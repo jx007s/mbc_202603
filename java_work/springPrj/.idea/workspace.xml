@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_3">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/anno_main/ResourceCoffeeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/ReCoffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_resource_coffee.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anno_p/ReHandPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_p/ReHandPhone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/anno_main/ResourceMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_main/ResourceMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,38 +82,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Git.Working.Tree.Tab.closed.by.user&quot;: &quot;closed&quot;,
-    &quot;Gradle.Build springPrj.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:anno_main.AutoCoffeeMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:anno_main.AutoWireMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:anno_main.ResourceMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:di_main.AutoWireMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:di_main.CollMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:di_main.ComputerMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:di_main.DiMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:di_main.ExamMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [:di_p.ExamMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.springPrj [clean].executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/public/mbc/2026_03/public/java_work/springPrj/src/main/resources/anno_xml&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.16623545&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Git.Working.Tree.Tab.closed.by.user": "closed",
+    "Gradle.Build springPrj.executor": "Run",
+    "Gradle.springPrj [:anno_main.AutoCoffeeMain.main()].executor": "Run",
+    "Gradle.springPrj [:anno_main.AutoWireMain.main()].executor": "Run",
+    "Gradle.springPrj [:anno_main.ResourceCoffeeMain.main()].executor": "Run",
+    "Gradle.springPrj [:anno_main.ResourceMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_main.AutoWireMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_main.CollMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_main.ComputerMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_main.DiMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_main.ExamMain.main()].executor": "Run",
+    "Gradle.springPrj [:di_p.ExamMain.main()].executor": "Run",
+    "Gradle.springPrj [build].executor": "Run",
+    "Gradle.springPrj [clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/public/mbc/2026_03/public/java_work/springPrj/src/main/resources/anno_xml",
+    "project.structure.last.edited": "프로젝트",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.splitter.proportion": "0.16623545",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\resources\anno_xml" />
@@ -117,8 +122,8 @@
       <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\resources\di_xml" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="anno_main" />
       <recent name="anno_p" />
+      <recent name="anno_main" />
       <recent name="di_main" />
     </key>
   </component>
@@ -230,7 +235,7 @@
       <workItem from="1779330443150" duration="147000" />
       <workItem from="1779330596394" duration="258000" />
       <workItem from="1779330883658" duration="1841000" />
-      <workItem from="1779332736799" duration="2235000" />
+      <workItem from="1779332736799" duration="5127000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -328,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779334225031</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="5_21_4">
+      <option name="closed" value="true" />
+      <created>1779335056404</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1779335056404</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +371,8 @@
     <MESSAGE value="5_21_1" />
     <MESSAGE value="5_21_2" />
     <MESSAGE value="5_21_3" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_21_3" />
+    <MESSAGE value="5_21_4" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_21_4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
