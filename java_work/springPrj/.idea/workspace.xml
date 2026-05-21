@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_main/ResourceMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/ReHandPhone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_resource.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_3">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/anno_p/ReHandPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_p/ReHandPhone.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +230,7 @@
       <workItem from="1779330443150" duration="147000" />
       <workItem from="1779330596394" duration="258000" />
       <workItem from="1779330883658" duration="1841000" />
-      <workItem from="1779332736799" duration="1476000" />
+      <workItem from="1779332736799" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -323,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779331659132</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="5_21_3">
+      <option name="closed" value="true" />
+      <created>1779334225031</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1779334225031</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +357,8 @@
     <MESSAGE value="5_20_6" />
     <MESSAGE value="5_21_1" />
     <MESSAGE value="5_21_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_21_2" />
+    <MESSAGE value="5_21_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_21_3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
