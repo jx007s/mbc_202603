@@ -17,3 +17,11 @@ public class AutoWireMain {
 
     }
 }
+/*
+커피 - 이름, 가격, 원두(auto), 부속(auto)(시럽, 우유, 카라멜,초코렛.....)
+AutoCoffeeMain
+
+
+*/
+
+

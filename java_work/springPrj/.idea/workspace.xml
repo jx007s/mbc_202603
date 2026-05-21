@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_5">
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_20_6">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/anno_main/AutoWireMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_main/AutoWireMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anno_p/HandPhone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_p/HandPhone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_autowire.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/anno_xml/anno_autowire.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,32 +76,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Git.Working.Tree.Tab.closed.by.user": "closed",
-    "Gradle.springPrj [:anno_main.AutoWireMain.main()].executor": "Run",
-    "Gradle.springPrj [:di_main.AutoWireMain.main()].executor": "Run",
-    "Gradle.springPrj [:di_main.CollMain.main()].executor": "Run",
-    "Gradle.springPrj [:di_main.ComputerMain.main()].executor": "Run",
-    "Gradle.springPrj [:di_main.DiMain.main()].executor": "Run",
-    "Gradle.springPrj [:di_p.ExamMain.main()].executor": "Run",
-    "Gradle.springPrj [clean].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/public/mbc/2026_03/public/java_work/springPrj/src/main/resources/anno_xml",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Git.Working.Tree.Tab.closed.by.user&quot;: &quot;closed&quot;,
+    &quot;Gradle.springPrj [:anno_main.AutoWireMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [:di_main.AutoWireMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [:di_main.CollMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [:di_main.ComputerMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [:di_main.DiMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [:di_p.ExamMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.springPrj [clean].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/public/mbc/2026_03/public/java_work/springPrj/src/main/resources/anno_xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\resources\anno_xml" />
@@ -114,7 +114,7 @@
       <recent name="di_main" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ExamMain">
     <configuration name="ExamMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="di_main.ExamMain" />
       <module name="springPrj.main" />
@@ -186,7 +186,9 @@
       <workItem from="1779168718607" duration="8533000" />
       <workItem from="1779236779221" duration="4472000" />
       <workItem from="1779243966586" duration="1262000" />
-      <workItem from="1779245441474" duration="13370000" />
+      <workItem from="1779245441474" duration="13813000" />
+      <workItem from="1779268487123" duration="1077000" />
+      <workItem from="1779322790566" duration="1657000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -252,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779264127198</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="5_20_6">
+      <option name="closed" value="true" />
+      <created>1779267930027</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1779267930027</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +288,7 @@
     <MESSAGE value="5_20_3" />
     <MESSAGE value="5_20_4" />
     <MESSAGE value="5_20_5" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_20_5" />
+    <MESSAGE value="5_20_6" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_20_6" />
   </component>
 </project>
