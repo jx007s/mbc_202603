@@ -5,7 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public class HandPhone {
-    Camera fc, rc;
+    @Autowired
+    Camera fc;
+
+    @Qualifier("cam3") // bean 이름 명시
+    @Autowired
+    Camera rc;
+
     String name;
     Mic mm;
     Display dd;
@@ -18,16 +24,11 @@ public class HandPhone {
 4. @Autowired(required=false)  // true 이면 필수 O , false이면 필수 X (생략시 true)
                 false - 같은 Type Bean 있으면 결합 없을때 에러 안남
 */
-    @Autowired
-    public void setFc(Camera fc) {
-        this.fc = fc;
-    }
 
-    @Qualifier("cam3") // bean 이름 명시
-    @Autowired
-    public void setRc(Camera rc) {
-        this.rc = rc;
-    }
+    // autowired 로 의존성결합시 setter 메소드 없이 멤버변수에 직접 지정가능
+    //public void setFc(Camera fc) {        this.fc = fc;    }
+
+    //public void setRc(Camera rc) {        this.rc = rc;    }
 
     public void setName(String name) {
         this.name = name;
