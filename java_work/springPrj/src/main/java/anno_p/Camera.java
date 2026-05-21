@@ -23,7 +23,4 @@ public class Camera {
                 '}';
     }
 
-    public Camera() {
-        System.out.println("Camera 기본생성자");
-    }
 }

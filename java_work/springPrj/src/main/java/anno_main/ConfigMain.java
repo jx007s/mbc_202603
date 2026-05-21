@@ -4,14 +4,14 @@ package anno_main;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ComponentMain {
+public class ConfigMain {
     public static void main(String[] args) {
 
         AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("anno_xml/anno_component.xml");
+                new ClassPathXmlApplicationContext("anno_xml/anno_config.xml");
 
-        System.out.println("handPhone:"+context.getBean("handPhone"));
-
+        System.out.println("cam1:"+context.getBean("cam1"));
+        System.out.println("sp1:"+context.getBean("sp1"));
     }
 }
 

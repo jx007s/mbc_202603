@@ -4,13 +4,13 @@ package anno_main;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ComponentMain {
+public class CompCoffeeMain {
     public static void main(String[] args) {
 
         AbstractApplicationContext context =
-                new ClassPathXmlApplicationContext("anno_xml/anno_component.xml");
+                new ClassPathXmlApplicationContext("anno_xml/anno_compcoffee.xml");
 
-        System.out.println("handPhone:"+context.getBean("handPhone"));
+        System.out.println("cc:"+context.getBean("cc"));
 
     }
 }
