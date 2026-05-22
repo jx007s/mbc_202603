@@ -20,6 +20,18 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
                         pointcut="execution(String aop_p.webToon..*(..))" />
             <aop:before method="retInt"
                         pointcut="execution(int aop_p.webToon..*(..))" />
+            <aop:before method="claHiMan"
+                        pointcut="execution(* aop_p.webToon.HiMan.*(..))" />
+            <aop:before method="nameDog"
+                        pointcut="execution(* aop_p.webToon.*.dog*(..))" />
+            <aop:before method="argIntStr"
+                        pointcut="execution(* aop_p.webToon..*(int, String))" />
+            <aop:before method="argAllInt"
+                        pointcut="execution(* aop_p.webToon..*(*,int))" />
+            <aop:before method="arg2"
+                        pointcut="execution(* aop_p.webToon..*(*,*))" />
+            <aop:before method="argNone"
+                        pointcut="execution(* aop_p.webToon..*())" />
         </aop:aspect>
 
     </aop:config>

@@ -29,9 +29,9 @@ public class ExecutionMain {
         System.out.println("rr:"+rr);
         rr = hiMan.cat1(22,"장우풍뎅이");
         System.out.println("rr:"+rr);
-        rr = hiMan.dog3(33,"장미풍뎅이");
+        rr = hiMan.dog3(33,246);
         System.out.println("rr:"+rr);
-        rr = hiMan.cat4(44,"장양풍뎅이");
+        rr = hiMan.cat4(44,369);
         System.out.println("rr:"+rr);
 
     }
