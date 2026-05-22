@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="arAdvice" class="aop_p.advice_p.MyAroundAdvice"/>
+
+    <!--
+    aop:around - Advice : 메소드 실행시 언제 심사할 것인가
+                            around : 메소드 실행 전체에 관여
+    pointCut - 적용위치 : 어느 메소드 실행시  심사할 것인가
+    접근제어자 : public
+    리턴형 : String
+    패키지 : aop_p.webToon
+    클래스 : 모든 클래스명
+    메소드 : 모든 메소드명
+    매개변수 : 모든 매개변수
+    public String aop_p.webToon..*(..))
+
+
+    aop_p.webToon.JoSuk.doc1()  ==>  arAdvice-> arTest() 심사
+    -->
+    <aop:config>
+        <aop:aspect ref="arAdvice">
+            <aop:around method="arTest"
+                        pointcut="execution(public String aop_p.webToon..*(..))" />
+        </aop:aspect>
+
+    </aop:config>
+
+    <!-- 하위 패키지 까지 검색-->
+    <context:component-scan base-package="aop_p.webToon"/>
+</beans>
