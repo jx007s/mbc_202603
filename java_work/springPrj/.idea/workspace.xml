@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_21_8">
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_main/ConfigCoffeeMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/anno_p/AnnoCoffeeConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aop_main/AroundMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyAroundAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aop_p/webToon/JoSuk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_around.xml" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_22_1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/aop_main/ExecutionMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyExecAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/aop_p/webToon/HiMan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_execution.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anno_main/ConfigMain3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_main/ConfigMain3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anno_p/CoffeeParts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_p/CoffeeParts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/anno_p/Wondu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/anno_p/Wondu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +97,7 @@
     "Gradle.springPrj [:anno_main.ResourceCoffeeMain.main()].executor": "Run",
     "Gradle.springPrj [:anno_main.ResourceMain.main()].executor": "Run",
     "Gradle.springPrj [:aop_main.AroundMain.main()].executor": "Run",
+    "Gradle.springPrj [:aop_main.ExecutionMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.AutoWireMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.CollMain.main()].executor": "Run",
     "Gradle.springPrj [:di_main.ComputerMain.main()].executor": "Run",
@@ -137,11 +132,11 @@
       <recent name="D:\public\mbc\2026_03\public\java_work\springPrj\src\main\java\anno_p" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="aop_p.webToon" />
+      <recent name="aop_p.advice_p" />
       <recent name="aop_main" />
       <recent name="anno_p" />
       <recent name="anno_main" />
-      <recent name="anno_p.config_p" />
-      <recent name="anno_p.compcoffee_p" />
     </key>
   </component>
   <component name="RunManager">
@@ -253,7 +248,7 @@
       <workItem from="1779330596394" duration="258000" />
       <workItem from="1779330883658" duration="1841000" />
       <workItem from="1779332736799" duration="18795000" />
-      <workItem from="1779409333847" duration="11080000" />
+      <workItem from="1779409333847" duration="13413000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -391,7 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779354203198</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="5_22_1">
+      <option name="closed" value="true" />
+      <created>1779426681380</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1779426681380</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,7 +429,8 @@
     <MESSAGE value="5_21_6" />
     <MESSAGE value="5_21_7" />
     <MESSAGE value="5_21_8" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_21_8" />
+    <MESSAGE value="5_22_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_22_1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
