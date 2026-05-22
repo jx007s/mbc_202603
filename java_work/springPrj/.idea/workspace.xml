@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_22_2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/aop_main/AdviceMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyAdviceAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_advice.xml" afterDir="false" />
+    <list default="true" id="7d88c198-e581-41af-ad01-643a7f342056" name="변경" comment="5_22_3">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aop_main/ExecutionMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aop_main/ExecutionMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyExecAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyExecAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aop_p/webToon/HiMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aop_p/webToon/HiMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_execution.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_execution.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aop_main/AdviceMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aop_main/AdviceMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyAdviceAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aop_p/advice_p/MyAdviceAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aop_p/webToon/JoSuk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aop_p/webToon/JoSuk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_advice.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/aop_xml/aop_advice.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +249,7 @@
       <workItem from="1779330596394" duration="258000" />
       <workItem from="1779330883658" duration="1841000" />
       <workItem from="1779332736799" duration="18795000" />
-      <workItem from="1779409333847" duration="17524000" />
+      <workItem from="1779409333847" duration="20787000" />
     </task>
     <task id="LOCAL-00001" summary="5_19_5">
       <option name="closed" value="true" />
@@ -406,7 +403,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779429015153</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="5_22_3">
+      <option name="closed" value="true" />
+      <created>1779433196046</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1779433196046</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +448,8 @@
     <MESSAGE value="5_21_8" />
     <MESSAGE value="5_22_1" />
     <MESSAGE value="5_22_2" />
-    <option name="LAST_COMMIT_MESSAGE" value="5_22_2" />
+    <MESSAGE value="5_22_3" />
+    <option name="LAST_COMMIT_MESSAGE" value="5_22_3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

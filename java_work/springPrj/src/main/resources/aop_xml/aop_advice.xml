@@ -16,8 +16,18 @@ http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <aop:config>
         <aop:aspect ref="arAdvice">
-            <aop:around method="arounddd"
-                        pointcut="execution(public String aop_p.webToon..*(..))" />
+            <aop:pointcut id="wt" expression="execution(public String aop_p.webToon..*(..))"/>
+            <aop:around method="arounddd" pointcut-ref="wt" />
+            <aop:before method="beforeee" pointcut-ref="wt" />
+
+            <!--정상종료시 실행-->
+            <aop:after-returning method="afterRet" pointcut-ref="wt" returning="oo"/>
+
+            <!--예외처리시 실행-->
+            <aop:after-throwing method="afterThrow" pointcut-ref="wt" throwing="ee"/>
+
+            <!--모든 종료시 : finally 와 비슷 -->
+            <aop:after method="afterrrr" pointcut-ref="wt" />
         </aop:aspect>
 
     </aop:config>

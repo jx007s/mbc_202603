@@ -15,9 +15,9 @@ public class AdviceMain {
         JoSuk joSuk = context.getBean("joSuk", JoSuk.class);
 
 
-        Object rr = joSuk.dog1(100,"아기상어");
+        Object rr = joSuk.char1();
         System.out.println("rr:"+rr);
-        rr = joSuk.dog1(200,"엄마상어");
+        rr = joSuk.char2();
         System.out.println("rr:"+rr);
     }
 }

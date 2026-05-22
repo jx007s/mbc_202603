@@ -23,4 +23,16 @@ public class JoSuk {
         System.out.println("JoSuk.dog4() 실행");
         return "조철왕";
     }
+
+    public String char1(){
+        System.out.println("JoSuk.char1() 실행");
+        return "조철왕";
+    }
+
+
+    public String char2(){
+        System.out.println("JoSuk.char2() 실행");
+        int a = 10/0;   //에러발생
+        return "서부욱";
+    }
 }
