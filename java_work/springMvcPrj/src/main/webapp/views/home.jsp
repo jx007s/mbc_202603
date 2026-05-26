@@ -8,6 +8,9 @@
 </head>
 <body>
 <h1>SpringMvcPrj</h1>
+<h2>basic</h2>
+<a href="/basic/now">now</a>
+<a href="/basic/form">form</a>
 </body>
 </html>
 
