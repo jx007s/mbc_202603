@@ -13,6 +13,7 @@
 <a href="/basic/form">form</a>
 <a href="/basic/member">member</a>
 <a href="/basic/order">order</a>
+<a href="/basic/exam">exam</a>
 </body>
 </html>
 
