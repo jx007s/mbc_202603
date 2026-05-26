@@ -12,6 +12,7 @@
 <a href="/basic/now">now</a>
 <a href="/basic/form">form</a>
 <a href="/basic/member">member</a>
+<a href="/basic/order">order</a>
 </body>
 </html>
 
