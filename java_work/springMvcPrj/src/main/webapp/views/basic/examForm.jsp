@@ -11,6 +11,16 @@
     <form method="post">
         <table border="">
             <tr>
+                <td  colspan="2">정렬기준
+                    <input type="radio" name="ordTitle" value="pname">이름
+                    <input type="radio" name="ordTitle" value="tot">합계
+                </td>
+                <td  colspan="2">정렬방향
+                    <input type="radio" name="ordDir" value="asc">오름차순
+                    <input type="radio" name="ordDir" value="desc">내림차순
+                </td>
+            </tr>
+            <tr>
                 <td>이름</td>
                 <td>국어</td>
                 <td>영어</td>
