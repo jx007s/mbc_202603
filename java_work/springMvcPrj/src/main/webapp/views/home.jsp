@@ -20,6 +20,7 @@
 <a href="/file/down1">down1</a>
 <a href="/file/down2">down2</a>
 <a href="/file/down3">down3</a>
+<a href="/file/ori">ori</a>
 </body>
 </html>
 
