@@ -21,7 +21,7 @@
                 <td>총점</td>
                 <td>평균</td>
             </tr>
-            <% for (Stud st : exam.getStuds()) { %>
+            <% for (Stud st : exam.calc()) { %>
             <tr>
                 <td><%=st.getPname()%></td>
                 <td><%=st.getJum(0)%></td>

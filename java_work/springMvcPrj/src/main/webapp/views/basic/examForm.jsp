@@ -28,10 +28,10 @@
             </tr>
             <% for (int i = 0;i<5;i++) { %>
             <tr>
-                <td><input type="text" name="studs[<%=i%>].pname"></td>
-                <td><input type="text" name="studs[<%=i%>].kor"></td>
-                <td><input type="text" name="studs[<%=i%>].eng"></td>
-                <td><input type="text" name="studs[<%=i%>].mat"></td>
+                <td><input type="text" name="studs[<%=i%>].pname" value="빈<%=i%>"></td>
+                <td><input type="text" name="studs[<%=i%>].kor" value="<%=(int)(Math.random()*60+40)%>"></td>
+                <td><input type="text" name="studs[<%=i%>].eng" value="<%=(int)(Math.random()*60+40)%>"></td>
+                <td><input type="text" name="studs[<%=i%>].mat" value="<%=(int)(Math.random()*60+40)%>"></td>
 
             </tr>
             <%}%>
