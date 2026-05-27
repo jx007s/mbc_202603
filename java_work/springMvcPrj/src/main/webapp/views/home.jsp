@@ -17,6 +17,9 @@
 <h2>file</h2>
 <a href="/file/form">form</a>
 <a href="/file/member">member</a>
+<a href="/file/down1">down1</a>
+<a href="/file/down2">down2</a>
+<a href="/file/down3">down3</a>
 </body>
 </html>
 
