@@ -16,6 +16,7 @@
 <a href="/basic/exam">exam</a>
 <h2>file</h2>
 <a href="/file/form">form</a>
+<a href="/file/member">member</a>
 </body>
 </html>
 

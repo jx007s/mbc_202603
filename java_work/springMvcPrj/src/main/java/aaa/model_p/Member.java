@@ -1,6 +1,7 @@
 package aaa.model_p;
 
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -13,6 +14,19 @@ public class Member {
     int age;
     double height;
     LocalDate reg_date;
+    MultipartFile pic, resume;
+
+    public String picStr(){
+        return pic.getOriginalFilename();
+    }
+
+    public String resumeStr(){
+        return resume.getOriginalFilename();
+    }
+
+    public void setReg_date(LocalDate reg_date) {
+        this.reg_date = reg_date;
+    }
 
     public void setReg_date(String reg_date) {
         System.out.println("setReg_date() 실행 : "+reg_date);
