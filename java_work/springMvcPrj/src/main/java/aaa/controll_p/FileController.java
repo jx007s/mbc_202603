@@ -1,6 +1,7 @@
 package aaa.controll_p;
 
 import aaa.model_p.Person;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +21,7 @@ public class FileController {
     }
 
     @PostMapping("/file/form")
-    String comp(Person pp){
+    String comp(Person pp, HttpServletRequest request){
         System.out.println("comp:"+pp);
         System.out.println("up1:"+
                 pp.getUp1().getOriginalFilename()+","+
@@ -44,7 +45,8 @@ public class FileController {
         // 접근경로 : 호스트IP:포트/이하주소임
         // localhost/fff/BDJY9060.JPG
 
-        String dirPath= "D:\\public\\mbc\\2026_03\\public\\java_work\\springMvcPrj\\src\\main\\resources\\static\\fff";
+        String dirPath = request.getServletContext().getRealPath("fff");
+        dirPath= "D:\\public\\mbc\\2026_03\\public\\java_work\\springMvcPrj\\src\\main\\resources\\static\\fff";
         if(!pp.getUp1().isEmpty()){ //파일이 존재한다면
             try {
                 Files.copy(
@@ -61,3 +63,10 @@ public class FileController {
         return "file/comp";
     }
 }
+
+   /*
+    회원 정보 :
+pid, pname,  age, height;
+가입일 - 현재시각 자동처리
+
+사진(이미지파일만), 이력서 * */
