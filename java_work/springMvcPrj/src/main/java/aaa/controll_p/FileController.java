@@ -1,14 +1,20 @@
 package aaa.controll_p;
 
 import aaa.model_p.Person;
+import jakarta.servlet.ServletOutputStream;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 
@@ -62,6 +68,42 @@ public class FileController {
 
         return "file/comp";
     }
+
+    @GetMapping("/file/down1")
+    void fileDown1(HttpServletRequest request, HttpServletResponse response){
+
+        try {
+            String fname = URLEncoder.encode("java 설치.txt", "utf-8");
+            System.out.println("fname:"+fname);
+            response.setHeader("Content-Disposition", "attachment;filename="+fname);
+
+
+
+            //2. 클라이언트 파일쓰기 stream
+            ServletOutputStream sos = response.getOutputStream();
+
+            //3. 서버 파일 Path
+            //3.1 파일 경로 가져오기
+            //3.1.1 실제 서버에서의 파일위치
+            String path = request.getServletContext().getRealPath("fff/java 설치.txt");
+            //3.1.2 가상 서버에서의 파일위치(배포시 주석처리 필수)
+            path= "D:\\public\\mbc\\2026_03\\public\\java_work\\springMvcPrj\\src\\main\\resources\\static\\fff\\java 설치.txt";
+
+            //3.2 파일 경로로 Path 얻기
+            Path inFile = Paths.get(path);
+
+            //4. 파일 내용 전송
+            Files.copy(inFile, sos);
+
+            //5. stream 닫기
+            sos.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
 }
 
    /*
