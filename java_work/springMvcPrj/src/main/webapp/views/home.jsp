@@ -22,7 +22,7 @@
 <a href="/file/down3">down3</a>
 <a href="/file/ori">ori</a>
 <h2>model</h2>
-<a href="/mmm/list">list</a>
+<a href="/mmm/list?nowPage=2&cate=prod">list</a>
 </body>
 </html>
 

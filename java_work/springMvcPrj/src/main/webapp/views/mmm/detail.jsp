@@ -1,4 +1,6 @@
+<%@ page import="aaa.model_p.PData" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<% PData pData = (PData)request.getAttribute("pData");%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,6 +12,7 @@
 <h1>mmm/detail</h1>
 mainData : <%=request.getAttribute("mainData")%><br/>
 mData : <%=request.getAttribute("mData")%><br/>
-<a href="modify">수정</a>
+pData : <%=pData%><br/>
+<a href="modify?<%=pData.urlParam()%>">수정</a>
 </body>
 </html>
