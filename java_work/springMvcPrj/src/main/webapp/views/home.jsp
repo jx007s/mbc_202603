@@ -23,6 +23,7 @@
 <a href="/file/ori">ori</a>
 <h2>model</h2>
 <a href="/mmm/list?nowPage=2&cate=prod">list</a>
+<a href="/center/list?cate=notice">center</a>
 </body>
 </html>
 
