@@ -24,6 +24,11 @@
 <h2>model</h2>
 <a href="/mmm/list?nowPage=2&cate=prod">list</a>
 <a href="/center/list?cate=notice">center</a>
+<h2>path</h2>
+<a href="/path/info/hello">info/hello</a>
+<a href="/path/tv/list">tv/list</a>
+<a href="/path/tv/detail">tv/detail</a>
+<a href="/path/tv/list/12">tv/list/12</a>
 </body>
 </html>
 

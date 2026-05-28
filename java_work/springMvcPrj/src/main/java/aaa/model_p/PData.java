@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 public class PData {
-    String cate;
+    String cate, service;
     int nowPage = 1;
 
     public String urlParam() {
