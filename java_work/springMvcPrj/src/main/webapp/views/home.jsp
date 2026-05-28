@@ -29,6 +29,10 @@
 <a href="/path/tv/list">tv/list</a>
 <a href="/path/tv/detail">tv/detail</a>
 <a href="/path/tv/list/12">tv/list/12</a>
+<h3>pathPro</h3>
+<a href="/pathPro/info/hello">info/hello</a>
+<a href="/pathPro/tv/list">tv/list</a>
+<a href="/pathPro/tv/detail">tv/detail</a>
 </body>
 </html>
 

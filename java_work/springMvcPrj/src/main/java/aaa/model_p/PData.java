@@ -10,4 +10,8 @@ public class PData {
     public String urlParam() {
         return "nowPage=" + nowPage + "&cate="+cate;
     }
+
+    public String ca_ser() {
+        return cate + "_"+service;
+    }
 }
