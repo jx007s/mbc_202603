@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mmm/list</title>
+    <title>mmm/detail</title>
 </head>
 <body>
-<h1>mmm/list</h1>
+<h1>mmm/detail</h1>
 mainData : <%=request.getAttribute("mainData")%><br/>
 mData : <%=request.getAttribute("mData")%><br/>
-<a href="detail">상세</a>
+<a href="modify">수정</a>
 </body>
 </html>
