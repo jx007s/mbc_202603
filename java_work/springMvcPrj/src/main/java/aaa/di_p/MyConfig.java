@@ -14,6 +14,9 @@ public class MyConfig implements WebMvcConfigurer {
     @Resource
     MyPageInterceptor mInter;
 
+    @Resource
+    AdminInterceptor aInter;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         System.out.println("MyConfig.addInterceptors() 실행");
@@ -28,5 +31,9 @@ public class MyConfig implements WebMvcConfigurer {
                 .addPathPatterns("/myPage/**","/order/**")
                 .addPathPatterns("/gall/**")
                 .excludePathPatterns("/order/detail","/gall/list"); //검사대상제외 - 제외가 더 우선순위가 높다
+
+        registry.addInterceptor(aInter)
+                .addPathPatterns("/admin/**")
+                .excludePathPatterns("/admin/login/login/**");
     }
 }

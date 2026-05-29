@@ -1,6 +1,7 @@
 package aaa.model_p;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
@@ -9,12 +10,24 @@ import java.time.format.DateTimeFormatter;
 
 
 @Data
+@NoArgsConstructor
 public class Member {
-    String pid, pname;
-    int age;
+    String pid, pname, pw;
+    int age, grade;
     double height;
     LocalDate reg_date;
     MultipartFile pic, resume;
+
+    public Member(int grade, String pid, String pw, String pname) {
+        this.grade = grade;
+        this.pid = pid;
+        this.pw = pw;
+        this.pname = pname;
+    }
+
+    public boolean logChk(Member you){
+        return pid.equals(you.pid) && pw.equals(you.pw);
+    }
 
     public String picStr(){
         return pic.getOriginalFilename();

@@ -1,6 +1,7 @@
 package aaa.controll_p;
 
 import aaa.model_p.PData;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,19 @@ public class CenterController {
         // 매개변수를 attribute 등록시에도 @ModelAttribute("속성명") 사용
         System.out.println("menu : "+pData);
         return pData;
+    }
+
+    @ModelAttribute("logURL")
+    Object logURL(HttpSession session){ //request.parameter 를 매개변수로 처리
+
+
+        String res = "login";
+
+        if(session.getAttribute("pid")!=null){
+            res = "logout";
+        }
+
+        return res;
     }
 
     @GetMapping("list")

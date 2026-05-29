@@ -2,7 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <% PData pData = (PData)request.getAttribute("pData");
 String mainURL = "main/"+(String)request.getAttribute("mainURL")+".jsp";
-String logURL = "inc/"+(String)request.getAttribute("logURL")+".jsp";
+String logURL = "../mmm/inc/"+(String)request.getAttribute("logURL")+".jsp";
 
 %>
 <!doctype html>
@@ -36,11 +36,11 @@ footer{
 </head>
 <body>
 <wrapper>
-<jsp:include page="inc/header.jsp"/>
+<jsp:include page="../mmm/inc/header.jsp"/>
 <jsp:include page="<%=logURL%>"/>
 <jsp:include page="inc/menu.jsp"/>
 <jsp:include page="<%=mainURL%>"/>
-<jsp:include page="inc/footer.jsp"/>
+<jsp:include page="../mmm/inc/footer.jsp"/>
 </wrapper>
 </body>
 </html>
