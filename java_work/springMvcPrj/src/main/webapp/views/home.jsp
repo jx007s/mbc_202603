@@ -36,6 +36,13 @@
 <h2>Interceptor</h2>
 <a href="/event/nomal?pid=aaa">이벤트aaa</a>
 <a href="/event/nomal?pid=bbb">이벤트bbb</a>
+<a href="/myPage/qwer">/myPage/qwer</a>
+<a href="/myPage">/myPage</a>
+<a href="/order/list">/order/list</a>
+<a href="/order/detail">/order/detail</a>
+<a href="/order/modify">/order/modify</a>
+<a href="/gall">/gall</a>
+<a href="/gall/list">/gall/list</a>
 </body>
 </html>
 
