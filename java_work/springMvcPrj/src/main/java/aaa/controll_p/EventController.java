@@ -10,6 +10,6 @@ public class EventController {
 
     @RequestMapping("/nomal")
     String event(){
-        return "이벤트 진행중";
+        return "이벤트 진행중  ";
     }
 }
