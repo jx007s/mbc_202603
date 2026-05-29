@@ -34,7 +34,8 @@
 <a href="/pathPro/tv/list">tv/list</a>
 <a href="/pathPro/tv/detail">tv/detail</a>
 <h2>Interceptor</h2>
-<a href="/event/nomal">이벤트</a>
+<a href="/event/nomal?pid=aaa">이벤트aaa</a>
+<a href="/event/nomal?pid=bbb">이벤트bbb</a>
 </body>
 </html>
 

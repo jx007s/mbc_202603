@@ -12,4 +12,9 @@ public class EventController {
     String event(){
         return "이벤트 진행중  ";
     }
+
+    @RequestMapping("/fail")
+    String fail(){
+        return "이벤트 기간이 아임다";
+    }
 }
