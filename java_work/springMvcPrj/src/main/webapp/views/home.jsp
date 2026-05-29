@@ -43,6 +43,11 @@
 <a href="/order/modify">/order/modify</a>
 <a href="/gall">/gall</a>
 <a href="/gall/list">/gall/list</a>
+<h2>session</h2>
+<a href="/sss/make">make</a>
+<a href="/sss/view">view</a>
+<a href="/sss/modify">modify</a>
+<a href="/sss/delete">delete</a>
 </body>
 </html>
 
