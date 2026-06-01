@@ -29,12 +29,14 @@ public class InsertReg implements ServiceAction {
         dirPath = "D:\\public\\mbc\\2026_03\\public\\java_work\\mybatisPrj\\src\\main\\resources\\static\\fff\\";
         try {
 
-            if(!dto.getUpFF().isEmpty()){ //파일 존재시 저장
+            if(!dto.getUpFile().isEmpty()){ //파일 존재시 저장
                 Files.copy(
-                        dto.getUpFF().getInputStream(),
-                        Paths.get(dirPath+dto.getUpFF().getOriginalFilename()),
+                        dto.getUpFile().getInputStream(),
+                        Paths.get(dirPath+dto.getUpFile().getOriginalFilename()),
                         StandardCopyOption.REPLACE_EXISTING
                 );
+
+                dto.setUpFF(dto.getUpFile().getOriginalFilename());
 
             }
         } catch (Exception e) {

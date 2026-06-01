@@ -30,6 +30,12 @@
         </tr><tr>
             <td>수학</td><td><%=dto.getMat()%></td>
         </tr>
+        <% if(dto.getUpFF()!=null){%>
+        <tr>
+            <td>파일</td><td>
+            <a href="/ffile/down?upFF=<%=dto.getUpFF()%>"><%=dto.getUpFF()%></a></td>
+        </tr>
+        <%} %>
         <tr>
             <td colspan="2" align="right">
                 <a href="list?pNo=<%=pInfo.getPNo()%>">목록으로</a>

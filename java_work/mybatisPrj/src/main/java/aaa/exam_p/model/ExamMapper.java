@@ -14,12 +14,14 @@ public interface ExamMapper {
     @Select("select * from exam where id = #{id}")
     ExamDTO detail(ExamDTO dto);
 
-    @Insert("insert into exam (hakgi,name, pid, kor, eng, mat,reg_date) values (#{hakgi}, #{name},#{pid},#{kor},#{eng},#{mat},#{regDate})")
+    @Insert("insert into exam (hakgi,name, pid, kor, eng, mat,reg_date, upff) values "+
+            " (#{hakgi}, #{name},#{pid},#{kor},#{eng},#{mat},#{regDate}, #{upFF})")
     int insert(ExamDTO dto);
 
     @Delete("delete from exam where id = #{id}")
     int delete(ExamDTO dto);
 
-    @Update("update exam set hakgi = #{hakgi},name =  #{name}, pid = #{pid}, kor = #{kor}, eng = #{eng}, mat = #{mat} where id = #{id}")
+    @Update("update exam set hakgi = #{hakgi},name =  #{name}, pid = #{pid}, kor = #{kor}, "+
+            " eng = #{eng}, mat = #{mat} where id = #{id}")
     int modify(ExamDTO dto);
 }

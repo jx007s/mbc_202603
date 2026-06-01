@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -28,9 +29,9 @@ public class Delete implements ServiceAction {
         String dirPath = request.getServletContext().getRealPath("fff")+"\\";
         dirPath = "D:\\public\\mbc\\2026_03\\public\\java_work\\mybatisPrj\\src\\main\\resources\\static\\fff\\";
         try {
-
-            if(!dto.getUpFF().isEmpty()){ //파일 존재시 저장
-
+            ExamDTO delDto = mapper.detail(dto);
+            if(delDto.getUpFF()!=null){ //파일 존재시 삭제
+                new File(dirPath+delDto.getUpFF()).delete();
             }
         } catch (Exception e) {
             e.printStackTrace();

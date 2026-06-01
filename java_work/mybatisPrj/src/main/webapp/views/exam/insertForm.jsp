@@ -47,7 +47,7 @@
         </tr><tr>
             <td>수학</td><td><input type="number" name="mat"></td>
         </tr><tr>
-            <td>파일</td><td><input type="file" name="upFF"></td>
+            <td>파일</td><td><input type="file" name="upFile"></td>
         </tr>
         <tr>
             <td colspan="2" align="right">
