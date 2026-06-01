@@ -1,5 +1,3 @@
-<%@ page import="java.util.List" %>
-<%@ page import="aaa.exam_p.model.ExamDTO" %>
 <%@ page import="aaa.exam_p.model.PageInfo" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 <%

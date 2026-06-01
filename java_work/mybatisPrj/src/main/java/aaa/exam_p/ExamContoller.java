@@ -29,6 +29,16 @@ public class ExamContoller {
 
     @RequestMapping
     String view(PageInfo pInfo){
-        return "exam/"+pInfo.getService();
+
+        String ttt = "exam/"+pInfo.getService();
+
+        if(pInfo.getService().equals("insertReg") ||
+        pInfo.getService().equals("modifyReg") ||
+        pInfo.getService().equals("delete")
+        ){
+            ttt = "exam/alert";
+        }
+
+        return ttt;
     }
 }
