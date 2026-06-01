@@ -1,6 +1,7 @@
 package aaa.exam_p.model;
 
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.LocalDate;
 
@@ -8,5 +9,6 @@ import java.time.LocalDate;
 public class ExamDTO {
     int id, hakgi, kor, eng, mat;
     String name, pid;
-    LocalDate reg_date;
+    LocalDate regDate;
+    MultipartFile upFF;
 }

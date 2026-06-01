@@ -1,5 +1,6 @@
 package aaa.exam_p.model;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -14,4 +15,7 @@ public interface ExamMapper {
 
     @Select("select * from exam where id = #{id}")
     ExamDTO detail(ExamDTO dto);
+
+    @Insert("insert into exam (hakgi,name, pid, kor, eng, mat,reg_date) values (#{hakgi}, #{name},#{pid},#{kor},#{eng},#{mat},#{regDate})")
+    int insert(ExamDTO dto);
 }

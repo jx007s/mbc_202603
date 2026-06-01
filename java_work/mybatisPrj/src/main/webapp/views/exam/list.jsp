@@ -26,7 +26,7 @@
         <tr>
             <td><%=dto.getHakgi()%></td>
             <td><%=dto.getName()%></td>
-            <td><%=dto.getReg_date()%></td>
+            <td><%=dto.getRegDate()%></td>
             <td>
                 <a href="detail?pNo=<%=pInfo.getPNo()%>&id=<%=dto.getId()%>"><%=dto.getPid()%></a>
                 </td>

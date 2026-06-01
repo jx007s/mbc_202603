@@ -18,3 +18,7 @@ spring :
     username: mbc_user
     password: 123456
 
+##  DB: 언더스코어 <--> JAVA : 카멜
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

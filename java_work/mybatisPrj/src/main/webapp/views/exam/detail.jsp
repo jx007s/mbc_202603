@@ -10,17 +10,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>시험목록</title>
+    <title>시험상세</title>
 </head>
 <body>
-    <h1>시험목록</h1>
+    <h1>시험상세</h1>
     <table border="">
         <tr>
             <td>학기</td><td><%=dto.getHakgi()%></td>
         </tr><tr>
             <td>종류</td><td><%=dto.getName()%></td>
         </tr><tr>
-            <td>시험일</td><td><%=dto.getReg_date()%></td>
+            <td>시험일</td><td><%=dto.getRegDate()%></td>
         </tr><tr>
             <td>학생</td><td><%=dto.getPid()%></td>
         </tr><tr>
