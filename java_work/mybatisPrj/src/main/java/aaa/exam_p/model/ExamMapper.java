@@ -1,9 +1,6 @@
 package aaa.exam_p.model;
 
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -22,4 +19,7 @@ public interface ExamMapper {
 
     @Delete("delete from exam where id = #{id}")
     int delete(ExamDTO dto);
+
+    @Update("update exam set hakgi = #{hakgi},name =  #{name}, pid = #{pid}, kor = #{kor}, eng = #{eng}, mat = #{mat} where id = #{id}")
+    int modify(ExamDTO dto);
 }

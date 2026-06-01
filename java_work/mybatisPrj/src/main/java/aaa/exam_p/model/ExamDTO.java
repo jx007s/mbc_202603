@@ -7,8 +7,8 @@ import java.time.LocalDate;
 
 @Data
 public class ExamDTO {
-    int id, hakgi, kor, eng, mat;
+    int id, hakgi, kor, eng, mat, upFF;
     String name, pid;
     LocalDate regDate;
-    MultipartFile upFF;
+    MultipartFile upFile;
 }
