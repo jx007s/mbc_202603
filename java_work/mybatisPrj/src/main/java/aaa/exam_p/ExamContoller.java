@@ -22,13 +22,13 @@ public class ExamContoller {
                     HttpServletResponse response,
                     PageInfo pInfo,
                     ExamDTO dto){
-        Object res = provider.getContext().getBean(pInfo.getService(), ServiceAction.class)
+        Object res = provider.getContext().getBean("exam"+pInfo.getService(), ServiceAction.class)
                 .execute(request,response,pInfo,dto);
         return res;
     }
 
     @RequestMapping
-    String view(){
-        return "exam/list";
+    String view(PageInfo pInfo){
+        return "exam/"+pInfo.getService();
     }
 }
