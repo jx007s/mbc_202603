@@ -11,4 +11,7 @@ public interface ExamMapper {
     // #{limit} : pInfo.getLimit() --> PrepareStatement의 ? 와 맵핑 기능을 처리
     @Select("select * from exam order by id desc limit #{limit} offset #{offset}")
     List<ExamDTO> list(PageInfo pInfo);
+
+    @Select("select * from exam where id = #{id}")
+    ExamDTO detail(ExamDTO dto);
 }

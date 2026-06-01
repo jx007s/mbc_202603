@@ -2,7 +2,7 @@
 <%@ page import="aaa.exam_p.model.ExamDTO" %>
 <%@ page import="aaa.exam_p.model.PageInfo" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<% PageInfo pInfo = (PageInfo)request.getAttribute("pInfo"); %>
+<% PageInfo pInfo = (PageInfo)request.getAttribute("pageInfo"); %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,7 +27,9 @@
             <td><%=dto.getHakgi()%></td>
             <td><%=dto.getName()%></td>
             <td><%=dto.getReg_date()%></td>
-            <td><%=dto.getPid()%></td>
+            <td>
+                <a href="detail?pNo=<%=pInfo.getPNo()%>&id=<%=dto.getId()%>"><%=dto.getPid()%></a>
+                </td>
             <td><%=dto.getKor()%></td>
             <td><%=dto.getEng()%></td>
             <td><%=dto.getMat()%></td>
@@ -37,10 +39,12 @@
         <tr>
             <td colspan="7" align="center">
                 <% for (int i = 1; i < 10; i++) {
-
+                    if(pInfo.getPNo()==i){
                 %>
+                    [<%=i%>]
+                <%}else{%>
                     <a href="list?pNo=<%=i%>"><%=i%></a>
-                <%}%>
+                <%}}%>
             </td>
         </tr>
 
