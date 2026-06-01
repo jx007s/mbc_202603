@@ -42,8 +42,8 @@ public class InsertReg implements ServiceAction {
         }
 
 
-        //int cnt =  mapper.insert(dto);
-        //System.out.println(cnt);
+        int cnt =  mapper.insert(dto);
+        System.out.println(cnt);
         pInfo.setMsg("등록되었습니다");
         pInfo.setGoURL("/exam/list");
         return dto;
