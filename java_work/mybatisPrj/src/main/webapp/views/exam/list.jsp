@@ -38,6 +38,9 @@
 
         <tr>
             <td colspan="7" align="center">
+                <% if(pInfo.getStartPage()>1){%>
+                    <a href="list?pNo=<%=pInfo.getStartPage()-1%>">[이전]</a>
+                <%}%>
                 <% for (int i = pInfo.getStartPage(); i <=pInfo.getEndPage(); i++) {
                     if(pInfo.getPNo()==i){
                 %>
@@ -45,6 +48,9 @@
                 <%}else{%>
                     <a href="list?pNo=<%=i%>"><%=i%></a>
                 <%}}%>
+                <% if(pInfo.getTotalPage()>pInfo.getEndPage()){%>
+                    <a href="list?pNo=<%=pInfo.getEndPage()+1%>">[다음]</a>
+                <%}%>
             </td>
         </tr>
 

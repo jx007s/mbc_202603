@@ -21,6 +21,7 @@ public class List implements ServiceAction {
                           PageInfo pInfo, ExamDTO dto) {
 
         pInfo.setTot(mapper.tot());
+        System.out.println("pInfo : "+pInfo.getTotalPage());
 
         java.util.List<ExamDTO> res =  mapper.list(pInfo);
         System.out.println(res);

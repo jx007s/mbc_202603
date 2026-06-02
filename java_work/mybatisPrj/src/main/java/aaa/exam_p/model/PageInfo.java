@@ -5,13 +5,16 @@ import lombok.Data;
 @Data
 public class PageInfo {
     String service, msg, goURL;
-    int pNo=1, totalPage, limit=3, pageLimit=4;
+    int pNo=1, totalPage, limit=4, pageLimit=5;
     public int getOffset(){
         return (pNo-1)*limit;
     }
 
     public void setTot(int tot){
         totalPage = tot/limit;
+        if(tot%limit!=0){
+            totalPage++;
+        }
     }
 
     public int getStartPage(){
@@ -19,6 +22,9 @@ public class PageInfo {
     }
     public int getEndPage(){
         int res =  getStartPage()+pageLimit-1;
+        if(res>totalPage){
+            res = totalPage;
+        }
         return res;
     }
 }
