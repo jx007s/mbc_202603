@@ -14,6 +14,19 @@
     <h1>시험목록</h1>
     <table border="">
         <tr>
+            <td colspan="7">
+                <form action="list">
+                    학생
+                    <input type="text" name="schVal" value="<%=pInfo.getSchVal()%>">
+
+                    <input type="radio" name="nameVal" value="semi">중간
+                    <input type="radio" name="nameVal" value="final">기말
+                    <input type="submit" value="검색">
+                </form>
+            </td>
+
+        </tr>
+        <tr>
             <td>학기</td>
             <td>종류</td>
             <td>시험일</td>

@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class PageInfo {
-    String service, msg, goURL;
-    int pNo=1, totalPage, limit=4, pageLimit=5;
+    String service, msg, goURL, schVal, nameVal;
+    int pNo=1, totalPage, limit=4, pageLimit=5, classNo;
     public int getOffset(){
         return (pNo-1)*limit;
     }

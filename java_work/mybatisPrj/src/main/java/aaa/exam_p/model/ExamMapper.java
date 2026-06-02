@@ -14,6 +14,12 @@ public interface ExamMapper {
     @Select("select * from exam where id = #{id}")
     ExamDTO detail(ExamDTO dto);
 
+    // 본 쿼리 실행 전 혹은 후에 쿼리문을 실행하여 매개변수 객체의 멤버변수에 대입
+    //keyProperty = "id" 입력할 멤버변수명
+    // resultType = Integer.class 입력시킬 값의 자료형
+    // before = false  본쿼리 실행 전에 할 것인지 true:실행전, false : 실행후
+    // statement = "select max(id) from exam" 실행시킬 쿼리문
+    @SelectKey(keyProperty = "id", resultType = Integer.class, before = false, statement = "select max(id) from exam")
     @Insert("insert into exam (hakgi,name, pid, kor, eng, mat,reg_date, upff) values "+
             " (#{hakgi}, #{name},#{pid},#{kor},#{eng},#{mat},#{regDate}, #{upFF})")
     int insert(ExamDTO dto);
@@ -32,8 +38,36 @@ public interface ExamMapper {
     /////////-----------동적 쿼리
 
     @Select("<script> "+
-            "select * from exam "+
-            " order by id desc limit #{limit} offset #{offset} "+
+            " select * from exam "+
+            " <where> "+
+            " <if test='schVal != null'> "+
+            " pid like '%'||#{schVal}||'%'  "+
+
+            " </if> "+
+            " <if test='nameVal != null'> "+  // else 가 없는 if 문
+            " and "+
+            " name = #{nameVal}  "+
+            " </if> "+
+            " </where> "+
             " </script>")
     List<ExamDTO> listsch(PageInfo pInfo);
+
+
+    // choose>when, otherwise : if ~ else if ~else 와 같음
+    @Select("<script> "+
+            " select id , "+
+            " <choose> "+
+            " <when test='classNo==1'> "+
+            " kor as jum "+
+            " </when> "+
+            " <when test='classNo==2'> "+
+            " eng as jum "+
+            " </when> "+
+            " <otherwise> "+
+            " mat as jum "+
+            " </otherwise> "+
+            " </choose> "+
+            " from exam "+
+            " </script>")
+    List<ExamDTO> list2(PageInfo pInfo);
 }
