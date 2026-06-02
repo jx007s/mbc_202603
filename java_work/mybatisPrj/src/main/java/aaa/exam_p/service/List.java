@@ -19,6 +19,9 @@ public class List implements ServiceAction {
     public Object execute(HttpServletRequest request,
                           HttpServletResponse response,
                           PageInfo pInfo, ExamDTO dto) {
+
+        pInfo.setTot(mapper.tot());
+
         java.util.List<ExamDTO> res =  mapper.list(pInfo);
         System.out.println(res);
         return res;

@@ -24,4 +24,7 @@ public interface ExamMapper {
     @Update("update exam set hakgi = #{hakgi},name =  #{name}, pid = #{pid}, kor = #{kor}, "+
             " eng = #{eng}, mat = #{mat} where id = #{id}")
     int modify(ExamDTO dto);
+
+    @Select("select count(*) as tot from exam")
+    int tot();
 }

@@ -38,7 +38,7 @@
 
         <tr>
             <td colspan="7" align="center">
-                <% for (int i = 1; i < 10; i++) {
+                <% for (int i = pInfo.getStartPage(); i <=pInfo.getEndPage(); i++) {
                     if(pInfo.getPNo()==i){
                 %>
                     [<%=i%>]
