@@ -49,6 +49,7 @@ public interface ExamMapper {
             " name = #{nameVal}  "+
             " </if> "+
             " </where> "+
+            " order by id desc " +
             " </script>")
     List<ExamDTO> listsch(PageInfo pInfo);
 
@@ -70,4 +71,20 @@ public interface ExamMapper {
             " from exam "+
             " </script>")
     List<ExamDTO> list2(PageInfo pInfo);
+
+
+    //foreach : 반복데이터처리
+    // collection='arr' :  List 혹은 Array 인 열거데이터- 보통 DTO를 원소로 한다
+    //  item='dd'   :   반복 원소 1개
+    //  separator=','  : 반복되어 생성된 문자열 사이 구분글자
+    // index='i'   :   반복순서  0,1,2,3 ...
+    // for(ExamDTO dd : pInfo.getArr() ) { ... }
+    @Insert(
+            "<script> "+
+            " insert into exam (hakgi,name, pid, kor, eng, mat,reg_date) values "+
+            " <foreach collection='arr' item='dd' separator=',' index='i' > "+
+            " (#{dd.hakgi}, #{dd.name},#{dd.pid},#{dd.kor},#{dd.eng},#{dd.mat},#{dd.regDate} ) "+
+            " </foreach> "+
+            " </script>")
+    int insertList(PageInfo pInfo);
 }

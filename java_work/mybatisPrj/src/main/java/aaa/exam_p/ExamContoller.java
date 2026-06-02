@@ -33,8 +33,9 @@ public class ExamContoller {
         String ttt = "exam/"+pInfo.getService();
 
         if(pInfo.getService().equals("insertReg") ||
-        pInfo.getService().equals("modifyReg") ||
-        pInfo.getService().equals("delete")
+                pInfo.getService().equals("insertListReg") ||
+                pInfo.getService().equals("modifyReg") ||
+                pInfo.getService().equals("delete")
         ){
             ttt = "exam/alert";
         }

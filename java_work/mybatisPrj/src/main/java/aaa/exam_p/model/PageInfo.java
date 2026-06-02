@@ -2,10 +2,15 @@ package aaa.exam_p.model;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class PageInfo {
     String service, msg, goURL, schVal, nameVal;
     int pNo=1, totalPage, limit=4, pageLimit=5, classNo;
+
+    List<ExamDTO> arr;
+
     public int getOffset(){
         return (pNo-1)*limit;
     }

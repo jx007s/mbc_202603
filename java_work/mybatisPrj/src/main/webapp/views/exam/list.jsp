@@ -70,6 +70,7 @@
         <tr>
             <td colspan="7" align="right">
                 <a href="insertForm">시험등록</a>
+                <a href="insertListForm">시험다중등록</a>
             </td>
         </tr>
     </table>
