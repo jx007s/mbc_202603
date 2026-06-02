@@ -23,7 +23,7 @@ public class List implements ServiceAction {
         pInfo.setTot(mapper.tot());
         System.out.println("pInfo : "+pInfo.getTotalPage());
 
-        java.util.List<ExamDTO> res =  mapper.list(pInfo);
+        java.util.List<ExamDTO> res =  mapper.listsch(pInfo);
         System.out.println(res);
         return res;
     }

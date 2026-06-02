@@ -27,4 +27,13 @@ public interface ExamMapper {
 
     @Select("select count(*) as tot from exam")
     int tot();
+
+
+    /////////-----------동적 쿼리
+
+    @Select("<script> "+
+            "select * from exam "+
+            " order by id desc limit #{limit} offset #{offset} "+
+            " </script>")
+    List<ExamDTO> listsch(PageInfo pInfo);
 }
