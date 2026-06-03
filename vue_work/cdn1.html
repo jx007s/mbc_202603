@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue CDN</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>vue CDN</h1>
+    <div id="app">
+        <h2>{{ message }}</h2> <!-- 머스태시 문법
+                                    message : 변수(키배열) 호출
+        -->
+    </div>
+    
+<script>
+    const app = Vue.createApp({
+
+        data(){
+            return{
+                message : "퇴근인가?"    //키배열을 리턴
+            }
+        }
+    })
+
+
+    app.mount("#app")
+</script>
+
+</body>
+</html>
