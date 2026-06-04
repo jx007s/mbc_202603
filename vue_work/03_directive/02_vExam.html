@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue"></script>
+    <title>02_vExam</title>
+</head>
+<body>
+    <h1>02_vExam</h1>
+    <div id="app">
+
+        <table border="">
+            <tr>
+                <td>이름</td>
+                <td>국어</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td>총점</td>
+                <td>평균</td>
+            </tr>
+            <tr v-for="st in arr" >
+                <td>{{st.pname}}</td>
+                <td>{{st.jum[0]}}</td>
+                <td>{{st.jum[1]}}</td>
+                <td>{{st.jum[2]}}</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        var model={
+            arr : [
+                {pname:'현빈', jum:[67,68,69]},
+                {pname:'원빈', jum:[87,88,89]},
+            ]
+        }
+        const app = Vue.createApp({
+            data(){
+                return model
+            }
+        })
+
+        app.mount("#app")
+    </script>
+</body>
+</html>

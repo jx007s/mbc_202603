@@ -21,6 +21,19 @@
         <img :src="eee"/>
         <p v-show="ggg">아빠상어</p>
         <p v-show="!ggg">할머니상어</p>
+        <p v-if="hhh>=80">우수</p>
+        <p v-else-if="hhh>=60">양호</p>
+        <p v-else-if="hhh>=40">정상</p>
+        <p v-else>미달</p>
+        <p>{{iii}}</p>
+        <p v-pre>{{jjj}}</p>
+        <hr/>
+            <p v-for="ee in arr" :key="ee.no">{{ee.pname}}</p>
+        <hr/>
+        <button v-on:click="btnGo1">눌러바1</button>
+        <p v-text="kkk"></p>
+        <button @click="btnGo2">눌러바2</button>
+        <p v-text="mmm"></p>
     </div>
 
     <script>
@@ -32,12 +45,34 @@
             ddd : '#00f',
             eee : '../fff/CXHA8530.JPG',    // < :src=''>  v-bind 축약식 : 으로 줄여사용
             fff : '#f00',                    // < :style={}>  v-bind 축약식
-            ggg : true                     //v-show : 보이기, 숨기기
+            ggg : true,                     //v-show : 보이기, 숨기기
+            hhh : 78,                       //v-if, v-else-if, v-else
+            iii : '할아버지상어',
+            jjj : '삼촌상어',               //  v-pre : Vue 템플레이트 처리안함
+            arr:[                            //v-for="ee in arr"   arr의  각 요소를 ee 로 처리
+                    {no:10, pname:'현빈'},
+                    {no:20, pname:'원빈'},
+                    {no:30, pname:'투빈'}
+                ],
+            kkk : 10,
+            mmm : 1000
         }
 
         Vue.createApp({
             data(){
                 return model
+            },
+            methods:{                   // 이벤트 처리 메소드등은 methods 의 키배열형태로 정의
+                btnGo1(){                       // v-on:click="btnGo1" 의 이벤트 핸들러
+                    console.log("눌렀구마1")
+                    this.kkk++  //model 에서 지정한 키 값을 변경한다. this로 접근 , 이벤트 후 화면 리렌더링한다.
+
+                },
+                btnGo2(){                       // @:click :  v-on:click의 축약형
+                    console.log("눌렀구마2")
+                    this.mmm++ 
+
+                }
             }
         }).mount('#app')
 
