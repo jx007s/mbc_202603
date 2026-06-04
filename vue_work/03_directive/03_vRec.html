@@ -8,7 +8,7 @@
         #boxs > div{
             margin: 5px;
             border: 1px solid #888;
-            background-color: #ff0;
+            /* background-color: #ff0; */
             float: left;
         }
     </style>
@@ -19,6 +19,7 @@
     <div id="app">
         <div>가로 : <input type="text" id="ww"></div>
         <div>세로 : <input type="text" id="hh"></div>
+        <div>색상 : <input type="color" id="cc"></div>
         <button @click="addRec">입력</button>
 
         <table border="">
@@ -36,14 +37,12 @@
             </tr>
         </table>
         <div id="boxs">
-            <div v-for="rr in arr" :style="{width: `${rr.ww}px`, height:`${rr.hh}px` }"></div>
+            <div v-for="rr in arr" :style="{width: `${rr.ww}px`, height:`${rr.hh}px`, backgroundColor:rr.cc }" >넓이:{{rr.area}}<br/>둘레:{{rr.border}}</div>
         </div>
     </div>
     <script>
         var model ={
             arr:[],
-            www:'50px',
-            hhh:'50px'
         }
         const app = Vue.createApp({
             data(){
@@ -53,10 +52,12 @@
                 addRec(){
                     const ww = Number(document.querySelector("#ww").value)
                     const hh = Number(document.querySelector("#hh").value)
+                    const cc = document.querySelector("#cc").value
                     this.arr.push(
                         {
                             ww,
                             hh,
+                            cc,
                             area:ww*hh,
                             border:(ww+hh)*2
                         }

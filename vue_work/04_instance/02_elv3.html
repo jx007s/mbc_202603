@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue"></script>
+    <title>02_elv3</title>
+</head>
+<body>
+    <h1>02_elv3</h1>
+    <h1>vue 버전 3</h1>
+    <div id="app1">
+        <h2>app1이여</h2>
+        <p >{{msg}}</p>
+        <button @click="go">눌러바</button>
+    </div>
+
+    <div id="app2">
+        <h2>app2이여</h2>
+        <p >{{msg}}</p>
+        <button @click="go">눌러바</button>
+    </div>
+
+    <div id="app3">
+        <h2>app3이여</h2>
+        <p >{{msg}}</p>
+        <button @click="go">눌러바</button>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data(){
+                return {msg:'첫번째메세지'}
+            },
+            methods: {
+                go(){
+                    this.msg='첫번째 변신'
+                }
+            },
+        }).mount("#app1")
+
+
+
+        Vue.createApp({
+            data(){
+                return {msg:'두번째메세지'}
+            },
+            methods: {
+                go(){
+                    this.msg='두번째 변신'
+                }
+            },
+        }).mount("#app2")
+
+
+        Vue.createApp({
+            data(){
+                return {msg:'세번째메세지'}
+            },
+            methods: {
+                go(){
+                    this.msg='세번째 변신'
+                }
+            },
+        }).mount("#app3")
+    </script>
+</body>
+</html>

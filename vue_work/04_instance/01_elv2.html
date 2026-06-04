@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>01_el</title>
+</head>
+<body>
+    <h1>01_el</h1>
+    <h1>vue 버전 2</h1>
+    <div id="app1">
+        <h2>app1이여</h2>
+        <p >{{msg}}</p>
+        <button @click="go">눌러바</button>
+    </div>
+
+    <div id="app2">
+        <h2>app2이여</h2>
+        <p >{{msg}}</p>
+        <button @click="go">눌러바</button>
+    </div>
+
+    <div id="app3">
+        <h2>app3이여</h2>
+        <p >{{msg}}</p>
+        <button @click="go">눌러바</button>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app1", //DOM 에 연결
+            data:{
+                msg:'첫번째메세지'
+            },
+            methods: {
+                go(){
+                    this.msg='첫번째 변신'
+                }
+            },
+        })
+
+        new Vue({
+            el:"#app2", //DOM 에 연결
+            data:{
+                msg:'두번째메세지'
+            },
+            methods: {
+                go(){
+                    this.msg='두번째 변신'
+                }
+            },
+        })
+
+        new Vue({
+            el:"#app3", //DOM 에 연결
+            data:{
+                msg:'세번째메세지'
+            },
+            methods: {
+                go(){
+                    this.msg='세번째 변신'
+                }
+            },
+        })
+    </script>
+</body>
+</html>
