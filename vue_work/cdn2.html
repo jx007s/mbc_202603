@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue CDN2</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <h1>vue CDN2</h1>
+    <div id="app"></div>
+    
+<script>
+    // template -- 마운트 되는 요소의 textnode로 대입
+    /*
+    <div id="app" data-v-app=""><h2>나는 템플레이트여</h2></div>
+    */
+    const app = Vue.createApp({
+
+        template: '<h2>나는 템플레이트여</h2>'
+    })
+
+
+    app.mount("#app")
+</script>
+
+</body>
+</html>
