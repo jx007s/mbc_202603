@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue"></script>
+    <title>01_v</title>
+</head>
+<body>
+    <h1>01_v</h1>
+    <div id="app">
+        <p v-text="aaa"></p>
+    </div>
+
+    <script>
+        //aaa : '아기상어' => v-text="aaa" 에 바인딩된다
+        //v-text  문자열로 출력 : 태그 작성시 문자열로 변환하여 출력
+        var model = {aaa : '<h2>아기상어</h2>'}
+
+        Vue.createApp({
+            data(){
+                return model
+            }
+        }).mount('#app')
+
+
+
+
+/*
+
+
+v-text  
+요소의 텍스트 콘텐츠를 갱신 
+<p v-text="message"></p>    
+message는 문자열이어야 합니다.
+html <p v-text="message"></p> 
+
+ 
+
+v-html
+
+요소의 HTML 콘텐츠를 갱신
+
+<p v-html="rawHtml"></p>
+
+rawHtml은 HTML 문자열이어야 합니다.
+
+html <p v-html="rawHtml"></p> 
+
+v-bind
+
+HTML 속성을 바인딩
+
+<a v-bind:href="url"></a>
+
+약어로 : 사용 가능. 예: :href="url"
+
+html <a :href="url">Link</a>  
+
+v-model
+
+양방향 데이터 바인딩
+
+<input v-model="message" />
+
+주로 폼 요소와 함께 사용되며, 입력 이벤트를 감지하여 데이터를 업데이트.
+
+html <div v-show="isVisible">This is visible</div> 
+
+v-show
+
+요소의 표시/숨김을 토글
+
+<div v-show="isVisible"></div>
+
+isVisible이 참일 때만 요소가 보입니다.
+
+html <div v-if="isShown">This is shown</div> 
+
+v-if
+
+조건에 따라 요소를 렌더링
+
+<div v-if="condition"></div>
+
+condition이 참일 때만 요소가 렌더링됩니다.
+
+html <div v-if="isShown">This is
+
+v-else
+
+v-if와 함께 사용되며, 조건이 거짓일 때 요소를 렌더링
+
+<div v-else></div>
+
+v-if 다음에 와야 합니다.
+
+shown</div><div v-else>This is else</div> 
+
+v-else-if
+
+v-if와 함께 사용되며, 추가 조건을 검사
+
+<div v-else-if="anotherCondition"></div>
+
+v-if 다음에 와야 합니다.
+
+html <div v-if="condition1">Condition 1</div><div v-else-if="condition2">Condition 2</div> 
+
+v-for
+
+리스트 렌더링
+
+<div v-for="item in items"></div>
+
+item은 각 항목을 나타내며, items는 배열입니다.
+
+html <div v-for="item in items">{{ item }}</div> 
+
+v-pre
+
+요소와 하위 요소의 템플릿 컴파일을 건너뜀
+
+<div v-pre>{{ raw }}</div>
+
+디버깅이나 원시 템플릿을 그대로 보존해야 할 때 사용됩니다.
+
+html <div v-pre>{{ raw }}</div> 
+
+v-once
+
+요소와 하위 요소를 한 번만 렌더링
+
+<div v-once>{{ message }}</div>
+
+데이터가 변경되더라도 재렌더링되지 않습니다.
+
+html <div v-once>{{ message }}</div> 
+
+v-cloak
+
+Vue가 완전히 초기화되기 전에 보이지 않게 함
+
+<div v-cloak></div>
+
+스타일과 함께 사용하여 초기 로딩 동안 내용을 숨깁니다.
+
+html <div v-cloak>{{ message }}</div><style>[v-cloak] { display: none; }</style> 
+
+v-on
+
+이벤트 리스너를 추가
+
+<button v-on:click="doSomething"></button>
+
+약어로 @ 사용 가능. 예: @click="doSomething"
+
+html <button @click="doSomething">Click me</button> 
+
+
+*/
+
+
+    </script>
+</body>
+</html>
