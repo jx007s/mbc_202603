@@ -9,6 +9,11 @@
 <body>
     <h1>02_vExam</h1>
     <div id="app">
+        <div>이름 : <input type="text" id="pname"></div>
+        <div>국어 : <input type="text" id="kor"></div>
+        <div>영어 : <input type="text" id="eng"></div>
+        <div>수학 : <input type="text" id="mat"></div>
+        <button @click="addStud">입력</button>
 
         <table border="">
             <tr>
@@ -24,8 +29,8 @@
                 <td>{{st.jum[0]}}</td>
                 <td>{{st.jum[1]}}</td>
                 <td>{{st.jum[2]}}</td>
-                <td></td>
-                <td></td>
+                <td>{{st.jum[0]+st.jum[1]+st.jum[2]}}</td>
+                <td>{{(st.jum[0]+st.jum[1]+st.jum[2])/3}}</td>
             </tr>
         </table>
     </div>
@@ -40,10 +45,37 @@
         const app = Vue.createApp({
             data(){
                 return model
-            }
+            },
+            methods: {
+                addStud(){
+                    //폼에서 데이터 가져오기
+                    const pname = document.querySelector("#pname").value
+                    const kor = Number(document.querySelector("#kor").value)
+                    const eng = Number(document.querySelector("#eng").value)
+                    const mat = Number(document.querySelector("#mat").value)
+
+                    //console.log(pname, kor, eng, mat)
+                    // 학생데이터에 추가
+                    this.arr.push(
+                        {
+                            pname,
+                            jum : [kor, eng, mat]
+                        }
+                    )
+
+                    // 입력폼 초기화
+                    document.querySelector("#pname").value=''
+                    document.querySelector("#kor").value=''
+                    document.querySelector("#eng").value=''
+                    document.querySelector("#mat").value=''
+                }    
+            },
         })
 
         app.mount("#app")
+
+        // 03_vRec.html 직사각형 정보를 받아 데이터 처리하세요
+
     </script>
 </body>
 </html>
