@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue"></script>
+    <style>
+        #boxs > div{
+            margin: 5px;
+            border: 1px solid #888;
+            background-color: #ff0;
+            float: left;
+        }
+    </style>
+    <title>03_vRec</title>
+</head>
+<body>
+    <h1>03_vRec</h1>
+    <div id="app">
+        <div>가로 : <input type="text" id="ww"></div>
+        <div>세로 : <input type="text" id="hh"></div>
+        <button @click="addRec">입력</button>
+
+        <table border="">
+            <tr>
+                <td>가로</td>
+                <td>세로</td>
+                <td>넓이</td>
+                <td>둘레</td>
+            </tr>
+            <tr v-for="rr in arr" >
+                <td>{{rr.ww}}</td>
+                <td>{{rr.hh}}</td>
+                <td>{{rr.area}}</td>
+                <td>{{rr.border}}</td>
+            </tr>
+        </table>
+        <div id="boxs">
+            <div v-for="rr in arr" :style="{width: `${rr.ww}px`, height:`${rr.hh}px` }"></div>
+        </div>
+    </div>
+    <script>
+        var model ={
+            arr:[],
+            www:'50px',
+            hhh:'50px'
+        }
+        const app = Vue.createApp({
+            data(){
+                return model
+            },
+            methods: {
+                addRec(){
+                    const ww = Number(document.querySelector("#ww").value)
+                    const hh = Number(document.querySelector("#hh").value)
+                    this.arr.push(
+                        {
+                            ww,
+                            hh,
+                            area:ww*hh,
+                            border:(ww+hh)*2
+                        }
+                    )
+                    document.querySelector("#ww").value=''
+                    document.querySelector("#hh").value=''
+                }
+            },
+        })
+
+        app.mount("#app")
+    </script>
+</body>
+</html>
