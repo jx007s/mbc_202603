@@ -4,18 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/vue"></script>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
     <title>01_v</title>
 </head>
 <body>
     <h1>01_v</h1>
     <div id="app">
         <p v-text="aaa"></p>
+        <p v-html="bbb" v-bind:style="{color:ddd}"></p>
+        <img v-bind:src="ccc"/>
+        <p :style="{color:fff}" v-html="bbb" ></p>
+        <img :src="eee"/>
+        <p v-show="ggg">아빠상어</p>
+        <p v-show="!ggg">할머니상어</p>
     </div>
 
     <script>
-        //aaa : '아기상어' => v-text="aaa" 에 바인딩된다
-        //v-text  문자열로 출력 : 태그 작성시 문자열로 변환하여 출력
-        var model = {aaa : '<h2>아기상어</h2>'}
+
+        var model = {
+            aaa : '<h2>아기상어</h2>',      // v-text="aaa" 에 바인딩된다 -  문자열로 출력 : 태그 작성시 문자열로 변환하여 출력
+            bbb : '<h2>엄마상어</h2>',      // v-html : 태그형태를 유지하여 출력
+            ccc : '../fff/CDCL8013.JPG',    //v-bind : html 속성
+            ddd : '#00f',
+            eee : '../fff/CXHA8530.JPG',    // < :src=''>  v-bind 축약식 : 으로 줄여사용
+            fff : '#f00',                    // < :style={}>  v-bind 축약식
+            ggg : true                     //v-show : 보이기, 숨기기
+        }
 
         Vue.createApp({
             data(){
