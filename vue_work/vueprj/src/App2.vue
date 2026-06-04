@@ -5,24 +5,32 @@
     <p >{{msg}}</p>
     <button @click="go">눌러바</button>
 
-    <!-- 컴포넌트 사용 -->
-    <MyBox />
-    <MyBox />
-    <MyBox />
-    <MyBox />
+    <!-- 3. 컴포넌트 사용 
+        title : 컴포넌트 의 props에 전달
+    -->
+    <MyBox v-for="bb in arr" :title="bb.title" />
 
 </template>
 
 
 <script>
-    import MyBox from './components/MyBox.vue';
+    import MyBox from './components/MyBox.vue'; // 1. 파일로드 및 이름지정
 
     export default {
         components:{
-            MyBox     //컴포넌트로 사용하겠다
+            MyBox     //2. 컴포넌트로 사용하겠다 -- 클래스를 가져오는 개념
         },
         data(){
-            return {msg:'첫번째메세지'}
+            return {
+                msg:'첫번째메세지',
+                arr : [
+                    {title:'아기상어'},
+                    {title:'엄마상어'},
+                    {title:'아빠상어'},
+                    {title:'할머니상어'},
+                    {title:'할아버지상어'}
+                ]
+            }
         },
         methods: {
             go(){
