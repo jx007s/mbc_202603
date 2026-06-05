@@ -29,8 +29,10 @@
                 <td>{{st.jum[0]}}</td>
                 <td>{{st.jum[1]}}</td>
                 <td>{{st.jum[2]}}</td>
-                <td>{{st.jum[0]+st.jum[1]+st.jum[2]}}</td>
-                <td>{{(st.jum[0]+st.jum[1]+st.jum[2])/3}}</td>
+                <!-- <td>{{st.jum[0]+st.jum[1]+st.jum[2]}}</td> 
+                <td>{{(st.jum[0]+st.jum[1]+st.jum[2])/3}}</td>-->
+                <td>{{tot}}</td> <!--컴퓨티드에 정의된 함수를 호출-->
+                <td>{{avg}}</td>
             </tr>
         </table>
     </div>
@@ -45,6 +47,14 @@
         const app = Vue.createApp({
             data(){
                 return model
+            },
+            computed:{    //미리 연산하는 연산식
+                tot(){      // 함수를 정의
+                    return 1234
+                },
+                avg(){
+                    return 5678
+                }
             },
             methods: {
                 addStud(){
