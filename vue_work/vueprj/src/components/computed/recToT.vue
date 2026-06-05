@@ -21,7 +21,7 @@
             </tr>
         </table>
         <div id="boxs">
-            <Rec v-for="rr in recCalc" :ww="rr.ww" :hh="rr.hh" :cc="rr.cc"  />
+            <Rec v-for="rr in recCalc" :rr="rr"  />   <!--  :rr="rr" 객체 통째로 전달 -->
         </div>
     </div>
 

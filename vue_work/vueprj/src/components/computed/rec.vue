@@ -1,5 +1,5 @@
 <template>
-    <div class="box" :style="{width: `${ww}px`, height:`${hh}px`, backgroundColor:cc }">
+    <div class="box" :style="{width: `${rr.ww}px`, height:`${rr.hh}px`, backgroundColor:rr.cc }">
         넓이:{{area}}<br/>
         둘레:{{border}}
     </div>
@@ -8,13 +8,15 @@
 
 <script>
 export default{
-    props:['ww','hh','cc'],
+    props:{
+        rr:{type:Object, required:true}  //객체로 받음
+    },
     computed:{
         area(){
-            return this.ww* this.hh
+            return this.rr.ww* this.rr.hh
         },
         border(){
-            return (this.ww + this.hh)* 2
+            return (this.rr.ww + this.rr.hh)* 2
         }
     }
     
