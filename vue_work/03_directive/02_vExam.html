@@ -24,15 +24,22 @@
                 <td>총점</td>
                 <td>평균</td>
             </tr>
-            <tr v-for="st in arr" >
+            <!-- <tr v-for="st in arr" > 기본 데이터만 출력-->
+                <tr v-for="st in studs" > <!--컴퓨티드(studs)에 의해 계산된 결과를 출력
+                                                컴퓨티드 함수는 함수 정의명으로만 호출
+                                                매개변수를 넣을 수 없다 ==> studs() 불가
+                                                                        studs 가능
+                    -->
                 <td>{{st.pname}}</td>
                 <td>{{st.jum[0]}}</td>
                 <td>{{st.jum[1]}}</td>
                 <td>{{st.jum[2]}}</td>
                 <!-- <td>{{st.jum[0]+st.jum[1]+st.jum[2]}}</td> 
                 <td>{{(st.jum[0]+st.jum[1]+st.jum[2])/3}}</td>-->
-                <td>{{tot}}</td> <!--컴퓨티드에 정의된 함수를 호출-->
-                <td>{{avg}}</td>
+                <!--<td>{{tot}}</td> 컴퓨티드에 정의된 함수를 호출 tot() 불가, tot 로 호출
+                <td>{{avg}}</td>-->
+                <td>{{st.tot}}</td><!-- studs 로 작업하여 tot를 만들어서 추가할 예정-->
+                <td>{{st.avg}}</td>
             </tr>
         </table>
     </div>
@@ -49,12 +56,35 @@
                 return model
             },
             computed:{    //미리 연산하는 연산식
-                tot(){      // 함수를 정의
+                tot(st){      // 함수를 정의
                     return 1234
                 },
                 avg(){
                     return 5678
+                },
+                studs(){    //전체 내용을 리턴하는 함수
+
+                    
+                    // let res = []
+                    // for (const st of this.arr) { //학생을 하나씩 반복
+                    //     //...st : st의 원소들을 분해하여 나열형태로 넣음 : 묶음1개 --> 여러개
+                    //     //{pname:'현빈', jum:[67,68,69]}  => pname:'현빈', jum:[67,68,69]
+                    //     let tot = 0
+                    //     for (const j of st.jum) {
+                    //         tot+=j
+                    //     }
+                    //     res.push({...st,tot, avg:tot/st.jum.length})    //리턴할 배열에 추가
+                    // }
+                    // return res
+
+                    return this.arr.map(st =>{
+                        let tot = st.jum.reduce((a,b)=>a+b,0)
+                        return {...st, tot, avg:tot/st.jum.length}
+                    })
                 }
+
+
+
             },
             methods: {
                 addStud(){
