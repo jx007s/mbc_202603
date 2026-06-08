@@ -7,10 +7,13 @@
     <Exam/>
     <Rec/>
     <ReativeGo/>
-    -->
-    
-    
     <WatchGo/>
+    <ExamGo/>
+    -->
+    <Parent/>
+    
+    
+    
 </template>
 
 
@@ -21,7 +24,10 @@
     import Exam from './components/lifecycle/Exam.vue';
     import Rec from './components/lifecycle/Rec.vue';
     import ReativeGo from './components/ReativeGo.vue';
-    import WatchGo from './components/lifecycle/WatchGo.vue';
+    import WatchGo from './components/WatchGo.vue';
+    import ExamGo from './components/ExamGo.vue';
+    import Parent from './components/emittt/Parent.vue';
+    
     
 
     export default {
@@ -32,7 +38,9 @@
             Exam,
             Rec,
             ReativeGo,
-            WatchGo
+            WatchGo,
+            ExamGo,
+            Parent
         }
     }
 </script>
