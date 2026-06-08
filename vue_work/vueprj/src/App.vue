@@ -5,8 +5,10 @@
     <Capsule/> 
     <LifeGo/>
     <Exam/>
-    -->
     <Rec/>
+    -->
+    
+    <ReativeGo/>
 </template>
 
 
@@ -16,6 +18,7 @@
     import LifeGo from './components/lifecycle/LifeGo.vue';
     import Exam from './components/lifecycle/Exam.vue';
     import Rec from './components/lifecycle/Rec.vue';
+    import ReativeGo from './components/ReativeGo.vue';
 
     export default {
         components:{
@@ -23,7 +26,8 @@
             Capsule,
             LifeGo,
             Exam,
-            Rec
+            Rec,
+            ReativeGo
         }
     }
 </script>
