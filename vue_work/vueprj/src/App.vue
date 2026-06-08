@@ -6,9 +6,11 @@
     <LifeGo/>
     <Exam/>
     <Rec/>
+    <ReativeGo/>
     -->
     
-    <ReativeGo/>
+    
+    <WatchGo/>
 </template>
 
 
@@ -19,6 +21,8 @@
     import Exam from './components/lifecycle/Exam.vue';
     import Rec from './components/lifecycle/Rec.vue';
     import ReativeGo from './components/ReativeGo.vue';
+    import WatchGo from './components/lifecycle/WatchGo.vue';
+    
 
     export default {
         components:{
@@ -27,7 +31,8 @@
             LifeGo,
             Exam,
             Rec,
-            ReativeGo
+            ReativeGo,
+            WatchGo
         }
     }
 </script>
