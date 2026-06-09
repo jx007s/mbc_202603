@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { reactive } from "vue";
+import { computed, reactive } from "vue";
 
 
 let no = 0
@@ -36,5 +36,5 @@ export const useRecStore = defineStore('rec',()=>{
     }
 
 
-    return { arr}
+    return { arr, totalArea, avgBorder, addRow, removeRow}
 })

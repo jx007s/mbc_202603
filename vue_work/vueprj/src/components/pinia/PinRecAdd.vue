@@ -7,14 +7,16 @@
 </template>
 <script setup>
 import { ref } from 'vue';
+import { useRecStore } from './stores/myRec.js';
 
-const emit = defineEmits(['addRow'])
+const store = useRecStore()
+
 
     const ww = ref(0)
     const hh = ref(0)
 
     function add(){
-        emit('addRow',{
+        store.addRow({
             ww:ww.value,
             hh:hh.value
         })

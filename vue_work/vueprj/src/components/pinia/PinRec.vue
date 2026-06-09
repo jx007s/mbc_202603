@@ -9,7 +9,9 @@
 </template>
 <script setup>
 import { toRefs, computed } from 'vue';
-const emit = defineEmits(['removeRow'])
+import { useRecStore } from './stores/myRec.js';
+
+const store = useRecStore()
     
     //부모가 보내준 객체 받기 -- 수정 불가 (읽기 전용)
     const props = defineProps({
@@ -23,8 +25,7 @@ const emit = defineEmits(['removeRow'])
     const area = computed(()=> ww.value * hh.value)
     const border = computed(()=> (ww.value + hh.value) * 2)
 
-    //부모컴포넌트의 rewmoveRow 실행 - 매개변수 rid.value
     function remove(){
-        emit('removeRow', rid.value)
+        store.removeRow(rid.value)
     }
 </script>
