@@ -10,9 +10,10 @@
     <WatchGo/>
     <ExamGo/>
     <Parent/>
-    -->
-    
     <EmitRecToT/>
+    -->
+    <EmitExamToT/>
+    
     
     
 </template>
@@ -29,6 +30,7 @@
     import ExamGo from './components/ExamGo.vue';
     import Parent from './components/emittt/Parent.vue';
     import EmitRecToT from './components/emittt/EmitRecToT.vue';
+    import EmitExamToT from './components/emittt/EmitExamToT.vue';
     
     
 
@@ -43,7 +45,8 @@
             WatchGo,
             ExamGo,
             Parent,
-            EmitRecToT
+            EmitRecToT,
+            EmitExamToT
         }
     }
 </script>
