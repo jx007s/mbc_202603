@@ -13,9 +13,10 @@
     <EmitRecToT/>
     <EmitExamToT/>
     <PinPar/>
-    -->
     <PinRecToT/>
+    -->
     
+    <PinExamToT/>
     
     
 </template>
@@ -35,6 +36,7 @@
     import EmitExamToT from './components/emittt/EmitExamToT.vue';
     import PinPar from './components/pinia/PinPar.vue';
 import PinRecToT from './components/pinia/PinRecToT.vue';
+import PinExamToT from './components/pinia/PinExamToT.vue';
     
     
 
@@ -52,7 +54,8 @@ import PinRecToT from './components/pinia/PinRecToT.vue';
             EmitRecToT,
             EmitExamToT,
             PinPar,
-            PinRecToT
+            PinRecToT,
+            PinExamToT
         }
     }
 </script>

@@ -28,4 +28,6 @@ const store = useRecStore()
     function remove(){
         store.removeRow(rid.value)
     }
+
+
 </script>
