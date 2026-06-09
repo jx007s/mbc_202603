@@ -11,8 +11,10 @@
     <ExamGo/>
     <Parent/>
     <EmitRecToT/>
-    -->
     <EmitExamToT/>
+    <PinPar/>
+    -->
+    <PinRecToT/>
     
     
     
@@ -31,6 +33,8 @@
     import Parent from './components/emittt/Parent.vue';
     import EmitRecToT from './components/emittt/EmitRecToT.vue';
     import EmitExamToT from './components/emittt/EmitExamToT.vue';
+    import PinPar from './components/pinia/PinPar.vue';
+import PinRecToT from './components/pinia/PinRecToT.vue';
     
     
 
@@ -46,7 +50,9 @@
             ExamGo,
             Parent,
             EmitRecToT,
-            EmitExamToT
+            EmitExamToT,
+            PinPar,
+            PinRecToT
         }
     }
 </script>
