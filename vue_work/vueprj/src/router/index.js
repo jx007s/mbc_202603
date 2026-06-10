@@ -6,6 +6,9 @@ import NoticeHome from '@/views/notice/NoticeHome.vue'
 import NoticeList from '@/views/notice/NoticeList.vue'
 import NoticeDetail from '@/views/notice/NoticeDetail.vue'
 import NoticeWrite from '@/views/notice/NoticeWrite.vue'
+import GallHello from '@/views/gall/GallHello.vue'
+import NotFFF from '@/views/NotFFF.vue'
+import RouterBtnGo from '@/views/RouterBtnGo.vue'
 
 
 const router = createRouter({
@@ -26,6 +29,7 @@ const router = createRouter({
     },
     {
       path: '/user/:service/:id',
+      name:'user',
       component: User,
     },
     ...dashboardRoutes, // 다른 파일의 route 결합
@@ -40,7 +44,33 @@ const router = createRouter({
           {path: 'detail',component: NoticeDetail},
           {path: 'write',component: NoticeWrite},
       ]
-    }
+    },
+
+    //Alias  :   GallHello 컴포넌트에 '/gall/hello', '/gall/info' 둘다 라우트
+    {
+      path: '/gall/hello',
+      alias:'/gall/info',
+      component: GallHello,
+    },
+
+    //redirect  :  '/gall/history' -->  '/gall/hello' 로 리다이렉트
+    {
+      path: '/gall/history',
+      redirect: '/gall/hello',
+    },
+
+    //router 로 페이지이동
+    {
+      path: '/btnGo',
+      component: RouterBtnGo,
+    },
+
+
+    // 404 처리
+    {
+      path: '/:pathMatch(.*)*',
+      component: NotFFF,
+    },
   ],
 })
 

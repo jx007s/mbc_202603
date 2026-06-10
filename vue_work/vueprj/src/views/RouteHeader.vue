@@ -15,7 +15,14 @@
         <h3>dashboard</h3>
         <router-link to="/dashboard/main">main</router-link>
         <router-link to="/dashboard/member">member</router-link>
-        <h3>중첩</h3>
+        <h3>중첩, alias, redirect, 404</h3>
         <router-link to="/notice">공지사항</router-link>
+        <router-link to="/gall/hello">gall/hello</router-link>
+        <router-link to="/gall/info">gall/info</router-link>
+        <router-link to="/gall/history">gall/history</router-link>
+        <router-link to="/fewfrweff">fewfrweff</router-link>
+        
+        <router-link to="/btnGo"><h3>btnGo</h3></router-link>
+        
     </div>
 </template>
