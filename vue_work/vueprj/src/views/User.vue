@@ -1,24 +1,12 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <router-link to="/">home으로</router-link>
+  <div>
+    <h1>User</h1>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
 
 <script setup>
 import { useRoute } from 'vue-router';
-
-
 const route = useRoute()        //현재 라우트 정보  -- /about?page=2&cate=gall#pp2
 //console.log(route)
 console.log("path",route.path)              //  /about
