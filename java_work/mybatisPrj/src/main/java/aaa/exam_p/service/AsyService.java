@@ -1,5 +1,6 @@
 package aaa.exam_p.service;
 
+import aaa.exam_p.model.ExamDTO;
 import aaa.exam_p.model.ExamMapper;
 import aaa.exam_p.model.PageInfo;
 import jakarta.annotation.Resource;
@@ -13,5 +14,9 @@ public class AsyService {
 
     public Object list(PageInfo pInfo){
         return mapper.list(pInfo);
+    }
+
+    public Object detail(ExamDTO dto){
+        return mapper.detail(dto);
     }
 }

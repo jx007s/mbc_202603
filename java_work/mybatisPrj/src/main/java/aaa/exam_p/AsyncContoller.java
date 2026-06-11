@@ -22,4 +22,9 @@ public class AsyncContoller {
     Object list(PageInfo pInfo){
         return  service.list(pInfo);
     }
+
+    @GetMapping("{id}")
+    Object detail(ExamDTO dto){
+        return  service.detail(dto);
+    }
 }
