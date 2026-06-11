@@ -37,11 +37,14 @@
 <script setup>
 import { useExamStore } from '@/stores/ExamStore';
 import { onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
 const examStore = useExamStore()
+const route = useRoute()
 
 onMounted(async ()=>{
-    await examStore.examList(12)
+    const pNo = route.query.pNo || 1  // ?pNo=8  존재하면 pNo=8  없으면 pNo=1
+    await examStore.examList(pNo)
 })
 
 async function movePage(pNo){

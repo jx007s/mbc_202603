@@ -38,6 +38,7 @@ export const useExamStore = defineStore('exam',()=>{
         examList,
         arr,
         detail,
-        st
+        st,
+        pNo
     }
 })

@@ -22,12 +22,15 @@
         </tr><tr>
             <td>수학</td><td>{{examStore.st.mat}}</td>
         </tr>
-        <% if(dto.getUpFF()!=null){%>
-       
-        <%} %>
+        
+        <tr v-if="examStore.st.upFF!=null">
+            <td>파일</td><td>
+            <a :href="`http://200.200.200.2/ffile/down?upFF=${examStore.st.upFF}`">{{examStore.st.upFF}}</a></td>
+        </tr>
+        
         <tr>
             <td colspan="2" align="right">
-                <a href="list?pNo=<%=pInfo.getPNo}}">목록으로</a>
+                <router-link :to="`/?pNo=${examStore.pNo}`">목록으로</router-link>
                 <a href="modifyForm?pNo=<%=pInfo.getPNo}}&id={{st.Id}}">수정</a>
                 <a href="delete?pNo=<%=pInfo.getPNo}}&id={{st.Id}}">삭제</a>
             </td>

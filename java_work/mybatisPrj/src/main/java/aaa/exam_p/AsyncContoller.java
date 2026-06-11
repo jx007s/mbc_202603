@@ -27,4 +27,10 @@ public class AsyncContoller {
     Object detail(ExamDTO dto){
         return  service.detail(dto);
     }
+
+
+    @PostMapping
+    Object write(ExamDTO dto,HttpServletRequest request){
+        return  service.write(dto, request);
+    }
 }
