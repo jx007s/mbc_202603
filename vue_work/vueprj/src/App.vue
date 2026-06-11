@@ -1,13 +1,13 @@
 <template>
     <div id="app">
-        <h2>router 여</h2>
-        <RouteHeader/>
-        
-        <router-view></router-view>
+        <h1>프론트 서버여</h1>
+        <SpringGo/>        
     </div>    
 </template>
 <script setup>
-import RouteHeader from './views/RouteHeader.vue';
+import SpringGo from './components/asyvv/SpringGo.vue';
+
+
 
 
 
