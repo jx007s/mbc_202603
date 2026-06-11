@@ -46,12 +46,21 @@ export const useExamStore = defineStore('exam',()=>{
         st.value = {id:await res.text()}     //리턴을  json 방식으로
     }
 
+    //삭제
+    async function remove(id){
+
+        await fetch( `${API_URL}/${id}`,{
+            method:"DELETE"
+        })
+    }
+
     return{
         examList,
         arr,
         detail,
         st,
         pNo,
-        write
+        write,
+        remove
     }
 })

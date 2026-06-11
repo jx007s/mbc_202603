@@ -31,8 +31,8 @@
         <tr>
             <td colspan="2" align="right">
                 <router-link :to="`/?pNo=${examStore.pNo}`">목록으로</router-link>
-                <a href="modifyForm?pNo=<%=pInfo.getPNo}}&id={{st.Id}}">수정</a>
-                <a href="delete?pNo=<%=pInfo.getPNo}}&id={{st.Id}}">삭제</a>
+                <router-link :to="`/modify/${examStore.st.id}`">수정</router-link>
+                <button @click="remove">삭제</button>
             </td>
         </tr>
     </table>
@@ -41,9 +41,10 @@
 <script setup>
 import { useExamStore } from '@/stores/ExamStore';
 import { onMounted } from 'vue';
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute()
+const router = useRouter()
 const examStore = useExamStore()
 
 const id = route.params.id
@@ -52,6 +53,15 @@ onMounted(async ()=>{
     console.log('detail', id)
     await examStore.detail(id)
 })
+
+async function remove(){
+    if(!confirm('삭제하시겠습니까?')){
+        return
+    }
+
+    await examStore.remove(id)
+    router.push("/")
+}
 
 
 </script>

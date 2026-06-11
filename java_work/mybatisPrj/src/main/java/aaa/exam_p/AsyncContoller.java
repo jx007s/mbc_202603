@@ -36,4 +36,9 @@ public class AsyncContoller {
         System.out.println("write 실행"+dto);
         return dto.getId();
     }
+
+    @DeleteMapping("{id}")
+    void delete(HttpServletRequest request,ExamDTO dto){
+        service.delete(request, dto);
+    }
 }

@@ -7,6 +7,7 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
@@ -47,5 +48,21 @@ public class AsyService {
 
         mapper.insert(dto);
 
+    }
+
+
+    public void delete(HttpServletRequest request,ExamDTO dto){
+        //파일 삭제
+        String dirPath = request.getServletContext().getRealPath("fff")+"\\";
+        dirPath = "D:\\public\\mbc\\2026_03\\public\\java_work\\mybatisPrj\\src\\main\\resources\\static\\fff\\";
+        try {
+            ExamDTO delDto = mapper.detail(dto);
+            if(delDto.getUpFF()!=null){ //파일 존재시 삭제
+                new File(dirPath+delDto.getUpFF()).delete();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        mapper.delete(dto);
     }
 }
