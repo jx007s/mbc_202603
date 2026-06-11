@@ -31,6 +31,9 @@ public class AsyncContoller {
 
     @PostMapping
     Object write(ExamDTO dto,HttpServletRequest request){
-        return  service.write(dto, request);
+
+        service.write(dto, request);
+        System.out.println("write 실행"+dto);
+        return dto.getId();
     }
 }

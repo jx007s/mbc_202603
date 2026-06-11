@@ -34,11 +34,24 @@ export const useExamStore = defineStore('exam',()=>{
         st.value = await res.json()     //리턴을  json 방식으로
     }
 
+
+    //쓰기
+    async function write(frmData){
+
+        const res = await fetch( API_URL,{
+            method:"POST",
+            body:frmData
+        })
+
+        st.value = {id:await res.text()}     //리턴을  json 방식으로
+    }
+
     return{
         examList,
         arr,
         detail,
         st,
-        pNo
+        pNo,
+        write
     }
 })

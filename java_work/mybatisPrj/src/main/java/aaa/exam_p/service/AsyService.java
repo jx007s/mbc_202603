@@ -25,7 +25,7 @@ public class AsyService {
         return mapper.detail(dto);
     }
 
-    public Object write(ExamDTO dto, HttpServletRequest request){
+    public void write(ExamDTO dto, HttpServletRequest request){
         //파일 저장
         String dirPath = request.getServletContext().getRealPath("fff")+"\\";
         dirPath = "D:\\public\\mbc\\2026_03\\public\\java_work\\mybatisPrj\\src\\main\\resources\\static\\fff\\";
@@ -45,6 +45,7 @@ public class AsyService {
             e.printStackTrace();
         }
 
-        return dto;
+        mapper.insert(dto);
+
     }
 }

@@ -50,14 +50,22 @@
 <script setup>
 import { useExamStore } from '@/stores/ExamStore';
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 
 const examStore = useExamStore()
 const examForm = ref(null)
+const router = useRouter()
 
-function backGo(){
-    console.log("백앤드 가즈아")
+async function backGo(){
+    //console.log("백앤드 가즈아")
     const myFrmData = new FormData(examForm.value)
 
-    console.log(myFrmData)
+    //console.log(myFrmData)
+    await examStore.write(myFrmData)
+
+    console.log(`write ${examStore.st.id}`)
+
+    router.push(`/detail/${examStore.st.id}`)  //detail 로 이동
+
 }
 </script>
