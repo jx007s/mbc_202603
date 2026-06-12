@@ -65,4 +65,8 @@ public class AsyService {
         }
         mapper.delete(dto);
     }
+
+    public void modify(ExamDTO dto){
+        mapper.modify(dto);
+    }
 }

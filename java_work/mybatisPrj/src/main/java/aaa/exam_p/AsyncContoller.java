@@ -46,7 +46,7 @@ public class AsyncContoller {
     @PutMapping
     void update(ExamDTO dto){
 
-        //service.write(dto, request);
+        service.modify(dto);
         System.out.println("update 실행"+dto);
 
     }
