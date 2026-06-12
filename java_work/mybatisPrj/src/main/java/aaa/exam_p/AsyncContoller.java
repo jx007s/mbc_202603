@@ -50,4 +50,10 @@ public class AsyncContoller {
         System.out.println("update 실행"+dto);
 
     }
+
+
+    @GetMapping("pages/{pNo}")
+    Object pages(PageInfo pInfo){
+        return  service.pages(pInfo);
+    }
 }

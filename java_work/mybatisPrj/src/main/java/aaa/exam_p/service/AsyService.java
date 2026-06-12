@@ -11,6 +11,8 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Map;
+import java.util.stream.IntStream;
 
 @Service
 public class AsyService {
@@ -68,5 +70,19 @@ public class AsyService {
 
     public void modify(ExamDTO dto){
         mapper.modify(dto);
+    }
+
+    public Object pages(PageInfo pInfo){
+
+        pInfo.setTot(mapper.tot());
+
+        Map<String, Object> res = Map.of(
+                "arr",IntStream.rangeClosed(pInfo.getStartPage(),pInfo.getEndPage()).toArray(),
+                "before", pInfo.getStartPage() <=1 ? false : pInfo.getStartPage()-1,
+                "after",pInfo.getEndPage() >= pInfo.getTotalPage() ? false : pInfo.getEndPage()+1
+        );
+
+
+        return res;
     }
 }

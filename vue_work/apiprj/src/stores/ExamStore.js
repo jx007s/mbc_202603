@@ -7,8 +7,9 @@ const API_URL = "http://200.200.200.2/async"
 export const useExamStore = defineStore('exam',()=>{
 
     const arr = ref([])     //목록
-    const pNo = ref(1)      //페이지번호
-    const st = ref({})    //데이터 1개
+    const pNo = ref(1)      //현재 페이지번호
+    const st = ref({})      //데이터 1개
+    const pages = ref({})   //페이지네이션
 
 
     async function examList(currNo=1){  // 1은 초기값
@@ -24,6 +25,10 @@ export const useExamStore = defineStore('exam',()=>{
         const res = await fetch(`${API_URL}?${params}`)
 
         arr.value = await res.json()     //리턴을  json 방식으로
+
+        const res2 =  await fetch(`${API_URL}/pages/${pNo.value}`)
+        pages.value = await res2.json()
+
     }
 
     //상세
@@ -64,6 +69,7 @@ export const useExamStore = defineStore('exam',()=>{
     }
 
     return{
+        pages,
         examList,
         arr,
         detail,

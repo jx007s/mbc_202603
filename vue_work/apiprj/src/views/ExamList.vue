@@ -28,7 +28,12 @@
         </tr>
         <tr>
             <td colspan="7">
-                <button v-for="pNo in [1,2,3,4,5,6,7,8,9,10]" @click="movePage(pNo)">{{pNo}}</button>
+                <button v-if="examStore.pages.before" @click="movePage(examStore.pages.before)">이전</button>
+                <template v-for="pNo in examStore.pages.arr" >
+                    <span v-if="examStore.pNo == pNo">[{{pNo}}]</span>
+                    <button v-else @click="movePage(pNo)">{{pNo}}</button>
+                </template>
+                <button v-if="examStore.pages.after" @click="movePage(examStore.pages.after)">다음</button>
             </td>
         </tr>
         </table>
