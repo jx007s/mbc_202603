@@ -54,6 +54,15 @@ export const useExamStore = defineStore('exam',()=>{
         })
     }
 
+    //수정
+    async function modify(frmData){
+
+        await fetch( API_URL,{
+            method:"PUT",
+            body:frmData
+        })
+    }
+
     return{
         examList,
         arr,
@@ -61,6 +70,7 @@ export const useExamStore = defineStore('exam',()=>{
         st,
         pNo,
         write,
-        remove
+        remove,
+        modify
     }
 })

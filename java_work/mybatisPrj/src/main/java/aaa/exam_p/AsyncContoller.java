@@ -41,4 +41,13 @@ public class AsyncContoller {
     void delete(HttpServletRequest request,ExamDTO dto){
         service.delete(request, dto);
     }
+
+
+    @PutMapping
+    void update(ExamDTO dto){
+
+        //service.write(dto, request);
+        System.out.println("update 실행"+dto);
+
+    }
 }

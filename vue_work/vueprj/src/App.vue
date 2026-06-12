@@ -7,10 +7,5 @@
 <script setup>
 import SpringGo from './components/asyvv/SpringGo.vue';
 
-
-
-
-
-
 </script>
     
