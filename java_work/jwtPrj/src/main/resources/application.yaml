@@ -1,0 +1,6 @@
+server:
+  port: 80
+
+jwt:
+  secret: qwertyuiopasdfghjkzxcvbnmlkj1234567890
+  expiration-seconds: 3600
