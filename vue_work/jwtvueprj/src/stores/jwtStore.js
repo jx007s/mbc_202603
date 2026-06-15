@@ -8,6 +8,8 @@ export const useJwtStore = defineStore('jwt',()=>{
     
     const mainData = ref('')
     const userId = ref('')    //로그인한 정보 넣기
+
+    
     
 
     async function main(){  
@@ -80,6 +82,7 @@ export const useJwtStore = defineStore('jwt',()=>{
         // 클라이언트(브라우져)의 토큰 삭제
         localStorage.removeItem('token')
         mainData.value = ''
+        window.location.href='/'
     }
 
 
@@ -97,7 +100,7 @@ export const useJwtStore = defineStore('jwt',()=>{
 
     back : memJwtPrj
     front : memvuejwtprj
-    
+
     aaa, 1111, 조인성
     bbb, 2222, 정우성
     ccc, 3333, 감우성

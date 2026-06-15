@@ -6,12 +6,16 @@
 <script setup>
 import { useJwtStore } from '@/stores/jwtStore';
 import { ref } from 'vue';
+import { useRouter} from 'vue-router';
 
 const jwtStore = useJwtStore()
 const uid = ref('')
+const router = useRouter()
+
 
 async function loginGo(){
     await jwtStore.loginGo(uid.value)
+    router.push('/')   //로그인 후 메인페이지로 이동
 }
 
 </script>
