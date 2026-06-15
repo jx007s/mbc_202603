@@ -92,4 +92,17 @@ export const useJwtStore = defineStore('jwt',()=>{
         logoutGo,
         userId
     }
+
+    /*
+
+    back : memJwtPrj
+    front : memvuejwtprj
+    
+    aaa, 1111, 조인성
+    bbb, 2222, 정우성
+    ccc, 3333, 감우성
+    ddd, 4444, 행주산성
+    */
+
+
 })
