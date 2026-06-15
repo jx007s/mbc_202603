@@ -37,7 +37,7 @@ public class SecurityConfig {
                                 .requestMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                                 .requestMatchers("/main","/login","/gall/**").permitAll()
 
-                                // 그 외 모든 요청은 인증필요
+                                // 그 외 모든 요청은 인증필요  -- 인증 실패시 403 Fobidden 에러 리턴
                                 .anyRequest().authenticated()
 
                 );

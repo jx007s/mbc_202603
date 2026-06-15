@@ -57,11 +57,21 @@ export const useJwtStore = defineStore('jwt',()=>{
     }
 
 
+
+    async function logoutGo(){  
+
+        // 클라이언트(브라우져)의 토큰 삭제
+        localStorage.removeItem('token')
+        mainData.value = ''
+    }
+
+
     return{
         mainData,
         main,
         gall,
         orderGo,
-        loginGo
+        loginGo,
+        logoutGo
     }
 })

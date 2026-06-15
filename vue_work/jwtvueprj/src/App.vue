@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-
+import { useJwtStore } from './stores/jwtStore';
+const jwtStore = useJwtStore()
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/gall/aa">갤러리</RouterLink>
         <RouterLink to="/order">주문</RouterLink>
         <RouterLink to="/login">로그인</RouterLink>
+        <button @click="jwtStore.logoutGo()">로그아웃</button>
       </nav>
 
 
