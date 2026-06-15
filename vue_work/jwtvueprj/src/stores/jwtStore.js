@@ -1,12 +1,13 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 
-const API_URL = "http://200.200.200.2"
+const API_URL = 'http://200.200.200.2'
 
 
 export const useJwtStore = defineStore('jwt',()=>{
     
     const mainData = ref('')
+    const userId = ref('')    //로그인한 정보 넣기
     
 
     async function main(){  
@@ -30,6 +31,19 @@ export const useJwtStore = defineStore('jwt',()=>{
                 Authorization:`Bearer ${token}`
             }
         })
+
+        console.log('status', res.status)
+
+        /// 로그인 하지 않은 상태에서 접근시 다른 페이지로 이동
+        if(res.status == 401 || res.status == 403){
+            localStorage.removeItem('token')
+            alert('권한없음')
+            mainData.value = ''
+            window.location.href='/login'
+            return
+        }
+
+
         mainData.value = await res.text()
         //mainData.value = "오더고 데이터"
     }
@@ -48,17 +62,20 @@ export const useJwtStore = defineStore('jwt',()=>{
             })
         })
         
-        // 응답으로 토큰을 받는다
-        const token = await res.text()
+        // 응답객체
+        const data = await res.json()
 
-        // 클라이언트(브라우져)에 저장 -- 브라우져 탭을 닫아도 유지된다. 
-        console.log('로그인성공',token)
-        localStorage.setItem('token', token)
+        // 클라이언트(브라우져)에 토큰 저장
+        localStorage.setItem('token', data.token)
+
+        //이름 저장
+        userId.value = data.userId
+
     }
 
 
 
-    async function logoutGo(){  
+    function logoutGo(){  
 
         // 클라이언트(브라우져)의 토큰 삭제
         localStorage.removeItem('token')
@@ -72,6 +89,7 @@ export const useJwtStore = defineStore('jwt',()=>{
         gall,
         orderGo,
         loginGo,
-        logoutGo
+        logoutGo,
+        userId
     }
 })

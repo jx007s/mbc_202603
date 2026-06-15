@@ -5,6 +5,7 @@ const jwtStore = useJwtStore()
 </script>
 
 <template>
+    <div v-if="jwtStore.userId">{{jwtStore.userId}}님 안녕하세요</div>
       <nav>
         <RouterLink to="/">main</RouterLink>
         <RouterLink to="/gall/aa">갤러리</RouterLink>
