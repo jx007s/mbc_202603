@@ -1,0 +1,29 @@
+1. mimiconda 설치
+
+https://www.anaconda.com/docs/getting-started/miniconda/main
+1.1 OS 에 맞는 미니콘다 다운로드
+1.2 설치 - just me 버전 
+모든 선택 사항 V 체크
+1.3 설치 위치 확인 - c:\users\본인계정\miniconda
+python 파일 존재 여부
+1.4 miniconda 위치에서 cmd 실행 : 
+python --version (버전확인)
+프롬프트  python 엔터
+>>>print(5+3)
+>>>8
+
+2. vscode 실행
+extensions - python,  python indent 설치
+이름폴더\python_work\basicPrj 폴더 생성하여 열기
+
+
+3. 가상환경
+터미널 열기
+3.1가상환경생성 - 가상환경명(abcenv)
+conda create env -n abcenv
+3.2 가상환경 확인
+conda env list
+3.3 가상환경 활성화
+conda activate abcenv
+
+
