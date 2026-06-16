@@ -32,3 +32,25 @@ print("바닷속", end=" ")
 print("뚜루루뚜루")
 print("아기상어")
 print("뚜루루뚜루")
+
+for gob in range(1,10):
+    for dan in range(2,10):
+        print(dan,"X",gob,"=",dan*gob, end="\t  ")
+    print()
+    
+for i in range(5):
+    print("break 시작",i)     
+    if i==2:
+        break
+    print("break 끝",i)     
+
+print("break 종료------")
+
+
+for i in range(5):
+    print("continue 시작",i)     
+    if i==2:
+        continue
+    print("continue 끝",i)     
+
+print("continue 종료------")
