@@ -24,3 +24,21 @@ print(lotto)
 화면 : 5 x  5 (총 25개)
 숫자는 중복되지 않음
 '''
+
+
+bingo = set()
+while True:
+    bingo.add(random.randint(1,90))
+    
+    if len(bingo) == 25:
+        break
+
+
+arr2 = list(bingo) 
+random.shuffle(arr2)   
+i = 1
+for b in arr2:
+    print(b, end="\t  ")
+    if i%5==0:
+        print()
+    i+=1
