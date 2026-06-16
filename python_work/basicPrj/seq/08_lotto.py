@@ -42,3 +42,21 @@ for b in arr2:
     if i%5==0:
         print()
     i+=1
+
+
+t1 = set(["박재상", "박정권", "최정", "김광현", "엄정욱", "박희수", "이호준"])  
+t2 = set(["이호준", "엄정욱", "박재홍", "이신협", "장동건"])
+fa = set(["이병규", "이승엽", "박정권", "장동건", "박용택", "홍성흔"])
+
+print("변경전>>>>")
+print("1군",t1)
+print("2군",t2)
+print("FA",fa)
+
+newT1 = t1 - t2 - fa
+newT2 = t2 - fa
+newFA = fa -t1 - t2 
+print("변경후>>>>")
+print("1군",newT1)
+print("2군",newT2)
+print("FA",newFA)
