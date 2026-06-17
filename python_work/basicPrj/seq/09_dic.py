@@ -35,3 +35,28 @@ print("이도류" in dd1)
 r = dd1.pop("호랑이")  ## 호랑이 가 삭제되면서 호랑이의 value 고양이과 리턴
 print(dd1)
 print(r)
+
+print("-------------")
+for d in dd1:   ## key 를 반복변수로 가져옴
+    print(d, dd1[d])
+
+kks = dd1.keys()    ##key를 묶음으로 리턴
+print(kks)
+arr = list(kks)
+tt = tuple(kks)
+ss = set(kks)
+print(type(kks), kks)
+print(type(arr), arr)
+print(type(tt), tt)
+print(type(ss), ss)
+
+vvs = dd1.values()
+print(type(vvs), vvs)
+
+'''
+10_num.py
+11,5,7,99,34,12,11,5,99,34,12,7,5,12,5,34,12
+==> 각 숫자들의 갯수가 몇개인지 파악해 주세요
+
+
+'''
