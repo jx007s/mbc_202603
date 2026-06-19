@@ -27,3 +27,26 @@ conda env list
 conda activate abcenv
 
 
+4 가상환경 삭제
+conda remove -n 가상환경이름 --all
+conda remove -n abcenv --all
+
+
+5. 가상환경에서 패키지 설치
+dependencies.txt
+---------------------
+numpy
+pandas
+scikit-learn
+matplotlib
+scipy
+ultralytics
+opencv-python
+fastapi
+uvicorn
+
+
+pip install -r 파일명
+pip install -r dependencies.txt
+
+
