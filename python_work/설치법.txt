@@ -21,8 +21,11 @@ extensions - python,  python indent 설치
 터미널 열기
 3.1가상환경생성 - 가상환경명(abcenv)
 conda create env -n abcenv
+conda create env -n efgenv python=3.13
+
 3.2 가상환경 확인
 conda env list
+
 3.3 가상환경 활성화
 conda activate abcenv
 
@@ -44,7 +47,7 @@ ultralytics
 opencv-python
 fastapi
 uvicorn
-
+tensorflow
 
 pip install -r 파일명
 pip install -r dependencies.txt
