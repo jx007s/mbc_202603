@@ -53,7 +53,7 @@ source venv/bin/activate
 pip install -r dependencies.txt 
 
 5. GPU 사용
-그래픽카드 확인
+5.1 그래픽카드 확인
 (venv) lee@LEE-Teacher:~/aiprj$ nvidia-smi
 Fri Jun 26 14:55:03 2026       
 +-----------------------------------------------------------------------------------------+
@@ -77,10 +77,22 @@ Fri Jun 26 14:55:03 2026
 +-----------------------------------------------------------------------------------------+
 975MiB /   8192MiB ==> 그래픽 드라이버 메모리 : 약 1GB 
 CUDA Version: 13.1 확인
-PyTorch CUDA 사용
+
+5.2 그래픽카드 GPU 존재확인 후 기존 패키지삭제
 pip uninstall torch torchvision torchaudio -y
-드라이버에 맞는 장비 확인
-https://docs.pytorch.org/get-started/previous-versions/
+
+
+5.3 드라이버에 맞는 장비 확인
+https://docs.pytorch.org/get-started/locally/
+에서 CUDA Version 에 맞는 설치명령어 검색
+선생님: 13.1
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+학생님: 12.6
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+
+
+5.4 yolo 로 GPU 확인
+yolo predict model=yolo11n.pt source=https://ultralytics.com/images/bus.jpg device=0
 
 
 
