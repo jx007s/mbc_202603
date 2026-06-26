@@ -1,0 +1,14 @@
+1. WSL2 설치
+1.1 윈도우 시작 버튼 > PowerShell(관리자 권한으로 실행)
+1.2 wsl --install -d Ubuntu-24.04 필요에 따라 재부팅
+1.3 계정, 암호, 설정
+
+2. 개발환경진입
+2.1 vscode 실행
+2.2 Extension > WSL 설치
+2.3 CTRL+SHIFT + P : wsl connect 실행
+2.4 open folder > home/계정명 열기
+2.5 aiprj 폴더 생성 및 열기
+
+
+
