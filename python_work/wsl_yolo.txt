@@ -1,7 +1,7 @@
 1. WSL2 설치
 1.1 윈도우 시작 버튼 > PowerShell(관리자 권한으로 실행)
 1.2 wsl --install -d Ubuntu-24.04 필요에 따라 재부팅
-1.3 계정, 암호, 설정
+1.3 계정, 암호(123456) 설정
 
 2. 개발환경진입
 2.1 vscode 실행
@@ -9,6 +9,48 @@
 2.3 CTRL+SHIFT + P : wsl connect 실행
 2.4 open folder > home/계정명 열기
 2.5 aiprj 폴더 생성 및 열기
+
+3. 개발데이터
+3.1 학습데이터 복사
+3.2 dependencies.txt 복사
+numpy
+pandas
+scikit-learn
+matplotlib
+scipy
+
+# YOLO
+ultralytics
+opencv-python
+
+# API
+fastapi
+uvicorn
+
+# Deep Learning
+tensorflow
+
+# PyTorch
+torch
+torchvision
+torchaudio
+
+4. 개발환경설정
+4.1 python 확인
+vscode 터미널에서 작업(wsl 터미널)
+lee@LEE-Teacher:~/aiprj$ python3 --version
+Python 3.12.3
+4.2 apt 업데이트
+sudo apt update --> 암호입력(123456)
+4.3 가상환경
+가상환경생성하는 패키지 설치
+sudo apt install python3.12-venv
+가상환경 생성
+python3 -m venv venv
+가상환경 활성화
+source venv/bin/activate
+
+
 
 
 
