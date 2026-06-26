@@ -49,6 +49,38 @@ sudo apt install python3.12-venv
 python3 -m venv venv
 가상환경 활성화
 source venv/bin/activate
+패키지 설치
+pip install -r dependencies.txt 
+
+5. GPU 사용
+그래픽카드 확인
+(venv) lee@LEE-Teacher:~/aiprj$ nvidia-smi
+Fri Jun 26 14:55:03 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 590.57                 Driver Version: 591.86         CUDA Version: 13.1     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 3070        On  |   00000000:01:00.0  On |                  N/A |
+|  0%   48C    P8             29W /  270W |     975MiB /   8192MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A              48      G   /Xwayland                             N/A      |
++-----------------------------------------------------------------------------------------+
+975MiB /   8192MiB ==> 그래픽 드라이버 메모리 : 약 1GB 
+CUDA Version: 13.1 확인
+PyTorch CUDA 사용
+pip uninstall torch torchvision torchaudio -y
+드라이버에 맞는 장비 확인
+https://docs.pytorch.org/get-started/previous-versions/
 
 
 
