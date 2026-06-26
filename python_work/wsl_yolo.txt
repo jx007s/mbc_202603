@@ -12,7 +12,8 @@
 
 3. 개발데이터
 3.1 학습데이터 복사
-3.2 dependencies.txt 복사
+3.2 dependencies.txt
+---------------------------------
 numpy
 pandas
 scikit-learn
@@ -34,6 +35,9 @@ tensorflow
 torch
 torchvision
 torchaudio
+---------------------------------
+
+
 
 4. 개발환경설정
 4.1 python 확인
@@ -93,7 +97,14 @@ pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu12
 
 5.4 yolo 로 GPU 확인
 yolo predict model=yolo11n.pt source=https://ultralytics.com/images/bus.jpg device=0
+결과
+...
+Ultralytics 8.4.78 🚀 Python-3.12.3 torch-2.12.1+cu130 CUDA:0 (NVIDIA GeForce RTX 3070, 8192MiB)
+...
+결과 : CPU - GPU 사용(설정)이 안된 경우
 
+
+6. rbyolo.ipynb 생성하여 개발
 
 
 
