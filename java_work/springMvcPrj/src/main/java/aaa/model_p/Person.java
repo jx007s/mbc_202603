@@ -8,6 +8,6 @@ public class Person {
     String pname;
     int age;
     boolean marriage;
-    MultipartFile up1;
+    MultipartFile up1, ff;
     MultipartFile [] up2;
 }
