@@ -8,3 +8,6 @@ opencv-python
 fastapi
 uvicorn
 tensorflow
+easyocr
+torch
+torchvision

@@ -48,6 +48,9 @@ opencv-python
 fastapi
 uvicorn
 tensorflow
+easyocr
+torch
+torchvision
 
 pip install -r 파일명
 pip install -r dependencies.txt
