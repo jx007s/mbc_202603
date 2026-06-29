@@ -48,6 +48,8 @@
 <a href="/sss/view">view</a>
 <a href="/sss/modify">modify</a>
 <a href="/sss/delete">delete</a>
+<h2>api</h2>
+<a href="/api/ocr">ocr</a>
 </body>
 </html>
 
