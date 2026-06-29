@@ -11,3 +11,4 @@ tensorflow
 easyocr
 torch
 torchvision
+python-multipart
